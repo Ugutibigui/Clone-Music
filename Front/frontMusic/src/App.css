@@ -1,7 +1,4 @@
 .App {
-  width: 100vw;
-  heigth: 100vh;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +6,31 @@
 }
 
 .top{
-  width: 100px;
-  height: calc(100% - 80px);
-  background-color: red;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #32323D;
+  display: flex;
 }
+
+.left-menu{
+  width: 220px;
+  background-color: #191922;
+  border-right: 1px solid #45454e;
+}
+
+.content{
+  overflow: auto;
+}
+
 .bottom{
   min-height: 80px;
   width: 100%;
-  background-color: green;
+  background-color: #23232d;
+  border-top: 1px solid #45454e;
+}
+
+.card{
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
 }
