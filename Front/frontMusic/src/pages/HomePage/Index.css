@@ -1,37 +1,77 @@
 .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .top{
-    width: 100%;
-    height: calc(100vh - 80px);
-    background-color: #32323D;
-    display: flex;
-  }
-  
-  .left-menu{
-    width: 220px;
-    background-color: #191922;
-    border-right: 1px solid #45454e;
-  }
-  
-  .content{
-    overflow: auto;
-  }
-  
-  .bottom{
-    min-height: 80px;
-    width: 100%;
-    background-color: #23232d;
-    border-top: 1px solid #45454e;
-  }
-  
-  .card{
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-  }
-  
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top {
+	width: 100%;
+	height: calc(100vh - 80px);
+	background-color: #32323D;
+	display: flex;
+}
+
+.left-menu {
+	width: 220px;
+	background-color: #191922;
+	border-right: 1px solid #45454e;
+}
+
+.left-menu .logo-top {
+	height: 56px;
+	width: 220px;
+	padding: 1rem;
+}
+
+.left-menu .logo-top img {
+	width: 123px;
+}
+
+/* Card de Assinar agora no sidebar */
+
+.subscribe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #2692b7;
+	background-image: linear-gradient(56deg,#0087c1 13%,#89d7bb);
+	border-radius: 20px;
+	margin: 36px 16px 12px;
+    padding: 20px 16px;
+
+	font-size: 13px;
+    font-weight: 200;
+    line-height: 18px;
+    margin-bottom: 13px;
+}
+
+.subscribe button {
+	background: none;
+	font-size: 15px;
+	border: 1px solid #fff;
+	border-radius: 30px;
+	width: 150px;
+	transition: 500ms;
+}
+
+.subscribe button:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.content {
+	overflow: auto;
+}
+
+.bottom {
+	min-height: 80px;
+	width: 100%;
+	background-color: #23232d;
+	border-top: 1px solid #45454e;
+}
+
+.card {
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+}
