@@ -8,14 +8,14 @@ function Teste() {
     <div className="App">
       <div className="top">
         <div className='left-menu'>
-dfasd fasfd
+          dfasd fasfd
         </div>
         <div className='content'>
           <header>
-adsf asdf
+            adsf asdf
           </header>
           <div className='info-content'>
-asdf asd f
+            asdf asd f
           </div>
         </div>
       </div>

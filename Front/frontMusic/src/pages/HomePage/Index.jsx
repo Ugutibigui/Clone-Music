@@ -17,8 +17,6 @@ import CardOption from '../../components/CardOption'
 
 function Index() {
 
-	const icons = [<FaMusic/>, <FaMicrophoneAlt/>, <MdOutlineRadio/>, <GrAppsRounded/>, <MdFavoriteBorder/>]
-
 	return (
 		<div className="App">
 			<div className="top">
@@ -37,7 +35,11 @@ function Index() {
 					<div className="options">
 						<div className="options-ref">
 							<ul>
-								<CardOption/>
+							<CardOption icon={FaMusic} title="Música"/>
+								<CardOption icon={FaMicrophoneAlt} title="Podcasts"/>
+								<CardOption icon={MdOutlineRadio} title="Rádios"/>
+								<CardOption icon={GrAppsRounded} title="Explorar"/>
+								<CardOption icon={MdFavoriteBorder} title="Favoritos"/>
 							</ul>
 						</div>
 					</div>
