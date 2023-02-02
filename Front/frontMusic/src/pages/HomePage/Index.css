@@ -1,3 +1,11 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
 .App {
 	display: flex;
 	flex-direction: column;
@@ -43,9 +51,10 @@
 	margin: 36px 16px 12px;
     padding: 16px 16px;
 
+	color: #fff;
 	font-size: 13px;
-	font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
+	font-weight: lighter;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 18px;
     margin-bottom: 13px;
 }
@@ -56,7 +65,10 @@
 	border: 1px solid #fff;
 	border-radius: 30px;
 	width: 150px;
+	height: 40px;
 	transition: 500ms;
+	cursor: pointer;
+	color: #fff;
 }
 
 .subscribe button:hover {
@@ -64,7 +76,9 @@
 }
 
 .content {
+	width: 100%;
 	overflow: auto;
+	background-color: #121216;
 }
 
 .bottom {
@@ -74,8 +88,71 @@
 	border-top: 1px solid #45454e;
 }
 
-.card {
-	width: 100px;
-	height: 100px;
-	background-color: aqua;
+/* Estilização para os inputs e buttons do header */
+
+header {
+	width: 100%;
+	height: 56px;
+    border-bottom: 1px solid #45454e;
+	display: flex;
+	align-items: center;
+}
+
+header .text-box {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+}
+
+header .text-box .search {
+	width: 100%;
+	height: 60%;
+	display: flex;
+}
+
+header .profile {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+header .profile .icons-profile {
+	width: 150px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+header button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: 400ms;
+	color: #fff;
+	border-radius: 150px;
+	display: grid;
+	place-items: center;
+}
+
+.search button, 
+.text-box button {
+	color: #32323D;
+}
+
+.text-box button:hover {
+	color: #5f5f6d;
+}
+
+.icons-profile button:hover {
+	background-color: #5f5f6d;
+}
+
+.search input {
+	background: none;
+	border: none;
+	font-size: 1rem;
+	color: #fff;
+	width: 100%;
+	outline: none;
 }
