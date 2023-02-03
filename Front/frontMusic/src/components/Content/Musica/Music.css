@@ -1,30 +1,139 @@
-.add-artist {
-    height: 30vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
+/* Estilizando campo para adicionar artistas */
+
+.info-content {
+	width: 100%;
+	overflow-x: auto;
+	margin: 0;
+	height: 100vh;
 }
 
-.add-artist .container {
+.info-content::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+.info-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.info-content::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}
+
+.channel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel .artist-add {
     width: 800px;
-    height: 250px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
+    color: #D1D1D6;
+    font-size: 15px;
+}
+
+.channel .artist-add button{
+    height: 40px;
+    width: 200px;
+    background-color: #EF5466;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 40px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.channel .artist-add button:hover {
+    background-color: #aa2938;
 }
 
 .artists {
+    background-color: aliceblue;
     width: 500px;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: blue;
 }
 
 .figure-image {
-    display: flex;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure-image img {
+    border-radius: 100%;
+    position: absolute;
+}
+
+#img-center {
+    z-index: 3;
+}
+
+#img-left {
+    z-index: 1;
+    margin-right: 20rem;
+}
+
+#img-almost-left {
+    z-index: 2;
+    margin-right: 10rem;
+}
+
+#img-right {
+   z-index: 1;
+   margin-left: 20rem;
+}
+
+#img-almost-right {
+    z-index: 2;
+    margin-left: 10rem;
+}
+
+/* Estilizando section de quizzes */
+
+.channel .quizzes {
+    margin-top: 50px;
+    width: 77vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.quizzes .container-text {
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+}
+
+.quizzes .container-rectangle {
+    height: calc(20vh - 50px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rectangle {
+    background-color: green;
+    height: calc(20vh - 60px);
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border-radius: 10px;
 }

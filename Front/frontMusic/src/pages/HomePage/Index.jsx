@@ -73,10 +73,9 @@ function Index() {
 								<button> <MdAccountCircle size={30} /> </button>
 							</div>
 						</div>
-					</header>
-					<div className='info-content'>		
-						<Music/>		
-					</div>
+					</header>	
+					
+					<Music/>		
 				</div>
 			</div>
 			<div className='bottom'></div>
