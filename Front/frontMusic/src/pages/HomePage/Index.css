@@ -106,14 +106,27 @@ body {
 .left-menu figure {
 	width: 100%;
 	overflow-x: auto;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+	/* -ms-overflow-style: none;
+	scrollbar-width: none; */
+	margin: 0;
 	height: calc(100vh - 80px - 300px);
 }
 
-.left-menu figure::-webkit-scrollbar {
+/* .left-menu figure::-webkit-scrollbar {
 	display: none;
+} */
+
+.left-menu figure::-webkit-scrollbar-track{
+	background-color: #ffffff00;
 }
+
+.left-menu figure::-webkit-scrollbar {
+	width: 6px;
+  }
+  .left-menu figure::-webkit-scrollbar-thumb {
+	background: #ffffff;
+	border-radius: 15px;
+  }
 
 .options {
 	width: 100%;
