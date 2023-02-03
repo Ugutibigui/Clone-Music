@@ -43,9 +43,16 @@ body {
 	width: 220px;
 	background-color: #191922;
 	border-right: 1px solid #45454e;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.left-menu .logo-top {
+.left-menu .top-menu {
+	height: 300px;
+}
+
+.top-menu .logo-top {
 	height: 50px;
 	display: flex;
 	align-items: center;
@@ -53,7 +60,7 @@ body {
 	padding-bottom: 6px;
 }
 
-.left-menu .logo-top img {
+.logo-top img {
 	height: 24px;
 }
 
@@ -96,12 +103,25 @@ body {
 
 /* Estilizando opções da siderbar */
 
+.left-menu figure {
+	width: 100%;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	height: calc(100vh - 80px - 300px);
+}
+
+.left-menu figure::-webkit-scrollbar {
+	display: none;
+}
+
 .options {
 	width: 100%;
 	height: auto;
 	display: flex;
 	flex-direction: column; 
 	justify-content: start;
+	flex-flow: column nowrap;
 }
 
 .icon-options {
@@ -218,3 +238,6 @@ header button {
 	width: 100%;
 	outline: none;
 }
+
+/* Estilizando campo para adicionar artistas */
+
