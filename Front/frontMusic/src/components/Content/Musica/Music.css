@@ -1,0 +1,30 @@
+.add-artist {
+    height: 30vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.add-artist .container {
+    width: 800px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.artists {
+    width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+.figure-image {
+    display: flex;
+    position: absolute;
+}
