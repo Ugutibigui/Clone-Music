@@ -21,7 +21,6 @@ body {
 
 .content {
 	width: 100%;
-	overflow: auto;
 	background-color: #121216;
 }
 
@@ -71,18 +70,18 @@ body {
 	flex-direction: column;
 	align-items: center;
 	background-color: #2692b7;
-	background-image: linear-gradient(56deg,#0087c1 13%,#89d7bb);
+	background-image: linear-gradient(56deg, #0087c1 13%, #89d7bb);
 	box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
 	border-radius: 10px;
 	margin: 36px 16px 12px;
-    padding: 16px 16px;
+	padding: 16px 16px;
 
 	color: #fff;
 	font-size: 13px;
 	font-weight: lighter;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 18px;
-    margin-bottom: 13px;
+	line-height: 18px;
+	margin-bottom: 13px;
 }
 
 .subscribe button {
@@ -106,33 +105,28 @@ body {
 .left-menu figure {
 	width: 100%;
 	overflow-x: auto;
-	/* -ms-overflow-style: none;
-	scrollbar-width: none; */
 	margin: 0;
 	height: calc(100vh - 80px - 300px);
 }
 
-/* .left-menu figure::-webkit-scrollbar {
-	display: none;
-} */
-
-.left-menu figure::-webkit-scrollbar-track{
+.left-menu figure::-webkit-scrollbar-track {
 	background-color: #ffffff00;
 }
 
 .left-menu figure::-webkit-scrollbar {
 	width: 6px;
-  }
-  .left-menu figure::-webkit-scrollbar-thumb {
+}
+
+.left-menu figure::-webkit-scrollbar-thumb {
 	background: #ffffff;
 	border-radius: 15px;
-  }
+}
 
 .options {
 	width: 100%;
 	height: auto;
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 	justify-content: start;
 	flex-flow: column nowrap;
 }
@@ -188,9 +182,10 @@ body {
 header {
 	width: 100%;
 	height: 56px;
-    border-bottom: 1px solid #45454e;
+	border-bottom: 1px solid #45454e;
 	display: flex;
 	align-items: center;
+
 }
 
 header .text-box {
@@ -230,7 +225,7 @@ header button {
 	place-items: center;
 }
 
-.search button, 
+.search button,
 .text-box button {
 	color: #32323D;
 }
@@ -254,3 +249,23 @@ header button {
 
 /* Estilizando campo para adicionar artistas */
 
+.info-content {
+	width: 100%;
+	overflow-x: auto;
+	margin: 0;
+	height: 100vh;
+}
+
+.info-content::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+.info-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.info-content::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}

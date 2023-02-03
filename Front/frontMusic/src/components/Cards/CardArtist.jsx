@@ -1,6 +1,6 @@
 function CardArtist(props) {
 	return (
-		<figure>
+		<figure className="figure-image">
             <img src={props.image} />
         </figure>
 	)
