@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Work+Sans:wght@100&display=swap');
+
+* {
+	font-family: Ubuntu;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -11,6 +17,19 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.content {
+	width: 100%;
+	overflow: auto;
+	background-color: #121216;
+}
+
+.bottom {
+	min-height: 80px;
+	width: 100%;
+	background-color: #23232d;
+	border-top: 1px solid #45454e;
 }
 
 .top {
@@ -75,17 +94,60 @@ body {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-.content {
+/* Estilizando opções da siderbar */
+
+.options {
 	width: 100%;
-	overflow: auto;
-	background-color: #121216;
+	height: 100%;
+	display: flex;
+	flex-direction: column; 
+	justify-content: start;
 }
 
-.bottom {
-	min-height: 80px;
+.icon-options {
+	width: 60%;
+	height: 25%;
+}
+
+.cardOption {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	cursor: pointer;
+	transition: 400ms;
+	height: 46px;
+}
+
+.cardOption:hover,
+.spans span:hover {
+	color: #ef5466;
+}
+
+.cardOption svg {
+	padding-right: 15px;
+}
+
+.more-options {
 	width: 100%;
-	background-color: #23232d;
-	border-top: 1px solid #45454e;
+	height: 15%;
+	display: flex;
+	justify-content: end;
+}
+
+.spans {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 65%;
+}
+
+.spans span {
+	font-size: 14px;
+	transition: 400ms;
+	color: #a2a2ad;
+	cursor: pointer;
 }
 
 /* Estilização para os inputs e buttons do header */

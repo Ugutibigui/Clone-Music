@@ -1,10 +1,10 @@
 function CardOption(props) {
   return (
     <li className='cardOption'>
-        <props.icon/>
-        <h4>
+        <props.icon size={22}/>
+        <h3>
           {props.title}
-        </h4>
+        </h3>
     </li>
   )
 }

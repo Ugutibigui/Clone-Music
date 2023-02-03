@@ -2,15 +2,15 @@ import { useState } from 'react'
 import './Index.css'
 import deezer from '../../assets/deezerWhite.png'
 
-import {FaMusic} from 'react-icons/fa'
-import {FaMicrophoneAlt} from 'react-icons/fa'
-import {MdOutlineRadio} from 'react-icons/md'
-import {GrAppsRounded} from 'react-icons/gr'
-import {MdFavoriteBorder} from 'react-icons/md'
-import {FiSearch} from 'react-icons/fi'
-import {AiFillCloseCircle} from 'react-icons/ai'
-import {MdNotifications} from 'react-icons/md'
-import {MdAccountCircle} from 'react-icons/md'
+import { FaMusic } from 'react-icons/fa'
+import { FaMicrophoneAlt } from 'react-icons/fa'
+import { MdOutlineRadio } from 'react-icons/md'
+import { GiAbstract050 } from 'react-icons/gi'
+import { MdFavoriteBorder } from 'react-icons/md'
+import { FiSearch } from 'react-icons/fi'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import { MdNotifications } from 'react-icons/md'
+import { MdAccountCircle } from 'react-icons/md'
 
 import CardOption from '../../components/CardOption'
 
@@ -33,14 +33,22 @@ function Index() {
 					</div>
 
 					<div className="options">
-						<div className="options-ref">
-							<ul>
-							<CardOption icon={FaMusic} title="Música"/>
-								<CardOption icon={FaMicrophoneAlt} title="Podcasts"/>
-								<CardOption icon={MdOutlineRadio} title="Rádios"/>
-								<CardOption icon={GrAppsRounded} title="Explorar"/>
-								<CardOption icon={MdFavoriteBorder} title="Favoritos"/>
-							</ul>
+						<ul className='icon-options'>
+							<CardOption icon={FaMusic} title="Música" />
+							<CardOption icon={FaMicrophoneAlt} title="Podcasts" />
+							<CardOption icon={MdOutlineRadio} title="Rádios" />
+							<CardOption icon={GiAbstract050} title="Explorar" />
+							<CardOption icon={MdFavoriteBorder} title="Favoritos" />
+						</ul>
+
+						<div className="more-options">
+							<div className="spans">
+								<span>Mais queridas</span>
+								<span>Playlist</span>
+								<span>Álbuns</span>
+								<span>Artistas</span>
+								<span>Podcasts</span> 
+							</div>
 						</div>
 					</div>
 				</div>
@@ -48,16 +56,16 @@ function Index() {
 					<header>
 						<div className="text-box">
 							<div className="search">
-								<button> <FiSearch size={20}/> </button>
-								<input type="text" placeholder='Buscar'/>
+								<button> <FiSearch size={20} /> </button>
+								<input type="text" placeholder='Buscar' />
 							</div>
-							<button> <AiFillCloseCircle size={35}/> </button>
+							<button> <AiFillCloseCircle size={35} /> </button>
 						</div>
 
 						<div className="profile">
 							<div className="icons-profile">
-								<button> <MdNotifications size={30}/> </button>
-								<button> <MdAccountCircle size={30}/> </button>
+								<button> <MdNotifications size={30} /> </button>
+								<button> <MdAccountCircle size={30} /> </button>
 							</div>
 						</div>
 					</header>
