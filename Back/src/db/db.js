@@ -13,3 +13,15 @@ async function connect(){
       global.connection = connection
       return connection
   }
+
+  async function searchInfosLogin(param){
+      const conn = await connect();
+      console.log("aqui")
+      const sql = 'SELECT * FROM users WHERE email = ? and password = ?;'
+      const values = [param.email, param.password]
+      return await conn.query(sql,values)
+  }
+
+  module.exports = {
+      searchInfosLogin
+  }
