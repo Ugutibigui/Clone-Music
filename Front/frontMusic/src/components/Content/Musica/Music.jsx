@@ -1,6 +1,7 @@
 import CardArtist from '../../Cards/CardArtist'
 import CardRectangle from '../../Cards/CardRectangle'
 import CardForYou from '../../Cards/CardForYou'
+import CardFavorite from '../../Cards/CardFavorite'
 import './Music.css'
 
 function Music() {
@@ -44,6 +45,22 @@ function Music() {
                     <figure>
                         <div className="gallery">
                             <CardForYou/>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <section className='channel'> 
+                <div className="favorites">
+                    <div className="container-text">
+                        <h2>Seus artistas favoritos</h2>
+                    </div>
+
+                    <figure>
+                        <div className="gallery">
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' name='Gusttavo Lima' fans='7.137.751 fãs'/>
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/18b811f5b9bac7241958b29682cae546/264x264-000000-80-0-0.jpg' name='Jorge & Mateus' fans='9.445.978 fãs'/>
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs'/>
                         </div>
                     </figure>
                 </div>
