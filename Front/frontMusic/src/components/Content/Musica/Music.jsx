@@ -1,5 +1,6 @@
 import CardArtist from '../../Cards/CardArtist'
 import CardRectangle from '../../Cards/CardRectangle'
+import CardForYou from '../../Cards/CardForYou'
 import './Music.css'
 
 function Music() {
@@ -31,6 +32,20 @@ function Music() {
                         <CardRectangle colorOne='rgb(60, 165, 100)' colorTwo='rgb(166, 206, 80)' title='Quizzes musicais' text='Teste seu conhecimento musical!'/>
                         <CardRectangle colorOne='rgb(55, 105, 200)' colorTwo='rgb(17, 168, 204)' text='Teste suas habilidades de adivinhar músicas e desafie seus amigos!'/>
                     </div>
+                </div>
+            </section>
+
+            <section className='channel'>
+                <div className="for-you">
+                    <div className="container-text">
+                        <h2>Feito para você</h2>
+                    </div>
+
+                    <figure>
+                        <div className="gallery">
+                            <CardForYou/>
+                        </div>
+                    </figure>
                 </div>
             </section>
         </div>

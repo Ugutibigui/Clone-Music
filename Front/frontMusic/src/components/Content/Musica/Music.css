@@ -4,7 +4,7 @@
 	width: 100%;
 	overflow-x: auto;
 	margin: 0;
-	height: 100vh;
+	height: calc(100vh - 56px - 80px);
 }
 
 .info-content::-webkit-scrollbar-track {
@@ -83,7 +83,7 @@
 
 #img-left {
     z-index: 1;
-    margin-right: 20rem;
+    margin-right: 17rem;
 }
 
 #img-almost-left {
@@ -93,7 +93,7 @@
 
 #img-right {
    z-index: 1;
-   margin-left: 20rem;
+   margin-left: 17rem;
 }
 
 #img-almost-right {
@@ -114,7 +114,7 @@
 }
 
 .quizzes .container-text {
-    height: 50px;
+    height: 70px;
     width: 100%;
     color: #fff;
     font-weight: 600;
@@ -129,11 +129,43 @@
 }
 
 .rectangle {
-    background-color: green;
     height: calc(20vh - 60px);
-    width: 700px;
+    width: 49%;
     display: flex;
+    align-items: center;
     flex-direction: row;
     cursor: pointer;
     border-radius: 10px;
+    transition: 400ms;
+}
+
+.rectangle:hover {
+    opacity: 0.6;
+}
+
+.rectangle-text {
+    height: 80px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    color: #ffffffd5;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Estilizando o Feito para voce */
+
+.for-you {
+    background-color: yellowgreen;
+    margin-top: 50px;
+    width: 77vw;
+    height: 35vh;
 }
