@@ -25,32 +25,28 @@ function Music() {
 
             <section className="channel">
                 <div className="quizzes">
-                    <div className="container-text">
-                        <h2>Quizzes musicais</h2>
-                    </div>
+                    <h2>Quizzes musicais</h2>
 
                     <div className="container-rectangle">
-                        <CardRectangle colorOne='rgb(60, 165, 100)' colorTwo='rgb(166, 206, 80)' title='Quizzes musicais' text='Teste seu conhecimento musical!'/>
-                        <CardRectangle colorOne='rgb(55, 105, 200)' colorTwo='rgb(17, 168, 204)' text='Teste suas habilidades de adivinhar músicas e desafie seus amigos!'/>
+                        <CardRectangle colorOne='rgb(60, 165, 100)' colorTwo='rgb(166, 206, 80)' title='Quizzes musicais' text='Teste seu conhecimento musical!' />
+                        <CardRectangle colorOne='rgb(55, 105, 200)' colorTwo='rgb(17, 168, 204)' text='Teste suas habilidades de adivinhar músicas e desafie seus amigos!' />
                     </div>
                 </div>
             </section>
 
             <section className='channel'>
                 <div className="for-you">
-                    <div className="container-text">
-                        <h2>Feito para você</h2>
-                    </div>
+                    <h2>Feito para você</h2>
 
                     <figure>
                         <div className="gallery">
-                            <CardForYou/>
+                            <CardForYou />
                         </div>
                     </figure>
                 </div>
             </section>
 
-            <section className='channel'> 
+            <section className='channel'>
                 <div className="favorites">
                     <div className="container-text">
                         <h2>Seus artistas favoritos</h2>
@@ -58,9 +54,9 @@ function Music() {
 
                     <figure>
                         <div className="gallery">
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' name='Gusttavo Lima' fans='7.137.751 fãs'/>
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/18b811f5b9bac7241958b29682cae546/264x264-000000-80-0-0.jpg' name='Jorge & Mateus' fans='9.445.978 fãs'/>
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs'/>
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' name='Gusttavo Lima' fans='7.137.751 fãs' />
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/18b811f5b9bac7241958b29682cae546/264x264-000000-80-0-0.jpg' name='Jorge & Mateus' fans='9.445.978 fãs' />
+                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs' />
                         </div>
                     </figure>
                 </div>

@@ -115,15 +115,14 @@
     align-items: center;
 }
 
-.quizzes .container-text {
-    height: 70px;
+.quizzes h2 {
     width: 100%;
     color: #fff;
     font-weight: 600;
 }
 
 .quizzes .container-rectangle {
-    height: calc(20vh - 50px);
+    height: 20vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -143,6 +142,10 @@
 
 .rectangle:hover {
     opacity: 0.6;
+}
+
+.rectangle img {
+    width: 17%;
 }
 
 .rectangle-text {
@@ -168,24 +171,22 @@
 .for-you {
     margin-top: 50px;
     width: 77vw;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.for-you .container-text {
+.for-you h2 {
     width: 100%;
-    height: 5px;
     color: #fff;
-    font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .for-you figure {
     width: 100%;
-    height: calc(50vh - 5px);
+    height: 45vh;
     display: flex;
     align-items:center;
     overflow-y: hidden;
@@ -194,7 +195,8 @@
     scrollbar-width: none;
 }
 
-.for-you figure::-webkit-scrollbar {
+.for-you figure::-webkit-scrollbar,
+.favorites figure::-webkit-scrollbar {
     display: none;
 }
 
@@ -237,6 +239,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 400ms;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -289,3 +293,79 @@
 
 /* Estilizando os artistas favoritos */
 
+.favorites {
+    margin-top: 30px;
+    width: 77vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites .container-text {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 600
+}
+
+.favorites figure {
+    width: 100%;
+    height: calc(40vh - 10px);
+    display: flex;
+    align-items:center;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.favorites figure .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+}
+
+.favorites .image-round {
+    width: 264px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites .image-round img {
+    height: 264px;
+    width: 264px;
+    border-radius: 100%;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.favorites .image-round img:hover {
+    opacity: 0.6;
+}
+
+.favorites .image-round span {
+    color: #fff;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.favorites .image-round span:hover {
+    text-decoration: underline;
+}
+
+.favorites .image-round p{
+    font-size: 14px;
+    line-height: 18px;
+    color: #a2a2ad;
+}

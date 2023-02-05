@@ -1,3 +1,5 @@
+import '../Content/Musica/Music'
+
 function CardFavorite(props) {
 	return (
 		<div className="image-round">
