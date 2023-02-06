@@ -1,4 +1,4 @@
-import '../../Content/Musica/Music'
+import './CardRectangle.css'
 
 const Title = (props) => {
     if (props.title) {

@@ -13,7 +13,7 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 import { MdNotifications } from 'react-icons/md'
 import { MdAccountCircle } from 'react-icons/md'
 
-import CardOption from '../../components/Cards/CardOption'
+import CardOption from '../../components/Cards/CardOption/CardOption'
 
 function Index() {
 
