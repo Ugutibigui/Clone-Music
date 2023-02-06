@@ -96,7 +96,6 @@
 
 .channel .quizzes {
     width: 77vw;
-    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -111,7 +110,7 @@
 
 /* Estilizando o Feito para voce */
 
-.for-you {
+.container {
     width: 77vw;
     display: flex;
     flex-direction: column;
@@ -119,13 +118,13 @@
     align-items: center;
 }
 
-.for-you h2 {
+.container h2 {
     width: 100%;
     color: #fff;
     font-weight: 600;
 }
 
-.for-you .organize {
+.organize {
     width: 100%;
     display: flex;
     align-items:center;
@@ -135,47 +134,12 @@
     scrollbar-width: none;
 }
  
-.for-you .organize::-webkit-scrollbar,
-.favorites .organize::-webkit-scrollbar {
+.organize::-webkit-scrollbar {
     display: none;
 }
 
-.for-you .organize .gallery {
+.organize .gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;
 }
-
-/* Estilizando os artistas favoritos */
-
-.favorites {
-    width: 77vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.favorites .container-text {
-    width: 100%;
-    color: #fff;
-    font-weight: 600
-}
-
-.favorites .organize {
-    width: 100%;
-    display: flex;
-    align-items:center;
-    overflow-y: hidden;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-
-.favorites .organize .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 40px;
-}
-

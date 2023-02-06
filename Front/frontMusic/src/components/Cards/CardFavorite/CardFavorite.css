@@ -1,4 +1,4 @@
-.favorites .image-round {
+.image-round {
     width: 264px;
     height: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.favorites .image-round img {
+.image-round img {
     height: 264px;
     width: 264px;
     border-radius: 100%;
@@ -15,11 +15,11 @@
     cursor: pointer;
 }
 
-.favorites .image-round img:hover {
+.image-round img:hover {
     opacity: 0.6;
 }
 
-.favorites .image-round span {
+.image-round span {
     color: #fff;
     font-size: 17px;
     line-height: 18px;
@@ -28,11 +28,11 @@
     margin-top: 5px;
 }
 
-.favorites .image-round span:hover {
+.image-round span:hover {
     text-decoration: underline;
 }
 
-.favorites .image-round p{
+.image-round p{
     font-size: 14px;
     line-height: 18px;
     color: #a2a2ad;

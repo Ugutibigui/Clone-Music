@@ -2,6 +2,7 @@ import CardArtist from '../../Cards/CardArtist/CardArtist'
 import CardRectangle from '../../Cards/CardRectangle/CardRectangle'
 import CardForYou from '../../Cards/CardForYou/CardForYou'
 import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
+import CardLovePlaylist from '../../Cards/CardLovePlaylist/CardLovePlaylist'
 import './Music.css'
 
 function Music() {
@@ -35,7 +36,7 @@ function Music() {
             </section>
 
             <section className='channel'>
-                <div className="for-you">
+                <div className="container">
                     <h2>Feito para você</h2>
 
                     <div className='organize'>
@@ -53,10 +54,8 @@ function Music() {
             </section>
 
             <section className='channel'>
-                <div className="favorites">
-                    <div className="container-text">
-                        <h2>Seus artistas favoritos</h2>
-                    </div> 
+                <div className="container">
+                    <h2>Seus artistas favoritos</h2>
 
                     <div className='organize'>
                         <div className="gallery">
@@ -64,6 +63,21 @@ function Music() {
                             <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/18b811f5b9bac7241958b29682cae546/264x264-000000-80-0-0.jpg' name='Jorge & Mateus' fans='9.445.978 fãs' />
                             <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs' />
                             <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs' />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='channel'>
+                <div className="container">
+                    <h2>Playlisst que você vai amar</h2>
+
+                    <div className="organize">
+                        <div className="gallery">
+                            <CardLovePlaylist/>
+                            <CardLovePlaylist/>
+                            <CardLovePlaylist/>
+                            <CardLovePlaylist/>
                         </div>
                     </div>
                 </div>
