@@ -1,7 +1,7 @@
-import CardArtist from '../../Cards/CardArtist'
-import CardRectangle from '../../Cards/CardRectangle'
-import CardForYou from '../../Cards/CardForYou'
-import CardFavorite from '../../Cards/CardFavorite'
+import CardArtist from '../../Cards/CardArtist/CardArtist'
+import CardRectangle from '../../Cards/CardRectangle/CardRectangle'
+import CardForYou from '../../Cards/CardForYou/CardForYou'
+import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
 import './Music.css'
 
 function Music() {
@@ -10,7 +10,7 @@ function Music() {
             <section className="channel">
                 <div className="artist-add">
                     <p>Desbloqueie seu Flow, selecionando seus artistas favoritos para obter recomendações melhores.</p>
-                        
+
                     <div className="artists">
                         <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/f2fc4cbd7dce34871582901f7bf3759b/80x80-000000-80-0-0.jpg' id='img-left' />
                         <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/9e0f61326531faad987d27caf6715019/100x100-000000-80-0-0.jpg' id='img-almost-left' />

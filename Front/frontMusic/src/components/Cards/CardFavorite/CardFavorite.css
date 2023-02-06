@@ -1,0 +1,39 @@
+.favorites .image-round {
+    width: 264px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites .image-round img {
+    height: 264px;
+    width: 264px;
+    border-radius: 100%;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.favorites .image-round img:hover {
+    opacity: 0.6;
+}
+
+.favorites .image-round span {
+    color: #fff;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.favorites .image-round span:hover {
+    text-decoration: underline;
+}
+
+.favorites .image-round p{
+    font-size: 14px;
+    line-height: 18px;
+    color: #a2a2ad;
+}

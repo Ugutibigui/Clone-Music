@@ -1,0 +1,11 @@
+.figure-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure-image img {
+    border-radius: 100%;
+    position: absolute;
+}

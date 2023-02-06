@@ -67,18 +67,6 @@
     align-items: center;
 }
 
-.figure-image {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.figure-image img {
-    border-radius: 100%;
-    position: absolute;
-}
-
 #img-center {
     z-index: 3;
 }
@@ -121,50 +109,6 @@
     font-weight: 600;
 }
 
-.quizzes .container-rectangle {
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rectangle {
-    width: 49%; /*retirar isso aqui */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: 400ms;
-}
-
-.rectangle:hover {
-    opacity: 0.6;
-}
-
-.rectangle img {
-    width: 17%;
-}
-
-.rectangle-text {
-    height: 80px;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    color: #ffffffd5;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-#title {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
 /* Estilizando o Feito para voce */
 
 .for-you {
@@ -203,91 +147,6 @@
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;
-}
-
-.image-singer {
-    width: 264px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.image-singer p {
-    color: #fff;
-    cursor: pointer;
-    line-height: 18px;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: Open Sans;
-}
-
-.image-singer p:hover {
-    text-decoration: underline;
-}
-
-.image-singer .image {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-singer .image img {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 400ms;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-.logo-daily {
-    background: linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.7));
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: end;
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.logo-daily .svg-icon {
-    padding-bottom: 10px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.play-button {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-}
-
-.play-button button {
-    border: none;
-    height: 55px;
-    width: 55px;
-    border-radius: 100%;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-}
-
-.play-button button svg {
-    width: 25px;
-    height: 25px;
 }
 
 /* Estilizando os artistas favoritos */
@@ -329,42 +188,3 @@
     gap: 40px;
 }
 
-.favorites .image-round {
-    width: 264px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.favorites .image-round img {
-    height: 264px;
-    width: 264px;
-    border-radius: 100%;
-    transition: 400ms;
-    cursor: pointer;
-}
-
-.favorites .image-round img:hover {
-    opacity: 0.6;
-}
-
-.favorites .image-round span {
-    color: #fff;
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.favorites .image-round span:hover {
-    text-decoration: underline;
-}
-
-.favorites .image-round p{
-    font-size: 14px;
-    line-height: 18px;
-    color: #a2a2ad;
-}

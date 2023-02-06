@@ -1,0 +1,18 @@
+.cardOption {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	cursor: pointer;
+	transition: 400ms;
+	height: 46px;
+}
+
+.cardOption:hover,
+.spans span:hover {
+	color: #ef5466;
+}
+
+.cardOption svg {
+	padding-right: 15px;
+}

@@ -1,4 +1,4 @@
-import '../Content/Musica/Music'
+import './CardForYou.css'
 import { ImPlay3 } from 'react-icons/im'
 import { FaDeezer } from 'react-icons/fa'
 

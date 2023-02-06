@@ -1,3 +1,5 @@
+import './CardArtist.css'
+
 function CardArtist(props) {
 	return (
 		<div className="figure-image">

@@ -1,3 +1,5 @@
+import './CardOption.css'
+
 function CardOption(props) {
 	return (
 		<li className='cardOption'>
