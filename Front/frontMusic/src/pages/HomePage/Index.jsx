@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Index.css'
 import Music from '../../components/Content/Musica/Music'
+import ModalLogin from '../../components/Content/ModalLogin/ModalLogin'
 
 import deezer from '../../assets/deezerWhite.png'
 import { FaMusic } from 'react-icons/fa'
@@ -18,7 +19,9 @@ import CardOption from '../../components/Cards/CardOption/CardOption'
 function Index() {
 
 	return (
+
 		<div className="App">
+			<ModalLogin/>	
 			<div className="top">
 				<div className='left-menu'>
 					<div className="top-menu">
@@ -70,7 +73,7 @@ function Index() {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button> <MdAccountCircle size={30} /> </button>
+								<button id='profile'> <MdAccountCircle size={30} /> </button>
 							</div>
 						</div>
 					</header>	

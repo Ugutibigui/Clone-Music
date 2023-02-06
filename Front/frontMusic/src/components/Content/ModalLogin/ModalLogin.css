@@ -1,0 +1,98 @@
+.opacity-body {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    place-items: center;
+    z-index: 7;
+    position: absolute;
+}
+
+.opacity-body section {
+    background-color: #303030;
+    /*background: linear-gradient(126.05deg,rgb(241 42 42/90%) 25.95%,#bf1ceb 44.46%,#06ad57 65.35%,rgb(6 173 87/60%) 76.7%);*/
+    min-width: 540px;
+    min-height: 580px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.text-click {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.text-click span {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.text-click p,
+form label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.text-click strong {
+    color: #ef5466;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.text-click strong:hover {
+    color: #9b2e3b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 500px;
+}
+
+form input {
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+form button {
+    width: 500px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: #ef5466;
+    color: #fff;
+    margin-bottom: 40px;
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #9b2e3b;
+}
+
+#forget {
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#forget:hover {
+    color: #ef5466;
+}
