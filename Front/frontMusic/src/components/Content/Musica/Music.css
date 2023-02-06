@@ -130,8 +130,7 @@
 }
 
 .rectangle {
-    height: calc(20vh - 60px);
-    width: 49%;
+    width: 49%; /*retirar isso aqui */
     display: flex;
     align-items: center;
     flex-direction: row;

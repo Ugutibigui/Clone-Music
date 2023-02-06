@@ -41,6 +41,12 @@ function Music() {
                     <figure>
                         <div className="gallery">
                             <CardForYou />
+                            <CardForYou />
+                            <CardForYou />
+                            <CardForYou />
+                            <CardForYou />
+                            <CardForYou />
+                            <CardForYou />
                         </div>
                     </figure>
                 </div>

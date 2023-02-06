@@ -10,6 +10,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(cookieParser())
 
+const createUser = require("./Router/user/createUser")
+app.use("/user/createUser", createUser)
+
 const login = require("./Router/user/login")
 app.use("/user/login", login)
 

@@ -27,11 +27,8 @@ router.post('/', async (req, res) => {
             }
 
             const [login] = await db.searchInfosLogin(param);
-            console.log(login.length)
 
             if (login.length > 0) {
-
-                  console.log(login)
                   
                    let Token = await jwt.sign({
                         id: login.id,
@@ -44,7 +41,7 @@ router.post('/', async (req, res) => {
                   response.ok = true
                   response.message = 'logged'
                   res.cookie('Token', Token);
-                  res.sendStatus(200);
+                  res.status(200).send(response)
             } else {
                   response.ok = false
                   response.message = 'E-mail ou senha incorretos'

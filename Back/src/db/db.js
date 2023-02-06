@@ -17,11 +17,20 @@ async function connect(){
   async function searchInfosLogin(param){
       const conn = await connect();
       console.log("aqui")
-      const sql = 'SELECT * FROM users WHERE email = ? and password = ?;'
+      const sql = 'SELECT * FROM users WHERE email = ? and password = SHA2(?,256);'
       const values = [param.email, param.password]
       return await conn.query(sql,values)
   }
+  
+
+  async function createUser(param){
+    const conn = await connect()
+    const sql = 'INSERT INTO users(name, email, password) VALUES(?,?,SHA2(?,256));'
+    const values = [param.name, param.email, param.password]
+    await conn.query(sql, values)
+  }
 
   module.exports = {
-      searchInfosLogin
+      searchInfosLogin,
+      createUser
   }
