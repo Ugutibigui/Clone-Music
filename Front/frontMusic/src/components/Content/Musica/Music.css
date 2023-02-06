@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .channel .artist-add {
@@ -94,7 +95,6 @@
 /* Estilizando section de quizzes */
 
 .channel .quizzes {
-    margin-top: 50px;
     width: 77vw;
     height: 20vh;
     display: flex;
@@ -112,9 +112,7 @@
 /* Estilizando o Feito para voce */
 
 .for-you {
-    margin-top: 50px;
     width: 77vw;
-    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,9 +125,8 @@
     font-weight: 600;
 }
 
-.for-you figure {
+.for-you .organize {
     width: 100%;
-    height: 45vh;
     display: flex;
     align-items:center;
     overflow-y: hidden;
@@ -137,13 +134,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
-.for-you figure::-webkit-scrollbar,
-.favorites figure::-webkit-scrollbar {
+ 
+.for-you .organize::-webkit-scrollbar,
+.favorites .organize::-webkit-scrollbar {
     display: none;
 }
 
-.for-you figure .gallery {
+.for-you .organize .gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;
@@ -152,9 +149,7 @@
 /* Estilizando os artistas favoritos */
 
 .favorites {
-    margin-top: 30px;
     width: 77vw;
-    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,16 +158,12 @@
 
 .favorites .container-text {
     width: 100%;
-    height: 10px;
-    display: flex;
-    align-items: center;
     color: #fff;
     font-weight: 600
 }
 
-.favorites figure {
+.favorites .organize {
     width: 100%;
-    height: calc(40vh - 10px);
     display: flex;
     align-items:center;
     overflow-y: hidden;
@@ -182,7 +173,7 @@
 }
 
 
-.favorites figure .gallery {
+.favorites .organize .gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;
