@@ -7,7 +7,7 @@
 }
 
 .rectangle {
-    width: 49%; /*retirar isso aqui */
+    width: 49%;
     display: flex;
     align-items: center;
     flex-direction: row;

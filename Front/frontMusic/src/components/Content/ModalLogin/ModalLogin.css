@@ -5,11 +5,26 @@
     place-items: center;
     z-index: 7;
     position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.opacity-body::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+.opacity-body::-webkit-scrollbar {
+	width: 8px;
+}
+
+.opacity-body::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
 }
 
 .opacity-body section {
     background-color: #303030;
-    /*background: linear-gradient(126.05deg,rgb(241 42 42/90%) 25.95%,#bf1ceb 44.46%,#06ad57 65.35%,rgb(6 173 87/60%) 76.7%);*/
     min-width: 540px;
     min-height: 580px;
     padding: 20px;
@@ -85,7 +100,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #9b2e3b;
+    background-color: #b33846;
 }
 
 #forget {

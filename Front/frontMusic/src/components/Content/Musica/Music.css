@@ -23,15 +23,7 @@
 	border-radius: 20px;
 }
 
-.channel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.channel .artist-add {
+.artist-add {
     width: 800px;
     height: 280px;
     display: flex;
@@ -42,7 +34,7 @@
     font-size: 15px;
 }
 
-.channel .artist-add button{
+.artist-add button{
     height: 40px;
     width: 200px;
     background-color: #EF5466;
@@ -55,7 +47,7 @@
     cursor: pointer;
 }
 
-.channel .artist-add button:hover {
+.artist-add button:hover {
     background-color: #aa2938;
 }
 
@@ -67,6 +59,8 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Distanciando as imagens da primeira section */
 
 #img-center {
     z-index: 3;
@@ -94,7 +88,7 @@
 
 /* Estilizando section de quizzes */
 
-.channel .quizzes {
+.quizzes {
     width: 77vw;
     display: flex;
     flex-direction: column;
@@ -106,40 +100,4 @@
     width: 100%;
     color: #fff;
     font-weight: 600;
-}
-
-/* Estilizando o Feito para voce */
-
-.container {
-    width: 77vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container h2 {
-    width: 100%;
-    color: #fff;
-    font-weight: 600;
-}
-
-.organize {
-    width: 100%;
-    display: flex;
-    align-items:center;
-    overflow-y: hidden;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
- 
-.organize::-webkit-scrollbar {
-    display: none;
-}
-
-.organize .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 40px;
 }

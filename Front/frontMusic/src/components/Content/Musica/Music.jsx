@@ -2,7 +2,8 @@ import CardArtist from '../../Cards/CardArtist/CardArtist'
 import CardRectangle from '../../Cards/CardRectangle/CardRectangle'
 import CardForYou from '../../Cards/CardForYou/CardForYou'
 import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
-import CardLovePlaylist from '../../Cards/CardLovePlaylist/CardLovePlaylist'
+import CardCube from '../../Cards/CardCube/CardCube'
+import Channel from '../../Section/Channel/Channel'
 import './Music.css'
 
 function Music() {
@@ -35,53 +36,12 @@ function Music() {
                 </div>
             </section>
 
-            <section className='channel'>
-                <div className="container">
-                    <h2>Feito para você</h2>
-
-                    <div className='organize'>
-                        <div className="gallery">
-                            <CardForYou />
-                            <CardForYou />
-                            <CardForYou />
-                            <CardForYou />
-                            <CardForYou />
-                            <CardForYou />
-                            <CardForYou />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='channel'>
-                <div className="container">
-                    <h2>Seus artistas favoritos</h2>
-
-                    <div className='organize'>
-                        <div className="gallery">
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' name='Gusttavo Lima' fans='7.137.751 fãs' />
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/18b811f5b9bac7241958b29682cae546/264x264-000000-80-0-0.jpg' name='Jorge & Mateus' fans='9.445.978 fãs' />
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs' />
-                            <CardFavorite image='https://e-cdns-images.dzcdn.net/images/artist/4b5733b0e49a754c4c776c9228990972/264x264-000000-80-0-0.jpg' name='Henrique & Juliano' fans='8.140.853 fãs' />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='channel'>
-                <div className="container">
-                    <h2>Playlisst que você vai amar</h2>
-
-                    <div className="organize">
-                        <div className="gallery">
-                            <CardLovePlaylist/>
-                            <CardLovePlaylist/>
-                            <CardLovePlaylist/>
-                            <CardLovePlaylist/>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Channel h2='Feito para você'  h3='' card={CardForYou} RequestAPI=''/>
+            <Channel h2='Seus artistas favoritos' h3='' card={CardFavorite} RequestAPI=''/>
+            <Channel h2='Playlist que você vai amar' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' card={CardCube} RequestAPI='' />
+            <Channel h2='Os sons do verão' h3='' card={CardCube} RequestAPI='' />
+            
         </div>
     )
 }

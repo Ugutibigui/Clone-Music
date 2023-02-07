@@ -1,25 +1,24 @@
-.image-round {
+.image-cube {
     width: 264px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 5px;
 }
 
-.image-round img {
+.image-cube img {
     height: 264px;
     width: 264px;
-    border-radius: 200px;
+    border-radius: 5px;
     transition: 400ms;
     cursor: pointer;
 }
 
-.image-round img:hover {
+.image-cube img:hover {
     opacity: 0.6;
 }
 
-.image-round span {
+.image-cube span {
     color: #fff;
     font-size: 17px;
     line-height: 18px;
@@ -28,12 +27,12 @@
     margin-top: 5px;
 }
 
-.image-round span:hover {
+.image-cube span:hover {
     text-decoration: underline;
 }
 
-.image-round p{
-    font-size: 14px;
+.image-cube p{
+    font-size: 16px;
     line-height: 18px;
     color: #a2a2ad;
 }

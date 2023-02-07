@@ -1,0 +1,44 @@
+.channel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 77vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h2 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.container h3  {
+    color: #a2a2ad;
+    font-weight: 400;
+}
+
+.organize {
+    width: 100%;
+    display: flex;
+    align-items:center;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+ 
+.organize::-webkit-scrollbar {
+    display: none;
+}
+
+.organize .gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+}

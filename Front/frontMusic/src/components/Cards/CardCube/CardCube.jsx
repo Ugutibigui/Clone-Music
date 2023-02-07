@@ -1,6 +1,6 @@
-import './CardLovePlaylist.css'
+import './CardCube.css'
 
-function CardLovePlaylist(props) {
+function CardCube(props) {
     return (
         <div className="image-cube">
             <img src='https://e-cdns-images.dzcdn.net/images/playlist/6ebfed888b3b116667d2b2897c995f29/264x264-000000-80-0-0.jpg' alt="Artista" />
@@ -11,4 +11,4 @@ function CardLovePlaylist(props) {
         </div>
     )
 }
-export default CardLovePlaylist
+export default CardCube
