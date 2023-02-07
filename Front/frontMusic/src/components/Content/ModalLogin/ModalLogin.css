@@ -1,26 +1,13 @@
-.opacity-body {
+.modal-content {
+    z-index: 28;
+}
+
+.opacity-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
-    display: none;
-    place-items: center;
-    z-index: 7;
-    position: absolute;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.opacity-body::-webkit-scrollbar-track {
-	background-color: #191922;
-	border-left: 1px solid #45454e;
-}
-
-.opacity-body::-webkit-scrollbar {
-	width: 8px;
-}
-
-.opacity-body::-webkit-scrollbar-thumb {
-	background: #686666;
-	border-radius: 20px;
 }
 
 .opacity-body section {

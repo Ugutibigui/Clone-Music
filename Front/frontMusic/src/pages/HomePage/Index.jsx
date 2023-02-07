@@ -17,11 +17,13 @@ import { MdAccountCircle } from 'react-icons/md'
 import CardOption from '../../components/Cards/CardOption/CardOption'
 
 function Index() {
+	const [modalOpen, setModalOpen] = useState(false)
+	//valor armazenado, armazenado
 
 	return (
 
 		<div className="App">
-			<ModalLogin/>	
+			<ModalLogin open={modalOpen} setOpen={status => setModalOpen(status)}/>	
 			<div className="top">
 				<div className='left-menu'>
 					<div className="top-menu">
@@ -73,7 +75,7 @@ function Index() {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button id='profile'> <MdAccountCircle size={30} /> </button>
+								<button id='profile'> <MdAccountCircle size={30} onClick={() => setModalOpen(true)}/> </button>
 							</div>
 						</div>
 					</header>	
