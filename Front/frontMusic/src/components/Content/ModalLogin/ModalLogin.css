@@ -2,7 +2,7 @@
     z-index: 28;
 }
 
-.opacity-body{
+.opacity-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,8 @@
 }
 
 .opacity-body section {
-    background-color: #303030;
+    background-position: center top;
+    background-image: url('../../../assets/background-login.jpeg');
     min-width: 540px;
     min-height: 580px;
     padding: 20px;
@@ -62,6 +63,8 @@
 }
 
 .form input {
+    box-sizing: border-box;
+    padding: 15px;
     width: 500px;
     height: 50px;
     border: none;

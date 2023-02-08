@@ -1,0 +1,28 @@
+.categorie {
+    width: 264px;
+    height: 132px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+
+.categorie:hover {
+    opacity: 0.6;
+}
+
+.categorie img {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.categorie p {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+}

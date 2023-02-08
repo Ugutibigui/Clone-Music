@@ -4,6 +4,7 @@ import CardForYou from '../../Cards/CardForYou/CardForYou'
 import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
 import CardCube from '../../Cards/CardCube/CardCube'
 import Channel from '../../Section/Channel/Channel'
+import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
 import './Music.css'
 
 function Music() {
@@ -41,6 +42,12 @@ function Music() {
             <Channel h2='Playlist que você vai amar' h3='' card={CardCube} RequestAPI='' />
             <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' card={CardCube} RequestAPI='' />
             <Channel h2='Os sons do verão' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Categorias' h3='' card={CardCategorie} RequestAPI='' />
+            <Channel h2='Lançamentos para você' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='100% para você' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Já que você gostou de: ' h3='' card={CardFavorite} RequestAPI='' />
+            <Channel h2='Gêneros: ' h3='' card={CardCategorie} RequestAPI='' />
+            <Channel h2='Playlists populares' h3='' card={CardCube} RequestAPI='' />
             
         </div>
     )
