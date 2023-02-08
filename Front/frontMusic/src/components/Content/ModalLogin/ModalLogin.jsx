@@ -1,11 +1,32 @@
 import './ModalLogin.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 
 function ModalLogin(props) {
-    console.log(props.open)
 
+    const [email, setEmail] = useState('')
+    const [password, setpassword] = useState('')
+
+    const Login = async () => {
+        fetch('http://localhost:8000/user/login', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        }).then((response) => response.json())
+        .then(async(data) => {
+            if (data.ok === true) {
+                props.setOpen(false)
+            }
+        })
+    }
+    
     const style = {
         position: 'absolute',
         top: '50%',
@@ -14,13 +35,13 @@ function ModalLogin(props) {
         width: 400,
         bgcolor: 'background.paper',
         boxShadow: 24,
-      };
+    };
     return (
-        <Modal open={props.open} 
-        onClose={() => props.setOpen(false)}
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        closeAfterTransition>
+        <Modal open={props.open}
+            onClose={() => props.setOpen(false)}
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            closeAfterTransition>
             <Box className="opacity-body" style={style}>
                 <section>
                     <div className="text-click">
@@ -28,15 +49,15 @@ function ModalLogin(props) {
                         <p>Ainda não possui uma conta Deezer? <strong>CADASTRE-SE</strong></p>
                     </div>
 
-                    <form>
+                    <div className='form'>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id='email' />
+                        <input value={email} onChange={(text) => setEmail(text.target.value)} type="email" id='email' />
 
                         <label htmlFor="password">Senha:</label>
-                        <input type="password" id='password' />
+                        <input value={password} onChange={(text) => setpassword(text.target.value)} type="password" id='password' />
 
-                        <button>FAZER LOGIN</button>
-                    </form>
+                        <button onClick={() => Login()}>FAZER LOGIN</button>
+                    </div>
 
                     <div className="text-click">
                         <p id='forget'>ESQUECEU SUA SENHA?</p>

@@ -37,7 +37,7 @@
 }
 
 .text-click p,
-form label {
+.form label {
     color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
@@ -53,7 +53,7 @@ form label {
     color: #9b2e3b;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,7 @@ form {
     width: 500px;
 }
 
-form input {
+.form input {
     width: 500px;
     height: 50px;
     border: none;
@@ -72,7 +72,7 @@ form input {
     margin-bottom: 30px;
 }
 
-form button {
+.form button {
     width: 500px;
     height: 60px;
     font-size: 16px;
@@ -86,7 +86,7 @@ form button {
     transition: 400ms;
 }
 
-form button:hover {
+.form button:hover {
     background-color: #b33846;
 }
 
