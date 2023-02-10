@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: start;
     gap: 5px;
+    position: relative;
 }
 
 .radio-image {
@@ -16,19 +17,49 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    position: relative;
     cursor: pointer;
-    transition: 400ms;
-}
-
-.radio-image:hover {
-    opacity: 0.7;
 }
 
 .radio-image img {
     height: 212px;
     width: 212px;
     border-radius: 10px;
+    transition: 400ms;
+    position: absolute;
+}
+
+.radio-image img:hover {
+    opacity: 0.6;
+}
+
+.play-button-radio{
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    margin-top: 140px;
+    margin-left: 10px;
+}
+
+.play-button-radio button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.play-button-radio button svg {
+    width: 18px;
+    height: 18px;
 }
 
 .cardRadio span {
