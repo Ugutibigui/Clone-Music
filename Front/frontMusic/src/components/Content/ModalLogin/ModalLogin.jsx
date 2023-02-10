@@ -2,6 +2,7 @@ import './ModalLogin.css'
 import { useState, useEffect } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import api from '../../../services/api';
 
 function ModalLogin(props) {
 
@@ -9,22 +10,23 @@ function ModalLogin(props) {
     const [password, setpassword] = useState('')
 
     const Login = async () => {
-        fetch('http://localhost:8000/user/login', {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password
+        const body = {
+            email: email,
+            password: password
+        }
+
+        try{
+            await api.post('user/login', body)
+            .then((response) => {
+                if(response.data.ok === true){
+                    props.setOpen(false)
+                }else{
+                    alert("Email ou senha incorretos")
+                }
             })
-        }).then((response) => response.json())
-        .then(async(data) => {
-            if (data.ok === true) {
-                props.setOpen(false)
-            }
-        })
+        }catch{
+            console.log("Erro")
+        }
     }
     
     const style = {
