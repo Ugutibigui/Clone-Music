@@ -7,11 +7,11 @@ function CardFavorite(props) {
 
     const [className, setClassName] = useState('btn');
 
-    const handleMouseEnter = () => {
+    const ShowButtons = () => {
         setClassName('add-button');
     };
 
-    const handleMouseLeave = () => {
+    const HideButtons = () => {
         setClassName('btn');
     };
 
@@ -19,8 +19,8 @@ function CardFavorite(props) {
         <div className="image-round">
             <div className="image-center">
                 <img 
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave} 
+                onMouseEnter={ShowButtons}
+                onMouseLeave={HideButtons} 
                 src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className="buttons-round">

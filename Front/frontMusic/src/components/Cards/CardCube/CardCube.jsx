@@ -8,11 +8,11 @@ function CardCube(props) {
 
     const [className, setClassName] = useState('btn');
 
-    const handleMouseEnter = () => {
+    const ShowButtons = () => {
         setClassName('add-button');
     };
 
-    const handleMouseLeave = () => {
+    const HideButtons = () => {
         setClassName('btn');
     };
 
@@ -20,8 +20,8 @@ function CardCube(props) {
         <div className="image-cube">
             <div className="image-end">
                 <img
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave} 
+                onMouseEnter={ShowButtons}
+                onMouseLeave={HideButtons} 
                 src='https://e-cdns-images.dzcdn.net/images/playlist/6ebfed888b3b116667d2b2897c995f29/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className="play-button-cube">

@@ -2,12 +2,29 @@
     z-index: 28;
 }
 
+@keyframes opacity {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
 .opacity-body {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    animation: opacity 400ms normal;
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(65deg)
+    } to {
+        transform: rotateY(0)
+    }
 }
 
 .opacity-body section {
@@ -21,6 +38,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    animation: flip 500ms linear;
 }
 
 .text-click {

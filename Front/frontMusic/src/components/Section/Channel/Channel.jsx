@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './Channel.css'
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
+
+// Verificando se existe h3
 
 const h3 = (props) => {
     if (props.h3) {
@@ -9,6 +12,19 @@ const h3 = (props) => {
 }
 
 function Channel(props) {
+
+    // Slider
+
+    const [index, setIndex] = useState(0);
+
+    const handleNext = () => {
+        setIndex(index + 1);
+    };
+
+    const handlePrev = () => {
+        setIndex(index - 1);
+    };
+
     return (
         <section className='channel'>
             <div className="container">
@@ -20,8 +36,8 @@ function Channel(props) {
                     </div>
 
                     <div className="sliders">
-                        <button id='button-left'><AiOutlineLeft /></button>
-                        <button id='button-right'><AiOutlineRight /></button>
+                        <button id='button-left' onClick={() => handlePrev()} ><AiOutlineLeft /></button>
+                        <button id='button-right' onClick={() => handleNext()}><AiOutlineRight /></button>
                     </div>
                 </div>
 
