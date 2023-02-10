@@ -68,17 +68,20 @@
     cursor: pointer;
 }
 
-.play-button button {
+.play-button button,
+.play-button-end button {
     border: none;
     height: 55px;
     width: 55px;
-    border-radius: 100%;
+    border-radius: 100px;
     cursor: pointer;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.play-button button svg {
+.play-button button svg,
+.play-button-end button svg {
     width: 25px;
     height: 25px;
 }

@@ -5,6 +5,8 @@ import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
 import CardCube from '../../Cards/CardCube/CardCube'
 import Channel from '../../Section/Channel/Channel'
 import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
+import CardHighlight from '../../Cards/CardHighlight/CardHighlight'
+import CardRadio from '../../Cards/CardRadio/CardRadio'
 import './Music.css'
 
 function Music() {
@@ -48,7 +50,13 @@ function Music() {
             <Channel h2='Já que você gostou de: ' h3='' card={CardFavorite} RequestAPI='' />
             <Channel h2='Gêneros: ' h3='' card={CardCategorie} RequestAPI='' />
             <Channel h2='Playlists populares' h3='' card={CardCube} RequestAPI='' />
-            
+            <Channel h2='Destaques' h3='' card={CardHighlight} RequestAPI='' />
+            <Channel h2='Sextou' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Charts' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Álbuns mais ouvidos' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Só na Deezer' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='No ritmo dos anos 2000' h3='' card={CardCube} RequestAPI='' />
+            <Channel h2='Rádios para você' h3='' card={CardRadio} RequestAPI='' />
         </div>
     )
 }

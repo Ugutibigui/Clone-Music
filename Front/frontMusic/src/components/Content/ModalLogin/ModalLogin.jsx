@@ -37,7 +37,8 @@ function ModalLogin(props) {
         width: 400,
         bgcolor: 'background.paper',
         boxShadow: 24,
-    };
+    }
+    
     return (
         <Modal open={props.open}
             onClose={() => props.setOpen(false)}

@@ -1,0 +1,43 @@
+.cardRadio {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.radio-image {
+    width: 264px;
+    height: 264px;
+    background-color: #191922;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.radio-image:hover {
+    opacity: 0.7;
+}
+
+.radio-image img {
+    height: 212px;
+    width: 212px;
+    border-radius: 10px;
+}
+
+.cardRadio span {
+    color: #92929d;
+    font-size: 15px;
+}
+
+.cardRadio #channel {
+    color: #fff;
+    font-size: 18px;
+}

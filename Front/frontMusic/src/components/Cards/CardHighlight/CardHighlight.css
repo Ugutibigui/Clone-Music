@@ -1,0 +1,26 @@
+.highlight {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+}
+
+.highlight:hover {
+    opacity: 0.7;
+}
+
+.highlight img {
+    border-radius: 5px;
+    width: 570px;
+}
+
+.play-button-end {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
