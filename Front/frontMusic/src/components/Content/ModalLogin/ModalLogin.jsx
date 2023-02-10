@@ -18,11 +18,7 @@ function ModalLogin(props) {
         try{
             await api.post('user/login', body)
             .then((response) => {
-                if(response.data.ok === true){
-                    props.setOpen(false)
-                }else{
-                    alert("Email ou senha incorretos")
-                }
+                response.data.ok === true ? props.setOpen(false) :  alert("Email ou senha incorretos")
             })
         }catch{
             console.log("Erro")

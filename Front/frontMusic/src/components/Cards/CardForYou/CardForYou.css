@@ -68,8 +68,7 @@
     cursor: pointer;
 }
 
-.play-button button,
-.play-button-end button {
+.play-button button {
     border: none;
     height: 55px;
     width: 55px;
@@ -80,8 +79,7 @@
     align-items: center;
 }
 
-.play-button button svg,
-.play-button-end button svg {
+.play-button button svg {
     width: 25px;
     height: 25px;
 }
