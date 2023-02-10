@@ -1,29 +1,51 @@
 .highlight {
+    width: 624px;
     position: relative;
-    cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: end;
     transition: 400ms;
-}
-
-.highlight:hover {
-    opacity: 0.7;
+    gap: 5px;
 }
 
 .highlight img {
     border-radius: 5px;
     width: 570px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.highlight img:hover {
+    opacity: 0.6;
 }
 
 .play-button-highlight {
-    position: relative;
+    position: absolute;
     z-index: 2;
     width: 55px;
-    border-radius: 100%;
+    border-radius: 100px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-left: 15px;
     margin-bottom: 15px;
+}
+
+.play-button-highlight button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.play-button-highlight button svg {
+    width: 20px;
+    height: 20px;
 }
