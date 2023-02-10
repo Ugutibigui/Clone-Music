@@ -13,14 +13,51 @@
     justify-content: center;
 }
 
-.container h2 {
+.headers {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+}
+
+.texts h2 {
     color: #fff;
     font-weight: 600;
 }
 
-.container h3  {
+.texts h3  {
     color: #a2a2ad;
     font-weight: 400;
+}
+
+.sliders {
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliders button {
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+    border-radius: 100px;
+}
+
+.sliders button:hover {
+    background-color: #80808070;
 }
 
 .organize {
