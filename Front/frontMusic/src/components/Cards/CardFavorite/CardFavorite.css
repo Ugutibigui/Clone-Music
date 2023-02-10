@@ -7,6 +7,16 @@
     gap: 5px;
 }
 
+.image-center {
+    width: 264px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    cursor: pointer;
+    transition: 400ms;
+}
+
 .image-round img {
     height: 264px;
     width: 264px;
@@ -17,6 +27,40 @@
 
 .image-round img:hover {
     opacity: 0.6;
+}
+
+.buttons-round{
+    position: absolute;
+    z-index: 2;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.buttons-round button {
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.buttons-round button svg {
+    width: 20px;
+    height: 20px;
+}
+
+#hearth {
+    color: #EF5466;
 }
 
 .image-round span {

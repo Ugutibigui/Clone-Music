@@ -33,7 +33,6 @@
     position: relative;
     z-index: 2;
     width: 150px;
-    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -52,7 +51,7 @@
     background-color: #fff;
     color: #000;
     cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .play-button-cube button svg {
