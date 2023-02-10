@@ -17,10 +17,13 @@
 }
 
 .play-button-end {
-    position: absolute;
-    width: 90%;
-    height: 90%;
+    position: relative;
+    z-index: 2;
+    width: 55px;
+    border-radius: 100%;
     display: flex;
-    justify-content: start;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }

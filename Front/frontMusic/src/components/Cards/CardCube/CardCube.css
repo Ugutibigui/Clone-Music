@@ -4,27 +4,32 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    position: relative;
 }
 
 .image-end {
     height: 264px;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: end;
     cursor: pointer;
     transition: 400ms;
-    cursor: pointer;
 }
 
-.image-end:hover {
+/* .image-end:hover {
     opacity: 0.7;
-}
+} */
 
 .image-end img {
     height: 264px;
     width: 264px;
     border-radius: 5px;
+    position: absolute;
+}
+
+.image-end img:hover{
+    opacity: 0.6;
 }
 
 .image-cube span {
@@ -42,4 +47,16 @@
     font-size: 16px;
     line-height: 18px;
     color: #a2a2ad;
+}
+
+.play-button-end{
+    position: relative;
+    z-index: 2;
+    width: 55px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
