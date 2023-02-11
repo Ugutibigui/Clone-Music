@@ -60,7 +60,7 @@
     background-color: #80808070;
 }
 
-.organize {
+.gallery {
     width: 100%;
     display: flex;
     align-items:center;
@@ -68,14 +68,16 @@
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
  
-.organize::-webkit-scrollbar {
+.gallery::-webkit-scrollbar {
     display: none;
 }
 
-.organize .gallery {
+.gallery .carrosel {
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;
+    
 }

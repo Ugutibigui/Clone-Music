@@ -1,29 +1,28 @@
-import { useState } from 'react';
-import './Channel.css'
+import { useState, useRef } from 'react';
+
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
 
-// Verificando se existe h3
-
-const h3 = (props) => {
-    if (props.h3) {
-        return <h3>{props.h3}</h3>
-    }
-}
+import './Channel.css'
 
 function Channel(props) {
 
-    // Slider
+    const h3 = (props) => {
+        if (props.h3) {
+            return <h3>{props.h3}</h3>
+        }
+    }    
 
-    const [index, setIndex] = useState(0);
-
-    const handleNext = () => {
-        setIndex(index + 1);
-    };
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const carrosel = useRef(null)
 
     const handlePrev = () => {
-        setIndex(index - 1);
-    };
+        console.log(carrosel.current.scrollLeft -= carrosel.current.offsetWidth)
+    }
+
+    const handleNext = () => {
+        console.log(carrosel.current.scrollRight += carrosel.current.offsetWidth)
+    }
 
     return (
         <section className='channel'>
@@ -36,13 +35,13 @@ function Channel(props) {
                     </div>
 
                     <div className="sliders">
-                        <button id='button-left' onClick={() => handlePrev()} ><AiOutlineLeft /></button>
-                        <button id='button-right' onClick={() => handleNext()}><AiOutlineRight /></button>
+                        <button id='button-left' onClick={handlePrev} ><AiOutlineLeft /></button>
+                        <button id='button-right' onClick={handleNext}><AiOutlineRight /></button>
                     </div>
                 </div>
 
-                <div className="organize">
-                    <div className="gallery">
+                <div className="gallery" >
+                    <div className="carrosel" ref={carrosel}>
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
