@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import './CardCube.css'
+
 import { ImPlay3 } from 'react-icons/im'
 import { FiHeart } from 'react-icons/fi'
 import { BsThreeDots } from 'react-icons/bs'

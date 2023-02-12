@@ -1,19 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion'
+import { useState } from 'react';
 
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
 
 import './Channel.css'
 
-function Channel(props) {
-
-    const carousel = useRef()
-    const [width, setWidth] = useState(0)
-
-    useEffect(() => {
-        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth) // scrollWidth - Tamanho maximo de width usado
-    },[])                                                                       // offsetWidth - Tamanho visivel na tela
+function Channel(props) {                                                                    
 
     const h3 = (props) => {
         if (props.h3) {
@@ -37,21 +29,16 @@ function Channel(props) {
                     </div>
                 </div>
 
-                <motion.div className="gallery" 
-                whileTap={{cursor: 'grabbing'}}  // Quando clicar na div o cursor muda
-                ref={carousel}>
-                    <motion.div className="carousel"
-                    drag='x' // Permite a iteração do usuario, arrastando uma div no eixo x
-                    dragConstraints={{right: 0, left: -width}}>
+                <div className="gallery" >
+                    <div className="carousel">
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                    </motion.div>
-                </motion.div>
+                    </div>
+                </div>
             </div>
         </section>
     )
