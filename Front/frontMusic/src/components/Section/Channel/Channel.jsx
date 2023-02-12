@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion'
 
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
@@ -7,21 +8,17 @@ import './Channel.css'
 
 function Channel(props) {
 
+    const carousel = useRef()
+    const [width, setWidth] = useState(0)
+
+    useEffect(() => {
+        setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth) // scrollWidth - Tamanho maximo de width usado
+    },[])                                                                       // offsetWidth - Tamanho visivel na tela
+
     const h3 = (props) => {
         if (props.h3) {
             return <h3>{props.h3}</h3>
         }
-    }    
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const carrosel = useRef(null)
-
-    const handlePrev = () => {
-        console.log(carrosel.current.scrollLeft -= carrosel.current.offsetWidth)
-    }
-
-    const handleNext = () => {
-        console.log(carrosel.current.scrollRight += carrosel.current.offsetWidth)
     }
 
     return (
@@ -35,20 +32,26 @@ function Channel(props) {
                     </div>
 
                     <div className="sliders">
-                        <button id='button-left' onClick={handlePrev} ><AiOutlineLeft /></button>
-                        <button id='button-right' onClick={handleNext}><AiOutlineRight /></button>
+                        <button id='button-left'><AiOutlineLeft /></button>
+                        <button id='button-right'><AiOutlineRight /></button>
                     </div>
                 </div>
 
-                <div className="gallery" >
-                    <div className="carrosel" ref={carrosel}>
+                <motion.div className="gallery" 
+                whileTap={{cursor: 'grabbing'}}  // Quando clicar na div o cursor muda
+                ref={carousel}>
+                    <motion.div className="carousel"
+                    drag='x' // Permite a iteração do usuario, arrastando uma div no eixo x
+                    dragConstraints={{right: 0, left: -width}}>
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
-                    </div>
-                </div>
+                        <props.card image='' title='' fans='' date='' author='' tracks='' />
+                        <props.card image='' title='' fans='' date='' author='' tracks='' />
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     )

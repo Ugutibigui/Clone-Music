@@ -22,7 +22,6 @@
     width: 264px;
     border-radius: 200px;
     transition: 400ms;
-    cursor: pointer;
 }
 
 .image-round img:hover {

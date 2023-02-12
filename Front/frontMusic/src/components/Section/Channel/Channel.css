@@ -69,13 +69,14 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    cursor: grab;
 }
  
 .gallery::-webkit-scrollbar {
     display: none;
 }
 
-.gallery .carrosel {
+.gallery .carousel {
     display: flex;
     flex-flow: row nowrap;
     gap: 40px;

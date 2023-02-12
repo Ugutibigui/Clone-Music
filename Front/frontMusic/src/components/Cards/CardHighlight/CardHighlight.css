@@ -12,7 +12,6 @@
     border-radius: 5px;
     width: 570px;
     transition: 400ms;
-    cursor: pointer;
 }
 
 .highlight img:hover {
