@@ -82,7 +82,7 @@ function Index() {
 						</div>
 					</header>	
 					
-					<Radio/>		
+					<Music/>		
 				</div>
 			</div>
 			<div className='bottom'></div>

@@ -9,12 +9,62 @@
 }
 
 .radio-container {
-    width: 77vw;
+    width: 67vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.radio-container h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.radio-container button {
+    font-size: 16px;
+    color: #fff;
+    background: none;
+    font-weight: 700;
+    cursor: pointer;
+    height: 36px;
+    border-radius: 15px;
+    border: 2px solid #52525D; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .radio-content {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    width: 70vw;
+}
+
+.radio-content li {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.info-content footer {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content footer span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info-content footer p {
+    color: #bebec7;
+    font-size: 14px;
+    font-family: 500;
 }
