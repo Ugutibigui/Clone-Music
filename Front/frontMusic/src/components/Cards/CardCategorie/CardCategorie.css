@@ -14,7 +14,7 @@
 }
 
 .categorie img {
-    border-radius: 10px;
+    border-radius: 5px;
     position: absolute;
     z-index: 1;
 }

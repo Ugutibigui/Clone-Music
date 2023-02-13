@@ -3,6 +3,7 @@ import './Index.css'
 
 import Music from '../../components/Content/Musica/Music'
 import Radio from '../../components/Content/Radios/Radio'
+import Explore from '../../components/Content/Explorar/Explore'
 import ModalLogin from '../../components/Content/ModalLogin/ModalLogin'
 
 import deezer from '../../assets/deezerWhite.png'
@@ -82,7 +83,7 @@ function Index() {
 						</div>
 					</header>	
 					
-					<Music/>		
+					<Explore/>		
 				</div>
 			</div>
 			<div className='bottom'></div>
