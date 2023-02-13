@@ -1,2 +1,5 @@
 # Clone-Music
-##Projeto em desenvolvimento para estudos com React
+## Projeto em desenvolvimento para estudos com React
+
+<hr>
+
