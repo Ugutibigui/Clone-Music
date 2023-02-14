@@ -4,7 +4,9 @@ import './Index.css'
 import Music from '../../components/Content/Musica/Music'
 import Radio from '../../components/Content/Radios/Radio'
 import Explore from '../../components/Content/Explorar/Explore'
-import ModalLogin from '../../components/Content/ModalLogin/ModalLogin'
+
+import ModalProfile from '../../components/Modals/Profile/Profile'
+import ModalLogin from '../../components/Modals/Login/Login'
 
 import deezer from '../../assets/deezerWhite.png'
 import { FaMusic } from 'react-icons/fa'
@@ -20,13 +22,18 @@ import { MdAccountCircle } from 'react-icons/md'
 import CardOption from '../../components/Cards/CardOption/CardOption'
 
 function Index() {
-	const [modalOpen, setModalOpen] = useState(false)
+	const [loginOpen, setloginOpen] = useState(false)
 	//valor armazenado, armazenado
+	const [profileOpen, setprofileOpen] = useState(false)
 
 	return (
 
 		<div className="App">
-			<ModalLogin open={modalOpen} setOpen={status => setModalOpen(status)}/>	
+
+			<ModalLogin open={loginOpen} setOpen={status => setloginOpen(status)}/>	
+
+			<ModalProfile open={profileOpen} setOpen={status => setprofileOpen(status)}/>
+
 			<div className="top">
 				<div className='left-menu'>
 					<div className="top-menu">
@@ -78,12 +85,12 @@ function Index() {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button id='profile'> <MdAccountCircle size={30} onClick={() => setModalOpen(true)}/> </button>
+								<button id='profile'> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)}/> </button>
 							</div>
 						</div>
 					</header>	
 					
-					<Explore/>		
+					<Music/>		
 				</div>
 			</div>
 			<div className='bottom'></div>

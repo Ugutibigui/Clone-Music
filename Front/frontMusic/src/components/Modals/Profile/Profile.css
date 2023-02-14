@@ -1,0 +1,9 @@
+.opacity-profile {
+    position: absolute;
+}
+
+.opacity-profile section {
+    width: 30vw;
+    height: 50vh;
+    background-color: yellowgreen;
+}

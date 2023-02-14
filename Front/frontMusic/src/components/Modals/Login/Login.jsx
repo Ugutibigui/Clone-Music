@@ -1,5 +1,5 @@
-import './ModalLogin.css'
-import { useState, useEffect } from 'react';
+import './Login.css'
+import { useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import api from '../../../services/api';
@@ -41,7 +41,7 @@ function ModalLogin(props) {
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             closeAfterTransition>
-            <Box className="opacity-body" style={style}>
+            <Box className="opacity-login" style={style}>
                 <section>
                     <div className="text-click">
                         <span>Fazer login</span>
