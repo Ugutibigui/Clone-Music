@@ -6,31 +6,24 @@ import Radio from '../../components/Content/Radios/Radio'
 import Explore from '../../components/Content/Explorar/Explore'
 
 import ModalProfile from '../../components/Modals/Profile/Profile'
-import ModalLogin from '../../components/Modals/Login/Login'
 
 import deezer from '../../assets/deezerWhite.png'
-import { FaMusic } from 'react-icons/fa'
-import { FaMicrophoneAlt } from 'react-icons/fa'
-import { MdOutlineRadio } from 'react-icons/md'
+import { FaMusic, FaMicrophoneAlt } from 'react-icons/fa'
+import { MdOutlineRadio, MdFavoriteBorder, MdNotifications, MdAccountCircle } from 'react-icons/md'
 import { GiAbstract050 } from 'react-icons/gi'
-import { MdFavoriteBorder } from 'react-icons/md'
 import { FiSearch } from 'react-icons/fi'
 import { AiFillCloseCircle } from 'react-icons/ai'
-import { MdNotifications } from 'react-icons/md'
-import { MdAccountCircle } from 'react-icons/md'
 
-import CardOption from '../../components/Cards/CardOption/CardOption'
+import CardOption from '../../components/Buttons/ButtonOption/ButtonOption'
 
 function Index() {
-	const [loginOpen, setloginOpen] = useState(false)
+	
 	//valor armazenado, armazenado
 	const [profileOpen, setprofileOpen] = useState(false)
 
 	return (
 
 		<div className="App">
-
-			<ModalLogin open={loginOpen} setOpen={status => setloginOpen(status)}/>	
 
 			<ModalProfile open={profileOpen} setOpen={status => setprofileOpen(status)}/>
 

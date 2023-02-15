@@ -1,4 +1,4 @@
-.cardOption {
+.buttonOption {
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -8,11 +8,11 @@
 	height: 46px;
 }
 
-.cardOption:hover,
+.buttonOption:hover,
 .spans span:hover {
 	color: #ef5466;
 }
 
-.cardOption svg {
+.buttonOption svg {
 	padding-right: 15px;
 }

@@ -1,9 +1,102 @@
+.modal-profile {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .opacity-profile {
-    position: absolute;
+    padding-right: 15px;
+}
+
+@keyframes animation-top {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-100px,0);
+    } to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
 }
 
 .opacity-profile section {
-    width: 30vw;
-    height: 50vh;
-    background-color: yellowgreen;
+    background-color: #23232d;
+    height: calc(100vh - 56px - 80px - 40px);
+    width: 360px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 10px 0px 0px 10px;
+    animation: animation-top 500ms normal;
+}
+
+.opacity-profile section::-webkit-scrollbar-track {
+	background-color: #191922;
+}
+
+.opacity-profile section::-webkit-scrollbar {
+	width: 10px;
+}
+
+.opacity-profile section::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}
+
+.opacity-profile section .profile {
+    border-top: 1px #a2a2ad27 solid;
+    border-bottom: 1px #a2a2ad27 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-profile {
+    box-sizing: border-box;
+    padding-right: 10px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 400ms;
+}
+
+.button-profile:hover {
+    background-color: #505052;
+}
+
+#top-profile {
+    padding-top: 10px;
+}
+
+.image-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.image-profile img {
+    border-radius: 100px;
+}
+
+.button-profile span {
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.get-deezer {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.get-deezer #get-deezer {
+    font-size: 14px;
+    color: #fff;
+}
+
+.get-deezer span {
+    font-size: 13px;
+    color: #686666;
 }
