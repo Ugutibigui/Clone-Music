@@ -1,6 +1,9 @@
 import './ButtonOption.css'
 
 function ButtonOption(props) {
+
+	const content = document.querySelector('.choice-content')
+
 	return (
 		<li className='buttonOption'>
 			<props.icon size={22} />

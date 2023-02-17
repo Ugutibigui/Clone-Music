@@ -4,14 +4,16 @@ import {
     Routes,
     Route
 } from "react-router-dom"
+
 import Index from "./pages/HomePage/Index"
-import Teste from "./pages/Teste/Teste"
+import ScreenLogin from "./pages/Login/ScreenLogin"
+
 export function AppRoutes() {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Index />}/>
-                <Route path="/teste" element={<Teste />}/>
+                <Route path="/login" element={<ScreenLogin />}/>
             </Routes>
         </Router>
     )

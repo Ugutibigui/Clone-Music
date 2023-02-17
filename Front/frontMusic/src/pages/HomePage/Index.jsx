@@ -46,11 +46,11 @@ function Index() {
 					<figure>
 						<div className="options">
 							<ul className='icon-options'>
-								<CardOption icon={FaMusic} title="Música" />
-								<CardOption icon={FaMicrophoneAlt} title="Podcasts" />
-								<CardOption icon={MdOutlineRadio} title="Rádios" />
-								<CardOption icon={GiAbstract050} title="Explorar" />
-								<CardOption icon={MdFavoriteBorder} title="Favoritos" />
+								<CardOption click={Music} icon={FaMusic} title="Música" />
+								<CardOption click='Undefined' icon={FaMicrophoneAlt} title="Podcasts" />
+								<CardOption click={Radio} icon={MdOutlineRadio} title="Rádios" />
+								<CardOption click={Explore} icon={GiAbstract050} title="Explorar" />
+								<CardOption click='Undefined' icon={MdFavoriteBorder} title="Favoritos" />
 							</ul>
 
 							<div className="more-options">
@@ -78,12 +78,14 @@ function Index() {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button id='profile'> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)}/> </button>
+								<button  id='profile'> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)}/> </button>
 							</div>
 						</div>
 					</header>	
 					
-					<Music/>		
+					<div className="choice-content">
+						<Music/>
+					</div>
 				</div>
 			</div>
 			<div className='bottom'></div>
