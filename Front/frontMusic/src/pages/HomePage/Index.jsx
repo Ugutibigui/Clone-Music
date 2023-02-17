@@ -83,9 +83,7 @@ function Index() {
 						</div>
 					</header>	
 					
-					<div className="choice-content">
-						<Music/>
-					</div>
+					<Music/>
 				</div>
 			</div>
 			<div className='bottom'></div>

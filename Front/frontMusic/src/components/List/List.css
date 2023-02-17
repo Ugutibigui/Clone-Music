@@ -1,0 +1,27 @@
+.infos-list span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 38px;
+}
+
+.infos-list ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.infos-list ul li{
+    margin-bottom: 30px;
+    display: list-item;
+    list-style-type: none;
+    color: #bebec7;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.infos-list ul li:hover {
+    color: #fff;
+}

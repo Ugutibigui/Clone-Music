@@ -5,9 +5,7 @@ function List(props) {
     const CreateLi = (array) => {
         const ListInfo = []
 
-        for (let i = 0; i < array.length; i++) {
-            ListInfo.push( <li>{array[i]}</li> )
-        }
+        for (let i = 0; i < array.length; i++) ListInfo.push( <li>{array[i]}</li> )
         return ListInfo
     }
 

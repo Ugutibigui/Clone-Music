@@ -14,8 +14,6 @@ function Profile(props) {
         boxShadow: 24,
     }
 
-    const [loginOpen, setloginOpen] = useState(false)
-
     return (
         <Modal className='modal-profile'
             open={props.open}
