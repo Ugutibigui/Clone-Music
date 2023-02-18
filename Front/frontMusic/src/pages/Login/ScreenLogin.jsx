@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc'
 import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
 import { BsFacebook, BsApple } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 
 import List from '../../components/List/List'
 import backgroundLogin from '../../assets/background-login.jpeg'
@@ -48,7 +49,9 @@ function ScreenLogin() {
 				<img id='backgroundLogin' src={backgroundLogin} alt="" />
 
 				<section>
-					<img src={deezer} alt="Logo Deezer" />
+					<Link to='/'>
+						<img src={deezer} alt="Logo Deezer" />
+					</Link>
 
 					<div className="text-click">
 						<h1>Fazer login</h1>
@@ -77,9 +80,7 @@ function ScreenLogin() {
 						<input value={email} onChange={(text) => setEmail(text.target.value)} type="email" id='email' />
 
 						<label htmlFor="password">Senha:</label>
-						<input value={password} onChan
-
-							ge={(text) => setpassword(text.target.value)} type="password" id='password' />
+						<input value={password} onChange={(text) => setpassword(text.target.value)} type="password" id='password' />
 
 						<button onClick={() => Login()}>FAZER LOGIN</button>
 					</div>
@@ -110,10 +111,10 @@ function ScreenLogin() {
 				<div className="bottom-infos">
 
 					<div className="icons">
-						<BsFacebook size={25}/>
-						<AiFillInstagram size={25}/>
-						<AiFillTwitterCircle size={25}/>
-						<AiFillYoutube size={25}/>
+						<BsFacebook size={25} />
+						<AiFillInstagram size={25} />
+						<AiFillTwitterCircle size={25} />
+						<AiFillYoutube size={25} />
 					</div>
 
 					<img src={deezer} alt="Logo Deezer" />

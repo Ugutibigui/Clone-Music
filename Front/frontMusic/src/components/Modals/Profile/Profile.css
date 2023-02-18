@@ -52,21 +52,6 @@
     align-items: center;
 }
 
-.button-profile {
-    box-sizing: border-box;
-    padding-right: 10px;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 400ms;
-}
-
-.button-profile:hover {
-    background-color: #505052;
-}
-
 #top-profile {
     padding-top: 10px;
 }
@@ -79,12 +64,6 @@
 
 .image-profile img {
     border-radius: 100px;
-}
-
-.button-profile span {
-    color: #fff;
-    font-size: 14px;
-    padding: 12px;
 }
 
 .get-deezer {
