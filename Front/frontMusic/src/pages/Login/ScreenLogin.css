@@ -69,6 +69,11 @@
     overflow-wrap: break-word;
 }
 
+.text-click span a:-webkit-any-link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .text-click strong {
     color: #ef5466;
     cursor: pointer;
@@ -120,9 +125,9 @@
     box-sizing: border-box;
     padding: 15px;
     width: 100%;
-    height: 50px;
+    height: 54px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: bolder;
     outline: none;
@@ -132,7 +137,7 @@
 .form button {
     width: 100%;
     height: 60px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bolder;
     cursor: pointer;
     border: none;
