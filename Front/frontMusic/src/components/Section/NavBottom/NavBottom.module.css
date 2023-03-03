@@ -1,4 +1,4 @@
-.bottom-login {
+.bottomAccount {
     z-index: 1;
     width: 90%;
     display: flex;
@@ -24,13 +24,13 @@
     width: 160px;
 }
 
-.listas-infos {
+.listasInfos {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.bottom-infos {
+.bottomInfos {
     height: 20vh;
     width: 95%;
     display: flex;
@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-.bottom-infos img {
+.bottomInfos img {
     width: 150px;
 }
 
@@ -49,17 +49,17 @@
     color: #fff;
 }
 
-.language-age {
+.languageAge {
     width: 220px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.language-age p {
+.languageAge p {
     color: #818181;
 }
 
-.language-age span {
+.languageAge span {
     color: #fff;
 }

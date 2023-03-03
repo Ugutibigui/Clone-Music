@@ -1,4 +1,4 @@
-import './NavBottom.css'
+import styles from './NavBottom.module.css'
 import deezer from '../../../assets/deezerWhite.png'
 import List from '../../List/List'
 
@@ -16,14 +16,14 @@ function NavBottom() {
     const Cool = ['Termos e condições de uso', 'Política de privacidade', 'Cookies', 'open Source Software(EN)']
 
     return (
-        <div className="bottom-login">
-            <div className="apps">
-                <img id='app-store' src="https://e-cdns-assets.dzcdn.net/common/images/apple-store-badge/pt-br.svg" alt="App Store" />
+        <div className={styles.bottomAccount}>
+            <div className={styles.apps}>
+                <img src="https://e-cdns-assets.dzcdn.net/common/images/apple-store-badge/pt-br.svg" alt="App Store" />
 
-                <img id='google-play' src="https://e-cdns-assets.dzcdn.net/common/images/play-store-badge/pt-br.svg" alt="Google Play" />
+                <img id={styles.googlePlay} src="https://e-cdns-assets.dzcdn.net/common/images/play-store-badge/pt-br.svg" alt="Google Play" />
             </div>
 
-            <div className="listas-infos">
+            <div className={styles.listasInfos}>
                 <List array={Deezer} title='Deezer' />
                 <List array={Resources} title='Recursos' />
                 <List array={Explore} title='Explorar' />
@@ -31,9 +31,9 @@ function NavBottom() {
                 <List array={Cool} title='Legal' />
             </div>
 
-            <div className="bottom-infos">
+            <div className={styles.bottomInfos}>
 
-                <div className="icons">
+                <div className={styles.icons}>
                     <BsFacebook size={25} />
                     <AiFillInstagram size={25} />
                     <AiFillTwitterCircle size={25} />
@@ -42,7 +42,7 @@ function NavBottom() {
 
                 <img src={deezer} alt="Logo Deezer" />
 
-                <div className="language-age">
+                <div className={styles.languageAge}>
                     <span>@ 2023 Deezer</span>
                     <p>Português (br)</p>
                 </div>

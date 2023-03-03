@@ -1,4 +1,4 @@
-import './List.css'
+import styles from './List.module.css'
 
 function List(props) {
 
@@ -10,7 +10,7 @@ function List(props) {
     }
 
     return (
-        <div className="infos-list">
+        <div className={styles.infosList}>
             <span>{props.title}</span>
 
             <ul>

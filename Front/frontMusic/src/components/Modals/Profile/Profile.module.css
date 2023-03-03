@@ -1,11 +1,11 @@
-.modal-profile {
+.modalProfile {
     display: flex;
     justify-content: end;
     align-items: start;
     padding-top: 56px;
 }
 
-.opacity-profile {
+.opacityProfile {
     padding-right: 15px;
     z-index: 8;
 }
@@ -20,7 +20,7 @@
     }
 }
 
-.opacity-profile section {
+.opacityProfile section {
     background-color: #23232d;
     max-height: calc(100vh - 56px - 80px - 40px);
     width: 360px;
@@ -30,20 +30,20 @@
     animation: animation-top 500ms normal;
 }
 
-.opacity-profile section::-webkit-scrollbar-track {
+.opacityProfile section::-webkit-scrollbar-track {
 	background-color: #191922;
 }
 
-.opacity-profile section::-webkit-scrollbar {
+.opacityProfile section::-webkit-scrollbar {
 	width: 10px;
 }
 
-.opacity-profile section::-webkit-scrollbar-thumb {
+.opacityProfile section::-webkit-scrollbar-thumb {
 	background: #686666;
 	border-radius: 20px;
 }
 
-.opacity-profile section .profile {
+.opacityProfile section .profile {
     border-top: 1px #a2a2ad27 solid;
     border-bottom: 1px #a2a2ad27 solid;
     display: flex;
@@ -52,32 +52,50 @@
     align-items: center;
 }
 
-#top-profile {
+.buttonProfile {
+    box-sizing: border-box;
+    padding-right: 10px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 400ms;
     padding-top: 10px;
 }
 
-.image-profile {
+.buttonProfile:hover {
+    background-color: #505052;
+}
+
+.buttonProfile span {
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.imageProfile {
     display: flex;
     align-items: center;
     margin-left: 10px;
 }
 
-.image-profile img {
+.imageProfile img {
     border-radius: 100px;
 }
 
-.get-deezer {
+.getDeezer {
     display: flex;
     align-items: start;
     flex-direction: column;
 }
 
-.get-deezer #get-deezer {
+.getDeezer #getDeezer {
     font-size: 14px;
     color: #fff;
 }
 
-.get-deezer span {
+.getDeezer span {
     font-size: 13px;
     color: #686666;
 }

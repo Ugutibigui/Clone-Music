@@ -1,8 +1,7 @@
-import './Profile.css'
+import styles from './Profile.module.css'
 
 import ButtonProfile from '../../Buttons/ButtonProfile/ButtonProfile'
 
-import { useState } from 'react'
 import { IoIosArrowForward } from 'react-icons/io'
 import { Modal, Box } from '@mui/material';
 
@@ -15,17 +14,17 @@ function Profile(props) {
     }
 
     return (
-        <Modal className='modal-profile'
+        <Modal className={styles.modalProfile}
             open={props.open}
             onClose={() => props.setOpen(false)}
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             closeAfterTransition>
-            <Box className='opacity-profile' style={style}>
+            <Box className={styles.opacityProfile} style={style}>
                 <section>
-                    <div className="profile">
-                        <div className="button-profile" id='top-profile'>
-                            <div className="image-profile">
+                    <div className={styles.profile}>
+                        <div className={styles.buttonProfile}>
+                            <div className={styles.imageProfile}>
                                 <img src="https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/40x40-000000-80-0-0.jpg" alt="Profile" />
 
                                 <span>Visitante</span>
@@ -34,9 +33,9 @@ function Profile(props) {
                             <span> <IoIosArrowForward /> </span>
                         </div>
 
-                        <div className="button-profile">
-                            <div className="get-deezer">
-                                <span id='get-deezer'>Obtenha até 6 contas com Deezer Family.</span>
+                        <div className={styles.buttonProfile}>
+                            <div className={styles.getDeezer}>
+                                <span id={styles.getDeezer}>Obtenha até 6 contas com Deezer Family.</span>
                                 <span>R$ 13,30 por mês durante 3 meses. A partir daí, R$ 39,90 por mês. Experimente agora </span>
                             </div>
 
@@ -44,7 +43,7 @@ function Profile(props) {
                         </div>
                     </div>
 
-                    <div className="profile">
+                    <div className={styles.profile}>
                         <ButtonProfile route='none' color='#fff' text='Configurações da Conta' checkbox='false' />
                         <ButtonProfile route='none' color='#fff' text='Gerenciar minha assinatura' checkbox='false' />
                         <ButtonProfile route='none' color='#fff' text='Gerenciar minhas exclusões' checkbox='false' />
@@ -53,7 +52,7 @@ function Profile(props) {
                         <ButtonProfile route='/login' color='#fff' text='Login' checkbox='false' />
                     </div>
 
-                    <div className="profile">
+                    <div className={styles.profile}>
                         <ButtonProfile route='none' color='#fff' text='Modo noturno' checkbox='true' />
                         <ButtonProfile route='none' color='#a2a2ad' text='Suporte' checkbox='false' />
                         <ButtonProfile route='none' color='#a2a2ad' text='Community e feedback' checkbox='false' />

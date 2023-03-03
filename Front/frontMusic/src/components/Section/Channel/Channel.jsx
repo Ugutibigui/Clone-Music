@@ -1,9 +1,7 @@
-import { useState } from 'react';
+import styles from './Channel.module.css'
 
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
-
-import './Channel.css'
 
 function Channel(props) {                                                                    
 
@@ -14,23 +12,23 @@ function Channel(props) {
     }
 
     return (
-        <section className='channel'>
-            <div className="container">
-                <div className="headers">
-                    <div className="texts">
+        <section className={styles.channel}>
+            <div className={styles.container}>
+                <div className={styles.titleSlider}>
+                    <div className={styles.texts}>
                         <h2>{props.h2}</h2>
 
                         {h3(props)}
                     </div>
 
-                    <div className="sliders">
+                    <div className={styles.sliders}>
                         <button id='button-left'><AiOutlineLeft /></button>
                         <button id='button-right'><AiOutlineRight /></button>
                     </div>
                 </div>
 
-                <div className="gallery" >
-                    <div className="carousel">
+                <div className={styles.gallery} >
+                    <div className={styles.carousel}>
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />
                         <props.card image='' title='' fans='' date='' author='' tracks='' />

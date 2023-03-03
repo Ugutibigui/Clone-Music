@@ -2,28 +2,39 @@
 
 /* Estilizando campo para adicionar artistas */
 
-.info-content {
+.infoContent {
 	width: 100%;
 	overflow-x: auto;
 	margin: 0;
 	height: calc(100vh - 56px - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.info-content::-webkit-scrollbar-track {
+.infoContent::-webkit-scrollbar-track {
 	background-color: #191922;
 	border-left: 1px solid #45454e;
 }
 
-.info-content::-webkit-scrollbar {
+.infoContent::-webkit-scrollbar {
 	width: 8px;
 }
 
-.info-content::-webkit-scrollbar-thumb {
+.infoContent::-webkit-scrollbar-thumb {
 	background: #686666;
 	border-radius: 20px;
 }
 
-.artist-add {
+.channel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.artistAdd {
     width: 800px;
     height: 280px;
     display: flex;
@@ -34,7 +45,7 @@
     font-size: 15px;
 }
 
-.artist-add button{
+.artistAdd button{
     height: 40px;
     width: 200px;
     background-color: #EF5466;
@@ -47,7 +58,7 @@
     cursor: pointer;
 }
 
-.artist-add button:hover {
+.artistAdd button:hover {
     background-color: #aa2938;
 }
 
@@ -100,4 +111,10 @@
     width: 100%;
     color: #fff;
     font-weight: 600;
+}
+
+.containerRectangle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,49 +1,15 @@
-import './Explore.css'
+import styles from './Explore.module.css'
 
-import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
+import ExploreContainer from '../../Section/ExploreContainer/ExploreContainer'
 
-const AddCards = (amount) => {
-    let list = []
-    for (let i = 0; i < amount; i++) {
-        list.push(
-            <li>
-                <CardCategorie />
-            </li>
-        )
-    }
-    return list
-}
-
-function Explore(props) {
+function Explore() {
     return (
-        <div className='info-content'>
-            <div className="title">
-                <h2>Todos os Canais</h2>
-            </div>
+        <div className={styles.infoContent}>
+            <h1>Todos os Canais</h1>
 
-            <div className="explore-container">
-                <h2>Categorias</h2>
-
-                <ul>
-                    {AddCards(29)}
-                </ul>
-            </div>
-
-            <div className="explore-container">
-                <h2>Gêneros</h2>
-
-                <ul>
-                    {AddCards(38)}
-                </ul>
-            </div>
-
-            <div className="explore-container">
-                <h2>Podscasts por categoria</h2>
-
-                <ul>
-                    {AddCards(39)}
-                </ul>
-            </div>
+            <ExploreContainer h2='Categorias' amount={29} />
+            <ExploreContainer h2='Gêneros' amount={38} />
+            <ExploreContainer h2='Podscasts por categoria' amount={39} />
         </div>
     )
 }

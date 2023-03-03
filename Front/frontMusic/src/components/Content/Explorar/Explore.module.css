@@ -1,0 +1,16 @@
+.infoContent {
+	width: 100%;
+	overflow-x: auto;
+	margin: 0;
+	height: calc(100vh - 56px - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoContent h1 {
+    width: 70vw;
+    justify-content: start;
+    color: #fff;
+    font-weight: bolder;
+}
