@@ -1,4 +1,4 @@
-import './ScreenRegister.css'
+import styles from './Account.module.css'
 
 import backgroundLogin from '../../assets/background-login.jpeg'
 import NavBottom from '../../components/Section/NavBottom/NavBottom'
@@ -18,9 +18,9 @@ import { Link } from 'react-router-dom';
 function ScreenRegister() {
 
     return (
-        <div className='body-register'>
-            <div className="top-register">
-                <img id='backgroundRegister' src={backgroundLogin} alt="" />
+        <div className={styles.bodyAccount}>
+            <div className={styles.topAccount}>
+                <img id={styles.backgroundAccount} src={backgroundLogin} alt="" />
 
                 <section>
                     <Link to='/'>
@@ -29,10 +29,10 @@ function ScreenRegister() {
 
                     <h1>Cadastra-se gratuitamente</h1>
 
-                    <div className="offer">
+                    <div className={styles.offer}>
                         <span>Ativar minha oferta de parceiro <SlArrowRight /> </span>
 
-                        <div className="partnerships">
+                        <div className={styles.partnerships}>
                             <img src={GloboPlay} alt="Company" />
                             <img src={Itau} alt="Company" />
                             <img src={Marketplace} alt="Company" />
@@ -43,19 +43,19 @@ function ScreenRegister() {
 
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
-                    <div className="social-media-register">
+                    <div className={styles.socialMediaAccount}>
                         <button>
-                            <BsFacebook />
+                            <BsFacebook size={25} color='royalblue'/>
                             FACEBOOK
                         </button>
 
                         <button>
-                            <FcGoogle />
+                            <FcGoogle size={25}/>
                             GOOGLE
                         </button>
                     </div>
 
-                    <div className="form">
+                    <div className={styles.form}>
                         <label htmlFor="email-register">E-mail</label>
                         <input type="email" id="email-register" />
 
@@ -69,7 +69,7 @@ function ScreenRegister() {
                         <input type="number" id='age-register' />
 
                         <label htmlFor="identity-register">Identidade</label>
-                        <select id="identity-register">
+                        <select id={styles.identityRegister}>
                             <option value="0">Identidade</option>
                             <option value="M">Masculino</option>
                             <option value="F">Feminino</option>
@@ -80,7 +80,7 @@ function ScreenRegister() {
                         <button>Cadastrar-se</button>
                     </div>
 
-                    <span>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>
+                    <span id={styles.reCAPTCHA}>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>
 
                 </section>
             </div>

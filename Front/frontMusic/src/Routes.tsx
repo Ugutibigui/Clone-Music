@@ -6,8 +6,8 @@ import {
 } from "react-router-dom"
 
 import Index from "./pages/HomePage/Index"
-import ScreenLogin from "./pages/Login/ScreenLogin"
-import ScreenRegister from "./pages/Register/ScreenRegister"
+import ScreenLogin from "./pages/Account/ScreenLogin"
+import ScreenRegister from "./pages/Account/ScreenRegister"
 
 export function AppRoutes() {
     return (

@@ -1,4 +1,4 @@
-import './ScreenLogin.css'
+import styles from './Account.module.css'
 
 import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc'
@@ -34,24 +34,24 @@ function ScreenLogin() {
 	}
 
 	return (
-		<div className="body-login">
-			<div className="top-login">
+		<div className={styles.bodyAccount}>
+			<div className={styles.topAccount}>
 
-				<img id='backgroundLogin' src={backgroundLogin} alt="" />
+				<img id={styles.backgroundAccount} src={backgroundLogin} alt="" />
 
 				<section>
 					<Link to='/'>
 						<img src={deezer} alt="Logo Deezer" />
 					</Link>
 
-					<div className="text-click">
+					<div className={styles.textClick}>
 						<h1>Fazer login</h1>
 						<span>Ainda não possui uma conta Deezer? <Link to='/register'> <strong>CADASTRE-SE</strong> </Link></span>
 					</div>
 
-					<div className="social-media">
+					<div className={`${styles.socialMediaAccount} ${styles.threeLogos}`}>
 						<button>
-							<BsFacebook size={20} />
+							<BsFacebook size={20} color='royalblue'/>
 							<span>FACEBOOK</span>
 						</button>
 
@@ -66,7 +66,7 @@ function ScreenLogin() {
 						</button>
 					</div>
 
-					<div className='form'>
+					<div className={styles.form}>
 						<label htmlFor="email">Email:</label>
 						<input value={email} onChange={(text) => setEmail(text.target.value)} type="email" id='email' />
 
@@ -76,8 +76,8 @@ function ScreenLogin() {
 						<button onClick={() => Login()}>FAZER LOGIN</button>
 					</div>
 
-					<p id='forget'>ESQUECEU SUA SENHA?</p>
-					<div className="text-click">
+					<p id={styles.forget}>ESQUECEU SUA SENHA?</p>
+					<div className={styles.textClick}>
 						<span>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE
 						</strong> e os <strong>TERMOS DE SERVIÇO</strong>do Google se aplicam.</span>
 					</div>
