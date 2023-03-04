@@ -1,15 +1,12 @@
-import './ButtonOption.css'
+import styles from './ButtonOption.module.css'
 
-function ButtonOption(props) {
-
-	const content = document.querySelector('.choice-content')
+function ButtonOption({title, icon}) {
 
 	return (
-		<li className='buttonOption'>
-			<props.icon size={22} />
-			<h3>
-				{props.title}
-			</h3>
+		<li className={styles.buttonOption}>
+			{icon({ size: 22 })}
+
+			<h3> {title} </h3>
 		</li>
 	)
 }

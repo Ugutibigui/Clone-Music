@@ -1,26 +1,21 @@
-.button-profile {
+.buttonProfile {
     box-sizing: border-box;
     padding-right: 10px;
     cursor: pointer;
-    width: 100%;
+    width: 360px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: 400ms;
 }
 
-.button-profile:hover {
+.buttonProfile:hover {
     background-color: #505052;
 }
 
-.button-profile span {
+.buttonProfile span {
     color: #fff;
     font-size: 14px;
     padding: 12px;
 }
 
-#link-button:-webkit-any-link {
-    width: 100%;
-    color: #fff;
-    text-decoration: none;
-}

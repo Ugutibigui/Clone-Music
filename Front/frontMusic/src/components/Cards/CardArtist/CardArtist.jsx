@@ -1,9 +1,9 @@
-import './CardArtist.css'
+import styles from './CardArtist.module.css'
 
-function CardArtist(props) {
+function CardArtist({image, id}) {
 	return (
-		<div className="figure-image">
-			<img src={props.image} id={props.id} />
+		<div className={styles.figureImage}>
+			<img src={image} id={id} />
 		</div>
 	)
 }

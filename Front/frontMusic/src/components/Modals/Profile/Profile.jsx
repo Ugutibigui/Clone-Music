@@ -44,23 +44,23 @@ function Profile(props) {
                     </div>
 
                     <div className={styles.profile}>
-                        <ButtonProfile route='none' color='#fff' text='Configurações da Conta' checkbox='false' />
-                        <ButtonProfile route='none' color='#fff' text='Gerenciar minha assinatura' checkbox='false' />
-                        <ButtonProfile route='none' color='#fff' text='Gerenciar minhas exclusões' checkbox='false' />
-                        <ButtonProfile route='none' color='#fff' text='Comprar um vale presente' checkbox='false' />
-                        <ButtonProfile route='none' color='#fff' text='Ativar um código' checkbox='false' />
-                        <ButtonProfile route='/login' color='#fff' text='Login' checkbox='false' />
+                        <ButtonProfile color='#fff' text='Configurações da Conta' />
+                        <ButtonProfile color='#fff' text='Gerenciar minha assinatura' />
+                        <ButtonProfile color='#fff' text='Gerenciar minhas exclusões' />
+                        <ButtonProfile color='#fff' text='Comprar um vale presente' />
+                        <ButtonProfile color='#fff' text='Ativar um código' />
+                        <ButtonProfile route='/login' color='#fff' text='Login' />
                     </div>
 
                     <div className={styles.profile}>
-                        <ButtonProfile route='none' color='#fff' text='Modo noturno' checkbox='true' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Suporte' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Community e feedback' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Planos' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Recursos' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Sobre nós' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='jobs' checkbox='false' />
-                        <ButtonProfile route='none' color='#a2a2ad' text='Legal' checkbox='false' />
+                        <ButtonProfile color='#fff' text='Modo noturno' checkbox='true' />
+                        <ButtonProfile color='#a2a2ad' text='Suporte' />
+                        <ButtonProfile color='#a2a2ad' text='Community e feedback' />
+                        <ButtonProfile color='#a2a2ad' text='Planos' />
+                        <ButtonProfile color='#a2a2ad' text='Recursos' />
+                        <ButtonProfile color='#a2a2ad' text='Sobre nós' />
+                        <ButtonProfile color='#a2a2ad' text='jobs' />
+                        <ButtonProfile color='#a2a2ad' text='Legal' />
                     </div>
                 </section>
             </Box>

@@ -1,11 +1,12 @@
-import './Radio.css'
+import styles from './Radio.module.css'
+
 import {IoIosArrowDown} from 'react-icons/io'
 import CardRadio from '../../Cards/CardRadio/CardRadio'
 
-function Radio(props) {
+function Radio() {
     return (
-        <div className='info-content'>
-            <div className="radio-container">
+        <div className={styles.infoContent}>
+            <div className={styles.radioContainer}>
                 <h1>Rádios</h1>
 
                 <button>
@@ -14,13 +15,13 @@ function Radio(props) {
                 </button>
             </div>
 
-            <ul className="radio-content">
-                {(() => {
+            <ul className={styles.radioContent}>
+                {(() => { // Consertar ao usar API, utilizar map
                     let radioList = []
                     for (let i=0;i<100;i++) {
                         radioList.push(
                             <li>
-                                <CardRadio/>
+                                <CardRadio/> 
                             </li>
                         )
                     }

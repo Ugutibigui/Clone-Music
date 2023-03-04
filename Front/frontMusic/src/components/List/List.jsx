@@ -1,20 +1,12 @@
 import styles from './List.module.css'
 
-function List(props) {
-
-    const CreateLi = (array) => {
-        const ListInfo = []
-
-        for (let i = 0; i < array.length; i++) ListInfo.push( <li key={i}>{array[i]}</li> )
-        return ListInfo
-    }
-
+function List({array, title}) {
     return (
         <div className={styles.infosList}>
-            <span>{props.title}</span>
+            <span>{title}</span>
 
             <ul>
-                {CreateLi(props.array)}
+                {array.length > 0 ? ( array.map( (item, index) => <li key={index}>{item}</li> )) : null}
             </ul>
         </div>
     )

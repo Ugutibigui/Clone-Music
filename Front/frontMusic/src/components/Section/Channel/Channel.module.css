@@ -66,10 +66,6 @@
     align-items:center;
     overflow-y: hidden;
     overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    cursor: grab;
 }
  
 .gallery::-webkit-scrollbar {

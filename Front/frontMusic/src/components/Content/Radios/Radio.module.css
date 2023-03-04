@@ -1,4 +1,4 @@
-.info-content {
+.infoContent {
 	width: 100%;
 	overflow-x: auto;
 	margin: 0;
@@ -8,20 +8,20 @@
     align-items: center;
 }
 
-.radio-container {
+.radioContainer {
     width: 67vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.radio-container h1 {
+.radioContainer h1 {
     font-size: 32px;
     font-weight: bolder;
     color: #fff;
 }
 
-.radio-container button {
+.radioContainer button {
     font-size: 16px;
     color: #fff;
     background: none;
@@ -37,7 +37,7 @@
     gap: 10px;
 }
 
-.radio-content {
+.radioContent {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -45,11 +45,11 @@
     list-style-type: none;
 }
 
-.radio-content li {
+.radioContent li {
     margin-bottom: 30px;
 }
 
-.info-content footer {
+.infoContent footer {
     width: 70vw;
     display: flex;
     flex-direction: column;
@@ -57,13 +57,13 @@
     align-items: center;
 }
 
-.info-content footer span {
+.infoContent footer span {
     color: #fff;
     font-weight: 500;
     font-size: 16px;
 }
 
-.info-content footer p {
+.infoContent footer p {
     color: #bebec7;
     font-size: 14px;
     font-family: 500;

@@ -13,7 +13,7 @@ const AddCards = (amount) => {
     return list
 }
 
-function ExploreContainer({h2, amount}) {
+function ExploreContainer({h2, amount}) { // amount é temporario ate usar API
     return (
         <div className={styles.exploreContainer}>
             <h2>{h2}</h2>

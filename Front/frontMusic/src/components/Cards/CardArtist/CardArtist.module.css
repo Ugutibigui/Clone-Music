@@ -1,4 +1,4 @@
-.figure-image {
+.figureImage {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -6,7 +6,7 @@
     color: #fff;
 }
 
-.figure-image img {
+.figureImage img {
     border-radius: 100px;
     position: absolute;
 }

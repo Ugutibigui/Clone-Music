@@ -18,7 +18,7 @@
     opacity: 0.6;
 }
 
-.play-button-highlight {
+.playButton {
     position: absolute;
     z-index: 2;
     width: 55px;
@@ -30,7 +30,7 @@
     margin-bottom: 15px;
 }
 
-.play-button-highlight button {
+.playButton button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.play-button-highlight button svg {
+.playButton button svg {
     width: 20px;
     height: 20px;
 }

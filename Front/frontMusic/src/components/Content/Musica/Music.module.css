@@ -73,26 +73,26 @@
 
 /* Distanciando as imagens da primeira section */
 
-#img-center {
+#imgCenter {
     z-index: 3;
 }
 
-#img-left {
+#imgLeft {
     z-index: 1;
     margin-right: 17rem;
 }
 
-#img-almost-left {
+#imgAlmostLeft {
     z-index: 2;
     margin-right: 10rem;
 }
 
-#img-right {
+#imgRight {
    z-index: 1;
    margin-left: 17rem;
 }
 
-#img-almost-right {
+#imgAlmostRight {
     z-index: 2;
     margin-left: 10rem;
 }

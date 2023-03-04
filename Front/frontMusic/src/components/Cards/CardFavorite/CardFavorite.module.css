@@ -1,4 +1,4 @@
-.image-round {
+.imageRound {
     width: 264px;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     gap: 5px;
 }
 
-.image-center {
+.imageCenter {
     width: 264px;
     position: relative;
     display: flex;
@@ -17,18 +17,18 @@
     transition: 400ms;
 }
 
-.image-round img {
+.imageRound img {
     height: 264px;
     width: 264px;
     border-radius: 200px;
     transition: 400ms;
 }
 
-.image-round img:hover {
+.imageRound img:hover {
     opacity: 0.6;
 }
 
-.buttons-round{
+.buttonsRound {
     position: absolute;
     z-index: 2;
     width: 110px;
@@ -40,7 +40,7 @@
     gap: 10px;
 }
 
-.buttons-round button {
+.buttonsRound button {
     justify-content: center;
     align-items: center;
     width: 45px;
@@ -53,16 +53,12 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.buttons-round button svg {
+.buttonsRound button svg {
     width: 20px;
     height: 20px;
 }
 
-#hearth {
-    color: #EF5466;
-}
-
-.image-round span {
+.imageRound span {
     color: #fff;
     font-size: 17px;
     line-height: 18px;
@@ -71,12 +67,29 @@
     margin-top: 5px;
 }
 
-.image-round span:hover {
+.imageRound span:hover {
     text-decoration: underline;
 }
 
-.image-round p{
+.imageRound p{
     font-size: 14px;
     line-height: 18px;
     color: #a2a2ad;
+}
+
+.btn {
+    display: none;
+}
+
+.addButton {
+    display: flex;
+    animation: opacity-animation 400ms normal;
+}
+
+@keyframes opacity-animation {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }

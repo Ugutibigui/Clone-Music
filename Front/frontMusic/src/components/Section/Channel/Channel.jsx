@@ -3,22 +3,16 @@ import styles from './Channel.module.css'
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
 
-function Channel(props) {                                                                    
 
-    const h3 = (props) => {
-        if (props.h3) {
-            return <h3>{props.h3}</h3>
-        }
-    }
-
+function Channel({h2, h3, card, requestAPI}) {                                                                    
     return (
         <section className={styles.channel}>
             <div className={styles.container}>
                 <div className={styles.titleSlider}>
                     <div className={styles.texts}>
-                        <h2>{props.h2}</h2>
+                        <h2>{h2}</h2>
 
-                        {h3(props)}
+                        {h3 ? (<h3>{h3}</h3>) : null}
                     </div>
 
                     <div className={styles.sliders}>
@@ -29,12 +23,12 @@ function Channel(props) {
 
                 <div className={styles.gallery} >
                     <div className={styles.carousel}>
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
-                        <props.card image='' title='' fans='' date='' author='' tracks='' />
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
                     </div>
                 </div>
             </div>

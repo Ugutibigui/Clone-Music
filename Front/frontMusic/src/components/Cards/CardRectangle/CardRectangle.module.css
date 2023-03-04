@@ -1,4 +1,4 @@
-.quizzes .container-rectangle {
+.quizzes .containerRectangle {
     height: 20vh;
     width: 100%;
     display: flex;
@@ -24,7 +24,7 @@
     width: 17%;
 }
 
-.rectangle-text {
+.rectangleText {
     height: 80px;
     width: 75%;
     display: flex;

@@ -1,35 +1,36 @@
+import styles from './CardFavorite.module.css'
+
 import { useState } from 'react';
-import './CardFavorite.css'
 import { ImPlay3 } from 'react-icons/im'
 import { FaHeart } from 'react-icons/fa'
 
-function CardFavorite(props) {
+function CardFavorite() {
 
-    const [className, setClassName] = useState('btn');
+    const [className, setClassName] = useState(`${styles.btn}`);
 
     const ShowButtons = () => {
-        setClassName('add-button');
+        setClassName(`${styles.addButton}`);
     };
 
     const HideButtons = () => {
-        setClassName('btn');
+        setClassName(`${styles.btn}`);
     };
 
     return (
-        <div className="image-round">
-            <div className="image-center">
+        <div className={styles.imageRound}>
+            <div className={styles.imageCenter}>
                 <img 
                 onMouseEnter={ShowButtons}
                 onMouseLeave={HideButtons} 
                 src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
 
-                <div className="buttons-round">
+                <div className={styles.buttonsRound}>
                     <button className={className}>
                         <ImPlay3 />
                     </button>
 
                     <button className={className}>
-                        <FaHeart id='hearth'/>
+                        <FaHeart color='#EF5466'/>
                     </button>
                 </div>
             </div>

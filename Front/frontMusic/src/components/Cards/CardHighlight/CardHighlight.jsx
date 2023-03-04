@@ -1,13 +1,13 @@
-import './CardHighlight.css'
+import styles from './CardHighlight.module.css'
 import { ImPlay3 } from 'react-icons/im'
 
 
 function CardHighlight() {
     return (
-        <div className='highlight'>
+        <div className={styles.highlight}>
             <img src="https://e-cdns-images.dzcdn.net/images/misc/92e6a428a32c3ccfba0959e740411f69/0x711-000000-80-0-0.jpg" alt="Destaques" />
 
-            <div className="play-button-highlight">
+            <div className={styles.playButton}>
                 <button>
                     <ImPlay3 />
                 </button>
