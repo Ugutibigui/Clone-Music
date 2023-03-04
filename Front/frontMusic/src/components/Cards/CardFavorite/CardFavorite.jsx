@@ -8,20 +8,12 @@ function CardFavorite() {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 
-    const ShowButtons = () => {
-        setClassName(`${styles.addButton}`);
-    };
-
-    const HideButtons = () => {
-        setClassName(`${styles.btn}`);
-    };
-
     return (
         <div className={styles.imageRound}>
             <div className={styles.imageCenter}>
                 <img 
-                onMouseEnter={ShowButtons}
-                onMouseLeave={HideButtons} 
+                onMouseEnter={() => setClassName(`${styles.addButton}`)}
+                onMouseLeave={() => setClassName(`${styles.btn}`)} 
                 src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className={styles.buttonsRound}>

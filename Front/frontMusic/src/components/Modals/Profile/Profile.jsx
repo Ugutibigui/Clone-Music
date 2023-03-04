@@ -5,7 +5,7 @@ import ButtonProfile from '../../Buttons/ButtonProfile/ButtonProfile'
 import { IoIosArrowForward } from 'react-icons/io'
 import { Modal, Box } from '@mui/material';
 
-function Profile(props) {
+function Profile({open, setOpen}) {
 
     const style = {
         position: 'absolute',
@@ -15,8 +15,8 @@ function Profile(props) {
 
     return (
         <Modal className={styles.modalProfile}
-            open={props.open}
-            onClose={() => props.setOpen(false)}
+            open={open}
+            onClose={() => setOpen(false)}
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             closeAfterTransition>

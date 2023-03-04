@@ -1,6 +1,6 @@
 import styles from './ButtonOption.module.css'
 
-function ButtonOption({title, icon}) {
+function ButtonOption({title, icon, click}) {
 
 	return (
 		<li className={styles.buttonOption}>

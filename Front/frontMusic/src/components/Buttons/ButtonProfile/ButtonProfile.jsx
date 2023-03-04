@@ -9,7 +9,7 @@ function ButtonProfile({ route, color, text, checkbox }) {
             <div className={styles.buttonProfile}>
                 <span style={{ color: color }} >{text}</span>
 
-                {checkbox?  <input type="checkbox" /> : <span> <IoIosArrowForward /> </span> }
+                {checkbox ? <input type="checkbox" /> : <span> <IoIosArrowForward /> </span>}
             </div>
         </Link>
     )

@@ -3,7 +3,6 @@ import styles from './CardForYou.module.css'
 import { ImPlay3 } from 'react-icons/im'
 import { FaDeezer } from 'react-icons/fa'
 
-
 function CardForYou() {
     return (
         <div className={styles.imageSinger}>

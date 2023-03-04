@@ -10,20 +10,12 @@ function CardCube() {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 
-    const ShowButtons = () => {
-        setClassName(`${styles.addButton}`);
-    };
-
-    const HideButtons = () => {
-        setClassName(`${styles.btn}`);
-    };
-
     return (
         <div className={styles.imageCube}>
             <div className={styles.imageEnd}>
                 <img
-                onMouseEnter={ShowButtons}
-                onMouseLeave={HideButtons} 
+                onMouseEnter={() => setClassName(`${styles.addButton}`)}
+                onMouseLeave={() =>  setClassName(`${styles.btn}`)} 
                 src='https://e-cdns-images.dzcdn.net/images/playlist/6ebfed888b3b116667d2b2897c995f29/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className={styles.playButtonCube}>
