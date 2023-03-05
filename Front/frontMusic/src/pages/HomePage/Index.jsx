@@ -21,6 +21,8 @@ function Index() {
 	//valor armazenado, armazenado
 	const [profileOpen, setprofileOpen] = useState(false)
 
+	const [screenIndex, setScreenIndex] = useState(<Music/>)
+
 	return (
 
 		<div className="App">
@@ -46,11 +48,11 @@ function Index() {
 					<figure>
 						<div className="options">
 							<ul className='icon-options'>
-								<CardOption click={Music} icon={FaMusic} title="Música" />
-								<CardOption click='Undefined' icon={FaMicrophoneAlt} title="Podcasts" />
-								<CardOption click={Radio} icon={MdOutlineRadio} title="Rádios" />
-								<CardOption click={Explore} icon={GiAbstract050} title="Explorar" />
-								<CardOption click='Undefined' icon={MdFavoriteBorder} title="Favoritos" />
+								<CardOption setScreen={setScreenIndex} click={Music} icon={FaMusic} title="Música" />
+								<CardOption setScreen={setScreenIndex} click='Undefined' icon={FaMicrophoneAlt} title="Podcasts" />
+								<CardOption setScreen={setScreenIndex} click={Radio} icon={MdOutlineRadio} title="Rádios" />
+								<CardOption setScreen={setScreenIndex} click={Explore} icon={GiAbstract050} title="Explorar" />
+								<CardOption setScreen={setScreenIndex} click='Undefined' icon={MdFavoriteBorder} title="Favoritos" />
 							</ul>
 
 							<div className="more-options">
@@ -83,7 +85,7 @@ function Index() {
 						</div>
 					</header>	
 					
-					<Music/>
+					{screenIndex}
 				</div>
 			</div>
 			<div className='bottom'></div>

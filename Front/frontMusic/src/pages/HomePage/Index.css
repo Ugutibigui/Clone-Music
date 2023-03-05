@@ -160,6 +160,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.spans span:hover {
+	color: #EF5466;
+}
+
 /* Estilização para os inputs e buttons do header */
 
 header {
