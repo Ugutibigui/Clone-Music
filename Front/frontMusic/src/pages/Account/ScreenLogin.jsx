@@ -29,7 +29,7 @@ function ScreenLogin() {
 					response.data.ok === true ? alert('Logado') : alert("Email ou senha incorretos")
 				})
 		} catch {
-			console.log("Erro")
+			console.log("Erro na API do login")
 		}
 	}
 
@@ -73,7 +73,7 @@ function ScreenLogin() {
 						<label htmlFor="password">Senha:</label>
 						<input value={password} onChange={(text) => setpassword(text.target.value)} type="password" id='password' />
 
-						<button onClick={() => Login()}>FAZER LOGIN</button>
+						<button onClick={Login}>FAZER LOGIN</button>
 					</div>
 
 					<p id={styles.forget}>ESQUECEU SUA SENHA?</p>

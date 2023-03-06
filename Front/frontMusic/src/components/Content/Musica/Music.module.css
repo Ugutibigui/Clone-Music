@@ -71,32 +71,6 @@
     align-items: center;
 }
 
-/* Distanciando as imagens da primeira section */
-
-#imgCenter {
-    z-index: 3;
-}
-
-#imgLeft {
-    z-index: 1;
-    margin-right: 17rem;
-}
-
-#imgAlmostLeft {
-    z-index: 2;
-    margin-right: 10rem;
-}
-
-#imgRight {
-   z-index: 1;
-   margin-left: 17rem;
-}
-
-#imgAlmostRight {
-    z-index: 2;
-    margin-left: 10rem;
-}
-
 /* Estilizando section de quizzes */
 
 .quizzes {

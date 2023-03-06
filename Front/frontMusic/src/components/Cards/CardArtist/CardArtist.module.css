@@ -9,4 +9,6 @@
 .figureImage img {
     border-radius: 100px;
     position: absolute;
+    object-fit: contain;
+    object-position: center;
 }

@@ -1,3 +1,6 @@
+import React, { useState } from 'react'
+import axios from 'axios';
+
 import CardArtist from '../../Cards/CardArtist/CardArtist'
 import CardRectangle from '../../Cards/CardRectangle/CardRectangle'
 import CardForYou from '../../Cards/CardForYou/CardForYou'
@@ -11,6 +14,16 @@ import CardRadio from '../../Cards/CardRadio/CardRadio'
 import styles from './Music.module.css'
 
 function Music() {
+    
+    // Recebendo reposta do endpoint para puxar fotos de artistas
+    const [singers, setSingers] = useState([])
+
+    axios.get('https://localhost:8000/api/artist/27/top', {
+        "method": "GET" ,
+    })
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error))
+
     return (
         <div className={styles.infoContent}>
             <section className={styles.channel}>
@@ -18,11 +31,7 @@ function Music() {
                     <p>Desbloqueie seu Flow, selecionando seus artistas favoritos para obter recomendações melhores.</p>
 
                     <div className={styles.artists}>
-                        <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/f2fc4cbd7dce34871582901f7bf3759b/80x80-000000-80-0-0.jpg' id={styles.imgLeft} />
-                        <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/9e0f61326531faad987d27caf6715019/100x100-000000-80-0-0.jpg' id={styles.imgAlmostLeft} />
-                        <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/e9e4d4e8bdd8af1d440aa1e3af5be10a/150x150-000000-80-0-0.jpg' id={styles.imgCenter} />
-                        <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/2497a48e0926004ac93d56c917eba04b/100x100-000000-80-0-0.jpg' id={styles.imgAlmostRight}/>
-                        <CardArtist image='https://e-cdns-images.dzcdn.net/images/artist/df890144a57f2de468b1e4bd7fb1383a/80x80-000000-80-0-0.jpg' id={styles.imgRight} />
+                        
                     </div>
 
                     <button>ADICIONE ARTISTAS</button>
@@ -40,8 +49,8 @@ function Music() {
                 </div>
             </section>
 
-            <Channel h2='Feito para você' card={CardForYou} RequestAPI=''/>
-            <Channel h2='Seus artistas favoritos' card={CardFavorite} RequestAPI=''/>
+            <Channel h2='Feito para você' card={CardForYou} RequestAPI='' />
+            <Channel h2='Seus artistas favoritos' card={CardFavorite} RequestAPI='' />
             <Channel h2='Playlist que você vai amar' card={CardCube} RequestAPI='' />
             <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' card={CardCube} RequestAPI='' />
             <Channel h2='Os sons do verão' card={CardCube} RequestAPI='' />
