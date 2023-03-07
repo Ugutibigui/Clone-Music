@@ -5,7 +5,7 @@ const AddCards = (amount) => {
     let list = []
     for (let i = 0; i < amount; i++) {
         list.push(
-            <li>
+            <li key={i}>
                 <CardCategorie />
             </li>
         )

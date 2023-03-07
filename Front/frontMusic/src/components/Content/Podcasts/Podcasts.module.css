@@ -1,0 +1,9 @@
+.infoContent {
+	width: 100%;
+	overflow-x: auto;
+	margin: 0;
+	height: calc(100vh - 56px - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

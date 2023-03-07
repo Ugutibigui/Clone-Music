@@ -16,13 +16,13 @@ import styles from './Music.module.css'
 function Music() {
     
     // Recebendo reposta do endpoint para puxar fotos de artistas
-    const [singers, setSingers] = useState([])
+    //const [singers, setSingers] = useState([])
 
-    axios.get('https://localhost:8000/api/artist/27/top', {
-        "method": "GET" ,
-    })
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error))
+    //axios.get('https://localhost:8000/api/artist/27/top', {
+    //    "method": "GET" ,
+    //})
+    //    .then((response) => console.log(response))
+    //    .catch((error) => console.log(error))
 
     return (
         <div className={styles.infoContent}>

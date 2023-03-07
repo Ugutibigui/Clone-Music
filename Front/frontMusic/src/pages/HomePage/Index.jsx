@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Index.css'
 
+import Favorite from '../../components/Content/Favoritos/Favorite'
+import Podcast from '../../components/Content/Podcasts/Podcasts'
 import Music from '../../components/Content/Musica/Music'
 import Radio from '../../components/Content/Radios/Radio'
 import Explore from '../../components/Content/Explorar/Explore'
@@ -49,10 +51,10 @@ function Index() {
 						<div className="options">
 							<ul className='icon-options'>
 								<CardOption setScreen={setScreenIndex} click={Music} icon={FaMusic} title="Música" />
-								<CardOption setScreen={setScreenIndex} click='Undefined' icon={FaMicrophoneAlt} title="Podcasts" />
+								<CardOption setScreen={setScreenIndex} click={Podcast} icon={FaMicrophoneAlt} title="Podcasts" />
 								<CardOption setScreen={setScreenIndex} click={Radio} icon={MdOutlineRadio} title="Rádios" />
 								<CardOption setScreen={setScreenIndex} click={Explore} icon={GiAbstract050} title="Explorar" />
-								<CardOption setScreen={setScreenIndex} click='Undefined' icon={MdFavoriteBorder} title="Favoritos" />
+								<CardOption setScreen={setScreenIndex} click={Favorite} icon={MdFavoriteBorder} title="Favoritos" />
 							</ul>
 
 							<div className="more-options">

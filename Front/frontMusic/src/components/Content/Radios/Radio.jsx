@@ -21,7 +21,7 @@ function Radio() {
                     for (let i=0;i<100;i++) {
                         radioList.push(
                             <li>
-                                <CardRadio/> 
+                                <CardRadio key={i}/> 
                             </li>
                         )
                     }
