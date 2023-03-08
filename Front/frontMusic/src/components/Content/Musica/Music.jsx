@@ -49,24 +49,24 @@ function Music() {
                 </div>
             </section>
 
-            <Channel h2='Feito para você' card={CardForYou} RequestAPI='' />
-            <Channel h2='Seus artistas favoritos' card={CardFavorite} RequestAPI='' />
-            <Channel h2='Playlist que você vai amar' card={CardCube} RequestAPI='' />
-            <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' card={CardCube} RequestAPI='' />
-            <Channel h2='Os sons do verão' card={CardCube} RequestAPI='' />
-            <Channel h2='Categorias' card={CardCategorie} RequestAPI='' />
-            <Channel h2='Lançamentos para você' card={CardCube} RequestAPI='' />
-            <Channel h2='100% para você' card={CardCube} RequestAPI='' />
-            <Channel h2='Já que você gostou de: ' card={CardFavorite} RequestAPI='' />
-            <Channel h2='Gêneros: ' card={CardCategorie} RequestAPI='' />
-            <Channel h2='Playlists populares' card={CardCube} RequestAPI='' />
-            <Channel h2='Destaques' card={CardHighlight} RequestAPI='' />
-            <Channel h2='Sextou' card={CardCube} RequestAPI='' />
-            <Channel h2='Charts' card={CardCube} RequestAPI='' />
-            <Channel h2='Álbuns mais ouvidos' card={CardCube} RequestAPI='' />
-            <Channel h2='Só na Deezer' card={CardCube} RequestAPI='' />
-            <Channel h2='No ritmo dos anos 2000' card={CardCube} RequestAPI='' />
-            <Channel h2='Rádios para você' card={CardRadio} RequestAPI='' />
+            <Channel h2='Feito para você' Card={CardForYou} RequestAPI='' />
+            <Channel h2='Seus artistas favoritos' Card={CardFavorite} RequestAPI='' />
+            <Channel h2='Playlist que você vai amar' Card={CardCube} RequestAPI='' />
+            <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' Card={CardCube} RequestAPI='' />
+            <Channel h2='Os sons do verão' Card={CardCube} RequestAPI='' />
+            <Channel h2='Categorias' Card={CardCategorie} RequestAPI='' />
+            <Channel h2='Lançamentos para você' Card={CardCube} RequestAPI='' />
+            <Channel h2='100% para você' Card={CardCube} RequestAPI='' />
+            <Channel h2='Já que você gostou de: ' Card={CardFavorite} RequestAPI='' />
+            <Channel h2='Gêneros: ' Card={CardCategorie} RequestAPI='' />
+            <Channel h2='Playlists populares' Card={CardCube} RequestAPI='' />
+            <Channel h2='Destaques' Card={CardHighlight} RequestAPI='' />
+            <Channel h2='Sextou' Card={CardCube} RequestAPI='' />
+            <Channel h2='Charts' Card={CardCube} RequestAPI='' />
+            <Channel h2='Álbuns mais ouvidos' Card={CardCube} RequestAPI='' />
+            <Channel h2='Só na Deezer' Card={CardCube} RequestAPI='' />
+            <Channel h2='No ritmo dos anos 2000' Card={CardCube} RequestAPI='' />
+            <Channel h2='Rádios para você' Card={CardRadio} RequestAPI='' />
         </div>
     )
 }

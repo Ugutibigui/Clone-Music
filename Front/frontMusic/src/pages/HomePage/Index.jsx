@@ -23,7 +23,7 @@ function Index() {
 	//valor armazenado, armazenado
 	const [profileOpen, setprofileOpen] = useState(false)
 
-	const [screenIndex, setScreenIndex] = useState(<Music/>)
+	const [screenIndex, setScreenIndex] = useState(<Favorite/>)
 
 	return (
 

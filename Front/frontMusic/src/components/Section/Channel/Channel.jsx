@@ -4,7 +4,7 @@ import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
 
 
-function Channel({h2, h3, card, requestAPI}) {                                                                    
+function Channel({h2, h3, Card, requestAPI}) {                                                                    
     return (
         <section className={styles.channel}>
             <div className={styles.container}>
@@ -23,12 +23,12 @@ function Channel({h2, h3, card, requestAPI}) {
 
                 <div className={styles.gallery} >
                     <div className={styles.carousel}>
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
-                        {card({image:'', title:'', fans:'', date:'', author:'', tracks:''})}
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
                     </div>
                 </div>
             </div>
