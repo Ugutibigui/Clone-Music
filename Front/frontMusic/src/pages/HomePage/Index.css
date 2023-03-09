@@ -107,6 +107,7 @@ body {
 .left-menu figure {
 	width: 100%;
 	overflow-x: auto;
+	overflow-y: hidden;
 	margin: 0;
 	height: calc(100vh - 80px - 300px);
 }
@@ -134,7 +135,7 @@ body {
 }
 
 .icon-options {
-	width: 60%;
+	width: 81%;
 	height: 25%;
 }
 

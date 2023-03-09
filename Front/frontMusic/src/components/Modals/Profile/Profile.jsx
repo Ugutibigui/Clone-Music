@@ -5,7 +5,7 @@ import ButtonProfile from '../../Buttons/ButtonProfile/ButtonProfile'
 import { IoIosArrowForward } from 'react-icons/io'
 import { Modal, Box } from '@mui/material';
 
-function Profile({open, setOpen}) {
+function Profile({ open, setOpen}) {
 
     const style = {
         position: 'absolute',

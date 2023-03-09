@@ -1,4 +1,5 @@
-.buttonOption {
+.buttonOption,
+.activeButton {
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -13,6 +14,12 @@
 	color: #ef5466;
 }
 
-.buttonOption svg {
+.buttonOption svg,
+.activeButton svg {
 	padding-right: 15px;
+}
+
+.activeButton {
+	color: #ef5466;
+	border-right: #ef5466 solid 4px;
 }

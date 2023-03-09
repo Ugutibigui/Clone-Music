@@ -23,7 +23,8 @@ function Index() {
 	//valor armazenado, armazenado
 	const [profileOpen, setprofileOpen] = useState(false)
 
-	const [screenIndex, setScreenIndex] = useState(<Favorite/>)
+	const [screenIndex, setScreenIndex] = useState(<Music/>)
+	const [activeScreen, setActiveScreen] = useState("Música")
 
 	return (
 
@@ -50,11 +51,11 @@ function Index() {
 					<figure>
 						<div className="options">
 							<ul className='icon-options'>
-								<CardOption setScreen={setScreenIndex} click={Music} icon={FaMusic} title="Música" />
-								<CardOption setScreen={setScreenIndex} click={Podcast} icon={FaMicrophoneAlt} title="Podcasts" />
-								<CardOption setScreen={setScreenIndex} click={Radio} icon={MdOutlineRadio} title="Rádios" />
-								<CardOption setScreen={setScreenIndex} click={Explore} icon={GiAbstract050} title="Explorar" />
-								<CardOption setScreen={setScreenIndex} click={Favorite} icon={MdFavoriteBorder} title="Favoritos" />
+								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Music} icon={FaMusic} title="Música" />
+								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Podcast} icon={FaMicrophoneAlt} title="Podcasts" />
+								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Radio} icon={MdOutlineRadio} title="Rádios" />
+								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Explore} icon={GiAbstract050} title="Explorar" />
+								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Favorite} icon={MdFavoriteBorder} title="Favoritos" />
 							</ul>
 
 							<div className="more-options">
