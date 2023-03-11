@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { useState } from "react"
 
 import Index from "./pages/HomePage/Index"
 import ScreenLogin from "./pages/Account/ScreenLogin"
@@ -15,7 +14,7 @@ export function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/" element={<Index content={<Music/>} />}/> 
+				<Route exact path="/" element={<Index content={<Music/>} />}/> 
 				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />

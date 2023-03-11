@@ -1,16 +1,19 @@
 .buttonOption,
 .activeButton {
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: start;
-	cursor: pointer;
-	transition: 400ms;
+	list-style: none;
 	height: 46px;
 }
 
-.buttonOption:hover,
-.spans span:hover {
+.buttonOption a,
+.activeButton a {
+	cursor: pointer;
+	transition: 400ms;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+.buttonOption a:hover {
 	color: #ef5466;
 }
 
@@ -19,7 +22,7 @@
 	padding-right: 15px;
 }
 
-.activeButton {
+.activeButton a{
 	color: #ef5466;
 	border-right: #ef5466 solid 4px;
 }

@@ -6,6 +6,8 @@ import Channel from '../../../components/Section/Channel/Channel'
 import PlaylistNav from '../../../components/Nav/PlaylistNav/PlaylistNav'
 import CardFavorite from '../../../components/Cards/CardFavorite/CardFavorite'
 
+import PinkButton from '../../../components/Buttons/PinkButton/PinkButton'
+
 function Favorite() {
 
     const playlist = ['Destaque', 'Mais queridas', 'Playlists', 'Álbuns', 'Artistas', 'Histórico de reprodução', 'Podcasts', 'Meus MP3', 'Seguindo', 'Seguidores']
@@ -25,10 +27,7 @@ function Favorite() {
                             <span>0 seguindo</span>
                         </div>
 
-                        <button>
-                            <TbArrowsShuffle />
-                            MINHA MÚSICA - ALEATÓRIO
-                        </button>
+                        <PinkButton text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle/>}/>
                     </div>
                 </div>
 

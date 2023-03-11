@@ -1,15 +1,13 @@
 .infoContent {
-	width: 100%;
-	overflow-x: auto;
-	margin: 0;
-	height: calc(100vh - 56px - 80px);
+    overflow-x: auto;
+    height: calc(100vh - 56px - 80px);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .radioContainer {
-    width: 67vw;
+    width: 75vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,19 +27,19 @@
     cursor: pointer;
     height: 36px;
     border-radius: 15px;
-    border: 2px solid #52525D; 
-    box-sizing: border-box;
+    border: 2px solid #52525D;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
 }
 
 .radioContent {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 77vw;
     list-style-type: none;
 }
 
@@ -53,7 +51,6 @@
     width: 70vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -66,5 +63,5 @@
 .infoContent footer p {
     color: #bebec7;
     font-size: 14px;
-    font-family: 500;
+    font-weight: 500;
 }

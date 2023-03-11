@@ -4,6 +4,9 @@ import backgroundLogin from '../../assets/background-login.jpeg'
 import NavBottom from '../../components/Section/NavBottom/NavBottom'
 import deezer from '../../assets/deezerWhite.png'
 
+import Input from '../../components/Form/Input/Input'
+import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton'
+import PinkButton from '../../components/Buttons/PinkButton/PinkButton'
 import GloboPlay from '../../assets/partnerships/globoPlayLogo.png'
 import Itau from '../../assets/partnerships/itauLogo.png'
 import Marketplace from '../../assets/partnerships/mercadoLogo.png'
@@ -14,8 +17,14 @@ import { FcGoogle } from 'react-icons/fc'
 import { BsFacebook } from 'react-icons/bs'
 import { SlArrowRight } from 'react-icons/sl'
 import { Link } from 'react-router-dom';
+import { useState } from 'react'
 
 function ScreenRegister() {
+
+    const [email, setEmail] = useState()
+    const [name, setName] = useState()
+    const [password, setPassword] = useState()
+    const [age, setAge] = useState()
 
     return (
         <div className={styles.bodyAccount}>
@@ -44,29 +53,15 @@ function ScreenRegister() {
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
                     <div className={styles.socialMediaAccount}>
-                        <button>
-                            <BsFacebook size={25} color='royalblue'/>
-                            FACEBOOK
-                        </button>
-
-                        <button>
-                            <FcGoogle size={25}/>
-                            GOOGLE
-                        </button>
+                        <WhiteButton icon={<BsFacebook size={25} color='royalblue'/>} text='FACEBOOK'/>
+                        <WhiteButton icon={<FcGoogle size={25}/>} text='GOOGLE'/>
                     </div>
 
                     <div className={styles.form}>
-                        <label htmlFor="email-register">E-mail</label>
-                        <input type="email" id="email-register" />
-
-                        <label htmlFor="name-register">Nome de usuário</label>
-                        <input type="text" id="name-register" />
-
-                        <label htmlFor="password-register">Senha</label>
-                        <input type="password" id="password-register" />
-
-                        <label htmlFor="age-register">Idade</label>
-                        <input type="number" id='age-register' />
+                        <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
+                        <Input type='text' text='Nome de usuário:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name}/>
+                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => console.log(text.target.value)} value={password}/>
+                        <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age}/>
 
                         <label htmlFor="identity-register">Identidade</label>
                         <select id={styles.identityRegister}>
@@ -77,7 +72,7 @@ function ScreenRegister() {
 
                         <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
 
-                        <button>Cadastrar-se</button>
+                        <PinkButton text='CADASTRAR-SE'/>
                     </div>
 
                     <span id={styles.reCAPTCHA}>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>

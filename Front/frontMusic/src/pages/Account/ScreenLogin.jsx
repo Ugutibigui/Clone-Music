@@ -5,6 +5,8 @@ import { FcGoogle } from 'react-icons/fc'
 import { BsFacebook, BsApple } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
+import Input from '../../components/Form/Input/Input';
+import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton';
 import NavBottom from '../../components/Section/NavBottom/NavBottom';
 import backgroundLogin from '../../assets/background-login.jpeg'
 import deezer from '../../assets/deezerWhite.png'
@@ -50,29 +52,15 @@ function ScreenLogin() {
 					</div>
 
 					<div className={`${styles.socialMediaAccount} ${styles.threeLogos}`}>
-						<button>
-							<BsFacebook size={20} color='royalblue'/>
-							<span>FACEBOOK</span>
-						</button>
-
-						<button>
-							<FcGoogle size={20} />
-							<span>GOOGLE</span>
-						</button>
-
-						<button>
-							<BsApple size={20} />
-							<span>APPLE</span>
-						</button>
+						<WhiteButton icon={<BsFacebook size={20} color='royalblue'/>} text='FACEBOOK' />
+						<WhiteButton icon={<FcGoogle size={20}/>} text='GOOGLE' />
+						<WhiteButton icon={<BsApple size={20}/>} text='APPLE' />
 					</div>
 
 					<div className={styles.form}>
-						<label htmlFor="email">Email:</label>
-						<input value={email} onChange={(text) => setEmail(text.target.value)} type="email" id='email' />
-
-						<label htmlFor="password">Senha:</label>
-						<input value={password} onChange={(text) => setpassword(text.target.value)} type="password" id='password' />
-
+						<Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
+						<Input type='password' text='Senha:' name='senha' handleOnChange={(text) => setpassword(text.target.value)} value={password}/>
+						
 						<button onClick={Login}>FAZER LOGIN</button>
 					</div>
 

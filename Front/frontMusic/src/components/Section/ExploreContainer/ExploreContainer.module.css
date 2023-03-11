@@ -1,7 +1,5 @@
 .exploreContainer {
-    width: 73vw;
-    display: flex;
-    flex-direction: column;
+    width: 80vw;
     margin-bottom: 80px;
 }
 
@@ -13,7 +11,7 @@
 }
 
 .exploreContainer ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;

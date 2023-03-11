@@ -1,7 +1,5 @@
 .infoContent {
-	width: 100%;
 	overflow-x: auto;
-	margin: 0;
 	height: calc(100vh - 56px - 80px);
     display: flex;
     flex-direction: column;
@@ -43,30 +41,6 @@
     color: #D1D1D6;
     font-size: 14px;
     line-height: 1.4px;
-}
-
-.profileInfos button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: transparent;
-    border-radius: 100px;
-    font-weight: 700;
-    height: 40px;
-    min-width: 40px;
-    width: auto;
-    font-size: 15px;
-    color: #fff;
-    background-color: #EF5466;
-    transition: 400ms;
-    gap: 7px;
-    padding-inline-start: 30px;
-    padding-inline-end: 30px;
-    cursor: pointer;
-}
-
-.profileInfos button:hover {
-    background-color: #DB343D;
 }
 
 .topProfile ul {
