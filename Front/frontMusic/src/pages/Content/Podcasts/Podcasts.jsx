@@ -1,9 +1,9 @@
 import styles from './Podcasts.module.css'
 
-import Channel from '../../Section/Channel/Channel'
-import CardCube from '../../Cards/CardCube/CardCube'
-import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
-import CardHighlight from '../../Cards/CardHighlight/CardHighlight'
+import Channel from '../../../components/Section/Channel/Channel'
+import CardCube from '../../../components/Cards/CardCube/CardCube'
+import CardCategorie from '../../../components/Cards/CardCategorie/CardCategorie'
+import CardHighlight from '../../../components/Cards/CardHighlight/CardHighlight'
 
 function Podcasts() {
     return(

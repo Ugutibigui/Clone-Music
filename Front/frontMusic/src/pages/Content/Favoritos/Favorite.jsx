@@ -2,9 +2,9 @@ import styles from './Favorite.module.css'
 
 import { TbArrowsShuffle } from 'react-icons/tb'
 
-import Channel from '../../Section/Channel/Channel'
-import PlaylistNav from '../../Nav/PlaylistNav/PlaylistNav'
-import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
+import Channel from '../../../components/Section/Channel/Channel'
+import PlaylistNav from '../../../components/Nav/PlaylistNav/PlaylistNav'
+import CardFavorite from '../../../components/Cards/CardFavorite/CardFavorite'
 
 function Favorite() {
 

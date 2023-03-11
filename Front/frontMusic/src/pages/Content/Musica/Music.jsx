@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 
-import CardArtist from '../../Cards/CardArtist/CardArtist'
-import CardRectangle from '../../Cards/CardRectangle/CardRectangle'
-import CardForYou from '../../Cards/CardForYou/CardForYou'
-import CardFavorite from '../../Cards/CardFavorite/CardFavorite'
-import CardCube from '../../Cards/CardCube/CardCube'
-import Channel from '../../Section/Channel/Channel'
-import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
-import CardHighlight from '../../Cards/CardHighlight/CardHighlight'
-import CardRadio from '../../Cards/CardRadio/CardRadio'
+import CardArtist from '../../../components/Cards/CardArtist/CardArtist'
+import CardRectangle from '../../../components/Cards/CardRectangle/CardRectangle'
+import CardForYou from '../../../components/Cards/CardForYou/CardForYou'
+import CardFavorite from '../../../components/Cards/CardFavorite/CardFavorite'
+import CardCube from '../../../components/Cards/CardCube/CardCube'
+import Channel from '../../../components/Section/Channel/Channel'
+import CardCategorie from '../../../components/Cards/CardCategorie/CardCategorie'
+import CardHighlight from '../../../components/Cards/CardHighlight/CardHighlight'
+import CardRadio from '../../../components/Cards/CardRadio/CardRadio'
 
 import styles from './Music.module.css'
 

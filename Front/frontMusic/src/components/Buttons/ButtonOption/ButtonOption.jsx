@@ -1,16 +1,16 @@
+import { Link } from 'react-router-dom'
 import styles from './ButtonOption.module.css'
 
-function ButtonOption({ activeScreen, setActive, title, icon, click, setScreen}) {
-	
-	return (
-		<li className={activeScreen === title ? styles.activeButton : styles.buttonOption} onClick={() => {
-			setScreen(click)
-			setActive(title)
-		}}>
-			{icon({ size: 22 })}
+function ButtonOption({ title, icon, to }) {
 
-			<h3> {title} </h3>
-		</li>
+	return (
+		<Link to={to}>
+			<li className={styles.buttonOption} >
+				{icon({ size: 22 })}
+
+				<h3> {title} </h3>
+			</li>
+		</Link>
 	)
 }
 

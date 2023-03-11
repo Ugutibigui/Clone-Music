@@ -1,12 +1,6 @@
 import { useState } from 'react'
 import './Index.css'
 
-import Favorite from '../../components/Content/Favoritos/Favorite'
-import Podcast from '../../components/Content/Podcasts/Podcasts'
-import Music from '../../components/Content/Musica/Music'
-import Radio from '../../components/Content/Radios/Radio'
-import Explore from '../../components/Content/Explorar/Explore'
-
 import ModalProfile from '../../components/Modals/Profile/Profile'
 
 import deezer from '../../assets/deezerWhite.png'
@@ -18,19 +12,15 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 
 import CardOption from '../../components/Buttons/ButtonOption/ButtonOption'
 
-function Index() {
-	
+function Index({ content }) {
+
 	//valor armazenado, armazenado
 	const [profileOpen, setprofileOpen] = useState(false)
-
-	const [screenIndex, setScreenIndex] = useState(<Music/>)
-	const [activeScreen, setActiveScreen] = useState("Música")
 
 	return (
 
 		<div className="App">
-
-			<ModalProfile open={profileOpen} setOpen={status => setprofileOpen(status)}/>
+			<ModalProfile open={profileOpen} setOpen={status => setprofileOpen(status)} />
 
 			<div className="top">
 				<div className='left-menu'>
@@ -51,11 +41,11 @@ function Index() {
 					<figure>
 						<div className="options">
 							<ul className='icon-options'>
-								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Music} icon={FaMusic} title="Música" />
-								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Podcast} icon={FaMicrophoneAlt} title="Podcasts" />
-								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Radio} icon={MdOutlineRadio} title="Rádios" />
-								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Explore} icon={GiAbstract050} title="Explorar" />
-								<CardOption activeScreen={activeScreen} setActive={setActiveScreen} setScreen={setScreenIndex} click={Favorite} icon={MdFavoriteBorder} title="Favoritos" />
+								<CardOption icon={FaMusic} title="Música" to='/'/>
+								<CardOption icon={FaMicrophoneAlt} title="Podcasts" to='/podcast' />
+								<CardOption icon={MdOutlineRadio} title="Rádios" to='/radio' />
+								<CardOption icon={GiAbstract050} title="Explorar" to='/explore' />
+								<CardOption icon={MdFavoriteBorder} title="Favoritos" to='/favorite' />
 							</ul>
 
 							<div className="more-options">
@@ -83,14 +73,15 @@ function Index() {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button  id='profile'> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)}/> </button>
+								<button id='profile'> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)} /> </button>
 							</div>
 						</div>
-					</header>	
-					
-					{screenIndex}
+					</header>
+
+					{content}
 				</div>
 			</div>
+
 			<div className='bottom'></div>
 		</div>
 	)

@@ -1,7 +1,7 @@
 import styles from './Radio.module.css'
 
 import {IoIosArrowDown} from 'react-icons/io'
-import CardRadio from '../../Cards/CardRadio/CardRadio'
+import CardRadio from '../../../components/Cards/CardRadio/CardRadio'
 
 function Radio() {
     return (
