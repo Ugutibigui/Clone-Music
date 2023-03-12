@@ -9,7 +9,6 @@
 
 .topProfile {
     width: 93%;
-    border-bottom: 1px #23232d solid;
 }
 
 .profile {
@@ -44,23 +43,34 @@
 }
 
 .topProfile ul {
+    height: 45px;
     white-space: nowrap;
-    height: 12.5%;
     display: flex;
     align-items: center;
     gap: 25px;
     list-style: none;
+    border-bottom: 1px #23232d solid;
 }
 
 .topProfile ul li {
+    height: 100%;
     color: #a2a2ad;
     font-size: 16px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: 400ms;
     cursor: pointer;
+}
+
+.topProfile ul li a {
+    color: #fff;
 }
 
 .topProfile ul li:hover {
     color: #fff;
     border-color: #A2A2AD;
+}
+
+.mainPlaylists {
+    display: flex;
+    flex-direction: column;
 }

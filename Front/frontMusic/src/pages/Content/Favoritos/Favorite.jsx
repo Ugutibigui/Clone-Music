@@ -2,15 +2,23 @@ import styles from './Favorite.module.css'
 
 import { TbArrowsShuffle } from 'react-icons/tb'
 
-import Channel from '../../../components/Section/Channel/Channel'
-import PlaylistNav from '../../../components/Nav/PlaylistNav/PlaylistNav'
-import CardFavorite from '../../../components/Cards/CardFavorite/CardFavorite'
-
+import NavFavorite from '../../../components/Nav/PlaylistNav/NavFavorite'
 import PinkButton from '../../../components/Buttons/PinkButton/PinkButton'
 
-function Favorite() {
+function Favorite({ content }) {
 
-    const playlist = ['Destaque', 'Mais queridas', 'Playlists', 'Álbuns', 'Artistas', 'Histórico de reprodução', 'Podcasts', 'Meus MP3', 'Seguindo', 'Seguidores']
+    const playlists = [
+        { name: 'Destaque', to: '/favorite' },
+        { name: 'Mais queridas', to: '/favorite/dearest' },
+        { name: 'Playlists', to: '/favorite/playlist' },
+        { name: 'Álbuns', to: '/favorite/album' },
+        { name: 'Artistas', to: '/favorite/artists' },
+        { name: 'Histórico de reprodução', to: '/favorite/history' },
+        { name: 'Podcasts', to: '/favorite/podcasts' },
+        { name: 'Meus MP3', to: '/favorite/mp3' },
+        { name: 'Seguindo', to: '/favorite/following' },
+        { name: 'Seguidores', to: '/favorite/followers' }
+    ]
 
     return (
         <div className={styles.infoContent}>
@@ -32,15 +40,14 @@ function Favorite() {
                 </div>
 
                 <ul>
-                    {playlist.map((item, index) => (
-                        <PlaylistNav text={item} key={index} />
+                    {playlists.map((item, index) => (
+                        <NavFavorite object={item} key={index} />
                     ))}
                 </ul>
             </div>
 
             <div className={styles.mainPlaylists}>
-                <Channel h2='Playlists' Card={CardFavorite} addContent='' />
-                <Channel h2='Artistas' Card={CardFavorite} addContent='' />
+                {content}
             </div>
         </div>
     )

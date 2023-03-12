@@ -1,0 +1,20 @@
+.selectForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.selectForm label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.selectForm select {
+    width: 21.5vw;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    height: 54px;
+    outline: none;
+}

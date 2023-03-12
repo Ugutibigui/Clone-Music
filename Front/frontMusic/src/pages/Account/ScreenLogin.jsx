@@ -6,6 +6,7 @@ import { BsFacebook, BsApple } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
 import Input from '../../components/Form/Input/Input';
+import PinkButton from '../../components/Buttons/PinkButton/PinkButton';
 import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton';
 import NavBottom from '../../components/Section/NavBottom/NavBottom';
 import backgroundLogin from '../../assets/background-login.jpeg'
@@ -61,7 +62,7 @@ function ScreenLogin() {
 						<Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
 						<Input type='password' text='Senha:' name='senha' handleOnChange={(text) => setpassword(text.target.value)} value={password}/>
 						
-						<button onClick={Login}>FAZER LOGIN</button>
+						<PinkButton text='FAZER LOGIN' onClick={Login}/>
 					</div>
 
 					<p id={styles.forget}>ESQUECEU SUA SENHA?</p>

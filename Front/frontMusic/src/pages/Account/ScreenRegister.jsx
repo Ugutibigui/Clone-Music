@@ -4,6 +4,7 @@ import backgroundLogin from '../../assets/background-login.jpeg'
 import NavBottom from '../../components/Section/NavBottom/NavBottom'
 import deezer from '../../assets/deezerWhite.png'
 
+import Select from '../../components/Form/Select/Select'
 import Input from '../../components/Form/Input/Input'
 import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton'
 import PinkButton from '../../components/Buttons/PinkButton/PinkButton'
@@ -20,6 +21,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react'
 
 function ScreenRegister() {
+
+    const identities = ['Feminino', 'Masculino', 'Não-Binário']
 
     const [email, setEmail] = useState()
     const [name, setName] = useState()
@@ -60,15 +63,10 @@ function ScreenRegister() {
                     <div className={styles.form}>
                         <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
                         <Input type='text' text='Nome de usuário:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name}/>
-                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => console.log(text.target.value)} value={password}/>
+                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => setPassword(text.target.value)} value={password}/>
                         <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age}/>
 
-                        <label htmlFor="identity-register">Identidade</label>
-                        <select id={styles.identityRegister}>
-                            <option value="0">Identidade</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                        </select>
+                        <Select text='Identidade'name='identifyRegister' options={identities} />
 
                         <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
 

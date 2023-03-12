@@ -8,15 +8,10 @@ a:-webkit-any-link {
 }
 
 .bodyAccount {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #121216;
 }
 
 .topAccount {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +21,7 @@ a:-webkit-any-link {
 
 #backgroundAccount {
     width: 120vw;
-    height: 100vh;
-    border-radius: 100%;
     filter: blur(100px);
-    display: block;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
@@ -38,11 +30,9 @@ a:-webkit-any-link {
 .topAccount section {
     z-index: 1;
     max-width: 383px;
-    min-height: 580px;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 15px;
 }
@@ -61,17 +51,15 @@ a:-webkit-any-link {
 }
 
 .offer {
-    width: 100%;
     border: 2px solid #a2a2ad91;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    padding: 20px;
     cursor: pointer;
     margin-bottom: 35px;
+    padding: 20px 40px;
 }
 
 .offer span {
@@ -85,7 +73,6 @@ a:-webkit-any-link {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
 }
 
 .offer .partnerships img {
@@ -131,25 +118,6 @@ a:-webkit-any-link {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-}
-
-.form button {
-    width: 100%;
-    height: 60px;
-    font-size: 17px;
-    font-weight: bolder;
-    cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    background-color: #ef5466;
-    color: #fff;
-    margin-bottom: 40px;
-    transition: 400ms;
-    letter-spacing: 1px;
-}
-
-.form button:hover {
-    background-color: #b33846;
 }
 
 #forget {
