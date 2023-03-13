@@ -1,0 +1,62 @@
+.card {
+    width: 264px;
+    gap: 5px;
+}
+
+.card div {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card span {
+    color: #a2a2ad;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.image {
+    height: 264px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.image img {
+    border-radius: 5px;
+    position: absolute;
+    transition: 400ms;
+    position: absolute;
+}
+
+.image img:hover{
+    opacity: 0.6;
+}
+
+.image button {
+    z-index: 2;
+    cursor: pointer;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    place-items: center;
+}
+
+.add {
+    display: grid;
+}
+
+.remove {
+    display: none;
+}
+
+.image button svg {
+    width: 18px;
+    height: 18px;
+}

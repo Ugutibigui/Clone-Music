@@ -12,10 +12,10 @@ function CardCube() {
 
     return (
         <div className={styles.imageCube}>
-            <div className={styles.imageEnd}>
-                <img
-                onMouseEnter={() => setClassName(`${styles.addButton}`)}
-                onMouseLeave={() =>  setClassName(`${styles.btn}`)} 
+            <div className={styles.imageEnd}
+            onMouseEnter={() => setClassName(`${styles.addButton}`)}
+            onMouseLeave={() =>  setClassName(`${styles.btn}`)}>
+                <img 
                 src='https://e-cdns-images.dzcdn.net/images/playlist/6ebfed888b3b116667d2b2897c995f29/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className={styles.playButtonCube}>

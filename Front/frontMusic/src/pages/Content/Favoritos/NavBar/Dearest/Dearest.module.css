@@ -1,0 +1,104 @@
+#dearest {
+    width: 80vw;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.shareSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.shareSection #share {
+    outline: transparent;
+    background: none;
+    border: 2px solid #52525D;
+    height: 40px;
+    width: 40px;
+    color: #6a6a74;
+    border-radius: 100px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.shareSection #share:hover {
+    border-color: #EAEAEA;
+    color: #EAEAEA;
+}
+
+.shareSection #share svg {
+    height: 18px;
+    width: 18px;
+}
+
+.search {
+    width: 600px;
+    background-color: #23232D;
+    color: #D1D1D6;
+    border: 1px solid #52525D;
+    border-radius: 5px;
+    display: flex;
+}
+
+.search button {
+    background: none;
+    border: none;
+    display: grid;
+    place-items: center;
+    color: #52525D;
+}
+
+.search button svg  {
+    width: 16px;
+    height: 16px;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tracks span {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.tracks p {
+    color: #bebec7;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.tracks button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #52525D;
+    border-radius: 20px;
+    border: none;
+    padding-inline-start: 25px;
+    padding-inline-end: 25px;
+    height: 40px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.tracks button:hover {
+    background-color: #7a7a81;
+}

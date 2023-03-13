@@ -10,11 +10,10 @@ function CardFavorite() {
 
     return (
         <div className={styles.imageRound}>
-            <div className={styles.imageCenter}>
-                <img 
-                onMouseEnter={() => setClassName(`${styles.addButton}`)}
-                onMouseLeave={() => setClassName(`${styles.btn}`)} 
-                src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
+            <div className={styles.imageCenter}
+            onMouseEnter={() => setClassName(`${styles.addButton}`)}
+            onMouseLeave={() => setClassName(`${styles.btn}`)} >
+                <img src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
 
                 <div className={styles.buttonsRound}>
                     <button className={className}>

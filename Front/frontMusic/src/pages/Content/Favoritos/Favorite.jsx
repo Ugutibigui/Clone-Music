@@ -12,7 +12,7 @@ function Favorite({ content }) {
         { name: 'Mais queridas', to: '/favorite/dearest' },
         { name: 'Playlists', to: '/favorite/playlist' },
         { name: 'Álbuns', to: '/favorite/album' },
-        { name: 'Artistas', to: '/favorite/artists' },
+        { name: 'Artistas', to: '/favorite/artist' },
         { name: 'Histórico de reprodução', to: '/favorite/history' },
         { name: 'Podcasts', to: '/favorite/podcasts' },
         { name: 'Meus MP3', to: '/favorite/mp3' },

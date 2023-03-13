@@ -6,7 +6,7 @@ function ButtonOption({ title, icon, to }) {
 	const { pathname } = useLocation()
 
 	return (
-		<li className={pathname === to ? `${styles.activeButton}` : `${styles.buttonOption}`} >
+		<li className={(to.includes('favorite') ? pathname.includes(to) : pathname === to )  ? `${styles.activeButton}` : `${styles.buttonOption}`} >
 			<Link to={to}>
 				{icon({ size: 22 })}
 
