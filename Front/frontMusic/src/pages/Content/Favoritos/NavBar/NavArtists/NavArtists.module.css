@@ -1,0 +1,21 @@
+.topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topContent h1 {
+    color: #fff;
+}
+
+.searchOption {
+    display: flex;
+    gap: 15px;
+}
+
+.artistCollection {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

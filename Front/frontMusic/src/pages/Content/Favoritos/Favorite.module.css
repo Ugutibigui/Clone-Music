@@ -4,11 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
 }
 
-.topProfile {
-    width: 93%;
+.topProfile,
+.mainPlaylists {
+    width: 90%;
 }
 
 .profile {

@@ -1,0 +1,18 @@
+#select {
+    gap: 10px;
+    background: none;
+    border-radius: 20px;
+    border: 2px solid #52525D;
+    font-size: 14px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#select:hover {
+    background-color: #d1d1d64b;
+}

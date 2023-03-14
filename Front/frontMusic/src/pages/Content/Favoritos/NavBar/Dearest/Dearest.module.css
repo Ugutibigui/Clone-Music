@@ -35,38 +35,6 @@
     width: 18px;
 }
 
-.search {
-    width: 600px;
-    background-color: #23232D;
-    color: #D1D1D6;
-    border: 1px solid #52525D;
-    border-radius: 5px;
-    display: flex;
-}
-
-.search button {
-    background: none;
-    border: none;
-    display: grid;
-    place-items: center;
-    color: #52525D;
-}
-
-.search button svg  {
-    width: 16px;
-    height: 16px;
-}
-
-.search input {
-    width: 100%;
-    padding: 10px;
-    background: none;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-}
-
 .tracks {
     display: flex;
     flex-direction: column;
@@ -82,7 +50,7 @@
 .tracks p {
     color: #bebec7;
     font-size: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .tracks button {

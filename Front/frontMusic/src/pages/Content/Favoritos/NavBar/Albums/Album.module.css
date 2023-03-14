@@ -1,0 +1,42 @@
+#album {
+    width: 80vw;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tracks span {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.tracks p {
+    color: #bebec7;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.tracks button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #52525D;
+    border-radius: 20px;
+    border: none;
+    padding-inline-start: 25px;
+    padding-inline-end: 25px;
+    height: 40px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.tracks button:hover {
+    background-color: #7a7a81;
+}

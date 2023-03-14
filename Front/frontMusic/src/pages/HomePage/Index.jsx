@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Index.css'
 
 import ModalProfile from '../../components/Modals/Profile/Profile'
@@ -43,13 +44,11 @@ function Index({ content }) {
 						</ul>
 
 						<div className="more-options">
-							
-								<span>Mais queridas</span>
-								<span>Playlist</span>
-								<span>Álbuns</span>
-								<span>Artistas</span>
-								<span>Podcasts</span>
-					
+							<Link to='/favorite/dearest'> <span>Mais queridas</span> </Link>
+							<Link to='/favorite/playlist'> <span>Playlist</span> </Link>
+							<Link to='/favorite/album'> <span>Álbuns</span> </Link>
+							<Link to='/favorite/artist'> <span>Artistas</span> </Link>
+							<Link to='/favorite/podcasts'> <span>Podcasts</span> </Link>						
 						</div>
 					</section>
 				</div>

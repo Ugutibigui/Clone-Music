@@ -1,5 +1,7 @@
 import styles from './Dearest.module.css'
-import { RiSearchLine, RiShareForwardLine } from 'react-icons/ri'
+import Search from '../../../../../components/Nav/Search/Search'
+
+import { RiShareForwardLine } from 'react-icons/ri'
 
 function Dearest() {
     return (
@@ -9,10 +11,7 @@ function Dearest() {
             <section className={styles.shareSection}>
                 <button id={styles.share}> <RiShareForwardLine/> </button>
 
-                <div className={styles.search}>
-                    <button> <RiSearchLine/> </button>
-                    <input type="text" placeholder='Buscar nas faixas'/>
-                </div>
+                <Search size='600px' placeholder='Buscar nas faixas' />
             </section>
 
             <div className={styles.tracks}>

@@ -1,0 +1,17 @@
+.topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topContent h1 {
+    color: #fff;
+}
+
+.searchOption {
+    margin-top: 40px;
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
