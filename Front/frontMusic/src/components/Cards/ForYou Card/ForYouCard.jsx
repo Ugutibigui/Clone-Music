@@ -1,9 +1,9 @@
-import styles from './CardForYou.module.css'
+import styles from './ForYouCard.module.css'
 
 import { ImPlay3 } from 'react-icons/im'
 import { FaDeezer } from 'react-icons/fa'
 
-function CardForYou() {
+function ForYouCard() {
     return (
         <div className={styles.imageSinger}>
             <div className={styles.image}>
@@ -28,4 +28,4 @@ function CardForYou() {
     )
 }
 
-export default CardForYou
+export default ForYouCard

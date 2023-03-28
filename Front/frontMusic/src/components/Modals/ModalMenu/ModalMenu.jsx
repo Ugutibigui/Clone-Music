@@ -1,11 +1,11 @@
-import styles from './Profile.module.css'
+import styles from './ModalMenu.module.css'
 
 import ButtonProfile from '../../Buttons/ButtonProfile/ButtonProfile'
 
 import { IoIosArrowForward } from 'react-icons/io'
 import { Modal, Box } from '@mui/material';
 
-function Profile({ open, setOpen}) {
+function ModalMenu({ open, setOpen}) {
 
     const style = {
         position: 'absolute',
@@ -14,16 +14,16 @@ function Profile({ open, setOpen}) {
     }
 
     return (
-        <Modal className={styles.modalProfile}
+        <Modal className={styles.modalMenu}
             open={open}
             onClose={() => setOpen(false)}
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             closeAfterTransition>
-            <Box className={styles.opacityProfile} style={style}>
+            <Box className={styles.menuOpacity} style={style}>
                 <section>
-                    <div className={styles.profile}>
-                        <div className={styles.buttonProfile}>
+                    <div className={styles.menu}>
+                        <div className={styles.menuButton}>
                             <div className={styles.imageProfile}>
                                 <img src="https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/40x40-000000-80-0-0.jpg" alt="Profile" />
 
@@ -33,7 +33,7 @@ function Profile({ open, setOpen}) {
                             <span> <IoIosArrowForward /> </span>
                         </div>
 
-                        <div className={styles.buttonProfile}>
+                        <div className={styles.menuButton}>
                             <div className={styles.getDeezer}>
                                 <span id={styles.getDeezer}>Obtenha até 6 contas com Deezer Family.</span>
                                 <span>R$ 13,30 por mês durante 3 meses. A partir daí, R$ 39,90 por mês. Experimente agora </span>
@@ -43,7 +43,7 @@ function Profile({ open, setOpen}) {
                         </div>
                     </div>
 
-                    <div className={styles.profile}>
+                    <div className={styles.menu}>
                         <ButtonProfile color='#fff' text='Configurações da Conta' />
                         <ButtonProfile color='#fff' text='Gerenciar minha assinatura' />
                         <ButtonProfile color='#fff' text='Gerenciar minhas exclusões' />
@@ -52,7 +52,7 @@ function Profile({ open, setOpen}) {
                         <ButtonProfile route='/login' color='#fff' text='Login' />
                     </div>
 
-                    <div className={styles.profile}>
+                    <div className={styles.menu}>
                         <ButtonProfile color='#fff' text='Modo noturno' checkbox='true' />
                         <ButtonProfile color='#a2a2ad' text='Suporte' />
                         <ButtonProfile color='#a2a2ad' text='Community e feedback' />
@@ -68,4 +68,4 @@ function Profile({ open, setOpen}) {
     )
 }
 
-export default Profile
+export default ModalMenu

@@ -1,25 +1,24 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Index.css'
-
-import ModalProfile from '../../components/Modals/Profile/Profile'
-import deezer from '../../assets/deezerWhite.png'
-
 import { FaMusic, FaMicrophoneAlt } from 'react-icons/fa'
 import { MdOutlineRadio, MdFavoriteBorder, MdNotifications, MdAccountCircle } from 'react-icons/md'
 import { GiAbstract050 } from 'react-icons/gi'
 import { FiSearch } from 'react-icons/fi'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
+import ModalMenu from '../../components/Modals/ModalMenu/ModalMenu'
+import deezer from '../../assets/deezerWhite.png'
 import ButtonOption from '../../components/Buttons/ButtonOption/ButtonOption'
+
+import './Index.css'
 
 function Index({ content }) {
 
-	const [profileOpen, setprofileOpen] = useState(false)
+	const [menuOpen, setMenuOpen] = useState(false)
 
 	return (
 		<div className="App">
-			<ModalProfile open={profileOpen} setOpen={status => setprofileOpen(status)} />
+			<ModalMenu open={menuOpen} setOpen={setMenuOpen} />
 
 			<div className="top">
 				<div className='left-menu'>
@@ -65,12 +64,12 @@ function Index({ content }) {
 						<div className="profile">
 							<div className="icons-profile">
 								<button> <MdNotifications size={30} /> </button>
-								<button> <MdAccountCircle size={30} onClick={() => setprofileOpen(true)} /> </button>
+								<button> <MdAccountCircle size={30} onClick={() => setMenuOpen(true)} /> </button>
 							</div>
 						</div>
 					</header>
 
-					{content}
+					{content} /* Importando o conteudo principal da pagina */
 				</div>
 			</div>
 

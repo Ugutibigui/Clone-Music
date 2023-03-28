@@ -1,7 +1,8 @@
-import styles from './CardRadio.module.css'
 import { ImPlay3 } from 'react-icons/im'
 
-function CardRadio() {
+import styles from './RadioCard.module.css'
+
+function RadioCard() {
     return (
         <div className={styles.cardRadio}>
             <div className={styles.radioImage}>
@@ -21,4 +22,4 @@ function CardRadio() {
     )
 }
 
-export default CardRadio
+export default RadioCard

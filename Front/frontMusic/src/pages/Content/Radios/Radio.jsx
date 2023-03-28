@@ -1,7 +1,8 @@
-import styles from './Radio.module.css'
-
 import {IoIosArrowDown} from 'react-icons/io'
-import CardRadio from '../../../components/Cards/CardRadio/CardRadio'
+
+import RadioCard from '../../../components/Cards/Radio Card/RadioCard'
+
+import styles from './Radio.module.css'
 
 function Radio() {
     return (
@@ -21,7 +22,7 @@ function Radio() {
                     for (let i=0;i<100;i++) {
                         radioList.push(
                             <li>
-                                <CardRadio key={i}/> 
+                                <RadioCard key={i}/> 
                             </li>
                         )
                     }

@@ -1,24 +1,23 @@
-import styles from './Account.module.css'
+import { FcGoogle } from 'react-icons/fc'
+import { BsFacebook } from 'react-icons/bs'
+import { SlArrowRight } from 'react-icons/sl'
+import { Link } from 'react-router-dom';
+import { useState } from 'react'
 
 import backgroundLogin from '../../assets/background-login.jpeg'
-import NavBottom from '../../components/Section/NavBottom/NavBottom'
+import NavBottom from '../../components/Nav/NavBottom/NavBottom'
 import deezer from '../../assets/deezerWhite.png'
 
+import Button from '../../components/Buttons/Button/Button'
 import Select from '../../components/Form/Select/Select'
 import Input from '../../components/Form/Input/Input'
-import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton'
-import PinkButton from '../../components/Buttons/PinkButton/PinkButton'
 import GloboPlay from '../../assets/partnerships/globoPlayLogo.png'
 import Itau from '../../assets/partnerships/itauLogo.png'
 import Marketplace from '../../assets/partnerships/mercadoLogo.png'
 import Tim from '../../assets/partnerships/timLogo.png'
 import TimUltra from '../../assets/partnerships/timUltraLogo.png'
 
-import { FcGoogle } from 'react-icons/fc'
-import { BsFacebook } from 'react-icons/bs'
-import { SlArrowRight } from 'react-icons/sl'
-import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import styles from './Account.module.css'
 
 function ScreenRegister() {
 
@@ -56,21 +55,21 @@ function ScreenRegister() {
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
                     <div className={styles.socialMediaAccount}>
-                        <WhiteButton icon={<BsFacebook size={25} color='royalblue'/>} text='FACEBOOK'/>
-                        <WhiteButton icon={<FcGoogle size={25}/>} text='GOOGLE'/>
+                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='gray'/>
+                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='gray'/>
                     </div>
 
                     <div className={styles.form}>
-                        <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
-                        <Input type='text' text='Nome de usuário:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name}/>
-                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => setPassword(text.target.value)} value={password}/>
-                        <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age}/>
+                        <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email} />
+                        <Input type='text' text='Nome de usuário:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name} />
+                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => setPassword(text.target.value)} value={password} />
+                        <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age} />
 
-                        <Select text='Identidade'name='identifyRegister' options={identities} />
+                        <Select text='Identidade' name='identifyRegister' options={identities} />
 
                         <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
 
-                        <PinkButton text='CADASTRAR-SE'/>
+                        <Button text='CADASTRAR-SE' type='pink'/> 
                     </div>
 
                     <span id={styles.reCAPTCHA}>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>

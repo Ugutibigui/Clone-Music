@@ -1,10 +1,10 @@
-import styles from './CardFavorite.module.css'
+import styles from './ArtistCard.module.css'
 
 import { useState } from 'react';
 import { ImPlay3 } from 'react-icons/im'
 import { FaHeart } from 'react-icons/fa'
 
-function CardFavorite() {
+function ArtistCard() {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 
@@ -33,4 +33,4 @@ function CardFavorite() {
     )
 }
 
-export default CardFavorite
+export default ArtistCard

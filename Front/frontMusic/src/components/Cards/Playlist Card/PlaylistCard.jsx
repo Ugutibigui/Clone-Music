@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs'
 
-import styles from './CardPlaylist.module.css'
+import styles from './PlaylistCard.module.css'
 
-function CardPlaylist() {
+function PlaylistCard() {
 
     const [className, setClassName] = useState(`${styles.remove}`);
 
@@ -25,4 +25,4 @@ function CardPlaylist() {
     )
 }
 
-export default CardPlaylist
+export default PlaylistCard

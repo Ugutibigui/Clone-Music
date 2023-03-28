@@ -1,7 +1,7 @@
 import Search from '../../../../../components/Nav/Search/Search'
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
-import Channel from '../../../../../components/Section/Channel/Channel'
-import CardPlaylist from '../../../../../components/Cards/CardPlaylist/CardPlaylist'
+import Channel from '../../../../../components/Layout/Channel/Channel'
+import PlaylistCard from '../../../../../components/Cards/Playlist Card/PlaylistCard'
 
 import styles from './NavPlaylist.module.css'
 
@@ -20,7 +20,7 @@ function NavPlaylist() {
                 </div>
             </div>
 
-            <Channel Card={CardPlaylist} />
+            <Channel Card={PlaylistCard} />
         </>
     )
 }

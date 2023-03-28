@@ -1,5 +1,5 @@
 import styles from './ExploreContainer.module.css'
-import CardCategorie from '../../Cards/CardCategorie/CardCategorie'
+import CardCategorie from '../../Cards/Categorie Card/CategorieCard'
 
 const AddCards = (amount) => {
     let list = []

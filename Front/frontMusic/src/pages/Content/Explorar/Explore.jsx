@@ -1,6 +1,6 @@
 import styles from './Explore.module.css'
 
-import ExploreContainer from '../../../components/Section/ExploreContainer/ExploreContainer'
+import ExploreContainer from '../../../components/Layout/ExploreContainer/ExploreContainer'
 
 function Explore() {
     return (

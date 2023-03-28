@@ -23,15 +23,16 @@ export function App() {
 
 	return (
 		<Router>
+
+
 			<Routes>
+				/* Definindo rotas com layout padrão e passando por props seu componente */
 				<Route exact path="/" element={<Index content={<Music/>} />}/> 
 				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
-				<Route path="/login" element={<ScreenLogin />} />
-				<Route path="/register" element={<ScreenRegister />} />
 
-				<Route path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
+				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>
 				<Route path="/favorite/playlist" element={<Index content={<Favorite content={<Playlist/>}/>} />}/>
 				<Route path="/favorite/album" element={<Index content={<Favorite content={<Album/>}/>} />}/>
@@ -41,6 +42,9 @@ export function App() {
 				<Route path="/favorite/mp3" element={<Index content={<Favorite content={<MP3/>}/>} />}/>
 				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
 				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
+
+				<Route path="/login" element={<ScreenLogin />} />
+				<Route path="/register" element={<ScreenRegister />} />
 			</Routes>
 		</Router>
 	)

@@ -1,12 +1,11 @@
 import { useState } from 'react'
-
-import styles from './CardCube.module.css'
-
 import { ImPlay3 } from 'react-icons/im'
 import { FiHeart } from 'react-icons/fi'
 import { BsThreeDots } from 'react-icons/bs'
 
-function CardCube() {
+import styles from './SuggestionCard.module.css'
+
+function SuggestionCard() {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 
@@ -39,4 +38,4 @@ function CardCube() {
         </div>
     )
 }
-export default CardCube
+export default SuggestionCard

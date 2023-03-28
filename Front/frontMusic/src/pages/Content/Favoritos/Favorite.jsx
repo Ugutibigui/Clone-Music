@@ -1,9 +1,9 @@
-import styles from './Favorite.module.css'
-
 import { TbArrowsShuffle } from 'react-icons/tb'
 
 import NavFavorite from '../../../components/Nav/PlaylistNav/NavFavorite'
-import PinkButton from '../../../components/Buttons/PinkButton/PinkButton'
+import Button from '../../../components/Buttons/Button/Button'
+
+import styles from './Favorite.module.css'
 
 function Favorite({ content }) {
 
@@ -34,8 +34,8 @@ function Favorite({ content }) {
                             <span> - </span>
                             <span>0 seguindo</span>
                         </div>
-
-                        <PinkButton text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle/>}/>
+                        
+                        <Button text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle/>} type='pink'/>
                     </div>
                 </div>
 

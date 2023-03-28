@@ -1,17 +1,16 @@
-import styles from './Account.module.css'
-
 import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc'
 import { BsFacebook, BsApple } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 
 import Input from '../../components/Form/Input/Input';
-import PinkButton from '../../components/Buttons/PinkButton/PinkButton';
-import WhiteButton from '../../components/Buttons/WhiteButton/WhiteButton';
-import NavBottom from '../../components/Section/NavBottom/NavBottom';
+import Button from '../../components/Buttons/Button/Button';
+import NavBottom from '../../components/Nav/NavBottom/NavBottom';
 import backgroundLogin from '../../assets/background-login.jpeg'
 import deezer from '../../assets/deezerWhite.png'
 import api from '../../services/api';
+
+import styles from './Account.module.css'
 
 function ScreenLogin() {
 
@@ -53,16 +52,16 @@ function ScreenLogin() {
 					</div>
 
 					<div className={`${styles.socialMediaAccount} ${styles.threeLogos}`}>
-						<WhiteButton icon={<BsFacebook size={20} color='royalblue'/>} text='FACEBOOK' />
-						<WhiteButton icon={<FcGoogle size={20}/>} text='GOOGLE' />
-						<WhiteButton icon={<BsApple size={20}/>} text='APPLE' />
+						<Button icon={<BsFacebook size={20} color='royalblue' />} text='FACEBOOK' type='gray' />
+						<Button icon={<FcGoogle size={20} />} text='GOOGLE' type='gray' />
+						<Button icon={<BsApple size={20} />} text='APPLE' type='gray' />
 					</div>
 
 					<div className={styles.form}>
-						<Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email}/>
-						<Input type='password' text='Senha:' name='senha' handleOnChange={(text) => setpassword(text.target.value)} value={password}/>
-						
-						<PinkButton text='FAZER LOGIN' onClick={Login}/>
+						<Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email} />
+						<Input type='password' text='Senha:' name='senha' handleOnChange={(text) => setpassword(text.target.value)} value={password} />
+
+						<Button text='FAZER LOGIN' onClick={Login} type='pink'/>
 					</div>
 
 					<p id={styles.forget}>ESQUECEU SUA SENHA?</p>
@@ -73,7 +72,7 @@ function ScreenLogin() {
 				</section>
 			</div>
 
-			<NavBottom/>
+			<NavBottom />
 		</div>
 	)
 }

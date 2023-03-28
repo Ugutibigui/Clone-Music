@@ -1,8 +1,8 @@
 import { ImPlay3 } from 'react-icons/im'
 
-import styles from './CardRecently.module.css'
+import styles from './RecentlyCard.module.css'
 
-function CardRecently() {
+function RecentlyCard() {
     return (
         <div className={styles.card}>
             <div className={styles.image}>
@@ -18,4 +18,4 @@ function CardRecently() {
     )
 }
 
-export default CardRecently
+export default RecentlyCard

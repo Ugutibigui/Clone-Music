@@ -1,11 +1,11 @@
-.modalProfile {
+.modalMenu {
     display: flex;
     justify-content: end;
     align-items: start;
     padding-top: 56px;
 }
 
-.opacityProfile {
+.menuOpacity {
     padding-right: 15px;
     z-index: 8;
 }
@@ -20,7 +20,7 @@
     }
 }
 
-.opacityProfile section {
+.menuOpacity section {
     background-color: #23232d;
     max-height: calc(100vh - 56px - 80px - 40px);
     width: 360px;
@@ -30,20 +30,20 @@
     animation: animation-top 500ms normal;
 }
 
-.opacityProfile section::-webkit-scrollbar-track {
+.menuOpacity section::-webkit-scrollbar-track {
 	background-color: #191922;
 }
 
-.opacityProfile section::-webkit-scrollbar {
+.menuOpacity section::-webkit-scrollbar {
 	width: 10px;
 }
 
-.opacityProfile section::-webkit-scrollbar-thumb {
+.menuOpacity section::-webkit-scrollbar-thumb {
 	background: #686666;
 	border-radius: 20px;
 }
 
-.opacityProfile section .profile {
+.menuOpacity section .menu {
     border-top: 1px #a2a2ad27 solid;
     border-bottom: 1px #a2a2ad27 solid;
     display: flex;
@@ -52,7 +52,7 @@
     align-items: center;
 }
 
-.buttonProfile {
+.menuButton {
     box-sizing: border-box;
     padding-right: 10px;
     cursor: pointer;
@@ -64,11 +64,11 @@
     padding-top: 10px;
 }
 
-.buttonProfile:hover {
+.menuButton:hover {
     background-color: #505052;
 }
 
-.buttonProfile span {
+.menuButton span {
     color: #fff;
     font-size: 14px;
     padding: 12px;
