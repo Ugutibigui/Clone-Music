@@ -18,12 +18,33 @@ import NavPodcasts from './pages/Content/Favoritos/NavBar/NavPodcasts/NavPodcast
 import MP3 from './pages/Content/Favoritos/NavBar/NavMP3/NavMP3'
 import Following from './pages/Content/Favoritos/NavBar/Following/Following'
 import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
-import Loading from "./components/Layout/Loading/Loading"
 
 export function App() {
 
 	return (
-		<Loading/>
+		<Router>
+			<Routes>
+				/* Definindo rotas com layout padrão e passando por props seu componente */
+				<Route index exact path="/" element={<Index content={<Music/>} />}/> 
+				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
+				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
+				<Route path="/explore" element={<Index content={<Explore/>} />} />
+
+				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
+				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>
+				<Route path="/favorite/playlist" element={<Index content={<Favorite content={<Playlist/>}/>} />}/>
+				<Route path="/favorite/album" element={<Index content={<Favorite content={<Album/>}/>} />}/>
+				<Route path="/favorite/artist" element={<Index content={<Favorite content={<Artists/>}/>} />}/>
+				<Route path="/favorite/history" element={<Index content={<Favorite content={<History/>}/>} />}/>
+				<Route path="/favorite/podcasts" element={<Index content={<Favorite content={<NavPodcasts/>}/>} />}/>
+				<Route path="/favorite/mp3" element={<Index content={<Favorite content={<MP3/>}/>} />}/>
+				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
+				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
+
+				<Route path="/login" element={<ScreenLogin />} />
+				<Route path="/register" element={<ScreenRegister />} />
+			</Routes>
+		</Router>
 	)
 }
 

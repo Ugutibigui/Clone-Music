@@ -6,6 +6,20 @@
     align-items: center;
 }
 
+.infoContent::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+.infoContent::-webkit-scrollbar {
+	width: 8px;
+}
+
+.infoContent::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}
+
 .radioContainer {
     width: 75vw;
     display: flex;

@@ -29,6 +29,10 @@ function Channel({h2, h3, Card, requestAPI}) {
                         <Card image='' title='' fans='' date='' author='' tracks=''/>
                         <Card image='' title='' fans='' date='' author='' tracks=''/>
                         <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+                        <Card image='' title='' fans='' date='' author='' tracks=''/>
                     </div>
                 </div>
             </div>

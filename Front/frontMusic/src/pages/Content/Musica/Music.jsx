@@ -8,6 +8,7 @@ import SuggestionCard from '../../../components/Cards/Suggestion Card/Suggestion
 import CategorieCard from '../../../components/Cards/Categorie Card/CategorieCard'
 import HighlightCard from '../../../components/Cards/Highlight Card/HighlightCard'
 import RadioCard from '../../../components/Cards/Radio Card/RadioCard'
+import FlowCard from '../../../components/Cards/Flow Card/FlowCard';
 
 import styles from './Music.module.css'
 
@@ -47,6 +48,7 @@ function Music() {
                 </div>
             </section>
 
+            <Channel h2='Flow: toque o que você sente' h3='Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.' Card={FlowCard} requestAPI=''/>
             <Channel h2='Feito para você' Card={ForYouCard} RequestAPI='' />
             <Channel h2='Seus artistas favoritos' Card={ArtistCard} RequestAPI='' />
             <Channel h2='Playlist que você vai amar' Card={SuggestionCard} RequestAPI='' />
