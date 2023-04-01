@@ -20,19 +20,22 @@
 }
 
 .texts {
-    display: flex;
-    flex-direction: column;
-    width: 93%;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .texts h2 {
     color: #fff;
     font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .texts h3  {
     color: #a2a2ad;
     font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .sliders {

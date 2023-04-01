@@ -6,7 +6,8 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import ModalMenu from '../../components/Modals/ModalMenu/ModalMenu'
+import Menu from '../../components/Modals/Menu/Menu'
+import Notification from '../../components/Modals/Notification/Notification'
 import deezer from '../../assets/deezerWhite.png'
 import ButtonOption from '../../components/Buttons/ButtonOption/ButtonOption'
 
@@ -15,10 +16,12 @@ import './Index.css'
 function Index({ content }) {
 
 	const [menuOpen, setMenuOpen] = useState(false)
+	const [noficationOpen, setNoficationOpen] = useState(false)
 
 	return (
 		<div className="App">
-			<ModalMenu open={menuOpen} setOpen={setMenuOpen} />
+			<Menu open={menuOpen} setOpen={setMenuOpen} />
+			<Notification open={noficationOpen} setOpen={setNoficationOpen} />
 
 			<div className="top">
 				<div className='left-menu'>
@@ -63,13 +66,13 @@ function Index({ content }) {
 
 						<div className="profile">
 							<div className="icons-profile">
-								<button> <MdNotifications size={30} /> </button>
+								<button> <MdNotifications size={30} onClick={() => setNoficationOpen(true)}/> </button>
 								<button> <MdAccountCircle size={30} onClick={() => setMenuOpen(true)} /> </button>
 							</div>
 						</div>
 					</header>
 
-					{content} /* Importando o conteudo principal da pagina */
+					{content} 
 				</div>
 			</div>
 

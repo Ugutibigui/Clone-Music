@@ -1,11 +1,15 @@
-import styles from './ModalMenu.module.css'
+import styles from './Menu.module.css'
 
 import ButtonProfile from '../../Buttons/ButtonProfile/ButtonProfile'
 
 import { IoIosArrowForward } from 'react-icons/io'
 import { Modal, Box } from '@mui/material';
+import { useState } from 'react';
 
-function ModalMenu({ open, setOpen}) {
+function Menu({ open, setOpen}) {
+
+    const [classnameImg, setClassNameImg] = useState('')
+    const [classnameDeezer, setClassNameDeezer] = useState('')
 
     const style = {
         position: 'absolute',
@@ -14,32 +18,34 @@ function ModalMenu({ open, setOpen}) {
     }
 
     return (
-        <Modal className={styles.modalMenu}
+        <Modal className={styles.modalContainer}
             open={open}
             onClose={() => setOpen(false)}
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             closeAfterTransition>
-            <Box className={styles.menuOpacity} style={style}>
+            <Box className={styles.boxContainer} style={style}>
                 <section>
                     <div className={styles.menu}>
-                        <div className={styles.menuButton}>
+                        <div className={styles.menuButton} onMouseEnter={() => setClassNameImg('add')}
+                        onMouseLeave={() => setClassNameImg('')}>
                             <div className={styles.imageProfile}>
                                 <img src="https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/40x40-000000-80-0-0.jpg" alt="Profile" />
 
                                 <span>Visitante</span>
                             </div>
 
-                            <span> <IoIosArrowForward /> </span>
+                            <span className={styles[classnameImg]}> <IoIosArrowForward /> </span>
                         </div>
 
-                        <div className={styles.menuButton}>
+                        <div className={styles.menuButton} onMouseEnter={() => setClassNameDeezer('add')}
+                        onMouseLeave={() => setClassNameDeezer('')}>
                             <div className={styles.getDeezer}>
-                                <span id={styles.getDeezer}>Obtenha até 6 contas com Deezer Family.</span>
+                                <span id={styles.textDeezer}>Obtenha até 6 contas com Deezer Family.</span>
                                 <span>R$ 13,30 por mês durante 3 meses. A partir daí, R$ 39,90 por mês. Experimente agora </span>
                             </div>
 
-                            <span> <IoIosArrowForward /> </span>
+                            <span className={styles[classnameDeezer]}> <IoIosArrowForward /> </span>
                         </div>
                     </div>
 
@@ -68,4 +74,4 @@ function ModalMenu({ open, setOpen}) {
     )
 }
 
-export default ModalMenu
+export default Menu

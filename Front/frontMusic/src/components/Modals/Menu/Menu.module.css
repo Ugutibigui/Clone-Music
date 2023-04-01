@@ -1,12 +1,12 @@
-.modalMenu {
+.modalContainer {
     display: flex;
     justify-content: end;
     align-items: start;
-    padding-top: 56px;
+    margin-top: 56px;
 }
 
-.menuOpacity {
-    padding-right: 15px;
+.boxContainer {
+    padding-right: 10px;
     z-index: 8;
 }
 
@@ -20,30 +20,30 @@
     }
 }
 
-.menuOpacity section {
+.boxContainer section {
     background-color: #23232d;
     max-height: calc(100vh - 56px - 80px - 40px);
     width: 360px;
     overflow-x: hidden;
     overflow-y: scroll;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
     animation: animation-top 500ms normal;
 }
 
-.menuOpacity section::-webkit-scrollbar-track {
+.boxContainer section::-webkit-scrollbar-track {
 	background-color: #191922;
 }
 
-.menuOpacity section::-webkit-scrollbar {
+.boxContainer section::-webkit-scrollbar {
 	width: 10px;
 }
 
-.menuOpacity section::-webkit-scrollbar-thumb {
+.boxContainer section::-webkit-scrollbar-thumb {
 	background: #686666;
 	border-radius: 20px;
 }
 
-.menuOpacity section .menu {
+.boxContainer section .menu {
     border-top: 1px #a2a2ad27 solid;
     border-bottom: 1px #a2a2ad27 solid;
     display: flex;
@@ -68,10 +68,24 @@
     background-color: #505052;
 }
 
+@keyframes arrow {
+    0% {
+        transform: translate3d(0, 0, 0);
+    } 50% {
+        transform: translate3d(5px, 0, 0);
+    } 100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.add {
+    animation: arrow 500ms normal;
+}
+
 .menuButton span {
     color: #fff;
     font-size: 14px;
-    padding: 12px;
+    padding: 0 12px;
 }
 
 .imageProfile {
@@ -88,9 +102,10 @@
     display: flex;
     align-items: start;
     flex-direction: column;
+    padding: 10px 0;
 }
 
-.getDeezer #getDeezer {
+.getDeezer #textDeezer {
     font-size: 14px;
     color: #fff;
 }

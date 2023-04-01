@@ -6,7 +6,6 @@
 .image {
     background-color: #23232d;
     border-radius: 200px;
-    cursor: pointer;
     position: relative;
     display: grid;
     place-items: center;
@@ -35,6 +34,7 @@
 }
 
 .button button {
+    cursor: pointer;
     border: none;
     border-radius: 100px;
     display: grid;

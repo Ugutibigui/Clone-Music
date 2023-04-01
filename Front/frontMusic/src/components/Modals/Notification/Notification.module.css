@@ -1,0 +1,30 @@
+.section {
+    height: calc(100vh - 56px - 80px - 40px);
+    color: #fff;
+}
+
+.notification {
+    border-bottom: 1px solid #32323d;
+    padding: 0 20px;
+}
+
+.notification p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.addArtist {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addArtist img {
+    width: 56px;
+    height: 56px;
+}
+
+.addArtist p {
+    font-size: 14px;
+}
