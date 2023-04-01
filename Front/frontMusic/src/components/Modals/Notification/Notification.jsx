@@ -1,11 +1,12 @@
 import { Modal, Box } from '@mui/material';
+import { Link } from 'react-router-dom'
 
 import Button from '../../Buttons/Button/Button';
 
 import stylesModal from '../Menu/Menu.module.css'
 import styles from './Notification.module.css'
 
-function Notification({open, setOpen}) {
+function Notification({ open, setOpen }) {
 
     const style = {
         position: 'absolute',
@@ -15,11 +16,11 @@ function Notification({open, setOpen}) {
 
     return (
         <Modal className={stylesModal.modalContainer}
-        open={open}
-        onClose={() => setOpen(false)}
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        closeAfterTransition>
+            open={open}
+            onClose={() => setOpen(false)}
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            closeAfterTransition>
             <Box className={stylesModal.boxContainer} style={style}>
                 <section className={styles.section}>
                     <div className={styles.notification}>
@@ -31,7 +32,9 @@ function Notification({open, setOpen}) {
 
                         <p>Não fique sozinho.</p>
 
-                        <Button text='ADICIONE ARTISTAS' type='pink'/>
+                        <Link to='/recommendation'>
+                            <Button text='ADICIONE ARTISTAS' type='pink' />
+                        </Link>
                     </div>
                 </section>
             </Box>

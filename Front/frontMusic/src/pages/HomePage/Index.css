@@ -10,6 +10,20 @@ body {
 	overflow-x: hidden;
 }
 
+body::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}
+
 .App {
 	display: flex;
 	flex-direction: column;

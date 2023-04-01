@@ -1,0 +1,45 @@
+.artistImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.artistImage img {
+    width: 220px;
+    height: 220px;
+    border-radius: 200px;
+    cursor: pointer;
+}
+
+.remove {
+    display: none;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    } to {
+        opacity: .6;
+    }
+}
+
+.opacity {
+    display: flex;
+    background-image: linear-gradient(45deg,#6b1b42,#f06262);
+    top: 0;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 200px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 2;
+    animation: opacity 400ms normal;
+}
+
+.artistImage p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}

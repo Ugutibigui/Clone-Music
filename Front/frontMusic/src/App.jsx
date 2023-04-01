@@ -18,6 +18,7 @@ import NavPodcasts from './pages/Content/Favoritos/NavBar/NavPodcasts/NavPodcast
 import MP3 from './pages/Content/Favoritos/NavBar/NavMP3/NavMP3'
 import Following from './pages/Content/Favoritos/NavBar/Following/Following'
 import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
+import Recommendation from './pages/Content/Recommendation/Recommendation'
 
 export function App() {
 
@@ -41,6 +42,7 @@ export function App() {
 				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
 				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
 
+				<Route path="/recommendation" element={<Recommendation />} />
 				<Route path="/login" element={<ScreenLogin />} />
 				<Route path="/register" element={<ScreenRegister />} />
 			</Routes>
