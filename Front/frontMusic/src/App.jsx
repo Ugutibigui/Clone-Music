@@ -19,6 +19,7 @@ import MP3 from './pages/Content/Favoritos/NavBar/NavMP3/NavMP3'
 import Following from './pages/Content/Favoritos/NavBar/Following/Following'
 import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
 import Recommendation from './pages/Content/Recommendation/Recommendation'
+import Artist from './pages/Content/Artist/Artist'
 
 export function App() {
 
@@ -41,6 +42,14 @@ export function App() {
 				<Route path="/favorite/mp3" element={<Index content={<Favorite content={<MP3/>}/>} />}/>
 				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
 				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
+
+				<Route exact path="/artist/:id" element={<Artist/>}/>
+				<Route path="/artist/:id/top_track" element={<Artist/>}/>
+				<Route path="/artist/:id/related_artist" element={<Artist/>}/>
+				<Route path="/artist/:id/playlists" element={<Artist/>}/>
+				<Route path="/artist/:id/concerts" element={<Artist/>}/>
+				<Route path="/artist/:id/biography" element={<Artist/>}/>
+
 
 				<Route path="/recommendation" element={<Recommendation />} />
 				<Route path="/login" element={<ScreenLogin />} />

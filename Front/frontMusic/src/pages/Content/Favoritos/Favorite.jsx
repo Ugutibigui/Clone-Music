@@ -1,6 +1,6 @@
 import { TbArrowsShuffle } from 'react-icons/tb'
 
-import NavFavorite from '../../../components/Nav/PlaylistNav/NavFavorite'
+import PlaylistNav from '../../../components/Nav/PlaylistNav/PlaylistNav'
 import Button from '../../../components/Buttons/Button/Button'
 
 import styles from './Favorite.module.css'
@@ -41,7 +41,7 @@ function Favorite({ content }) {
 
                 <ul>
                     {playlists.map((item, index) => (
-                        <NavFavorite object={item} key={index} />
+                        <PlaylistNav object={item} key={index} />
                     ))}
                 </ul>
             </div>

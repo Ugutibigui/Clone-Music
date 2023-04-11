@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import ArtistsGrid from '../../../components/Layout/ArtistsGrid/ArtistsGrid';
 import Channel from '../../../components/Layout/Channel/Channel'
 import Button from '../../../components/Buttons/Button/Button';
@@ -13,7 +15,7 @@ import FlowCard from '../../../components/Cards/Flow Card/FlowCard';
 import styles from './Music.module.css'
 
 function Music() {
-    
+
     // Recebendo reposta do endpoint para puxar fotos de artistas
     //const [singers, setSingers] = useState([])
 
@@ -33,7 +35,9 @@ function Music() {
                         <ArtistsGrid />
                     </div>
 
-                    <Button text='ADICIONE ARTISTAS' type='pink'/>
+                    <Link to='/recommendation'>
+                        <Button text='ADICIONE ARTISTAS' type='pink' />
+                    </Link>
                 </div>
             </section>
 
@@ -48,7 +52,7 @@ function Music() {
                 </div>
             </section>
 
-            <Channel h2='Flow: toque o que você sente' h3='Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.' Card={FlowCard} requestAPI=''/>
+            <Channel h2='Flow: toque o que você sente' h3='Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.' Card={FlowCard} requestAPI='' />
             <Channel h2='Feito para você' Card={ForYouCard} RequestAPI='' />
             <Channel h2='Seus artistas favoritos' Card={ArtistCard} RequestAPI='' />
             <Channel h2='Playlist que você vai amar' Card={SuggestionCard} RequestAPI='' />

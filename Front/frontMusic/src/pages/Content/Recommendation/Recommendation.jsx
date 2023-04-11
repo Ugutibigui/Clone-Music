@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FiSearch } from 'react-icons/fi'
 
@@ -9,11 +10,13 @@ import styles from './Recommendation.module.css'
 
 function Artists() {
     return (
-        <div className={styles.artistContainer}>
+        <section className={styles.artistContainer}>
             <div className={styles.topContent}>
                 <img src={deezer} alt="Deezer" />
 
-                <button> <AiOutlineClose size={40} color='white' /> </button>
+                <Link to='/'>
+                    <button> <AiOutlineClose size={40} color='white' /> </button>
+                </Link>
             </div>
 
             <div className={styles.navContainer}>
@@ -44,9 +47,11 @@ function Artists() {
             </section>
 
             <div className={styles.finish}>
-                <Button text='TERMINAR' type='pink' />
+                <Link to='/'>
+                    <Button text='TERMINAR' type='pink' />
+                </Link>
             </div>
-        </div>
+        </section>
     )
 }
 

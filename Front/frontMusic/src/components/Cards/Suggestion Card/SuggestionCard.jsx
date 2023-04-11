@@ -5,7 +5,7 @@ import { BsThreeDots } from 'react-icons/bs'
 
 import styles from './SuggestionCard.module.css'
 
-function SuggestionCard() {
+function SuggestionCard({image}) {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 

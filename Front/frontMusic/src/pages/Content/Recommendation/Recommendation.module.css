@@ -1,10 +1,12 @@
 .artistContainer {
     height: 100vh;
     background-color: #121216;
-    padding: 2rem 16rem;
+    padding: 0rem 16rem;
+    overflow: hidden;
 }
 
 .topContent img {
+    margin-top: 2rem;
     height: 24px;
 }
 
