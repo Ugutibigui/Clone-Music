@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 
 import TopArtistMusic from '../../../components/Layout/TopMusic/TopArtistMusic'
 import TopPlaylist from '../../../components/Layout/TopPlaylist/TopPlaylist'
-import PlaylistNav from '../../../components/Nav/PlaylistNav/PlaylistNav'
+import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Buttons/Button/Button'
 
 import styles from './Artist.module.css'
@@ -32,27 +32,21 @@ function Artist() {
                         <p>1.046.862 fãs</p>
 
                         <div className={styles.buttons}>
-                            <Button icon={<BsFillPlayFill />} text='MIX' type='pink' />
+                            <Button width='130px' icon={<BsFillPlayFill size={20} />} text='MIX' type='pink' />
 
-                            <button> <AiFillHeart /> </button>
-                            <button> <BsThreeDots /> </button>
+                            <button className={styles.button}> <AiFillHeart size={18} /> </button>
+                            <button className={styles.button}> <BsThreeDots size={18} /> </button>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.medias}>
-                    <BsTwitter />
-                    <BsFacebook />
+                    <BsTwitter color='#fff8' />
+                    <BsFacebook color='#fff8' />
                 </div>
             </div>
 
-            <nav>
-                <ul>
-                    {playlists.map((item, index) => (
-                        <PlaylistNav object={item} key={index} />
-                    ))}
-                </ul>
-            </nav>
+            <CustomNav navigations={playlists} padding='0 6rem'/>
 
             <div className={styles.topTrack}>
                 <div className={styles.content}>
@@ -115,7 +109,7 @@ function Artist() {
                     </div>
 
                     <ul>
-                        <TopPlaylist /> 
+                        <TopPlaylist />
                         <TopPlaylist />
                         <TopPlaylist />
 

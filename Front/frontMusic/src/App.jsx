@@ -43,12 +43,12 @@ export function App() {
 				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
 				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
 
-				<Route exact path="/artist/:id" element={<Artist/>}/>
-				<Route path="/artist/:id/top_track" element={<Artist/>}/>
-				<Route path="/artist/:id/related_artist" element={<Artist/>}/>
-				<Route path="/artist/:id/playlists" element={<Artist/>}/>
-				<Route path="/artist/:id/concerts" element={<Artist/>}/>
-				<Route path="/artist/:id/biography" element={<Artist/>}/>
+				<Route exact path="/artist/:id" element={<Index content={<Artist/>} />}/>
+				<Route path="/artist/:id/top_track" element={<Index content={<Artist/>} />}/>
+				<Route path="/artist/:id/related_artist" element={<Index content={<Artist/>} />}/>
+				<Route path="/artist/:id/playlists" element={<Index content={<Artist/>} />}/>
+				<Route path="/artist/:id/concerts" element={<Index content={<Artist/>} />}/>
+				<Route path="/artist/:id/biography" element={<Index content={<Artist/>} />}/>
 
 
 				<Route path="/recommendation" element={<Recommendation />} />
