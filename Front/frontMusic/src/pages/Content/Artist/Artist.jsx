@@ -46,14 +46,14 @@ function Artist() {
                 </div>
             </div>
 
-            <CustomNav navigations={playlists} padding='0 6rem'/>
+            <CustomNav navigations={playlists} padding='0 6rem' />
 
-            <div className={styles.topTrack}>
+            <div className={styles.topContent}>
                 <div className={styles.content}>
-                    <div className={styles.title}>
-                        <h1>Top músicas</h1>
-                        <span> <IoIosArrowForward /> </span>
-                    </div>
+                    <h1>
+                        <span>Top músicas  </span>
+                        <IoIosArrowForward />
+                    </h1>
 
                     <ul>
                         <TopArtistMusic />
@@ -64,27 +64,28 @@ function Artist() {
                 </div>
 
                 <aside>
-                    <div className={styles.title}>
-                        <h1>Playlists</h1>
-                        <span> <IoIosArrowForward /> </span>
-                    </div>
-
                     <ul>
+                        <h1>
+                            <span>Playlists  </span>
+                            <IoIosArrowForward />
+                        </h1>
+                        
                         <TopPlaylist />
                         <TopPlaylist />
                         <TopPlaylist />
 
                         <Button text='VER MAIS PLAYLIST' type='black' />
                     </ul>
+
                 </aside>
             </div>
 
-            <div className={styles.latest}>
+            <div className={styles.topContent}>
                 <div className={styles.content}>
-                    <div className={styles.title}>
-                        <h1>Último lançamento</h1>
-                        <span> <IoIosArrowForward /> </span>
-                    </div>
+                    <h1>
+                        <span>Último lançamento </span>
+                        <IoIosArrowForward />
+                    </h1>
 
                     <div className={styles.latestTrack}>
                         <div className={styles.cardMusic}>
@@ -95,7 +96,7 @@ function Artist() {
 
                         <div className={styles.infoMusic}>
                             <h1>Flores de Plástico</h1>
-                            <p>31/03/2024</p>
+                            <p id={styles.data}>31/03/2024</p>
 
                             <TopArtistMusic />
                         </div>
@@ -103,10 +104,10 @@ function Artist() {
                 </div>
 
                 <aside>
-                    <div className={styles.title}>
-                        <h1>Artistas semelhantes</h1>
-                        <span> <IoIosArrowForward /> </span>
-                    </div>
+                    <h1>
+                        <span>Artistas semelhantes </span>
+                        <IoIosArrowForward />
+                    </h1>
 
                     <ul>
                         <TopPlaylist />

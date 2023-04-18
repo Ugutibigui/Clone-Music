@@ -10,11 +10,12 @@ function TopPlaylist({image, title, info}) {
             <div className={styles.texts}>
                 <p>
                     100% Mc Hariel 
+                    <br />
                     <span> 50 faixas - 23.801 fãs </span>
                 </p>
             </div>
 
-            <button> <AiOutlineHeart/> </button>
+            <button> <AiOutlineHeart color='#fff' size={20}/> </button>
         </li>
     )
 }

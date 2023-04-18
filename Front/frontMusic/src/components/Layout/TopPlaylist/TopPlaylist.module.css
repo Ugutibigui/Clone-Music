@@ -1,0 +1,39 @@
+.wrapper {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper img {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+}
+
+.texts p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.texts p span {
+    color: #a2a2ad;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.wrapper button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 400ms;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper button:hover {
+    background-color: #ffffff67;
+}
