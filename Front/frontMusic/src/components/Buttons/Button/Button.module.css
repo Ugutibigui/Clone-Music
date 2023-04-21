@@ -31,6 +31,8 @@
 }
 
 .black {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
     border: 1px solid #52525D;
     background: none;
     color: #fff;

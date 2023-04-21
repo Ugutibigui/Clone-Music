@@ -1,12 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import Index from "./pages/HomePage/Index"
+
 import ScreenLogin from "./pages/Account/ScreenLogin"
 import ScreenRegister from "./pages/Account/ScreenRegister"
+
 import Music from "./pages/Content/Musica/Music"
 import Podcasts from "./pages/Content/Podcasts/Podcasts"
 import Radio from "./pages/Content/Radios/Radio"
 import Explore from "./pages/Content/Explorar/Explore"
+import Recommendation from './pages/Content/Recommendation/Recommendation'
+
 import Favorite from "./pages/Content/Favoritos/Favorite"
 import NavHighlight from './pages/Content/Favoritos/NavBar/NavHighlight/NavHighlight'
 import Album from './pages/Content/Favoritos/NavBar/Albums/Album'
@@ -18,8 +22,14 @@ import NavPodcasts from './pages/Content/Favoritos/NavBar/NavPodcasts/NavPodcast
 import MP3 from './pages/Content/Favoritos/NavBar/NavMP3/NavMP3'
 import Following from './pages/Content/Favoritos/NavBar/Following/Following'
 import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
-import Recommendation from './pages/Content/Recommendation/Recommendation'
+
 import Artist from './pages/Content/Artist/Artist'
+import Discography from "./pages/Content/Artist/NavBar/Discography/Discography"
+import TopTrack from "./pages/Content/Artist/NavBar/TopTrack/TopTrack"
+import Related from "./pages/Content/Artist/NavBar/Related/Related"
+import PlaylistArt from './pages/Content/Artist/NavBar/PlaylistArt/PlaylistArt'
+import Concert from './pages/Content/Artist/NavBar/Concert/Concert'
+import Biography from './pages/Content/Artist/NavBar/Biography/Biography'
 
 export function App() {
 
@@ -43,12 +53,12 @@ export function App() {
 				<Route path="/favorite/following" element={<Index content={<Favorite content={<Following/>}/>} />}/>
 				<Route path="/favorite/followers" element={<Index content={<Favorite content={<Followers/>}/>} />}/>
 
-				<Route exact path="/artist/:id" element={<Index content={<Artist/>} />}/>
-				<Route path="/artist/:id/top_track" element={<Index content={<Artist/>} />}/>
-				<Route path="/artist/:id/related_artist" element={<Index content={<Artist/>} />}/>
-				<Route path="/artist/:id/playlists" element={<Index content={<Artist/>} />}/>
-				<Route path="/artist/:id/concerts" element={<Index content={<Artist/>} />}/>
-				<Route path="/artist/:id/biography" element={<Index content={<Artist/>} />}/>
+				<Route exact path="/artist/:id" element={<Index content={<Artist content={<Discography/>}/>} />}/>
+				<Route path="/artist/:id/top_track" element={<Index content={<Artist content={<TopTrack/>}/>} />}/>
+				<Route path="/artist/:id/related_artist" element={<Index content={<Artist content={<Related/>}/>} />}/>
+				<Route path="/artist/:id/playlists" element={<Index content={<Artist content={<PlaylistArt/>}/>} />}/>
+				<Route path="/artist/:id/concerts" element={<Index content={<Artist content={<Concert/>}/>} />}/>
+				<Route path="/artist/:id/biography" element={<Index content={<Artist content={<Biography/>}/>} />}/>
 
 
 				<Route path="/recommendation" element={<Recommendation />} />

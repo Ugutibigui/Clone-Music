@@ -1,4 +1,5 @@
 import { IoIosArrowDown } from 'react-icons/io'
+
 import styles from './CustomSelect.module.css'
 
 function CustomSelect({ text }) {
