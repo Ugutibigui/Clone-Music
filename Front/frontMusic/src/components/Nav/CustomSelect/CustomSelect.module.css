@@ -1,4 +1,10 @@
-#select {
+.fieldSelected {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fieldSelected button {
     gap: 10px;
     background: none;
     border-radius: 20px;
@@ -13,6 +19,41 @@
     transition: 400ms;
 }
 
-#select:hover {
+.fieldSelected button:hover {
     background-color: #d1d1d64b;
+}
+
+.fieldSelected ul {
+    position: absolute;
+    margin-top: 2rem;
+    z-index: 2;
+    background-color: #23232d;
+    border: 1px solid #32323d;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0/24%);
+    list-style: none;
+    padding-inline-start: 0px;
+    animation: select-in 500ms ease-out forwards;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+}
+
+@keyframes select-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    } 
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+.fieldSelected ul li {
+    padding: .5rem 1rem;
+    font-size: 12px;
+    color: #a2a2ad;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.fieldSelected ul li:hover {
+    background-color: rgba(162, 162, 173, 0.356);
+    color: #fff;
 }

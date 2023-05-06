@@ -6,6 +6,7 @@ import PlaylistCard from '../../../../../components/Cards/Playlist Card/Playlist
 import styles from './NavPlaylist.module.css'
 
 function NavPlaylist() {
+
     return (
         <>
             <div className={styles.topContent}>
@@ -15,8 +16,8 @@ function NavPlaylist() {
                     
                     <Search size='45%' placeholder='Buscar'/>
 
-                    <CustomSelect text='TODAS' />
-                    <CustomSelect text='ADICIONADAS RECENTEMENTE' />
+                    <CustomSelect text='TODAS' array={['Todas', 'Pessoais', 'Adicionadas', 'Colaborativas']}/>
+                    <CustomSelect text='ADICIONADAS RECENTEMENTE' array={['Adicionadas recentemente', 'Atualizadas recentemente', 'A-Z']}/>
                 </div>
             </div>
 

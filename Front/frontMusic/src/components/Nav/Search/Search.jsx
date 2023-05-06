@@ -1,5 +1,6 @@
-import styles from './Search.module.css'
 import { RiSearchLine } from 'react-icons/ri'
+
+import styles from './Search.module.css'
 
 function Search({ size, placeholder }) {
     return (

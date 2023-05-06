@@ -7,3 +7,34 @@
     list-style: none;
     border-bottom: 1px #23232d solid;
 }
+
+.button {
+    height: 100%;
+    color: #a2a2ad;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.button a {
+    color: #fff;
+}
+
+.button:hover {
+    color: #fff;
+    border-color: #A2A2AD;
+}
+
+.active {
+    height: 100%;
+    color: #a2a2ad;
+    font-size: 16px;
+    border-bottom: 3px solid #ef5466;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.active a {
+    color: #fff;
+}
