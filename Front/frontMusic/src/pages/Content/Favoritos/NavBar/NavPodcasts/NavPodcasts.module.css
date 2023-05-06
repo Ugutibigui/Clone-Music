@@ -1,0 +1,25 @@
+.cards {
+    display: flex;
+    gap: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.content span {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #3b3b41;
+    width: 264px;
+    height: 264px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}

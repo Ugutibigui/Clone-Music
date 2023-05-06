@@ -1,0 +1,36 @@
+.history {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #32323d;
+    padding: .5rem;
+}
+
+.history span {
+    color: #bebec7;
+    font-size: 13px;
+}
+
+#music {
+    padding-right: 20rem;
+}
+
+.infos span{
+    margin-left: 13rem;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore h2 {
+    color: #fff;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.icons span{
+    margin-left: 3rem;
+}

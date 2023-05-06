@@ -1,0 +1,26 @@
+.addContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.addContent .image {
+    height: 264px;
+    width: 264px;
+    background-color: #42424c;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.addContent p {
+    color: #fff;
+}
+
+.circle {
+    align-items: center;
+}
+
+.circle .image {
+    border-radius: 200px;
+}

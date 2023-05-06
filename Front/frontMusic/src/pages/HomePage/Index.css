@@ -4,6 +4,10 @@
 	font-family: Ubuntu;
 }
 
+h1 {
+	color: #fff;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -165,9 +169,13 @@ header .profile .icons-profile {
 	width: 100px;
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 header button {
+	display: grid;
+	place-items: center;
+	height: 70%;
 	background: none;
 	border: none;
 	cursor: pointer;

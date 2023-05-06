@@ -2,7 +2,13 @@ import styles from './Followers.module.css'
 
 function Followers() {
     return (
-        <h1>Followers</h1>
+        <>
+            <h1>0 Seguidor</h1>
+
+            <div className={styles.followers}>
+                <p>Sem seguidores ainda</p>
+            </div>
+        </>
     )
 }
 

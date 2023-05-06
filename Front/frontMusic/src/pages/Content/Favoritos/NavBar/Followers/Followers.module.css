@@ -1,0 +1,8 @@
+.followers {
+    display: flex;
+    justify-content: center;
+}
+
+.followers p {
+    color: #fff;
+}

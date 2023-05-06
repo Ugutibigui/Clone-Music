@@ -4,10 +4,6 @@ import PlaylistNav from '../PlaylistNav/PlaylistNav'
 import styles from './CustomNav.module.css'
 
 function CustomNav({ navigations, padding }) {
-
-    useEffect(() => {
-        console.log(padding)
-    })
     return (
         <nav style={{ padding: padding }}>
             <ul className={styles.nav}>

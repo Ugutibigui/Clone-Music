@@ -20,7 +20,7 @@ function NavPlaylist() {
                 </div>
             </div>
 
-            <Channel Card={PlaylistCard} />
+            <Channel addText='Criar uma playlist' Card={PlaylistCard} />
         </>
     )
 }

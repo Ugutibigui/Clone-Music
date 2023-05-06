@@ -1,10 +1,12 @@
-import styles from './Channel.module.css'
-
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
 
+import AddContent from '../AddContent/AddContent'
 
-function Channel({h2, h3, Card, requestAPI}) {                                                                    
+import styles from './Channel.module.css'
+
+function Channel({ addText, h2, h3, Card, requestAPI }) {
+    
     return (
         <section className={styles.channel}>
             <div className={styles.container}>
@@ -23,16 +25,21 @@ function Channel({h2, h3, Card, requestAPI}) {
 
                 <div className={styles.gallery} >
                     <div className={styles.carousel}>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
-                        <Card image='' title='' fans='' date='' author='' tracks=''/>
+
+                        {addText && (
+                            <AddContent text={addText}/>
+                        )}
+                        
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
+                        <Card image='' title='' fans='' date='' author='' tracks='' />
                     </div>
                 </div>
             </div>

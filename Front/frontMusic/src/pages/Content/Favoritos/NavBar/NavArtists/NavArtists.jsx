@@ -1,6 +1,7 @@
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
 import Search from '../../../../../components/Nav/Search/Search'
 import ArtisrCard from '../../../../../components/Cards/Artist Card/ArtistCard'
+import AddContent from '../../../../../components/Layout/AddContent/AddContent'
 
 import styles from './NavArtists.module.css'
 
@@ -20,6 +21,7 @@ function NavArtists() {
             </div>
 
             <ul className={styles.artistCollection}>
+                <AddContent text='Adicione artistas' circle={true}/>
                 {artistList}
             </ul>
         </>
