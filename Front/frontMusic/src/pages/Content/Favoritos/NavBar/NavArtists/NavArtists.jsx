@@ -1,5 +1,5 @@
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
-import Search from '../../../../../components/Nav/Search/Search'
+import Search from '../../../../../components/Search/Search'
 import ArtisrCard from '../../../../../components/Cards/Artist Card/ArtistCard'
 import AddContent from '../../../../../components/Layout/AddContent/AddContent'
 

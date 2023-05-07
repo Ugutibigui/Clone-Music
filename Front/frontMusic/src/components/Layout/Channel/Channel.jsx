@@ -12,9 +12,8 @@ function Channel({ addText, h2, h3, Card, requestAPI }) {
             <div className={styles.container}>
                 <div className={styles.titleSlider}>
                     <div className={styles.texts}>
-                        {h2 ? <h2>{h2}</h2> : null}
-
-                        {h3 ? (<h3>{h3}</h3>) : null}
+                        {h2 && ( <h2> {h2} </h2> )}
+                        {h3 && ( <h3> {h3} </h3> )}
                     </div>
 
                     <div className={styles.sliders}>

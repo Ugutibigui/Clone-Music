@@ -38,6 +38,21 @@
     position: relative;
 }
 
+.figureImage {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.figureImage img {
+    border-radius: 100px;
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+}
+
 .quizzes { /* Estilizando section de quizzes */
     width: 77vw;
     display: flex;

@@ -1,6 +1,6 @@
 import { RiShareForwardLine } from 'react-icons/ri'
 
-import Search from '../../../../../components/Nav/Search/Search'
+import Search from '../../../../../components/Search/Search'
 
 import styles from './Dearest.module.css'
 

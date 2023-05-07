@@ -1,5 +1,6 @@
-import styles from './ExploreContainer.module.css'
-import CardCategorie from '../../Cards/Categorie Card/CategorieCard'
+import CardCategorie from '../Cards/Categorie Card/CategorieCard'
+
+import styles from './RadioList.module.css'
 
 const AddCards = (amount) => {
     let list = []
@@ -13,7 +14,7 @@ const AddCards = (amount) => {
     return list
 }
 
-function ExploreContainer({h2, amount}) { // amount é temporario ate usar API
+function RadioList({h2, amount}) { // amount é temporario ate usar API
     return (
         <div className={styles.exploreContainer}>
             <h2>{h2}</h2>
@@ -25,4 +26,4 @@ function ExploreContainer({h2, amount}) { // amount é temporario ate usar API
     )
 }
 
-export default ExploreContainer
+export default RadioList

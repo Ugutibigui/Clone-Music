@@ -1,8 +1,8 @@
 import { AiOutlineHeart } from 'react-icons/ai'
 
-import styles from './TopPlaylist.module.css'
+import styles from './SingerDetails.module.css'
 
-function TopPlaylist({image, title, info}) {
+function SingerDetails({image, title, info}) {
     return(
         <li className={styles.wrapper}>
             <img src="https://e-cdns-images.dzcdn.net/images/playlist/849c0eebb937d630ff0afc76fd2a1b60/56x56-000000-80-0-0.jpg" alt="Playlist" />
@@ -20,4 +20,4 @@ function TopPlaylist({image, title, info}) {
     )
 }
 
-export default TopPlaylist
+export default SingerDetails

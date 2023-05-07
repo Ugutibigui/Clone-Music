@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { BsFillPlayFill, BsThreeDots, BsFillHeartFill } from 'react-icons/bs'
 import { TbMicrophone2 } from 'react-icons/tb'
 
-import styles from './TopArtistMusic.module.css'
+import styles from './MusicRankItem.module.css'
 
-function TopArtistMusic({ image, title }) {
+function MusicRankItem({ image, title }) {
 
     const [buttonClass, setButtonClass] = useState(`${styles.remove}`)
-    const [ wrapperClass, setWrapperClass] = useState('')
+    const [wrapperClass, setWrapperClass] = useState('')
 
     return (
         <li id={styles.wrapper} className={wrapperClass}
@@ -37,4 +37,4 @@ function TopArtistMusic({ image, title }) {
     )
 }
 
-export default TopArtistMusic
+export default MusicRankItem

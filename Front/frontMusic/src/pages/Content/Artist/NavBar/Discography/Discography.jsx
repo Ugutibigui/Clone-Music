@@ -1,8 +1,8 @@
 import { IoIosArrowForward } from 'react-icons/io'
 
 import Button from '../../../../../components/Buttons/Button/Button'
-import TopArtistMusic from '../../../../../components/Layout/TopMusic/TopArtistMusic'
-import TopPlaylist from '../../../../../components/Layout/TopPlaylist/TopPlaylist'
+import MusicRankItem from '../../../../../components/Layout/MusicRankItem/MusicRankItem'
+import SingerDetails from '../../../../../components/Layout/SingerDetails/SingerDetails'
 
 import styles from './Discography.module.css'
 
@@ -17,10 +17,10 @@ function Discography() {
                     </h1>
 
                     <ul>
-                        <TopArtistMusic />
-                        <TopArtistMusic />
-                        <TopArtistMusic />
-                        <TopArtistMusic />
+                        <MusicRankItem />
+                        <MusicRankItem />
+                        <MusicRankItem />
+                        <MusicRankItem />
                     </ul>
                 </div>
 
@@ -31,9 +31,9 @@ function Discography() {
                             <IoIosArrowForward />
                         </h1>
 
-                        <TopPlaylist />
-                        <TopPlaylist />
-                        <TopPlaylist />
+                        <SingerDetails />
+                        <SingerDetails />
+                        <SingerDetails />
 
                         <Button text='VER MAIS PLAYLIST' type='black' />
                     </ul>
@@ -59,7 +59,7 @@ function Discography() {
                             <h1>Flores de Plástico</h1>
                             <p id={styles.data}>31/03/2024</p>
 
-                            <TopArtistMusic />
+                            <MusicRankItem />
                         </div>
                     </div>
                 </div>
@@ -71,9 +71,9 @@ function Discography() {
                     </h1>
 
                     <ul>
-                        <TopPlaylist />
-                        <TopPlaylist />
-                        <TopPlaylist />
+                        <SingerDetails />
+                        <SingerDetails />
+                        <SingerDetails />
 
                         <Button text='VER MAIS PLAYLIST' type='black' />
                     </ul>

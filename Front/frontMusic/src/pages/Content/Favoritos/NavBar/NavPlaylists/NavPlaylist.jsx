@@ -1,4 +1,4 @@
-import Search from '../../../../../components/Nav/Search/Search'
+import Search from '../../../../../components/Search/Search'
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
 import Channel from '../../../../../components/Layout/Channel/Channel'
 import PlaylistCard from '../../../../../components/Cards/Playlist Card/PlaylistCard'

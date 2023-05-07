@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import ArtistsGrid from '../../../components/Layout/ArtistsGrid/ArtistsGrid';
 import Channel from '../../../components/Layout/Channel/Channel'
 import Button from '../../../components/Buttons/Button/Button';
 import QuizzeCard from '../../../components/Cards/Quizze Card/QuizzeCard'
@@ -16,23 +15,32 @@ import styles from './Music.module.css'
 
 function Music() {
 
-    // Recebendo reposta do endpoint para puxar fotos de artistas
-    //const [singers, setSingers] = useState([])
-
-    //axios.get('https://localhost:8000/api/artist/27/top', {
-    //    "method": "GET" ,
-    //})
-    //    .then((response) => console.log(response))
-    //    .catch((error) => console.log(error))
-
     return (
         <div className={styles.infoContent}>
             <section className={styles.channel}>
                 <div className={styles.artistAdd}>
                     <p>Desbloqueie seu Flow, selecionando seus artistas favoritos para obter recomendações melhores.</p>
 
-                    <div className={styles.artists}>
-                        <ArtistsGrid />
+                    <div className={styles.artists} /* Temporario */>
+                        <div className={styles.figureImage}>
+                            <img src='https://e-cdns-images.dzcdn.net/images/artist/6f797dbd305547a2b793858497ed0ecd/162x162-000000-80-0-0.jpg' id={`img${0}`} />
+                        </div>
+
+                        <div className={styles.figureImage}>
+                            <img src='https://e-cdns-images.dzcdn.net/images/artist/62e6edfaf5461eeb5b7310903229607a/264x264-000000-80-0-0.jpg' id={`img${1}`} />
+                        </div>
+
+                        <div className={styles.figureImage}>
+                            <img src='https://e-cdns-images.dzcdn.net/images/artist/ba30ff888a06c1253f9138f7a49e0ff2/264x264-000000-80-0-0.jpg' id={`img${2}`} />
+                        </div>
+
+                        <div className={styles.figureImage}>
+                            <img src='https://e-cdns-images.dzcdn.net/images/artist/7260526934f80aab3f3c37221b9132ca/264x264-000000-80-0-0.jpg' id={`img${3}`} />
+                        </div>
+
+                        <div className={styles.figureImage}>
+                            <img src='https://e-cdns-images.dzcdn.net/images/artist/a143873fc7a5984edc629eadd5856861/264x264-000000-80-0-0.jpg' id={`img${4}`} />
+                        </div>
                     </div>
 
                     <Link to='/recommendation'>
