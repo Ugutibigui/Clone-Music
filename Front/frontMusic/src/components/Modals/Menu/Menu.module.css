@@ -52,22 +52,6 @@
     align-items: center;
 }
 
-.menuButton {
-    box-sizing: border-box;
-    padding-right: 10px;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 400ms;
-    padding-top: 10px;
-}
-
-.menuButton:hover {
-    background-color: #505052;
-}
-
 @keyframes arrow {
     0% {
         transform: translate3d(0, 0, 0);
@@ -82,16 +66,33 @@
     animation: arrow 500ms normal;
 }
 
-.menuButton span {
+.button {
+    box-sizing: border-box;
+    padding-right: 10px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 400ms;
+    padding: 0 .5rem;
+}
+
+.button:hover {
+    background-color: #505052;
+}
+
+.button span {
     color: #fff;
     font-size: 14px;
-    padding: 0 12px;
+    padding: 12px;
 }
 
 .imageProfile {
     display: flex;
     align-items: center;
     margin-left: 10px;
+    padding: 1rem 0rem;
 }
 
 .imageProfile img {
@@ -102,10 +103,9 @@
     display: flex;
     align-items: start;
     flex-direction: column;
-    padding: 10px 0;
 }
 
-.getDeezer #textDeezer {
+#offert {
     font-size: 14px;
     color: #fff;
 }

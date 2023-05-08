@@ -1,10 +1,10 @@
-.buttonOption,
+.button,
 .activeButton {
 	list-style: none;
 	height: 46px;
 }
 
-.buttonOption a,
+.button a,
 .activeButton a {
 	cursor: pointer;
 	transition: 400ms;
@@ -13,11 +13,11 @@
 	color: #fff;
 }
 
-.buttonOption a:hover {
+.button a:hover {
 	color: #ef5466;
 }
 
-.buttonOption svg,
+.button svg,
 .activeButton svg {
 	padding-right: 15px;
 }

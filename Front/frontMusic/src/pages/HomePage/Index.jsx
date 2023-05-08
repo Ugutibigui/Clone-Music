@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import Menu from '../../components/Modals/Menu/Menu'
 import Notification from '../../components/Modals/Notification/Notification'
 import deezer from '../../assets/deezerWhite.png'
-import ButtonOption from '../../components/Buttons/ButtonOption/ButtonOption'
+import NavButton from '../../components/Buttons/NavButton/NavButton'
 
 import './Index.css'
 
@@ -38,11 +38,11 @@ function Index({ content }) {
 
 					<section>
 						<ul className='icon-options'>
-							<ButtonOption icon={FaMusic} title="Música" to='/' />
-							<ButtonOption icon={FaMicrophoneAlt} title="Podcasts" to='/podcast' />
-							<ButtonOption icon={MdOutlineRadio} title="Rádios" to='/radio' />
-							<ButtonOption icon={GiAbstract050} title="Explorar" to='/explore' />
-							<ButtonOption icon={MdFavoriteBorder} title="Favoritos" to='/favorite' />
+							<NavButton icon={FaMusic} title="Música" to='/' />
+							<NavButton icon={FaMicrophoneAlt} title="Podcasts" to='/podcast' />
+							<NavButton icon={MdOutlineRadio} title="Rádios" to='/radio' />
+							<NavButton icon={GiAbstract050} title="Explorar" to='/explore' />
+							<NavButton icon={MdFavoriteBorder} title="Favoritos" to='/favorite' />
 						</ul>
 
 						<div className="more-options">
