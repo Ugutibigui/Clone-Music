@@ -14,10 +14,10 @@ function NavPlaylist() {
 
                 <div className={styles.searchOption}>
                     
-                    <Search size='45%' placeholder='Buscar'/>
+                    <Search size='400px' placeholder='Buscar'/>
 
-                    <CustomSelect text='TODAS' array={['Todas', 'Pessoais', 'Adicionadas', 'Colaborativas']}/>
-                    <CustomSelect text='ADICIONADAS RECENTEMENTE' array={['Adicionadas recentemente', 'Atualizadas recentemente', 'A-Z']}/>
+                    <CustomSelect array={['Todas', 'Pessoais', 'Adicionadas', 'Colaborativas']}/>
+                    <CustomSelect array={['Adicionadas recentemente', 'Atualizadas recentemente', 'A-Z']}/>
                 </div>
             </div>
 

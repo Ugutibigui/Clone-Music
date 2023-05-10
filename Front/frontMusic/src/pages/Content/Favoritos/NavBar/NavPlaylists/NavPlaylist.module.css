@@ -10,9 +10,9 @@
 
 .searchOption {
     margin-top: 40px;
-    width: 750px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    gap: 20px;
 }

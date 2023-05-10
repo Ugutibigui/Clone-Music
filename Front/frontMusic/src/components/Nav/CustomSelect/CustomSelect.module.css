@@ -1,6 +1,7 @@
 .fieldSelected {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
@@ -10,13 +11,13 @@
     border-radius: 20px;
     border: 2px solid #52525D;
     font-size: 14px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
     color: #EAEAEA;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: 400ms;
+    white-space: nowrap;
+    padding: .5rem 1rem;
 }
 
 .fieldSelected button:hover {
@@ -25,7 +26,7 @@
 
 .fieldSelected ul {
     position: absolute;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     z-index: 2;
     background-color: #23232d;
     border: 1px solid #32323d;
@@ -48,7 +49,6 @@
 .fieldSelected ul li {
     padding: .5rem 1rem;
     font-size: 12px;
-    color: #a2a2ad;
     cursor: pointer;
     transition: 400ms;
 }
@@ -56,4 +56,12 @@
 .fieldSelected ul li:hover {
     background-color: rgba(162, 162, 173, 0.356);
     color: #fff;
+}
+
+.selected {
+    color: #ef5466;
+}
+
+.deselect {
+    color: #a2a2ad;
 }

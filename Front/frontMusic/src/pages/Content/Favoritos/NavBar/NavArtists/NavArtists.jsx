@@ -16,7 +16,7 @@ function NavArtists() {
 
                 <div className={styles.searchOption}>
                     <Search size='300px' placeholder='Buscar'/>
-                    <CustomSelect text='ADICIONADAS RECENTEMENTE' />
+                    <CustomSelect array={['Adicionados Recentemente', 'A-Z']}/>
                 </div>
             </div>
 
