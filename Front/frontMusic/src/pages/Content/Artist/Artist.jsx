@@ -1,5 +1,5 @@
-import { BsTwitter, BsFacebook, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
-import { AiFillHeart } from 'react-icons/ai'
+import { BsTwitter, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
+import { AiFillHeart, AiFillInstagram } from 'react-icons/ai'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Buttons/Button/Button'
@@ -38,8 +38,8 @@ function Artist({content}) {
                 </div>
 
                 <div className={styles.medias}>
-                    <BsTwitter color='#fff8' />
-                    <BsFacebook color='#fff8' />
+                    <BsTwitter color='#fff8' size={20}/>
+                    <AiFillInstagram color='#fff8' size={20}/>
                 </div>
             </div>
 

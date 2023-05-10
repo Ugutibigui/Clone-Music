@@ -88,6 +88,12 @@
 
 .medias svg {
     padding: 0 1rem;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.medias svg:hover {
+    fill: #FFF;
 }
 
 .medias svg:nth-of-type(2) {
