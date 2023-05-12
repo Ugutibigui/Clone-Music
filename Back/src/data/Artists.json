@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "MC Mirella",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/4d4ff46049ee0cf3c55332635df4ac86/264x264-000000-80-0-0.jpg",
         "fans": "722.738",
         "instagram": "",
@@ -23,7 +22,6 @@
     {
         "id": 1,
         "name": "Projota",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/f1a1d244b6f24db5d93dbcb9f3318f44/264x264-000000-80-0-0.jpg",
         "fans": "3.491.922",
         "instagram": "",
@@ -44,7 +42,6 @@
     {
         "id": 2,
         "name": "Orochi",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/d42da8d6ac25d38ae5ce09afb6b171b9/264x264-000000-80-0-0.jpg",
         "fans": "1.123.361",
         "instagram": "",
@@ -65,7 +62,6 @@
     {
         "id": 3,
         "name": "Ariana Grande",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/3b99aa38bc4f58b05d6671c918eeb03e/264x264-000000-80-0-0.jpg",
         "fans": "12.026.823",
         "instagram": "",
@@ -86,7 +82,6 @@
     {
         "id": 4,
         "name": "Anitta",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/99b8050643594b1737f4d5386093c012/264x264-000000-80-0-0.jpg",
         "fans": "6.821.769",
         "instagram": "",
@@ -107,7 +102,6 @@
     {
         "id": 5,
         "name": "MC Kevinho",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/3549481bbfd3415ba247b411eea2f8d0/264x264-000000-80-0-0.jpg",
         "fans": "3.704.748",
         "instagram": "",
@@ -128,7 +122,6 @@
     {
         "id": 6,
         "name": "MC Hariel",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/3a6e09e739db1615be58b155a7331068/264x264-000000-80-0-0.jpg",
         "fans": "1.060.200",
         "instagram": "",
@@ -149,7 +142,6 @@
     {
         "id": 7,
         "name": "XXXTentacion",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/62e6edfaf5461eeb5b7310903229607a/264x264-000000-80-0-0.jpg",
         "fans": "4.000.809",
         "instagram": "",
@@ -170,7 +162,6 @@
     {
         "id": 8,
         "name": "Cesar MC",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/2abeb93edb6c3ddcfd86de363cd9b8e4/264x264-000000-80-0-0.jpg",
         "fans": "312.293",
         "instagram": "",
@@ -191,7 +182,6 @@
     {
         "id": 9,
         "name": "Tainá Costa",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/6f797dbd305547a2b793858497ed0ecd/264x264-000000-80-0-0.jpg",
         "fans": "260.598",
         "instagram": "",
@@ -212,9 +202,348 @@
     {
         "id": 8,
         "name": "Jaya Luuck",
-        "age": "",
         "image": "https://e-cdns-images.dzcdn.net/images/artist/7260526934f80aab3f3c37221b9132ca/264x264-000000-80-0-0.jpg",
         "fans": "212.906",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Marilia Mendonça",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/5ad111b990fb42b2f433ecec4d3c6866/264x264-000000-80-0-0.jpg",
+        "fans": "12.493.958",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Simone & Simaria",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/077a8e990eeedb81c466a247010289c1/264x264-000000-80-0-0.jpg",
+        "fans": "3.840.873",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Zé Felipe",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/ee3c180e2728349c9a7c20f3fc3dfc92/264x264-000000-80-0-0.jpg",
+        "fans": "2.267.913",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Veigh",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/ea33de176d56ab60f06665f81855326a/264x264-000000-80-0-0.jpg",
+        "fans": "47.994",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Azzy",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/140a64d752ae1ab977e4b91547fc6e64/264x264-000000-80-0-0.jpg",
+        "fans": "368.971",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Dudu",
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/74761cbf9a802072faddc8a08191bc47/264x264-000000-80-0-0.jpg",
+        "fans": "115.820",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Lourena",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/f946d468ce22ca7e0868d09a1f86044b/264x264-000000-80-0-0.jpg",
+        "fans": "391.671",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Xamã",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/a359a4e5926795e34847587811a8b7b9/264x264-000000-80-0-0.jpg",
+        "fans": "1.057.103 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Luísa Sonza",     
+        "image": "https://e-cdns-images.dzcdn.net/images/cover/3e466897f11efdf7facfea51a60232ec/264x264-000000-80-0-0.jpg",
+        "fans": "1.810.522 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Pabllo Vittar",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/e9f3f7cb11a6a4d9a196e18a23f7e779/264x264-000000-80-0-0.jpg",
+        "fans": "1.391.541 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 19,
+        "name": "POCAH",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/9ccbd3c727f2c655fd0715b137fa6732/264x264-000000-80-0-0.jpg",
+        "fans": "1.058.088 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Lara Silva",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/f6169519d51a08a660f2b31ac1790cf3/264x264-000000-80-0-0.jpg",
+        "fans": "103.709 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Melody",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/f0f68980e8ac40edfb75d558a4430e17/264x264-000000-80-0-0.jpg",
+        "fans": "217.787 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Bianca",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/17e9bb5e9c92d84581e4cf8cc9ea76d6/264x264-000000-80-0-0.jpg",
+        "fans": "114.958",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 23,
+        "name": "MC Kevin o Chris",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/bcd5da098ff637dbde8241ba70de3b0e/264x264-000000-80-0-0.jpg",
+        "fans": "1.412.323 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 24,
+        "name": "MC Livinho",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/ddcb8b0efe104f6acebc31f1a4269b9e/264x264-000000-80-0-0.jpg",
+        "fans": "1.464.594 ",
+        "instagram": "",
+        "twitter": "",
+        "albums": [
+
+        ],
+        "eps": [
+
+        ],
+        "singles": [
+
+        ],
+        "shows": [
+
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Mc Don Juan",     
+        "image": "https://e-cdn-images.dzcdn.net/images/artist/a390ad92156ad3a21a406dcce9f8c5d6/264x264-000000-80-0-0.jpg",
+        "fans": "1.099.131 ",
         "instagram": "",
         "twitter": "",
         "albums": [
