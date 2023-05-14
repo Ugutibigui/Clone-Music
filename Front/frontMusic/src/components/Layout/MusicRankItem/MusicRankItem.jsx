@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { BsFillPlayFill, BsThreeDots, BsFillHeartFill } from 'react-icons/bs'
 import { TbMicrophone2 } from 'react-icons/tb'
+import { RiBarcodeFill } from 'react-icons/ri'
 
 import styles from './MusicRankItem.module.css'
 
-function MusicRankItem({ image, title }) {
+function MusicRankItem({ image, title, moreInfos }) {
 
     const [buttonClass, setButtonClass] = useState(`${styles.remove}`)
     const [wrapperClass, setWrapperClass] = useState('')
@@ -32,6 +33,19 @@ function MusicRankItem({ image, title }) {
                 <button> <TbMicrophone2 color='#fff' size={20} /> </button>
                 <button> <BsFillHeartFill color='#fff' size={20} /> </button>
                 <button> <BsThreeDots color='#fff' size={20} /> </button>
+
+
+                {moreInfos && (
+                    <>
+                        <p> Set dos Casados </p>
+
+                        <span> 10:43 </span>
+
+                        <span> <RiBarcodeFill/> </span>
+
+                        <div id={styles.cube}></div>
+                    </>
+                )}
             </div>
         </li>
     )
