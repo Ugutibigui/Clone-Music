@@ -1,12 +1,17 @@
 import { IoIosArrowForward } from 'react-icons/io'
+import { useState } from 'react'
 
 import Button from '../../../../../components/Buttons/Button/Button'
 import MusicRankItem from '../../../../../components/Layout/MusicRankItem/MusicRankItem'
 import SingerDetails from '../../../../../components/Layout/SingerDetails/SingerDetails'
+import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicFormat'
 
 import styles from './Discography.module.css'
 
 function Discography() {
+
+    const [arrayMusic, setArrayMusics] = useState({})
+
     return (
         <>
             <div className={styles.topContent}>
@@ -79,6 +84,11 @@ function Discography() {
                     </ul>
                 </aside>
             </div>
+
+            <MusicFormat listMusic={arrayMusic[0]} text='Álbuns' selectOne={['Tipo', 'A-Z', 'Data de Lançamento', 'Mais ouvidos']} selectTwo={['Grade', 'Lista']}/>
+            <MusicFormat listMusic={arrayMusic[1]} text='EPs'/>
+            <MusicFormat listMusic={arrayMusic[2]} text='Singles'/>
+            <MusicFormat listMusic={arrayMusic[3]} text='Destaque em'/>
         </>
     )
 }

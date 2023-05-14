@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FiSearch } from 'react-icons/fi'
 
@@ -9,6 +10,20 @@ import deezer from '../../../assets/deezerWhite.png'
 import styles from './Recommendation.module.css'
 
 function Artists() {
+
+    const [artist, setArtist] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:8000/artists', {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json()) // Randomizando e mostrando somente 5 artistas
+            .then(data => setArtist(data.sort(() => Math.random() - 0.5))) 
+    }, [])
+
     return (
         <section className={styles.artistContainer}>
             <div className={styles.topContent}>
@@ -31,19 +46,9 @@ function Artists() {
             </div>
 
             <section>
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
-                <AddArtist />
+                {artist.map((item, index) => (
+                    <AddArtist key={index} image={item.image} name={item.name }/>
+                ))}
             </section>
 
             <div className={styles.finish}>
