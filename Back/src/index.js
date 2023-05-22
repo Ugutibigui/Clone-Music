@@ -29,5 +29,5 @@ app.get('/artists', (req, res) => {
 })
 
 app.listen(port, () => {
-      console.log("Servidor Ligado")
+      console.log("Servidor Online!")
 })

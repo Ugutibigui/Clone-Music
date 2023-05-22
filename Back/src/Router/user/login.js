@@ -4,7 +4,6 @@ const router = express.Router()
 const db = require("../../db/db")
 
 router.post('/', async (req, res) => {
-      console.log("foi")
       let info = req.body;
       const email = info.email
       const password = info.password
@@ -18,8 +17,6 @@ router.post('/', async (req, res) => {
             ok: false,
             message: ""
       }
-
-      console.log(param)
 
       try {
             if (!email || !password) {

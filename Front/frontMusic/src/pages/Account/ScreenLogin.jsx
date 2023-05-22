@@ -30,7 +30,7 @@ function ScreenLogin() {
 				.then((response) => {
 					response.data.ok === true ? alert('Logado') : alert("Email ou senha incorretos")
 				})
-		} catch {
+		} catch(error) {
 			console.log("Erro na API do login")
 		}
 	}
