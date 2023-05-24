@@ -24,8 +24,8 @@ async function searchInfosLogin(param) {
 
 async function createUser(param) {
     const conn = await connect()
-    const sql = 'INSERT INTO users(email, password, name, age, sex, artist) VALUES(?, SHA2(?,256), ?, ?, ?, ?);'
-    const values = [param.email, param.password, param.username, param.age, param.sex, param.artist]
+    const sql = 'INSERT INTO users(email, password, name, age, sex, artist, image) VALUES(?, SHA2(?,256), ?, ?, ?, ?, ?);'
+    const values = [param.email, param.password, param.username, param.age, param.sex, param.artist, param.image]
     await conn.query(sql, values)
 }
 

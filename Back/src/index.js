@@ -23,6 +23,8 @@ app.use("/user/verifyLogin", logado)
 const logoff = require("./Router/user/logoff")
 app.use("/user/logoff", logoff)
 
+// 
+
 const artist = require('../src/data/artists.json')
 app.get('/artists', (req, res) => {
       return res.json(artist)

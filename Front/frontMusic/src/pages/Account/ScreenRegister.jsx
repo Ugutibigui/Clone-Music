@@ -39,7 +39,8 @@ function ScreenRegister() {
             username: name,
             age: age,
             sex: sex,
-            artist: checkbox
+            artist: checkbox,
+            image: ''
         }
 
         console.log(body)
@@ -81,8 +82,8 @@ function ScreenRegister() {
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
                     <div className={styles.socialMediaAccount}>
-                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='gray'/>
-                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='gray'/>
+                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white'/>
+                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white'/>
                     </div>
 
                     <div className={styles.form}>

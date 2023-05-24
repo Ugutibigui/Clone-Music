@@ -1,0 +1,89 @@
+.content {
+    padding: 0 4rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #32323D;
+    padding: 2rem 0;
+}
+
+.customFileUpload {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.customFileUpload img {
+    width: 140px;
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.customFileUpload input[type='file'] {
+    display: none;
+}
+
+.content h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.texts {
+    margin: 0 3rem 0 0;
+}
+
+.texts h2 {
+    color: #A2A2AD;
+}
+
+.texts span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #A2A2AD;
+}
+
+.column {
+    flex-direction: column;
+    align-items: start;
+}
+
+.box label{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #A2A2AD;  
+}
+
+.boxContent {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input input {
+    cursor:not-allowed;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: .9rem;
+    border: 1px solid #52525D;
+    border-radius: 5px;
+    background-color: #23232D;
+    color: #A2A2AD;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}

@@ -36,6 +36,8 @@
 .profile img {
     width: 220px;
     border-radius: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .profileInfos {

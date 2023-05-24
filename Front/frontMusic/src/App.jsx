@@ -11,6 +11,12 @@ import Radio from "./pages/Content/Radios/Radio"
 import Explore from "./pages/Content/Explorar/Explore"
 import Recommendation from './pages/Content/Recommendation/Recommendation'
 
+import Account from './pages/Content/SetUpAccount/SetUpAccount'
+import Settings from './pages/Content/SetUpAccount/NavBar/Settings/Settings'
+import Notifications from './pages/Content/SetUpAccount/NavBar/Notifications/Notifications'
+import Device from './pages/Content/SetUpAccount/NavBar/Device/Device'
+import Apps from './pages/Content/SetUpAccount/NavBar/Apps/Apps'
+
 import Favorite from "./pages/Content/Favoritos/Favorite"
 import NavHighlight from './pages/Content/Favoritos/NavBar/NavHighlight/NavHighlight'
 import Album from './pages/Content/Favoritos/NavBar/Albums/Album'
@@ -41,6 +47,11 @@ export function App() {
 				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
+
+				<Route exact path="/account" element={<Index content={<Account content={<Settings/>}/>} />} />
+				<Route exact path="/account/notifications" element={<Index content={<Account content={<Notifications/>}/>} />} />
+				<Route exact path="/account/device" element={<Index content={<Account content={<Device/>}/>} />} />
+				<Route exact path="/account/apps" element={<Index content={<Account content={<Apps/>}/>} />} />
 
 				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>

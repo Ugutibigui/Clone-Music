@@ -20,7 +20,7 @@ a:-webkit-any-link {
 }
 
 #backgroundAccount {
-    width: 120vw;
+    width: 80vw;
     filter: blur(100px);
     margin-left: auto;
     margin-right: auto;

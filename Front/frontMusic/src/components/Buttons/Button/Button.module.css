@@ -23,11 +23,17 @@
     padding-inline-end: 20px;
 }
 
-.gray {
+.white {
     border: none;
     width: 180px;
     background-color: #fff;
     color: #191919;
+}
+
+.gray {
+    border: none;
+    background-color: #808080;
+    color: #fff;
 }
 
 .black {
@@ -38,11 +44,27 @@
     color: #fff;
 }
 
-.button .gray:hover {
+.blue {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    border: none;
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.blue:hover {
+    background-color: #335392;
+}
+
+.white:hover {
     background-color: #e0e0e0;
 }
 
-.button .pink:hover {
+.gray:hover {
+    background-color: #a5a5a5;
+}
+
+.pink:hover {
     background-color: #DB343D;
 }
 

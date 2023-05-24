@@ -52,9 +52,9 @@ function ScreenLogin() {
 					</div>
 
 					<div className={`${styles.socialMediaAccount} ${styles.threeLogos}`}>
-						<Button icon={<BsFacebook size={20} color='royalblue' />} text='FACEBOOK' type='gray' />
-						<Button icon={<FcGoogle size={20} />} text='GOOGLE' type='gray' />
-						<Button icon={<BsApple size={20} />} text='APPLE' type='gray' />
+						<Button icon={<BsFacebook size={20} color='royalblue' />} text='FACEBOOK' type='white' />
+						<Button icon={<FcGoogle size={20} />} text='GOOGLE' type='white' />
+						<Button icon={<BsApple size={20} />} text='APPLE' type='white' />
 					</div>
 
 					<div className={styles.form}>

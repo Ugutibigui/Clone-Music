@@ -1,4 +1,5 @@
 import { TbArrowsShuffle } from 'react-icons/tb'
+import { useState } from 'react'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Buttons/Button/Button'
@@ -24,7 +25,7 @@ function Favorite({ content }) {
         <div className={styles.infoContent}>
             <div className={styles.topProfile}>
                 <div className={styles.profile}>
-                    <img src="https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/264x264-000000-80-0-0.jpg" alt="Profile" />
+                    <img src='https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/264x264-000000-80-0-0.jpg' alt="Profile" />
 
                     <div className={styles.profileInfos}>
                         <span>Ubbe Lothbrok</span>
@@ -34,12 +35,12 @@ function Favorite({ content }) {
                             <span> - </span>
                             <span>0 seguindo</span>
                         </div>
-                        
-                        <Button text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle/>} type='pink'/>
+
+                        <Button text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle />} type='pink' />
                     </div>
                 </div>
 
-                <CustomNav navigations={playlists} padding='0'/>
+                <CustomNav navigations={playlists} padding='0' />
             </div>
 
             <div className={styles.mainPlaylists}>

@@ -14,7 +14,7 @@ function Menu({ open, setOpen }) {
                 image: 'https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/40x40-000000-80-0-0.jpg',
                 name: 'Visitante',
                 color: '#fff',
-                route: ''
+                route: '/favorite'
             },
             {
                 id: 1,
@@ -27,7 +27,7 @@ function Menu({ open, setOpen }) {
                 id: 2,
                 text: 'Configurações da Conta',
                 color: '#fff',
-                route: ''
+                route: '/account'
             },
             {
                 id: 3,
