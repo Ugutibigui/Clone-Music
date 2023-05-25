@@ -24,9 +24,19 @@ async function searchInfosLogin(param) {
 
 async function createUser(param) {
     const conn = await connect()
-    const sql = 'INSERT INTO users(email, password, name, age, sex, artist, image) VALUES(?, SHA2(?,256), ?, ?, ?, ?, ?);'
-    const values = [param.email, param.password, param.username, param.age, param.sex, param.artist, param.image]
+    const sql = 'INSERT INTO users(email, password, name, username, age, sex, artist) VALUES(?, SHA2(?,256), ?, ?, ?, ?, ?);'
+    const values = [param.email, param.password, param.name, param.username, param.age, param.sex, param.artist]
     await conn.query(sql, values)
+
+    if (param.artist === 1) {
+        const sqlUserId = 'SELECT LAST_INSERT_ID() as userId;'
+        const getUserId = await conn.query(sqlUserId);
+        const userId = getUserId[0].userId;
+
+        const sqlFans = 'INSERT INTO fans(userId, fansCount) VALUES (?, 0);'
+        const valueFans = [userId]
+        await conn.query(sqlFans, valueFans);
+    }
 }
 
 module.exports = {

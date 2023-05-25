@@ -27,6 +27,7 @@ function ScreenRegister() {
 
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
+    const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [age, setAge] = useState('')
     const [sex, setSex] = useState('')
@@ -34,9 +35,10 @@ function ScreenRegister() {
 
     const Register = async () => {
         const body = {
+            name: name,
+            username: userName,
             email: email,
             password: password,
-            username: name,
             age: age,
             sex: sex,
             artist: checkbox,
@@ -87,9 +89,10 @@ function ScreenRegister() {
                     </div>
 
                     <div className={styles.form}>
+                        <Input type='text' text='Nome:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name} />
+                        <Input type='text' text='Nome de usuário:' name='userName' handleOnChange={(text) => setUserName(text.target.value)} value={userName} />
                         <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email} />
                         <Input type='password' text='Senha:' name='password' handleOnChange={(text) => setPassword(text.target.value)} value={password} />
-                        <Input type='text' text='Nome de usuário:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name} />
                         <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age} />
 
                         <Select text='Identidade' name='identifyRegister' options={identities} handleOnChange={(option) => setSex(option.target.value)}/>

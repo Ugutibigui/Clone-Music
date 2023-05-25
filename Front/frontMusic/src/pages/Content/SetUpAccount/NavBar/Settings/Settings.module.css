@@ -2,6 +2,12 @@
     padding: 0 4rem;
 }
 
+.content h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
 .box {
     display: flex;
     align-items: center;
@@ -9,16 +15,38 @@
     padding: 2rem 0;
 }
 
+.box label{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #A2A2AD;  
+}
+
+.box button {
+    margin-bottom: 0;
+}
+
+.boxContent {
+    width: 100%;
+}
+
+.column {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
 .customFileUpload {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    position: relative;
 }
 
 .customFileUpload img {
     width: 140px;
     border-radius: 200px;
     cursor: pointer;
-    margin: 0 1rem 0 0;
     object-fit: cover;
     object-position: center;
 }
@@ -27,14 +55,44 @@
     display: none;
 }
 
-.content h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #fff;
+.camera {
+    background-color: #23232da8;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border-radius: 100px;
+}
+
+.off {
+    animation: off-camera 500ms normal;
+    opacity: 0;
+}
+
+.on {
+    opacity: 1;
+    animation: on-camera 500ms normal;
+}
+
+@keyframes on-camera {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes off-camera {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
 }
 
 .texts {
-    margin: 0 3rem 0 0;
+    margin: 0 3rem;
 }
 
 .texts h2 {
@@ -45,21 +103,6 @@
     font-size: 1rem;
     font-weight: 300;
     color: #A2A2AD;
-}
-
-.column {
-    flex-direction: column;
-    align-items: start;
-}
-
-.box label{
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #A2A2AD;  
-}
-
-.boxContent {
-    width: 100%;
 }
 
 .input {
