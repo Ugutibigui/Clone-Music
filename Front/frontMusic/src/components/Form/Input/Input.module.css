@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.formInput input {
+.formInput .input {
     width: 100%;
     height: 54px;
     border: none;
@@ -23,7 +23,7 @@
     overflow-wrap: break-word;
 }
 
-.formInput input[type="checkbox"] {
+.formInput .input[type="checkbox"] {
     height: 30px;
     width: 30px;
 }

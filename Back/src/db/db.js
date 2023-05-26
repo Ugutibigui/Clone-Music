@@ -26,13 +26,10 @@ async function createUser(param) {
     const conn = await connect()
     const sql = 'INSERT INTO users(email, password, name, username, age, sex, artist) VALUES(?, SHA2(?,256), ?, ?, ?, ?, ?);'
     const values = [param.email, param.password, param.name, param.username, param.age, param.sex, param.artist]
-    await conn.query(sql, values)
+    const result = await conn.query(sql, values)
+    const userId = result[0].insertId;
 
     if (param.artist === 1) {
-        const sqlUserId = 'SELECT LAST_INSERT_ID() as userId;'
-        const getUserId = await conn.query(sqlUserId);
-        const userId = getUserId[0].userId;
-
         const sqlFans = 'INSERT INTO fans(userId, fansCount) VALUES (?, 0);'
         const valueFans = [userId]
         await conn.query(sqlFans, valueFans);

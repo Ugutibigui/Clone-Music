@@ -3,6 +3,7 @@ import { BsFacebook } from 'react-icons/bs'
 import { SlArrowRight } from 'react-icons/sl'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import { Formik, Form, ErrorMessage } from 'formik'
 
 import backgroundLogin from '../../assets/background-login.jpeg'
 import NavBottom from '../../components/Nav/NavBottom/NavBottom'
@@ -16,36 +17,30 @@ import Marketplace from '../../assets/partnerships/mercadoLogo.png'
 import Tim from '../../assets/partnerships/timLogo.png'
 import TimUltra from '../../assets/partnerships/timUltraLogo.png'
 import api from '../../services/api';
+import * as yup from 'yup'
 
 import styles from './Account.module.css'
 
 function ScreenRegister() {
 
-    const identities = ['Feminino', 'Masculino', 'Não-Binário']
+    const identities = ['Identidade', 'Feminino', 'Masculino', 'Não-Binário']
 
     // Funcionamento da criação de Usúario
 
-    const [email, setEmail] = useState('')
-    const [name, setName] = useState('')
-    const [userName, setUserName] = useState('')
-    const [password, setPassword] = useState('')
-    const [age, setAge] = useState('')
     const [sex, setSex] = useState('')
     const [checkbox, setCheckBox] = useState('')
 
-    const Register = async () => {
+    const Register = async (values) => {
         const body = {
-            name: name,
-            username: userName,
-            email: email,
-            password: password,
-            age: age,
+            name: values.name,
+            username: values.username,
+            email: values.email,
+            password: values.password,
+            age: values.age,
             sex: sex,
             artist: checkbox,
             image: ''
         }
-
-        console.log(body)
 
         try {
             await api.post('user/createUser', body)
@@ -56,6 +51,14 @@ function ScreenRegister() {
             console.log('Erro na API')
         }
     }
+
+    const validationRegister = yup.object().shape({
+        name: yup.string().required('Campo obrigatório'),
+        username: yup.string().required('Campo obrigatório'),
+        email: yup.string().email('E-mail inválido').required('Campo obrigatório'),
+        password: yup.string().min(8, 'Mínimo de 8 caracteres').required('Campo obrigatório'),
+        age: yup.number().required('Campo obrigatório')
+    })
 
     return (
         <div className={styles.bodyAccount}>
@@ -84,25 +87,48 @@ function ScreenRegister() {
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
                     <div className={styles.socialMediaAccount}>
-                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white'/>
-                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white'/>
+                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white' />
+                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white' />
                     </div>
 
-                    <div className={styles.form}>
-                        <Input type='text' text='Nome:' name='name' handleOnChange={(text) => setName(text.target.value)} value={name} />
-                        <Input type='text' text='Nome de usuário:' name='userName' handleOnChange={(text) => setUserName(text.target.value)} value={userName} />
-                        <Input type='email' text='E-mail:' name='email' handleOnChange={(text) => setEmail(text.target.value)} value={email} />
-                        <Input type='password' text='Senha:' name='password' handleOnChange={(text) => setPassword(text.target.value)} value={password} />
-                        <Input type='number' text='Idade:' name='age' handleOnChange={(text) => setAge(text.target.value)} value={age} />
+                    <Formik initialValues={{}} validationSchema={validationRegister} onSubmit={Register}>
+                        {({ errors, touched }) => (
+                            <Form className={styles.form}>
+                                <Input type='text' text='Nome:' name='name' />
+                                {errors.name && touched.name && (
+                                    <ErrorMessage name="name" component="div" className={styles.error} />
+                                )}
 
-                        <Select text='Identidade' name='identifyRegister' options={identities} handleOnChange={(option) => setSex(option.target.value)}/>
+                                <Input type='text' text='Nome de usuário:' name='username' />
+                                {errors.username && touched.username && (
+                                    <ErrorMessage name="username" component="div" className={styles.error} />
+                                )}
 
-                        <Input type='checkbox' text='Artista?' name='artistCheck' handleOnChange={(bool) => setCheckBox(bool.target.checked ? 1 : 0)}/> 
+                                <Input type="email" text="E-mail:" name="email" />
+                                {errors.email && touched.email && (
+                                    <ErrorMessage name="email" component="div" className={styles.error} />
+                                )}
 
-                        <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
+                                <Input type="password" text="Senha:" name="password" />
+                                {errors.password && touched.password && (
+                                    <ErrorMessage name="password" component="div" className={styles.error} />
+                                )}
 
-                        <Button text='CADASTRAR-SE' type='pink'  onClick={Register}/> 
-                    </div>
+                                <Input type='number' text='Idade:' name='age' />
+                                {errors.age && touched.age && (
+                                    <ErrorMessage name="age" component="div" className={styles.error} />
+                                )}
+
+                                <Select text='Identidade' name='identifyRegister' options={identities} handleOnChange={(option) => setSex(option.target.value)} />
+
+                                <Input type='checkbox' text='Artista?' name='artistCheck' handleOnChange={(bool) => setCheckBox(bool.target.checked ? 1 : 0)} />
+
+                                <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
+
+                                <Button text='CADASTRAR-SE' type='pink' typeButton='submit' />
+                            </Form>
+                        )}
+                    </Formik>
 
                     <span id={styles.reCAPTCHA}>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>
 
