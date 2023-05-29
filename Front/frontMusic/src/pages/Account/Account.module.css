@@ -117,6 +117,13 @@ a:-webkit-any-link {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    gap: 1rem;
+}
+
+.form span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #a2a2ad;
 }
 
 #forget {

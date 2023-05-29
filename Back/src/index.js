@@ -23,6 +23,9 @@ app.use("/user/verifyLogin", logado)
 const logoff = require("./Router/user/logoff")
 app.use("/user/logoff", logoff)
 
+const checkUser = require("./Router/user/checkExistingUser")
+app.use("/user/checkExistingUser", checkUser)
+
 // 
 
 const artist = require('../src/data/artists.json')

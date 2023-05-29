@@ -10,6 +10,7 @@ import NavBottom from '../../components/Nav/NavBottom/NavBottom'
 import deezer from '../../assets/deezerWhite.png'
 import Button from '../../components/Buttons/Button/Button'
 import Select from '../../components/Form/Select/Select'
+import InputField from '../../components/Form/InputField/InputField'
 import Input from '../../components/Form/Input/Input'
 import GloboPlay from '../../assets/partnerships/globoPlayLogo.png'
 import Itau from '../../assets/partnerships/itauLogo.png'
@@ -29,6 +30,7 @@ function ScreenRegister() {
 
     const [sex, setSex] = useState('')
     const [checkbox, setCheckBox] = useState('')
+    const [accountExists, setAccountExists] = useState(false);
 
     const Register = async (values) => {
         const body = {
@@ -43,10 +45,25 @@ function ScreenRegister() {
         }
 
         try {
+            await api.post('user/checkExistingUser', { email: values.email })
+                .then(response => {
+                    if (response.data.exists) {
+                        setAccountExists(true);
+                        return;
+                    } else {
+                        setAccountExists(false)
+                    }
+                })
+
             await api.post('user/createUser', body)
-            .then(response => {
-                response.data.ok === true ? alert('Conta Criada com sucesso') : alert('Erro na Criação de Conta')
-            })
+                .then(response => {
+                    if (response.data.ok) {
+                        alert('Conta Criada com sucesso')
+                        window.location.reload()
+                    } else {
+                        alert('Erro na Criação de Conta')
+                    }
+                })
         } catch (error) {
             console.log('Erro na API')
         }
@@ -94,30 +111,40 @@ function ScreenRegister() {
                     <Formik initialValues={{}} validationSchema={validationRegister} onSubmit={Register}>
                         {({ errors, touched }) => (
                             <Form className={styles.form}>
-                                <Input type='text' text='Nome:' name='name' />
-                                {errors.name && touched.name && (
-                                    <ErrorMessage name="name" component="div" className={styles.error} />
-                                )}
+                                <div>
+                                    <InputField type='text' text='Nome:' name='name' />
+                                    {errors.name && touched.name && (
+                                        <ErrorMessage name="name" component="span" />
+                                    )}
+                                </div>
 
-                                <Input type='text' text='Nome de usuário:' name='username' />
-                                {errors.username && touched.username && (
-                                    <ErrorMessage name="username" component="div" className={styles.error} />
-                                )}
+                                <div>
+                                    <InputField type='text' text='Nome de usuário:' name='username' />
+                                    {errors.username && touched.username && (
+                                        <ErrorMessage name="username" component="span" />
+                                    )}
+                                </div>
 
-                                <Input type="email" text="E-mail:" name="email" />
-                                {errors.email && touched.email && (
-                                    <ErrorMessage name="email" component="div" className={styles.error} />
-                                )}
+                                <div>
+                                    <InputField type="email" text="E-mail:" name="email" />
+                                    {errors.email && touched.email && (
+                                        <ErrorMessage name="email" component="span" />
+                                    )}
+                                </div>
 
-                                <Input type="password" text="Senha:" name="password" />
-                                {errors.password && touched.password && (
-                                    <ErrorMessage name="password" component="div" className={styles.error} />
-                                )}
+                                <div>
+                                    <InputField type="password" text="Senha:" name="password" />
+                                    {errors.password && touched.password && (
+                                        <ErrorMessage name="password" component="span" />
+                                    )}
+                                </div>
 
-                                <Input type='number' text='Idade:' name='age' />
-                                {errors.age && touched.age && (
-                                    <ErrorMessage name="age" component="div" className={styles.error} />
-                                )}
+                                <div>
+                                    <InputField type='number' text='Idade:' name='age' />
+                                    {errors.age && touched.age && (
+                                        <ErrorMessage name="age" component="span" />
+                                    )}
+                                </div>
 
                                 <Select text='Identidade' name='identifyRegister' options={identities} handleOnChange={(option) => setSex(option.target.value)} />
 
@@ -126,12 +153,13 @@ function ScreenRegister() {
                                 <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
 
                                 <Button text='CADASTRAR-SE' type='pink' typeButton='submit' />
+
+                                {accountExists && <span>A conta já existe. Por favor, escolha outro e-mail.</span>}
                             </Form>
                         )}
                     </Formik>
 
                     <span id={styles.reCAPTCHA}>Este site é protegido por reCAPTCHA. <strong> A POLÍTICA DE PRIVACIDADE </strong> e os <strong> TERMOS DE SERVIÇO </strong> do Google se aplicam.</span>
-
                 </section>
             </div>
 

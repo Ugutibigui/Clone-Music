@@ -21,6 +21,13 @@ async function searchInfosLogin(param) {
     return await conn.query(sql, values)
 }
 
+async function checkUser(param) {
+    const conn = await connect()
+    const sql = 'SELECT * FROM users WHERE email = ?'
+    const values = [param.email]
+    return await conn.query(sql, values)
+}
+
 
 async function createUser(param) {
     const conn = await connect()
@@ -38,5 +45,6 @@ async function createUser(param) {
 
 module.exports = {
     searchInfosLogin,
+    checkUser,
     createUser
 }

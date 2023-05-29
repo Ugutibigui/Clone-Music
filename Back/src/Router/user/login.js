@@ -25,8 +25,7 @@ router.post('/', async (req, res) => {
 
             const [login] = await db.searchInfosLogin(param);
 
-            if (login.length > 0) {
-                  
+            if (login.length > 0) { 
                    let Token = await jwt.sign({
                         id: login.id,
                         name: login.name,

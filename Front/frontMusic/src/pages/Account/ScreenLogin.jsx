@@ -3,7 +3,7 @@ import { BsFacebook, BsApple } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { Formik, Form, ErrorMessage } from 'formik'
 
-import Input from '../../components/Form/Input/Input'
+import InputField from '../../components/Form/InputField/InputField'
 import Button from '../../components/Buttons/Button/Button'
 import NavBottom from '../../components/Nav/NavBottom/NavBottom'
 import backgroundLogin from '../../assets/background-login.jpeg'
@@ -60,15 +60,19 @@ function ScreenLogin() {
 					<Formik initialValues={{}} validationSchema={validationLogin} onSubmit={Login} >
 						{({ errors, touched }) => (
 							<Form className={styles.form}>
-								<Input type="email" text="E-mail:" name="email" />
-								{errors.email && touched.email && (
-									<ErrorMessage name="email" component="div" className={styles.error} />
-								)}
+								<div>
+									<InputField type="email" text="E-mail:" name="email" />
+									{errors.email && touched.email && (
+										<ErrorMessage name="email" component="span" />
+									)}
+								</div>
 
-								<Input type="password" text="Senha:" name="password" />
-								{errors.password && touched.password && (
-									<ErrorMessage name="password" component="div" className={styles.error} />
-								)}
+								<div>
+									<InputField type="password" text="Senha:" name="password" />
+									{errors.password && touched.password && (
+										<ErrorMessage name="password" component="span" />
+									)}
+								</div>
 
 								<Button text="FAZER LOGIN" type="pink" typeButton="submit" />
 							</Form>
