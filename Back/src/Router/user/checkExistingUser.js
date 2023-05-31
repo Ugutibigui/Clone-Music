@@ -1,7 +1,7 @@
 const express = require('express')
 
 const router = express.Router()
-const db = require("../../db/db")
+const db = require("../../database/repository")
 
 router.post('/', async (req, res) => {
     const { email } = req.body

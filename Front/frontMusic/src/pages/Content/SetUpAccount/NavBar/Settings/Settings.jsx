@@ -32,13 +32,13 @@ const Settings = () => {
 
             <div className={styles.box}>
                 <label htmlFor="profileImage" className={styles.customFileUpload}
-                onMouseEnter={() => setCamera('on')}
-                onMouseLeave={() => setCamera('off')}>
+                    onMouseEnter={() => setCamera('on')}
+                    onMouseLeave={() => setCamera('off')}>
                     <img src={profileImage} alt="Profile" />
-                    <input type="file" id="profileImage"  onChange={handleFileChange} accept="image/*" />
+                    <input type="file" id="profileImage" onChange={handleFileChange} accept="image/*" />
 
                     <div className={`${styles.camera} ${styles[camera]}`}>
-                        <AiFillCamera size={30}/>
+                        <AiFillCamera size={30} />
                     </div>
                 </label>
 
@@ -77,36 +77,11 @@ const Settings = () => {
                     <Button text='CONECTE-SE COM FACEBOOK' icon={<BsFacebook size={20} />} type='blue' />
                     <Button text='CONECTE-SE COM GOOGLE' icon={<BsGoogle size={20} />} type='white' />
                 </div>
+
             </div>
-
-            <h2> Informações Deezer visíveis para outros usuários </h2>
-
+            <Button text='Salvar' type='pink' onClick={toggleImage} width='120px'/>
             <div className={styles.box}>
-                <span> Eu me identifico como </span>
-
-                <ul>
-                    <li>
-                        <label htmlFor="mascRadio"> Masculino </label>
-                        <input type="radio" id="mascRadio" />
-                    </li>
-
-                    <li>
-                        <label htmlFor="mascFem"> Feminino </label>
-                        <input type="radio" id="mascFem" />
-                    </li>
-
-                    <li>
-                        <label htmlFor="mascNo"> Não-Binário </label>
-                        <input type="radio" id="mascNo" />
-                    </li>
-                </ul>
-
-                <label htmlFor="userName"> Nome de usuário </label>
-                <input type="text" id="userName" value='Ubbe Lothbrok' readOnly/>
-            </div>
-
-            <div className={styles.box}>
-                <Button text='Salvar' type='pink' onClick={toggleImage} />
+                <Button text='DELETAR MINHA CONTA' type='black' />
             </div>
         </div>
     )

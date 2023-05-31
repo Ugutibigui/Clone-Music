@@ -104,8 +104,8 @@ function ScreenRegister() {
                     <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
 
                     <div className={styles.socialMediaAccount}>
-                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white' />
-                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white' />
+                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white' width='180px'/>
+                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white' width='180px'/>
                     </div>
 
                     <Formik initialValues={{}} validationSchema={validationRegister} onSubmit={Register}>

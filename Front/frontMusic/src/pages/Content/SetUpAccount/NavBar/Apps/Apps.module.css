@@ -1,0 +1,24 @@
+.rectangle {
+    border-radius: 10px;
+    background-color: #23232d;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-block-start: 2rem;
+    margin-block-end: 0;
+}
+
+hr {
+    width: 100%;
+    opacity: .5;
+    border-width: 0px 0px 1px;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    border-color: #32323D;
+}

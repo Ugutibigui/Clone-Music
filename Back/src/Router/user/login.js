@@ -1,10 +1,12 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
 const router = express.Router()
-const db = require("../../db/db")
+
+const db = require("../../database/repository")
 
 router.post('/', async (req, res) => {
-      let info = req.body;
+      let info = req.body
+
       const email = info.email
       const password = info.password
 

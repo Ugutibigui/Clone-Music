@@ -15,10 +15,10 @@
     padding: 2rem 0;
 }
 
-.box label{
+.box label {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #A2A2AD;  
+    color: #A2A2AD;
 }
 
 .box button {
@@ -78,7 +78,9 @@
 @keyframes on-camera {
     from {
         opacity: 0;
-    } to {
+    }
+
+    to {
         opacity: 1;
     }
 }
@@ -86,7 +88,9 @@
 @keyframes off-camera {
     from {
         opacity: 1;
-    } to {
+    }
+
+    to {
         opacity: 0;
     }
 }
@@ -99,7 +103,7 @@
     color: #A2A2AD;
 }
 
-.texts span {
+.box span {
     font-size: 1rem;
     font-weight: 300;
     color: #A2A2AD;
@@ -113,7 +117,7 @@
 }
 
 .input input {
-    cursor:not-allowed;
+    cursor: not-allowed;
     height: 40px;
     box-sizing: border-box;
     padding: 1rem;

@@ -11,6 +11,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
+const router = require('./router')
+app.use(router)
+
 const createUser = require("./Router/user/createUser")
 app.use("/user/createUser", createUser)
 
@@ -25,13 +28,6 @@ app.use("/user/logoff", logoff)
 
 const checkUser = require("./Router/user/checkExistingUser")
 app.use("/user/checkExistingUser", checkUser)
-
-// 
-
-const artist = require('../src/data/artists.json')
-app.get('/artists', (req, res) => {
-      return res.json(artist)
-})
 
 app.listen(port, () => {
       console.log("Servidor Online!")

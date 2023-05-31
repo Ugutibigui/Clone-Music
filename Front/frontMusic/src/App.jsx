@@ -13,7 +13,6 @@ import Recommendation from './pages/Content/Recommendation/Recommendation'
 
 import Account from './pages/Content/SetUpAccount/SetUpAccount'
 import Settings from './pages/Content/SetUpAccount/NavBar/Settings/Settings'
-import Notifications from './pages/Content/SetUpAccount/NavBar/Notifications/Notifications'
 import Device from './pages/Content/SetUpAccount/NavBar/Device/Device'
 import Apps from './pages/Content/SetUpAccount/NavBar/Apps/Apps'
 
@@ -49,7 +48,6 @@ export function App() {
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
 
 				<Route exact path="/account" element={<Index content={<Account content={<Settings/>}/>} />} />
-				<Route exact path="/account/notifications" element={<Index content={<Account content={<Notifications/>}/>} />} />
 				<Route exact path="/account/device" element={<Index content={<Account content={<Device/>}/>} />} />
 				<Route exact path="/account/apps" element={<Index content={<Account content={<Apps/>}/>} />} />
 

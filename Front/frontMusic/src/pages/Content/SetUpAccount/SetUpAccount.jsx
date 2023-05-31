@@ -6,7 +6,6 @@ const SetUpAccount = ({content}) => {
 
     const playlists = [
         { name: 'Minhas informações', to: '/account' },
-        { name: 'Preferências de Notificação', to: '/account/notifications' },
         { name: 'Meus dispositivos conectados', to: '/account/device' },
         { name: 'Meus aplicativos', to: '/account/apps' }
     ]

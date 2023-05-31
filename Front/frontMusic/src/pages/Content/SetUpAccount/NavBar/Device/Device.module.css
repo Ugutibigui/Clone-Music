@@ -1,0 +1,16 @@
+.rectangle {
+    padding: 1rem;
+    background-color: #23232d;
+    border-radius: 10px;
+}
+
+.rectangle h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.rectangle h2 {
+    color: #a2a2ad;
+    font-weight: 400;
+    font-size: .8rem;
+}
