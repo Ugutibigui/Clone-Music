@@ -19,7 +19,7 @@ function Music() {
     const [artist, setArtist] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/artists', {
+        fetch('http://localhost:8000/artists?limit=100', {
             'method': 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ function Music() {
                     <div className={styles.artists}>
                         {artist.map((item, index) => (
                             <div className={styles.figureImage}>
-                                <img src={item.image} alt="Artist" id={`img${index}`} />
+                                <img src={item.photo} alt="Artist" id={`img${index}`} />
                             </div>
                         ))}
                     </div>

@@ -14,13 +14,13 @@ function Artists() {
     const [artist, setArtist] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/artists', {
+        fetch('http://localhost:8000/artists?limit=200', {
             'method': 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-            .then(response => response.json()) // Randomizando e mostrando somente 5 artistas
+            .then(response => response.json()) // randomizando os artistas
             .then(data => setArtist(data.sort(() => Math.random() - 0.5))) 
     }, [])
 
@@ -47,7 +47,7 @@ function Artists() {
 
             <section>
                 {artist.map((item, index) => (
-                    <AddArtist key={index} image={item.image} name={item.name }/>
+                    <AddArtist key={index} image={item.photo} name={item.name }/>
                 ))}
             </section>
 

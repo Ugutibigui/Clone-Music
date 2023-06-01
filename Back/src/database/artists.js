@@ -1,9 +1,11 @@
 const connect = require('./connection')
 
-async function getArtists() {
+async function getArtists(limit) {
     const conn = await connect()
-    const sql = 'select * from users where artist = 1'
-    return await conn.query(sql)
+    const sql = 'SELECT * FROM users WHERE artist = 1 LIMIT ?'
+    const values = [limit]
+    const [result] =  await conn.query(sql, values)
+    return result
 }
 
 module.exports = {

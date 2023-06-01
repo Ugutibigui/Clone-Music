@@ -6,8 +6,8 @@
 }
 
 .artistImage img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 200px;
     cursor: pointer;
 }
@@ -29,8 +29,8 @@
     background-image: linear-gradient(45deg,#6b1b42,#f06262);
     top: 0;
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 200px;
     opacity: .6;
     cursor: pointer;
@@ -39,7 +39,7 @@
 }
 
 .artistImage p {
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
 }

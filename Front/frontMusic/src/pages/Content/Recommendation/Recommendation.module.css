@@ -1,8 +1,12 @@
 .artistContainer {
     height: 100vh;
     background-color: #121216;
-    padding: 0rem 16rem;
+    padding: 0rem 8rem;
     overflow: hidden;
+}
+
+.topContent {
+    height: 8vh;
 }
 
 .topContent img {
@@ -32,22 +36,26 @@
 }
 
 .navContainer {
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     color: #fff;
+    margin: 0 auto;
 }
 
 .navContainer h1,
 .navContainer p {
     margin-block-start: 0;
     margin-block-end: 0;
+    text-align: center;
 }
 
 .search {
     height: 48px;
-	width: 60%;
+    width: 100%;
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -73,12 +81,13 @@
 }
 
 .artistContainer section {
-    height: 600px;
+    height: 57vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: scroll;
-    gap: 30px;
+    gap: 15px;
+    margin-bottom: 2rem;
 }
 
 .artistContainer section::-webkit-scrollbar-track {
@@ -95,7 +104,6 @@
 }
 
 .finish {
-    height: 150px;
     width: 100%;
     bottom: 0;
     display: flex;
