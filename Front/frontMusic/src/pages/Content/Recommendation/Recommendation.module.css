@@ -80,25 +80,33 @@
     margin-left: 10px;
 }
 
-.artistContainer section {
+.gridScreen {
+    width: 100%;
     height: 57vh;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+}
+
+.gridScreen section {
+    width: 100vw;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: repeat(6,16.6%);
     overflow-y: scroll;
-    gap: 15px;
+    overflow-x: hidden;
     margin-bottom: 2rem;
 }
 
-.artistContainer section::-webkit-scrollbar-track {
+.gridScreen section::-webkit-scrollbar-track {
 	background-color: transparent;
 }
 
-.artistContainer section::-webkit-scrollbar {
+.gridScreen section::-webkit-scrollbar {
 	width: 8px;
 }
 
-.artistContainer section::-webkit-scrollbar-thumb {
+.gridScreen section::-webkit-scrollbar-thumb {
 	background: #dbdbdb;
 	border-radius: 20px;
 }

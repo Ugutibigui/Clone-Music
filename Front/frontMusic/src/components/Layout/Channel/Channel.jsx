@@ -5,7 +5,7 @@ import AddContent from '../AddContent/AddContent'
 
 import styles from './Channel.module.css'
 
-function Channel({ addText, h2, h3, Card, requestAPI }) {
+function Channel({ addText, addLink, h2, h3, Card, requestAPI }) {
     
     return (
         <section className={styles.channel}>
@@ -26,7 +26,7 @@ function Channel({ addText, h2, h3, Card, requestAPI }) {
                     <div className={styles.carousel}>
 
                         {addText && (
-                            <AddContent text={addText}/>
+                            <AddContent text={addText} link={addLink}/>
                         )}
                         
                         <Card image='' title='' fans='' date='' author='' tracks='' />

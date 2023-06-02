@@ -11,6 +11,8 @@ import Radio from "./pages/Content/Radios/Radio"
 import Explore from "./pages/Content/Explorar/Explore"
 import Recommendation from './pages/Content/Recommendation/Recommendation'
 
+import SearchPage from "./pages/Content/Search/Search"
+
 import Account from './pages/Content/SetUpAccount/SetUpAccount'
 import Settings from './pages/Content/SetUpAccount/NavBar/Settings/Settings'
 import Device from './pages/Content/SetUpAccount/NavBar/Device/Device'
@@ -46,6 +48,7 @@ export function App() {
 				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
+				<Route path="/search" element={<Index content={<SearchPage/>}/>}/>
 
 				<Route exact path="/account" element={<Index content={<Account content={<Settings/>}/>} />} />
 				<Route exact path="/account/device" element={<Index content={<Account content={<Device/>}/>} />} />

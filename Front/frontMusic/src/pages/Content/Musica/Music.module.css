@@ -47,9 +47,9 @@
 }
 
 .figureImage img {
-    border-radius: 100px;
+    border-radius: 200px;
     position: absolute;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 

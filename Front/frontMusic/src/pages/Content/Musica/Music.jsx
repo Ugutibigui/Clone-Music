@@ -37,7 +37,7 @@ function Music() {
 
                     <div className={styles.artists}>
                         {artist.map((item, index) => (
-                            <div className={styles.figureImage}>
+                            <div className={styles.figureImage} key={index}>
                                 <img src={item.photo} alt="Artist" id={`img${index}`} />
                             </div>
                         ))}

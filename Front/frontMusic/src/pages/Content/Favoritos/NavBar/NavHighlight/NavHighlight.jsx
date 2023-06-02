@@ -10,7 +10,7 @@ function NavHighlight() {
         <>
             <Channel h2='Tocados recentemente' Card={RecentlyCard}/>
             <Channel addText='Criar uma playlist' h2='Playlists' Card={PlaylistCard}/>
-            <Channel addText='Adicione artistas' h2='Artistas' Card={ArtistCard}/>
+            <Channel addText='Adicione artistas' addLink='/recommendation' h2='Artistas' Card={ArtistCard}/>
         </>
     )
 }

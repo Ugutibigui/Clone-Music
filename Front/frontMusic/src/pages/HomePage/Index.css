@@ -159,6 +159,15 @@ header .text-box .search {
 	outline: none;
 }
 
+.remove {
+	opacity: 0;
+	cursor: default;
+}
+
+.active {
+	opacity: 1;
+}
+
 header .profile {
 	width: 50%;
 	display: flex;
@@ -201,29 +210,34 @@ header button {
 
 #img2 {
 	width: 150px;
+	height: 150px;
     z-index: 3;
 }
 
 #img0 {
     z-index: 1;
 	width: 110px;
+	height: 110px;
     margin-right: 19rem;
 }
 
 #img1 {
     z-index: 2;
 	width: 130px;
+	height: 130px;
     margin-right: 11rem;
 }
 
 #img3 {
    z-index: 1;
    width: 110px;
+   height: 110px;
    margin-left: 19rem;
 }
 
 #img4 {
 	width: 130px;
+	height: 130px;
     z-index: 2;
     margin-left: 11rem;
 }

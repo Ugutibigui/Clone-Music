@@ -21,7 +21,7 @@ function Artists() {
             }
         })
             .then(response => response.json()) // randomizando os artistas
-            .then(data => setArtist(data.sort(() => Math.random() - 0.5))) 
+            .then(data => setArtist(data.sort(() => Math.random() - 0.5)))
     }, [])
 
     return (
@@ -45,11 +45,13 @@ function Artists() {
                 </div>
             </div>
 
-            <section>
-                {artist.map((item, index) => (
-                    <AddArtist key={index} image={item.photo} name={item.name }/>
-                ))}
-            </section>
+            <div className={styles.gridScreen}>
+                <section>
+                    {artist.map((item, index) => (
+                        <AddArtist key={index} image={item.photo} name={item.name} />
+                    ))}
+                </section>
+            </div>
 
             <div className={styles.finish}>
                 <Link to='/'>

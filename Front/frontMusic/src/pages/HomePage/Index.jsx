@@ -18,6 +18,13 @@ function Index({ content }) {
 	const [menuOpen, setMenuOpen] = useState(false)
 	const [noficationOpen, setNoficationOpen] = useState(false)
 
+	const [search, setSearch] = useState('')
+
+	const Search = () => {
+		const buttonSearch = document.getElementById("button-search")
+		buttonSearch.click()
+	}
+
 	return (
 		<div className="App">
 			<Menu open={menuOpen} setOpen={setMenuOpen} />
@@ -50,7 +57,7 @@ function Index({ content }) {
 							<Link to='/favorite/playlist'> <span>Playlist</span> </Link>
 							<Link to='/favorite/album'> <span>Álbuns</span> </Link>
 							<Link to='/favorite/artist'> <span>Artistas</span> </Link>
-							<Link to='/favorite/podcasts'> <span>Podcasts</span> </Link>						
+							<Link to='/favorite/podcasts'> <span>Podcasts</span> </Link>
 						</div>
 					</section>
 				</div>
@@ -58,21 +65,24 @@ function Index({ content }) {
 					<header>
 						<div className="text-box">
 							<div className="search">
-								<button> <FiSearch size={20} /> </button>
-								<input type="text" placeholder='Buscar' />
+								<Link to='/search' id='button-search'>
+									<button> <FiSearch size={20} /> </button>
+								</Link>
+								<input type="text" placeholder='Buscar' onChange={event => setSearch(event.target.value)}
+									onKeyDown={event => event.key === 'Enter' ? Search() : null} value={search}/>
 							</div>
-							<button> <AiFillCloseCircle size={35} /> </button>
+							<button className={search ? 'active' : 'remove'} onClick={() => setSearch('')}> <AiFillCloseCircle size={35} /> </button>
 						</div>
 
 						<div className="profile">
 							<div className="icons-profile">
-								<button> <MdNotifications size={30} onClick={() => setNoficationOpen(true)}/> </button>
+								<button> <MdNotifications size={30} onClick={() => setNoficationOpen(true)} /> </button>
 								<button> <MdAccountCircle size={30} onClick={() => setMenuOpen(true)} /> </button>
 							</div>
 						</div>
 					</header>
 
-					{content} 
+					{content}
 				</div>
 			</div>
 

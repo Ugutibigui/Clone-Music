@@ -1,13 +1,15 @@
 import { IoAdd } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 import styles from './AddContent.module.css'
 
-const AddContent = ({text, circle}) => {
+const AddContent = ({text, circle, link}) => {
+
   return (
     <div className={`${styles.addContent} ${circle && styles.circle}`}>
-        <div className={styles.image}>
+        <Link className={styles.image} to={link !== undefined ? link : '/favorite'}>
             <IoAdd size={40} color='#72727d'/>
-        </div>
+        </Link>
         <p> {text} </p>
     </div>
   )
