@@ -39,6 +39,7 @@ function ScreenLogin() {
 		<div className={styles.bodyAccount}>
 			<div className={styles.topAccount}>
 				<img id={styles.backgroundAccount} src={backgroundLogin} alt="Background" />
+
 				<section>
 					<Link to="/">
 						<img src={deezer} alt="Logo Deezer" />

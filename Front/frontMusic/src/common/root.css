@@ -1,0 +1,14 @@
+:root {
+    /* Colors */ 
+
+    --white-one: #fff;
+    --gray-one: #a2a2ad;
+    --gray-two: #92929d;
+    --dark-gray-one: #45454e;
+    --black-one: #121216;
+    --black-two: #191922;
+
+    /* Fonts */
+
+    --ubuntu-font: Ubuntu, Arial, sans-serif;
+}

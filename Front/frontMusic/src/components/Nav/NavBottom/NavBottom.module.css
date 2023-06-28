@@ -1,6 +1,6 @@
 .bottomAccount {
     z-index: 1;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,8 +26,8 @@
 
 .listasInfos {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .bottomInfos {

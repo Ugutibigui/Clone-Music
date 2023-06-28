@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Work+Sans:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: #191922;
+	border-left: 1px solid #45454e;
+}
+
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #686666;
+	border-radius: 20px;
+}
+
+h1 {
+    font-family: var(--ubuntu-font);
+    color: var(--white-one);
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    font-family: var(--ubuntu-font);
+    font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+p {
+    font-family: var(--ubuntu-font);
+    font-weight: 400;
+    color: var(--gray-one);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+span {
+    font-family: var(--ubuntu-font);
+    font-weight: 300;
+    color: var(--gray-two);
+}
+
+li {
+    font-family: var(--ubuntu-font);
+    list-style: none;
+}
+
+a {
+    font-family: var(--ubuntu-font);
+    text-decoration: none;
+    color: var(--white-one);
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+	color: #fff;
+    transition: 500ms;
+}
+
+/* Distanciando as imagens da primeira section de music*/
+
+#img2 {
+	width: 150px;
+	height: 150px;
+    z-index: 3;
+}
+
+#img0 {
+    z-index: 1;
+	width: 110px;
+	height: 110px;
+    margin-right: 19rem;
+}
+
+#img1 {
+    z-index: 2;
+	width: 130px;
+	height: 130px;
+    margin-right: 11rem;
+}
+
+#img3 {
+   z-index: 1;
+   width: 110px;
+   height: 110px;
+   margin-left: 19rem;
+}
+
+#img4 {
+	width: 130px;
+	height: 130px;
+    z-index: 2;
+    margin-left: 11rem;
+}

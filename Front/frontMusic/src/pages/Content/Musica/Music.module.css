@@ -1,20 +1,8 @@
 .infoContent { /* Estilizando campo para adicionar artistas */
-	overflow-x: auto;
-	height: calc(100vh - 56px - 80px);
-}
-
-.infoContent::-webkit-scrollbar-track {
-	background-color: #191922;
-	border-left: 1px solid #45454e;
-}
-
-.infoContent::-webkit-scrollbar {
-	width: 8px;
-}
-
-.infoContent::-webkit-scrollbar-thumb {
-	background: #686666;
-	border-radius: 20px;
+	height: 100%;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    margin-top: 56px;
 }
 
 .channel {
@@ -65,3 +53,4 @@
     display: flex;
     justify-content: space-between;
 }
+

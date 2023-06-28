@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
+import './common/reset.css'
+import './common/root.css'
+
 import Index from "./pages/HomePage/Index"
 
 import ScreenLogin from "./pages/Account/ScreenLogin"

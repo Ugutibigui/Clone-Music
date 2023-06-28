@@ -8,6 +8,8 @@ a:-webkit-any-link {
 }
 
 .bodyAccount {
+    display: flex;
+    flex-direction: column;
     background-color: #121216;
 }
 
