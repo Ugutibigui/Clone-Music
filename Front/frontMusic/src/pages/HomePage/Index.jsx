@@ -1,5 +1,5 @@
-import { FaMicrophoneAlt } from 'react-icons/fa'
-import { IoMusicalNotesOutline } from 'react-icons/io'
+import { CiMicrophoneOn } from 'react-icons/ci'
+import { HiOutlineMusicNote } from 'react-icons/hi'
 import { MdOutlineRadio, MdFavoriteBorder, MdNotifications, MdAccountCircle } from 'react-icons/md'
 import { GiAbstract050 } from 'react-icons/gi'
 import { FiSearch } from 'react-icons/fi'
@@ -16,8 +16,8 @@ import styles from './Index.module.css'
 function Index({ content }) {
 
 	const navButton = [
-		{ icon: IoMusicalNotesOutline, title: 'Música', to: '/' },
-		{ icon: FaMicrophoneAlt, title: 'Podcasts', to: '/podcast' },
+		{ icon: HiOutlineMusicNote, title: 'Música', to: '/' },
+		{ icon: CiMicrophoneOn, title: 'Podcasts', to: '/podcast' },
 		{ icon: MdOutlineRadio, title: 'Rádios', to: '/radio' },
 		{ icon: GiAbstract050, title: 'Explorar', to: '/explore' },
 		{ icon: MdFavoriteBorder, title: 'Favoritos', to: '/favorite' }
@@ -56,7 +56,7 @@ function Index({ content }) {
 							{navButton.map((item, index) => (
 									<li className={(item.to.includes('favorite') ? pathname.includes(item.to) : pathname === item.to) ? `${styles.activeButton}` : `${styles.button}`} key={index}>
 										<Link to={item.to}>
-											{item.icon({size: 35})}
+											{item.icon({size: 40})}
 
 											<h1> {item.title} </h1>
 										</Link>

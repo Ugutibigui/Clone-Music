@@ -41,8 +41,7 @@ import PlaylistArt from './pages/Content/Artist/NavBar/PlaylistArt/PlaylistArt'
 import Concert from './pages/Content/Artist/NavBar/Concert/Concert'
 import Biography from './pages/Content/Artist/NavBar/Biography/Biography'
 
-export function App() {
-
+function App() {
 	return (
 		<Router>
 			<Routes>
