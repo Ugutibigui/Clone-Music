@@ -1,8 +1,7 @@
 .infoContent { /* Estilizando campo para adicionar artistas */
 	height: 100%;
-    width: calc(100% - 220px);
-    margin-left: 220px;
-    margin-top: 56px;
+    width: 100%;
+    margin-top: 65px;
 }
 
 .channel {

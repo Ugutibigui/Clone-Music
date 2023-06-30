@@ -1,5 +1,5 @@
 import { CiMicrophoneOn } from 'react-icons/ci'
-import { HiOutlineMusicNote } from 'react-icons/hi'
+import { TfiMusicAlt } from 'react-icons/tfi'
 import { MdOutlineRadio, MdFavoriteBorder, MdNotifications, MdAccountCircle } from 'react-icons/md'
 import { GiAbstract050 } from 'react-icons/gi'
 import { FiSearch } from 'react-icons/fi'
@@ -16,7 +16,7 @@ import styles from './Index.module.css'
 function Index({ content }) {
 
 	const navButton = [
-		{ icon: HiOutlineMusicNote, title: 'Música', to: '/' },
+		{ icon: TfiMusicAlt, title: 'Música', to: '/' },
 		{ icon: CiMicrophoneOn, title: 'Podcasts', to: '/podcast' },
 		{ icon: MdOutlineRadio, title: 'Rádios', to: '/radio' },
 		{ icon: GiAbstract050, title: 'Explorar', to: '/explore' },

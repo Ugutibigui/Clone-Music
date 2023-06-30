@@ -69,6 +69,7 @@ a {
     color: var(--white-one);
     outline: none;
     cursor: pointer;
+    transition: 400ms;
 }
 
 button {

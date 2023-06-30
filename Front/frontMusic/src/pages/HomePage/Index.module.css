@@ -31,6 +31,8 @@
 	padding: 1.5rem 1rem;
 	margin: 1rem;
 	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .subscribe p {
@@ -65,7 +67,7 @@
 }
 
 .optionsNavigations::-webkit-scrollbar-thumb {
-	background: #ffffff;
+	background: var(--white-one);
 	border-radius: 15px;
 }
 
@@ -94,53 +96,55 @@
 }
 
 .optionsTwo span:hover {
-	color: #EF5466;
+	color: var(--pink-red-one);
 }
 
-.button,
-.activeButton {
-	list-style: none;
-	height: 46px;
-}
-
-.button a,
-.activeButton a {
-	cursor: pointer;
-	transition: 400ms;
+.optionsOne li a {
 	display: flex;
 	align-items: center;
-	color: #fff;
 }
 
-.button a:hover {
-	color: #ef5466;
+.optionsOne li a:hover h1 {
+    color: var(--pink-red-one);
 }
 
-.button svg,
-.activeButton svg {
+.optionsOne li a:hover svg {
+    fill: var(--pink-red-one);
+}
+
+.optionsOne li a svg {
 	padding-right: 15px;
 }
+.activeButton a {
+	border-right: var(--pink-red-one) solid 4px;
+}
 
-.activeButton a{
-	color: #ef5466;
-	border-right: #ef5466 solid 4px;
+.activeButton a h1{
+	color: var(--pink-red-one);
+}
+
+.activeButton a svg {
+	fill: var(--pink-red-one);
 }
 
 /* Estilizando Menu lateral - FIM */
 
+
+/* Estilização do header - INICIO */
+
 .contentRight {
-	width: 100%;
+	margin-left: 220px;
+	width: calc(100% - 220px);
 	background-color: var(--black-one);
 }
 
 header {
+	width: calc(100% - 220px);
 	background-color: var(--black-one);
 	position: fixed;
 	top: 0;
-	right: 0;
 	z-index: 5;
 	height: 56px;
-	width: calc(100% - 220px);
 	border-bottom: 1px solid #45454e;
 	display: flex;
 }
@@ -213,6 +217,10 @@ header button {
 	background-color: #5f5f6d;
 }
 
+/* Estilização do Header- FIM */
+
+/* Estilização do play de musica - INICIO */
+
 .bottom {
 	height: 80px;
 	width: 100%;
@@ -221,4 +229,97 @@ header button {
 	position: fixed;
 	bottom: 0;
 	z-index: 5;
+}
+
+/* Estilização do play de musica - FIM */
+
+/* Responsividade */
+
+@media screen and (max-width: 920px) {
+	.leftMenu {
+		width: 180px;
+	}
+
+	.contentRight {
+		margin-left: 180px;
+		width: calc(100% - 180px);
+	}
+
+	.leftMenu img {
+		width: 90px;
+	}
+
+	.subscribe {
+		padding: 1rem .5rem;
+		align-items: center;
+	}
+
+	.subscribe p {
+		text-align: center;
+		font-size: 10px;
+		line-height: 13px;
+	}	
+	
+	.subscribe button {
+		width: 80px;
+		height: 20px;
+		font-size: 10px;
+	}
+
+	.optionsNavigations {
+		padding: 0 1rem;
+	}
+
+	.optionsOne h1 {
+		font-size: 14px;
+	}
+
+	.optionsOne svg {
+		width: 35px;
+		height: 35px;
+	}
+
+	.activeButton a {
+		border-right: var(--pink-red-one) solid 3px;
+	}
+
+	.optionsTwo span {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.leftMenu {
+		width: 140px;
+	}
+
+	.contentRight {
+		margin-left: 140px;
+		width: calc(100% - 140px);
+	}
+
+	.leftMenu img {
+		width: 70px;
+	}
+
+	.optionsOne {
+		gap: unset;
+	}
+
+	.optionsTwo span {
+		font-size: 10px;
+	}
+
+	.optionsTwo {
+		margin-left: 2rem;
+	}
+
+	.optionsOne h1 {
+		font-size: 12px;
+	}
+
+	.optionsOne svg {
+		width: 30px;
+		height: 30px;
+	}
 }
