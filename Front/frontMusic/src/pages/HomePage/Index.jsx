@@ -83,13 +83,13 @@ function Index({ content }) {
 								<input type="text" placeholder='Buscar' onChange={event => setSearch(event.target.value)}
 									onKeyDown={event => event.key === 'Enter' ? Search() : null} value={search} />
 							</div>
-							<button className={search ? `${styles.active}` : `${styles.remove}`} onClick={() => setSearch('')}> <AiFillCloseCircle size={35} /> </button>
+							<button id={styles.closeBtn} className={search ? `${styles.active}` : `${styles.remove}`} onClick={() => setSearch('')}> <AiFillCloseCircle size={35} /> </button>
 						</div>
 
 						<div className={styles.profile}>
 							<div className={styles.iconsProfile}>
-								<button> <MdNotifications size={30} onClick={() => setNoficationOpen(true)} /> </button>
-								<button> <MdAccountCircle size={30} onClick={() => setMenuOpen(true)} /> </button>
+								<button> <MdNotifications size={25} onClick={() => setNoficationOpen(true)} /> </button>
+								<button> <MdAccountCircle size={25} onClick={() => setMenuOpen(true)} /> </button>
 							</div>
 						</div>
 					</header>

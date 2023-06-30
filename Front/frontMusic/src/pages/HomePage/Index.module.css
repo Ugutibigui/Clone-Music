@@ -129,7 +129,6 @@
 
 /* Estilizando Menu lateral - FIM */
 
-
 /* Estilização do header - INICIO */
 
 .contentRight {
@@ -149,16 +148,17 @@ header {
 	display: flex;
 }
 
-header .textBox {
+.textBox {
 	width: 50%;
 	display: flex;
 	align-items: center;
-	margin: 0px 20px;
+	margin-left: 20px;
 }
 
-header .textBox .search {
+.search {
 	width: 100%;
 	display: flex;
+	gap: 10px;
 }
 
 .search input {
@@ -192,29 +192,21 @@ header .profile .iconsProfile {
 	align-items: center;
 }
 
-header button {
-	display: grid;
-	place-items: center;
-	height: 70%;
-	background: none;
-	border: none;
-	cursor: pointer;
-	transition: 400ms;
-	color: #fff;
-	border-radius: 150px;
+#closeBtn {
+	color: var(--dark-gray-one);
 }
 
-.search button,
-.textBox button {
-	color: #32323D;
+#closeBtn:hover {
+	color: var(--gray-two);
 }
 
-.textBox button:hover {
-	color: #5f5f6d;
+.iconsProfile button {
+	width: 35px;
+	height: 35px;
 }
 
 .iconsProfile button:hover {
-	background-color: #5f5f6d;
+	background-color: var(--gray-two);
 }
 
 /* Estilização do Header- FIM */
@@ -284,6 +276,31 @@ header button {
 	}
 
 	.optionsTwo span {
+		font-size: 12px;
+	}
+
+	.iconsProfile button,
+	#closeBtn {
+		width: 30px;
+		height: 30px;
+	}
+
+	.iconsProfile button svg{
+		width: 20px;
+		height: 20px;
+	}
+
+	#closeBtn svg {
+		width: 25px;
+		height: 25px;
+	}
+
+	header {
+		width: calc(100% - 180px);
+		height: 45px;
+	}
+
+	.search input {
 		font-size: 12px;
 	}
 }
