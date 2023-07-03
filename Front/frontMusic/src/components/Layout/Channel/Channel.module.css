@@ -3,65 +3,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-}
-
-.container {
-    width: 77vw;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .titleSlider {
     display: flex;
     align-items: center;
-    width: 100%;
-}
-
-.texts {
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
 }
 
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .texts h2 {
-    color: #fff;
-    font-weight: 600;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    color: var(--white-one);
 }
 
 .texts h3  {
-    color: #a2a2ad;
-    font-weight: 400;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    color: var(--gray-one);
 }
 
 .sliders {
-    width: 7%;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 .sliders button {
-    height: 40px;
-    width: 40px;
-    background: none;
-    border: none;
+    height: 30px;
+    width: 30px;
     font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 400ms;
     border-radius: 100px;
 }
 
 .sliders button:hover {
-    background-color: #80808070;
+    background-color: var(--dark-gray-one);
 }
+
+/* mexer depois  */
 
 .gallery {
     width: 100%;

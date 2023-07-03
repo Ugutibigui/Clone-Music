@@ -51,3 +51,10 @@
 .blue:hover {
     background-color: #335392;
 } */
+
+@media screen and (max-width: 920px) {
+    #button {
+		height: 25px;
+		font-size: 10px;
+	}
+}

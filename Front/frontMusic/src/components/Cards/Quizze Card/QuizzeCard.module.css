@@ -1,19 +1,11 @@
-.quizzes .containerRectangle {
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .rectangle {
-    width: 49%;
+    width: 50%;
     display: flex;
     align-items: center;
-    flex-direction: row;
     cursor: pointer;
     border-radius: 10px;
     transition: 400ms;
+    padding: 1rem;
 }
 
 .rectangle:hover {
@@ -21,23 +13,20 @@
 }
 
 .rectangle img {
-    width: 17%;
+    width: max(5vw, 50px);
 }
 
 .rectangleText {
-    height: 80px;
-    width: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    color: #ffffffd5;
-    font-size: 1.2rem;
-    font-weight: 400;
+    gap: 1rem;
 }
 
-#title {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.4rem;
+.rectangleText h1 {
+    font-size: 20px;
+}
+
+#subtitle {
+    font-size: 16px;
+    color: #ffffffbd;
 }

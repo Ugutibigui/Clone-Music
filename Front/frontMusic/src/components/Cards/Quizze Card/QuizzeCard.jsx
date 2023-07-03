@@ -6,10 +6,9 @@ function QuizzeCard({colorOne, colorTwo, title, text}) {
             <img src="https://e-cdns-images.dzcdn.net/images/misc/ed75a34e8f911b6bd636144096678a9c/142x142-none-80-0-0.png" alt="??" />
 
             <div className={styles.rectangleText}>
+                {title ? (<h1>{title}</h1>) : null}
 
-                {title ? (<span id={styles.title}>{title}</span>) : null}
-
-                <span>{text}</span>
+                <h2 id={styles.subtitle} >{text}</h2>
             </div>
         </div>
     )

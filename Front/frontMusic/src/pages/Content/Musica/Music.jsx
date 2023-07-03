@@ -10,7 +10,8 @@ import SuggestionCard from '../../../components/Cards/Suggestion Card/Suggestion
 import CategorieCard from '../../../components/Cards/Categorie Card/CategorieCard'
 import HighlightCard from '../../../components/Cards/Highlight Card/HighlightCard'
 import RadioCard from '../../../components/Cards/Radio Card/RadioCard'
-import FlowCard from '../../../components/Cards/Flow Card/FlowCard';
+import FlowCard from '../../../components/Cards/Flow Card/FlowCard'
+import Container from '../../../components/Layout/Container/Container'
 
 import styles from './Music.module.css'
 
@@ -26,37 +27,31 @@ function Music() {
             }
         })
             .then(response => response.json()) // Randomizando e mostrando somente 5 artistas
-            .then(data => setArtist(data.sort(() => Math.random() - 0.5).slice(0, 5))) 
+            .then(data => setArtist(data.sort(() => Math.random() - 0.5).slice(0, 5)))
     }, [])
 
     return (
-        <div className={styles.infoContent}>
+        <Container>
             <section className={styles.channel}>
-                <div className={styles.artistAdd}>
-                    <p>Desbloqueie seu Flow, selecionando seus artistas favoritos para obter recomendações melhores.</p>
+                <p>Desbloqueie seu Flow, selecionando seus artistas favoritos para obter recomendações melhores.</p>
 
-                    <div className={styles.artists}>
-                        {artist.map((item, index) => (
-                            <div className={styles.figureImage} key={index}>
-                                <img src={item.photo} alt="Artist" id={`img${index}`} />
-                            </div>
-                        ))}
-                    </div>
-
-                    <Link to='/recommendation'>
-                        <Button text='ADICIONE ARTISTAS' type='pink' />
-                    </Link>
+                <div className={styles.artists}>
+                    {artist.map((item, index) => (
+                        <img src={item.photo} alt="Artist" id={`img${index}`} key={index} />
+                    ))}
                 </div>
+
+                <Link to='/recommendation'>
+                    <Button text='ADICIONE ARTISTAS' type='pink' />
+                </Link>
             </section>
 
             <section className={styles.channel}>
-                <div className={styles.quizzes}>
-                    <h2>Quizzes musicais</h2>
+                <h2>Quizzes musicais</h2>
 
-                    <div className={styles.containerRectangle}>
-                        <QuizzeCard colorOne='rgb(60, 165, 100)' colorTwo='rgb(166, 206, 80)' title='Quizzes musicais' text='Teste seu conhecimento musical!' />
-                        <QuizzeCard colorOne='rgb(55, 105, 200)' colorTwo='rgb(17, 168, 204)' text='Teste suas habilidades de adivinhar músicas e desafie seus amigos!' />
-                    </div>
+                <div className={styles.containerRectangle}>
+                    <QuizzeCard colorOne='rgb(60, 165, 100)' colorTwo='rgb(166, 206, 80)' title='Quizzes musicais' text='Teste seu conhecimento musical!' />
+                    <QuizzeCard colorOne='rgb(55, 105, 200)' colorTwo='rgb(17, 168, 204)' text='Teste suas habilidades de adivinhar músicas e desafie seus amigos!' />
                 </div>
             </section>
 
@@ -79,7 +74,7 @@ function Music() {
             <Channel h2='Só na Deezer' Card={SuggestionCard} RequestAPI='' />
             <Channel h2='No ritmo dos anos 2000' Card={SuggestionCard} RequestAPI='' />
             <Channel h2='Rádios para você' Card={RadioCard} RequestAPI='' />
-        </div>
+        </Container>
     )
 }
 

@@ -1,55 +1,44 @@
-.infoContent { /* Estilizando campo para adicionar artistas */
-	height: 100%;
-    width: 100%;
-    margin-top: 65px;
-}
-
 .channel {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.artistAdd {
-    width: 800px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.channel:first-child {
     align-items: center;
-    color: #D1D1D6;
-    font-size: 15px;
+    height: 300px;
+}
+
+.channel p {
+    font-size: 1rem;
+}
+
+.channel h2 {
+    color: var(--white-one);
 }
 
 .artists {
+    width: 100%;
     position: relative;
-}
-
-.figureImage {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
 
-.figureImage img {
-    border-radius: 200px;
+.artists img {
     position: absolute;
+    border-radius: 200px;
     object-fit: cover;
     object-position: center;
 }
 
-.quizzes { /* Estilizando section de quizzes */
-    width: 77vw;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-weight: 600;
-}
-
 .containerRectangle {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 

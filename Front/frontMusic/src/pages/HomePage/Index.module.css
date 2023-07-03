@@ -43,9 +43,6 @@
 }
 
 
-
-
-
 .optionsNavigations {
 	overflow-x: hidden;
 	height: calc(100vh - 360px);
@@ -245,12 +242,6 @@ header .profile .iconsProfile {
 		font-size: 10px;
 		line-height: 13px;
 	}	
-	
-	.subscribe button {
-		width: 80px;
-		height: 20px;
-		font-size: 10px;
-	}
 
 	.optionsNavigations {
 		padding: 0 1rem;
