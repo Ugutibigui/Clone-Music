@@ -73,9 +73,11 @@ a {
 }
 
 button {
-    display: grid;
-	place-items: center;
+    display: flex;
+	justify-content: center;
+    align-items: center;
     background: none;
+    font-weight: 700;
     border: none;
     border-radius: 30px;
     cursor: pointer;

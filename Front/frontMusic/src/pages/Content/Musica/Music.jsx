@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import Channel from '../../../components/Layout/Channel/Channel'
-import Button from '../../../components/Buttons/Button/Button';
+import Button from '../../../components/Button/Button';
 import QuizzeCard from '../../../components/Cards/Quizze Card/QuizzeCard'
 import ForYouCard from '../../../components/Cards/ForYou Card/ForYouCard'
 import ArtistCard from '../../../components/Cards/Artist Card/ArtistCard'

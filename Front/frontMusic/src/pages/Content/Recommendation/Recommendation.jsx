@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FiSearch } from 'react-icons/fi'
 
-import Button from '../../../components/Buttons/Button/Button'
+import Button from '../../../components/Button/Button'
 import AddArtist from '../../../components/Cards/AddArtist Card/AddArtist'
 
 import deezer from '../../../assets/deezerWhite.png'

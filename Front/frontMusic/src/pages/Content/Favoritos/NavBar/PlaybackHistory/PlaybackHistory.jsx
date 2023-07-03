@@ -1,7 +1,7 @@
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { BiSquareRounded } from 'react-icons/bi'
 
-import Button from '../../../../../components/Buttons/Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 import styles from './PlaybackHistory.module.css'
 

@@ -2,7 +2,7 @@ import { BsFacebook, BsGoogle } from 'react-icons/bs'
 import { AiFillCamera } from 'react-icons/ai'
 import { useState } from 'react'
 
-import Button from '../../../../../components/Buttons/Button/Button'
+import Button from '../../../../../components/Button/Button'
 import api from '../../../../../services/api'
 
 import styles from './Settings.module.css'

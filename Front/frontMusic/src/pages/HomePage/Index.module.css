@@ -42,15 +42,9 @@
 	margin-bottom: 10px;
 }
 
-.subscribe button {
-	border: 1px solid var(--white-one);
-	width: 150px;
-	height: 40px;
-}
 
-.subscribe button:hover {
-	background-color: var(--transparent-white);
-}
+
+
 
 .optionsNavigations {
 	overflow-x: hidden;
@@ -312,6 +306,10 @@ header .profile .iconsProfile {
 
 	.contentRight {
 		margin-left: 140px;
+		width: calc(100% - 140px);
+	}
+
+	header {
 		width: calc(100% - 140px);
 	}
 

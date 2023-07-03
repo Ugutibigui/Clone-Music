@@ -7,6 +7,7 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+import Button from '../../components/Button/Button'
 import Menu from '../../components/Modals/Menu/Menu'
 import Notification from '../../components/Modals/Notification/Notification'
 import deezer from '../../assets/deezerWhite.png'
@@ -47,8 +48,7 @@ function Index({ content }) {
 						<p>
 							Você está na versão Deezer Free. Faça o upgrade e pule os anúncios, de graça, por 1 mês
 						</p>
-
-						<button>ASSINAR</button>
+						<Button text='ASSINAR' typeButton='button' type='white'/>
 					</div>
 
 					<div className={styles.optionsNavigations}>

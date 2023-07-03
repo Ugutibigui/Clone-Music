@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Formik, Form, ErrorMessage } from 'formik'
 
 import InputField from '../../components/Form/InputField/InputField'
-import Button from '../../components/Buttons/Button/Button'
+import Button from '../../components/Button/Button'
 import NavBottom from '../../components/Nav/NavBottom/NavBottom'
 import backgroundLogin from '../../assets/background-login.jpeg'
 import deezer from '../../assets/deezerWhite.png'

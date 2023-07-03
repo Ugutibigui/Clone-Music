@@ -1,4 +1,4 @@
-import Button from '../../../../../components/Buttons/Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 import styles from './Apps.module.css'
 

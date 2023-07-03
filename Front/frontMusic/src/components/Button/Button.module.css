@@ -1,0 +1,53 @@
+#button {
+    gap: 10px; 
+    height: 45px;
+    font-size: 16px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+}
+
+.pink {
+    background-color: var(--pink-red-one);
+}
+
+.pink:hover {
+    background-color: var(--dark-pink-one);
+}
+
+.gray {
+    background-color: var(--gray-two);
+}
+
+.gray:hover {
+    background-color: var(--gray-one);
+}
+
+.white {
+    box-shadow: 0 1px 20px 0 rgb(31 31 31/35%);
+    border: 1px solid var(--white-one);
+}
+
+.white:hover {
+    background-color: var(--transparent-white);
+}
+
+.black {
+    border: 2px solid var(--dark-gray-two);
+}
+
+.black:hover {
+    border-color: var(--transparent-white);
+    background-color: var(--transparent-white);
+}
+
+/* Não vi uso ainda 
+
+.blue {
+    border: none;
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.blue:hover {
+    background-color: #335392;
+} */

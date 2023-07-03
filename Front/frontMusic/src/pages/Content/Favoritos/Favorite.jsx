@@ -2,7 +2,7 @@ import { TbArrowsShuffle } from 'react-icons/tb'
 import { useState } from 'react'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
-import Button from '../../../components/Buttons/Button/Button'
+import Button from '../../../components/Button/Button'
 
 import styles from './Favorite.module.css'
 

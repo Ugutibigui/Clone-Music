@@ -2,7 +2,7 @@ import { BsTwitter, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
 import { AiFillHeart, AiFillInstagram } from 'react-icons/ai'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
-import Button from '../../../components/Buttons/Button/Button'
+import Button from '../../../components/Button/Button'
 
 import styles from './Artist.module.css'
 

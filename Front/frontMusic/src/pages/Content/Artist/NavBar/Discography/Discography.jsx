@@ -1,7 +1,7 @@
 import { IoIosArrowForward } from 'react-icons/io'
 import { useState } from 'react'
 
-import Button from '../../../../../components/Buttons/Button/Button'
+import Button from '../../../../../components/Button/Button'
 import MusicRankItem from '../../../../../components/Layout/MusicRankItem/MusicRankItem'
 import SingerDetails from '../../../../../components/Layout/SingerDetails/SingerDetails'
 import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicFormat'

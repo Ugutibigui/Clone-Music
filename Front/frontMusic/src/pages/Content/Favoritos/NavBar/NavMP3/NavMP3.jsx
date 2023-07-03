@@ -2,7 +2,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { BiSquareRounded } from 'react-icons/bi'
 
 import Search from '../../../../../components/Search/Search'
-import Button from '../../../../../components/Buttons/Button/Button'
+import Button from '../../../../../components/Button/Button'
 
 import styles_dearest from '../Dearest/Dearest.module.css'
 import styles_playback from '../PlaybackHistory/PlaybackHistory.module.css'

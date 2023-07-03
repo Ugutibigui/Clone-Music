@@ -1,7 +1,7 @@
 import { Modal, Box } from '@mui/material';
 import { Link } from 'react-router-dom'
 
-import Button from '../../Buttons/Button/Button';
+import Button from '../../Button/Button';
 
 import stylesModal from '../Menu/Menu.module.css'
 import styles from './Notification.module.css'
