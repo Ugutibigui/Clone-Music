@@ -1,24 +1,20 @@
 .imageSinger {
     width: 264px;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.imageSinger p {
-    color: #fff;
-    cursor: pointer;
+.imageSinger a {
     line-height: 18px;
     font-size: 14px;
-    font-weight: 400;
-    font-family: Open Sans;
 }
 
-.imageSinger p:hover {
+.imageSinger a:hover {
     text-decoration: underline;
 }
 
-.imageSinger .image {
+.image {
     width: 100%;
     height: 100%;
     position: relative;
@@ -26,12 +22,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.imageSinger .image img {
-    border-radius: 5px;
-    pointer-events: none;
-    transition: 400ms;
+.image img {
     object-fit: cover;
     object-position: center;
 }
@@ -50,25 +44,16 @@
     font-weight: bold;
 }
 
-.logoDaily .svgIcon {
-    padding-bottom: 10px;
-    padding-left: 20px;
+.svgIcon {
+    padding: .5rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.playButton {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-}
 
-.playButton button {
+.image button {
+    position: absolute;
     border: none;
     height: 55px;
     width: 55px;
@@ -77,9 +62,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--white-one);
 }
 
-.playButton button svg {
+.image button svg {
+    fill: var(--black);
     width: 25px;
     height: 25px;
 }

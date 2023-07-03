@@ -1,10 +1,12 @@
 .imageContainer {
-   display: grid;
-   place-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
 }
 
 .image {
-    background-color: #23232d;
+    background-color: var(--black-three);
     border-radius: 200px;
     position: relative;
     display: grid;
@@ -12,9 +14,8 @@
 }
 
 .image img {
-    height: 160px;
+    width: 150px;
 }
-  
 
 .button {
     position: absolute;
@@ -43,6 +44,12 @@
     width: 60px;
     height: 60px;
     background-color: #fff;
+}
+
+.button button svg {
+    fill: var(--black);
+    width: 35px;
+    height: 35px;
 }
 
 .imageContainer p {

@@ -15,14 +15,12 @@ function ForYouCard() {
                     </div>
                 </div>
 
-                <div className={styles.playButton}>
-                    <button>
-                        <ImPlay3 />
-                    </button>
-                </div>
+                <button>
+                    <ImPlay3 />
+                </button>
             </div>
 
-            <p>Destacando Munhoz & Mariano, Gusttavo Lima, Jorge & Mateus, Henrique & Juliano</p>
+            <a>Destacando Munhoz & Mariano, Gusttavo Lima, Jorge & Mateus, Henrique & Juliano</a>
 
         </div>
     )
