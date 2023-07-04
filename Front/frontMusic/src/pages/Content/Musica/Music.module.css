@@ -14,6 +14,7 @@
 
 .channel p {
     font-size: 1rem;
+    text-align: center;
 }
 
 .channel h2 {
@@ -42,3 +43,117 @@
     gap: 1rem;
 }
 
+/* Distanciando as imagens da primeira section de music*/
+
+#img2 {
+	width: 150px;
+	height: 150px;
+    z-index: 3;
+}
+
+#img0 {
+    z-index: 1;
+	width: 110px;
+	height: 110px;
+    margin-right: 19rem;
+}
+
+#img1 {
+    z-index: 2;
+	width: 130px;
+	height: 130px;
+    margin-right: 11rem;
+}
+
+#img3 {
+   z-index: 1;
+   width: 110px;
+   height: 110px;
+   margin-left: 19rem;
+}
+
+#img4 {
+	width: 130px;
+	height: 130px;
+    z-index: 2;
+    margin-left: 11rem;
+}
+
+@media screen and (max-width: 920px) {
+    .channel:first-child {
+        height: 200px;
+    }
+
+    .channel p {
+        font-size: 12px;
+    }
+
+    #img2 {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #img0 {
+        width: 80px;
+        height: 80px;
+        margin-right: 15rem;
+    }
+    
+    #img1 {
+        width: 100px;
+        height: 100px;
+        margin-right: 7rem;
+    }
+    
+    #img3 {
+       width: 80px;
+       height: 80px;
+       margin-left: 15rem;
+    }
+    
+    #img4 {
+        width: 100px;
+        height: 100px;
+        margin-left: 7rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .containerRectangle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .channel:first-child {
+        height: 180px;
+    }
+
+    #img2 {
+        width: 90px;
+        height: 90px;
+    }
+    
+    #img0 {
+        width: 50px;
+        height: 50px;
+        margin-right: 11rem;
+    }
+    
+    #img1 {
+        width: 70px;
+        height: 70px;
+        margin-right: 6rem;
+    }
+    
+    #img3 {
+       width: 50px;
+       height: 50px;
+       margin-left: 11rem;
+    }
+    
+    #img4 {
+        width: 70px;
+        height: 70px;
+        margin-left: 6rem;
+    }
+}

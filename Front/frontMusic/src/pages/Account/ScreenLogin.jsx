@@ -88,6 +88,7 @@ function ScreenLogin() {
 					</div>
 				</section>
 			</div>
+			
 			<NavBottom />
 		</div>
 	);

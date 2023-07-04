@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Button/Button'
+import Container from '../../../components/Layout/Container/Container'
 
 import styles from './Favorite.module.css'
 
@@ -22,7 +23,7 @@ function Favorite({ content }) {
     ]
 
     return (
-        <div className={styles.infoContent}>
+        <Container>
             <div className={styles.topProfile}>
                 <div className={styles.profile}>
                     <img src='https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/264x264-000000-80-0-0.jpg' alt="Profile" />
@@ -46,7 +47,7 @@ function Favorite({ content }) {
             <div className={styles.mainPlaylists}>
                 {content}
             </div>
-        </div>
+        </Container>
     )
 }
 

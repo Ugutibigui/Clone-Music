@@ -1,8 +1,10 @@
+import Container from '../../../components/layout/Container/Container'
+
 import styles from './Search.module.css'
 
 const Search = () => {
     return (
-        <div>Pesquisa realizada</div>
+        <Container>Pesquisa realizada</Container>
     )
 }
 

@@ -7,3 +7,15 @@
     flex-direction: column;
     gap: 30px;
 }
+
+@media screen and (max-width: 820px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        padding: 0 1rem;
+    }
+}

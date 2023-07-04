@@ -30,3 +30,45 @@
     font-size: 16px;
     color: #ffffffbd;
 }
+
+@media screen and (max-width: 1160px) {
+    .rectangle {
+        padding: 8px;
+    }
+    
+    .rectangleText {
+        gap: 2px;
+    }
+
+    .rectangleText h1 {
+        font-size: 16px;
+    }
+    
+    #subtitle {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .rectangleText h1 {
+        font-size: 12px;
+    }
+    
+    #subtitle {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .rectangle {
+        width: 100%;
+    }
+
+    .rectangleText h1 {
+        font-size: 16px;
+    }
+    
+    #subtitle {
+        font-size: 12px;
+    }
+}

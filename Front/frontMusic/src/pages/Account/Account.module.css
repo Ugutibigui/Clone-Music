@@ -1,23 +1,14 @@
-* {
-    font-family: 'Open Sans', sans-serif, Arial;
-}
-
-a:-webkit-any-link {
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .bodyAccount {
     display: flex;
     flex-direction: column;
-    background-color: #121216;
+    background-color: var(--black-one);
 }
 
 .topAccount {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #686666;
+    border-bottom: 2px solid var(--dark-gray-two);
     margin-bottom: 50px;
 }
 

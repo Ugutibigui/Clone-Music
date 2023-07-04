@@ -37,12 +37,12 @@ function Music() {
 
                 <div className={styles.artists}>
                     {artist.map((item, index) => (
-                        <img src={item.photo} alt="Artist" id={`img${index}`} key={index} />
+                        <img src={item.photo} alt="Artist" id={styles[`img${index}`]} key={index} />
                     ))}
                 </div>
 
                 <Link to='/recommendation'>
-                    <Button text='ADICIONE ARTISTAS' type='pink' />
+                    <Button text='ADICIONE ARTISTAS' type='pink' typeButton='button'/>
                 </Link>
             </section>
 

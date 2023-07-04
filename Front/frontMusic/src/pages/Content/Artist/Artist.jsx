@@ -2,6 +2,7 @@ import { BsTwitter, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
 import { AiFillHeart, AiFillInstagram } from 'react-icons/ai'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
+import Container from '../../../components/layout/Container/Container'
 import Button from '../../../components/Button/Button'
 
 import styles from './Artist.module.css'
@@ -18,7 +19,7 @@ function Artist({content}) {
     ]
 
     return (
-        <section className={styles.container}>
+        <Container>
             <div className={styles.topContent}>
                 <div className={styles.profile}>
                     <img src="https://e-cdn-images.dzcdn.net/images/artist/3a6e09e739db1615be58b155a7331068/264x264-000000-80-0-0.jpg" alt="Mc Hariel" />
@@ -46,7 +47,7 @@ function Artist({content}) {
             <CustomNav navigations={playlists} padding='0 6rem' />
 
             {content}
-        </section>
+        </Container>
     )
 }
 
