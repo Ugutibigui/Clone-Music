@@ -44,22 +44,9 @@
     background-color: var(--dark-gray-one);
 }
 
-/* mexer depois  */
-
-.gallery {
-    width: 100%;
+.carousel {
     display: flex;
-    align-items:center;
-    overflow-y: hidden;
     overflow-x: auto;
-}
- 
-.gallery::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery .carousel {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 40px;
+    width: 100%;
+    scroll-behavior: smooth;
 }
