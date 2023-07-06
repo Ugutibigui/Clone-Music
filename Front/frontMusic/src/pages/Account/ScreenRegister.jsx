@@ -65,7 +65,7 @@ function ScreenRegister() {
                     }
                 })
         } catch (error) {
-            console.log('Erro na API')
+            console.log('Erro na API de Cadastro')
         }
     }
 

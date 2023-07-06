@@ -7,7 +7,7 @@ import QuizzeCard from '../../../components/Cards/Quizze Card/QuizzeCard'
 import Container from '../../../components/Layout/Container/Container'
 
 const LazyArtistCard = React.lazy(() => import('../../../components/Cards/Artist Card/ArtistCard'))
-const LazySuggestionCard = React.lazy(() => import('../../../components/Cards/Suggestion Card/SuggestionCard'))
+const LazyMusicCard = React.lazy(() => import('../../../components/Cards/Music Card/MusicCard'))
 const LazyCategorieCard = React.lazy(() => import('../../../components/Cards/Categorie Card/CategorieCard'))
 const LazyHighlightCard = React.lazy(() => import('../../../components/Cards/Highlight Card/HighlightCard'))
 const LazyRadioCard = React.lazy(() => import('../../../components/Cards/Radio Card/RadioCard'))
@@ -45,8 +45,8 @@ function Music() {
         switch (componentName) {
             case 'CategorieCard':
                 return LazyCategorieCard
-            case 'SuggestionCard':
-                return LazySuggestionCard
+            case 'MusicCard':
+                return LazyMusicCard
             case 'ArtistCard':
                 return LazyArtistCard
             case 'HighlightCard':
@@ -89,7 +89,7 @@ function Music() {
                 const Component = getComponentByName(channel.card)
 
                 return Component ? (
-                    <Channel key={channel.idChannel} title={channel.title} subtitle={channel.subtitle} Card={Component}/>
+                    <Channel key={channel.idChannel} h2={channel.title} h3={channel.subtitle} Card={Component} request={channel.requestApi}/>
                 ) : null
             })}
         </Container>

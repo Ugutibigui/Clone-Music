@@ -1,5 +1,5 @@
 import { TbArrowsShuffle } from 'react-icons/tb'
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Button/Button'
@@ -38,6 +38,9 @@ function Favorite({ content }) {
                         </div>
 
                         <Button text='MINHA MÚSICA - ALEATÓRIO' icon={<TbArrowsShuffle />} type='pink' />
+                        <Link to='/createmusic'> 
+                            <Button text='ADICIONAR MÚSICA' type='pink' />
+                        </Link>
                     </div>
                 </div>
 

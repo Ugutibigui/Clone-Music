@@ -15,6 +15,7 @@ import Explore from "./pages/Content/Explorar/Explore"
 import Recommendation from './pages/Content/Recommendation/Recommendation'
 
 import SearchPage from "./pages/Content/Search/Search"
+import CreateMusic from "./pages/Content/CreateMusic/CreateMusic"
 
 import Account from './pages/Content/SetUpAccount/SetUpAccount'
 import Settings from './pages/Content/SetUpAccount/NavBar/Settings/Settings'
@@ -51,6 +52,7 @@ function App() {
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
 				<Route path="/search" element={<Index content={<SearchPage/>}/>}/>
+				<Route path="/createmusic" element={<Index content={<CreateMusic/>}/>}/>
 
 				<Route exact path="/account" element={<Index content={<Account content={<Settings/>}/>} />} />
 				<Route exact path="/account/device" element={<Index content={<Account content={<Device/>}/>} />} />
@@ -73,7 +75,6 @@ function App() {
 				<Route path="/artist/:id/playlists" element={<Index content={<Artist content={<PlaylistArt/>}/>} />}/>
 				<Route path="/artist/:id/concerts" element={<Index content={<Artist content={<Concert/>}/>} />}/>
 				<Route path="/artist/:id/biography" element={<Index content={<Artist content={<Biography/>}/>} />}/>
-
 
 				<Route path="/recommendation" element={<Recommendation />} />
 				<Route path="/login" element={<ScreenLogin />} />

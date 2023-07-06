@@ -5,7 +5,7 @@ import AddContent from '../AddContent/AddContent'
 
 import styles from './Channel.module.css'
 
-function Channel({ addText, addLink, h2, h3, Card }) {
+function Channel({ addText, addLink, h2, h3, Card, request }) {
 
     return (
         <section className={styles.channel}>
@@ -22,7 +22,7 @@ function Channel({ addText, addLink, h2, h3, Card }) {
             </div>
 
             <div className={styles.carousel}>
-                <Card/>
+                <Card api={request}/>
             </div>
         </section>
     )

@@ -6,7 +6,7 @@ const db = require("../../database/repository")
 router.post('/', async (req, res, next) => {
       let info = req.body;
 
-      var response = {
+      let response = {
             ok: false,
             message: ""
       }
@@ -14,12 +14,12 @@ router.post('/', async (req, res, next) => {
       try{
             await db.createUser(info)
             response.ok = true
-            response.message = "Deu certo"
+            response.message = "Conta Criada"
             res.send(response)
 
-      } catch (err){
-            console.log(err)
-            res.send(err)
+      } catch (error){
+            console.log(error)
+            res.send(error)
       }
 })
 

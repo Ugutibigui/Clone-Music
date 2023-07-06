@@ -1,5 +1,5 @@
 import CustomSelect from '../../Nav/CustomSelect/CustomSelect'
-import SuggestionCard from '../../Cards/Suggestion Card/SuggestionCard'
+import MusicCard from '../../Cards/Music Card/MusicCard'
 
 import styles from './MusicFormat.module.css'
 
@@ -23,16 +23,16 @@ const MusicFormat = ({ listMusic, text, selectOne, selectTwo }) => {
             </div>
 
             <section>
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
-                <SuggestionCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
+                <MusicCard />
             </section>
         </div>
     )

@@ -1,0 +1,91 @@
+.MusicContainer {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+}
+
+.imageEnd {
+    height: 264px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    cursor: pointer;
+}
+
+.imageEnd img {
+    height: 264px;
+    width: 264px;
+    border-radius: 5px;
+    position: absolute;
+    transition: 400ms;
+}
+
+.imageEnd img:hover{
+    opacity: 0.6;
+}
+
+.playButtonCube{
+    position: relative;
+    z-index: 2;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.playButtonCube button {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+.playButtonCube button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn {
+    display: none;
+}
+
+.addButton {
+    display: flex;
+    animation: opacity-animation 400ms normal;
+}
+
+@keyframes opacity-animation {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.MusicContainer h2 {
+    color: var(--white-one);
+    font-size: 18px;
+}
+
+.MusicContainer span {
+    color: var(--gray-one);
+    font-size: 14px;
+}
+
+.MusicContainer p {
+    font-size: 12px;
+    color: var(--gray-two);
+}
