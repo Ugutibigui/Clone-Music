@@ -28,8 +28,6 @@ function FlowCard() {
                             <div className={styles.button} style={{ backgroundImage: `${item.background}` }}>
                                 <button> <BsPlayFill size={20} /> </button>
                             </div>
-
-
                         </div>
 
                         <p> {item.name} </p>

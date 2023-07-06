@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Channel from '../../../components/Layout/Channel/Channel'
 import Button from '../../../components/Button/Button';
 import QuizzeCard from '../../../components/Cards/Quizze Card/QuizzeCard'
-import ForYouCard from '../../../components/Cards/ForYou Card/ForYouCard'
-import ArtistCard from '../../../components/Cards/Artist Card/ArtistCard'
-import SuggestionCard from '../../../components/Cards/Suggestion Card/SuggestionCard'
-import CategorieCard from '../../../components/Cards/Categorie Card/CategorieCard'
-import HighlightCard from '../../../components/Cards/Highlight Card/HighlightCard'
-import RadioCard from '../../../components/Cards/Radio Card/RadioCard'
-import FlowCard from '../../../components/Cards/Flow Card/FlowCard'
 import Container from '../../../components/Layout/Container/Container'
+
+const LazyArtistCard = React.lazy(() => import('../../../components/Cards/Artist Card/ArtistCard'))
+const LazySuggestionCard = React.lazy(() => import('../../../components/Cards/Suggestion Card/SuggestionCard'))
+const LazyCategorieCard = React.lazy(() => import('../../../components/Cards/Categorie Card/CategorieCard'))
+const LazyHighlightCard = React.lazy(() => import('../../../components/Cards/Highlight Card/HighlightCard'))
+const LazyRadioCard = React.lazy(() => import('../../../components/Cards/Radio Card/RadioCard'))
+const LazyFlowCard = React.lazy(() => import('../../../components/Cards/Flow Card/FlowCard'))
 
 import styles from './Music.module.css'
 
 function Music() {
 
     const [artist, setArtist] = useState([])
+    const [channels, setChannels] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:8000/artists?limit=100', {
@@ -29,6 +30,35 @@ function Music() {
             .then(response => response.json()) // Randomizando e mostrando somente 5 artistas
             .then(data => setArtist(data.sort(() => Math.random() - 0.5).slice(0, 5)))
     }, [])
+
+    useEffect(() => {
+        fetch("http://localhost:8000/channels?local=Music", {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.json())
+            .then(data => setChannels(data))
+    }, [])
+
+    const getComponentByName = (componentName) => {
+        switch (componentName) {
+            case 'CategorieCard':
+                return LazyCategorieCard
+            case 'SuggestionCard':
+                return LazySuggestionCard
+            case 'ArtistCard':
+                return LazyArtistCard
+            case 'HighlightCard':
+                return LazyHighlightCard
+            case 'RadioCard':
+                return LazyRadioCard
+            case 'FlowCard':
+                return LazyFlowCard
+            default:
+                return null
+        }
+    };
 
     return (
         <Container>
@@ -42,7 +72,7 @@ function Music() {
                 </div>
 
                 <Link to='/recommendation'>
-                    <Button text='ADICIONE ARTISTAS' type='pink' typeButton='button'/>
+                    <Button text='ADICIONE ARTISTAS' type='pink' typeButton='button' />
                 </Link>
             </section>
 
@@ -55,25 +85,13 @@ function Music() {
                 </div>
             </section>
 
-            <Channel h2='Flow: toque o que você sente' h3='Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.' Card={FlowCard} />
-            <Channel h2='Feito para você' Card={ForYouCard} />
-            <Channel h2='Seus artistas favoritos' Card={ArtistCard} />
-            <Channel h2='Playlist que você vai amar' Card={SuggestionCard} />
-            <Channel h2='The Grammy Awards 2023' h3='E os vencedores são...' Card={SuggestionCard} />
-            <Channel h2='Os sons do verão' Card={SuggestionCard} />
-            <Channel h2='Categorias' Card={CategorieCard} />
-            <Channel h2='Lançamentos para você' Card={SuggestionCard} />
-            <Channel h2='100% para você' Card={SuggestionCard} />
-            <Channel h2='Já que você gostou de: ' Card={ArtistCard} />
-            <Channel h2='Gêneros: ' Card={CategorieCard} />
-            <Channel h2='Playlists populares' Card={SuggestionCard} />
-            <Channel h2='Destaques' Card={HighlightCard} />
-            <Channel h2='Sextou' Card={SuggestionCard} />
-            <Channel h2='Charts' Card={SuggestionCard} />
-            <Channel h2='Álbuns mais ouvidos' Card={SuggestionCard} />
-            <Channel h2='Só na Deezer' Card={SuggestionCard} />
-            <Channel h2='No ritmo dos anos 2000' Card={SuggestionCard} />
-            <Channel h2='Rádios para você' Card={RadioCard} />
+            {channels.map(channel => {
+                const Component = getComponentByName(channel.card)
+
+                return Component ? (
+                    <Channel key={channel.idChannel} title={channel.title} subtitle={channel.subtitle} Card={Component}/>
+                ) : null
+            })}
         </Container>
     )
 }
