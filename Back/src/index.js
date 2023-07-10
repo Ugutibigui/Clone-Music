@@ -29,6 +29,9 @@ app.use("/user/logoff", logoff)
 const checkUser = require("./Router/user/checkExistingUser")
 app.use("/user/checkExistingUser", checkUser)
 
+const createMusic = require("./Router/music/createMusic")
+app.use("/music/createMusic", createMusic)
+
 app.listen(port, () => {
       console.log("Servidor Online!")
 })

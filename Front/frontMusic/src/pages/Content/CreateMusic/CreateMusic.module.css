@@ -1,0 +1,14 @@
+.formMusic {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.formMusic label {
+    color: var(--white-one);
+}
+
+.formMusic input {
+    margin-bottom: 2rem;
+    height: 40px;
+}

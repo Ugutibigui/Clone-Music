@@ -38,9 +38,9 @@ function CreateMusic() {
         <Container>
             <h1> Crie sua Música! </h1>
 
-            <form>
+            <form className={styles.formMusic}>
                 <label htmlFor="music">Nome da Música:</label>
-                <input type="text" id="music" name="music" onChange={event => setName(event.target.value)}/>
+                <input type="text" id="music" name="music" onChange={event => setName(event.target.value)} autocomplete="off"/>
 
                 <label htmlFor="date">Lançamento:</label>
                 <input type="date" id="date" name="date"onChange={event => setdate(event.target.value)} />
@@ -48,10 +48,12 @@ function CreateMusic() {
                 <label htmlFor="audio">Audio:</label>
                 <input type="file" name="audio" onChange={event => setAudio(event.target.value)} />
 
-                <Button text="CRIAR MÚSICA" type="pink" onClick={CreateSong} />
+                criar select depois
+
+                <Button text="CRIAR MÚSICA" type="pink" onClick={CreateSong}/>
             </form>
         </Container>
-    );
+    )
 }
 
 export default CreateMusic;
