@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/07/2023 às 21:12
+-- Tempo de geração: 11/07/2023 às 21:46
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -45,7 +45,7 @@ INSERT INTO `channels` (`idChannel`, `title`, `subtitle`, `card`, `requestApi`, 
 (2, 'Seus artistas favoritos', '', 'ArtistCard', '', 'Music'),
 (3, 'Playlist que você vai amar', '', 'MusicCard', '', 'Music'),
 (4, 'The Grammy Awards 2023', 'E os vencedores são...', 'MusicCard', '', 'Music'),
-(5, 'Mais ouvidas do momento', '', 'MusicCard', 'musics?', 'Music'),
+(5, 'Mais ouvidas do momento', '', 'MusicCard', 'musics?date=2023&views=500000', 'Music'),
 (6, 'Categorias', '', 'CategorieCard', '', 'Music'),
 (7, 'Lançamentos para você', '', 'MusicCard', '', 'Music'),
 (8, '100% para você', '', 'MusicCard', '', 'Music'),
@@ -208,7 +208,13 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (17, 'ARLEQUINA', 'https://i.scdn.co/image/ab67616d0000b27319fbf5b345013cc0ca999175', '2022-04-12', 'C:\\fakepath\\ARLEQUINA - Tainá Costa.mp3', 2665376, 'Brega Funk', 'Brasil', '81'),
 (18, 'Bum Bum Aribaba', 'https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/28/2a/4c/282a4c49-6359-0eb6-34b9-bd62651ce146/0.jpg/1200x1200bb.jpg', '2020-04-27', 'C:\\fakepath\\Tainá Costa e K2 - Bum Bum Aribaba.mp3', 4806604, 'Brega Funk', 'Brasil', '81'),
 (19, 'Para', 'https://i.scdn.co/image/ab67616d0000b27368664302d02e75df2b786d06', '2020-02-19', 'C:\\fakepath\\Tainá Costa e Malharo - Para.mp3', 380632, 'Funk', 'Brasil', '81'),
-(20, 'Moreno', 'https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2021/06/04/103085513-mc-mari-2-ari-prensa.jpg', '2021-06-04', 'C:\\fakepath\\Tainá Costa e MC Mari - Moreno.mp3', 4543699, 'Brega Funk', 'Brasil', '81');
+(20, 'Moreno', 'https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2021/06/04/103085513-mc-mari-2-ari-prensa.jpg', '2021-06-04', 'C:\\fakepath\\Tainá Costa e MC Mari - Moreno.mp3', 4543699, 'Brega Funk', 'Brasil', '81'),
+(21, 'Without Me', 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Eminem_-_Without_Me_CD_cover.jpg/220px-Eminem_-_Without_Me_CD_cover.jpg', '2009-06-16', 'C:\\fakepath\\Eminem - Without Me.mp3', 1701798262, 'Hip Hop', 'Estados Unidos', '54'),
+(22, 'Lose Yourself', 'https://upload.wikimedia.org/wikipedia/pt/d/d6/Lose_Yourself.jpg', '2015-08-06', 'C:\\fakepath\\Eminem - Lose Yourself.mp3', 1306456646, 'Rap', 'Estados Unidos', '54'),
+(23, 'The Real Slim Shady', 'https://upload.wikimedia.org/wikipedia/en/6/69/Eminem_-_The_Real_Slim_Shady_CD_cover.jpg', '2010-09-15', 'C:\\fakepath\\Eminem - The Real Slim Shady.mp3', 841662868, 'Hip Hop', 'Estados Unidos', '54'),
+(24, 'Venom', 'https://pbs.twimg.com/media/EYG-tYiWAAE17Ml.jpg', '2018-10-05', 'C:\\fakepath\\Eminem - Venom.mp3', 783462599, 'Rap', 'Rap', '54'),
+(25, 'Not Afraid', 'https://m.media-amazon.com/images/M/MV5BMDg1NTY0MjItZDk3NS00M2JiLWJmZjgtMTE3Mjg4MTdmOGE5XkEyXkFqcGdeQXVyNzU3Nzk4MDQ@._V1_.jpg', '2010-06-05', 'C:\\fakepath\\Eminem - Not Afraid.mp3', 1777691957, 'Rap', 'Estados Unidos', '54'),
+(26, 'Rap God ', 'https://musicapave.com/wp-content/uploads/eminem-rap-god.jpg', '2013-11-27', 'C:\\fakepath\\Eminem - Rap God.mp3', 1351334350, 'Rap', 'Estados Unidos', '54');
 
 -- --------------------------------------------------------
 
@@ -343,7 +349,7 @@ ALTER TABLE `flow`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `idMusic` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idMusic` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `playlist`
