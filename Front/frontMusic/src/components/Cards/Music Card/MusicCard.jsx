@@ -42,22 +42,22 @@ function MusicCard({ object }) {
 
     return (
         <div className={styles.MusicContainer}>
-            <div className={styles.imageEnd}
+            <div className={styles.image}
                 onMouseEnter={() => setClassName(`${styles.addButton}`)}
                 onMouseLeave={() => setClassName(`${styles.btn}`)} >
                 <img src={object.photo} alt={object.name} />
 
-                <div className={styles.playButtonCube}>
+                <div className={styles.buttons}>
                     <button>
-                        <ImPlay3 />
+                        <ImPlay3 size={20}/>
                     </button>
 
                     <button className={className}>
-                        <FiHeart />
+                        <FiHeart size={20}/>
                     </button>
 
                     <button className={className}>
-                        <BsThreeDots />
+                        <BsThreeDots size={20}/>
                     </button>
                 </div>
             </div>
@@ -69,7 +69,7 @@ function MusicCard({ object }) {
                     <a key={index} href=""> {name},  </a>
                 ))}
             </span>
-            <p>{formatDate(object.date)}</p>
+            <p> Lançado em {formatDate(object.date)}</p>
         </div>
     );
 }

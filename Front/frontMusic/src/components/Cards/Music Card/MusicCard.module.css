@@ -1,61 +1,52 @@
 .MusicContainer {
-    width: 264px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    position: relative;
+    gap: 6px;
 }
 
-.imageEnd {
-    height: 264px;
+.image {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: end;
+    width: 280px;
+    height: 280px;
     cursor: pointer;
 }
 
-.imageEnd img {
-    height: 264px;
-    width: 264px;
-    border-radius: 5px;
+.image img {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: 400ms;
+    border-radius: 10px;
 }
 
-.imageEnd img:hover{
-    opacity: 0.6;
+.image img:hover {
+    opacity: 0.7;
 }
 
-.playButtonCube{
-    position: relative;
+.buttons {
+    position: absolute;
     z-index: 2;
-    width: 150px;
     display: flex;
     align-items: center;
-    justify-content: start;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    gap: 10px;
+    left: 0;
+    bottom: 0;
+    margin: 1rem;
+    gap: 1rem;
 }
 
-.playButtonCube button {
-    justify-content: center;
-    align-items: center;
+.buttons button {
     width: 40px;
     height: 40px;
     border-radius: 100px;
-    border: none;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white-one);
+    color: var(--black);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    cursor: pointer;
 }
 
-.playButtonCube button svg {
-    width: 18px;
-    height: 18px;
+.buttons button:hover {
+    background-color: var(--gray-one);
 }
 
 .btn {
@@ -64,7 +55,7 @@
 
 .addButton {
     display: flex;
-    animation: opacity-animation 400ms normal;
+    animation: opacity-animation 600ms normal;
 }
 
 @keyframes opacity-animation {
@@ -78,14 +69,20 @@
 .MusicContainer h2 {
     color: var(--white-one);
     font-size: 18px;
+    font-weight: 400;
 }
 
-.MusicContainer span {
+.MusicContainer span,
+.MusicContainer span a {
     color: var(--gray-one);
     font-size: 14px;
 }
 
+.MusicContainer span a:hover {
+    text-decoration: underline;
+}
+
 .MusicContainer p {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--gray-two);
 }
