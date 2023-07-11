@@ -1,11 +1,25 @@
 import { AiOutlineLeft } from 'react-icons/ai'
 import { AiOutlineRight } from 'react-icons/ai'
+import { useState, useEffect } from 'react'
 
 import AddContent from '../AddContent/AddContent'
 
 import styles from './Channel.module.css'
 
 function Channel({ addText, addLink, h2, h3, Card, request }) {
+
+    const [contentCard, setContentCard] = useState([])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/${request}`, {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json()) 
+            .then(data => setContentCard(data))
+    }, [])
 
     return (
         <section className={styles.channel}>
@@ -22,7 +36,9 @@ function Channel({ addText, addLink, h2, h3, Card, request }) {
             </div>
 
             <div className={styles.carousel}>
-                <Card api={request}/>
+                {contentCard.map(item => (
+                    <Card object={item} key={item.idMusic}/>
+                ))}
             </div>
         </section>
     )

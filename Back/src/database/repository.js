@@ -31,8 +31,8 @@ const createUser = async (param) => {
 
 const createMusic = async (param) => {
     const conn = await connect()
-    const sql = 'INSERT INTO music(name, photo, date, audio, views, gender) VALUES(?, ?, ?, ?, 0, ?);'
-    const values = [param.name, param.photo, param.date, param.audio]
+    const sql = 'INSERT INTO music(name, photo, date, audio, views, gender, nationality) VALUES(?, ?, ?, ?, 0, ?, ?);'
+    const values = [param.name, param.photo, param.date, param.audio, param.nationality]
     await conn.query(sql, values)
 }
 

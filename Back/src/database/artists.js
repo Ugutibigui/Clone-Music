@@ -1,9 +1,21 @@
 const connect = require('./connection')
 
-async function getArtists(limit) {
+async function getArtists(limit, user) {
     const conn = await connect()
-    const sql = 'SELECT * FROM users WHERE artist = 1 LIMIT ?'
-    const values = [limit]
+    let sql = 'SELECT * FROM users WHERE artist = 1'
+
+    const values = []
+
+    if (user) {
+        sql += ' AND userId = ?'
+        values.push(user)
+    }
+
+    if (limit) {
+        sql += ' LIMIT ?'
+        values.push(limit)
+    }
+
     const [result] =  await conn.query(sql, values)
     return result
 }

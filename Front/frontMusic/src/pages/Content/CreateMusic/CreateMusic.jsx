@@ -16,7 +16,9 @@ function CreateMusic() {
             name: name,
             photo: '',
             date: date,
-            audio: audio
+            audio: audio,
+            gender: '',
+            nationality: ''
         }
 
         try {
