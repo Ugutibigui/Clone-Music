@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/07/2023 às 04:13
--- Versão do servidor: 8.0.30
+-- Tempo de geração: 12/07/2023 às 21:15
+-- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `channels` (
-  `idChannel` int NOT NULL,
-  `title` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `subtitle` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `card` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `requestApi` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `local` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+  `idChannel` int(11) NOT NULL,
+  `title` varchar(150) NOT NULL,
+  `subtitle` varchar(150) NOT NULL,
+  `card` varchar(150) NOT NULL,
+  `requestApi` varchar(255) NOT NULL,
+  `local` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -75,8 +75,8 @@ INSERT INTO `channels` (`idChannel`, `title`, `subtitle`, `card`, `requestApi`, 
 --
 
 CREATE TABLE `fans` (
-  `userId` int NOT NULL,
-  `fansCount` int NOT NULL
+  `userId` int(11) NOT NULL,
+  `fansCount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -133,10 +133,10 @@ INSERT INTO `fans` (`userId`, `fansCount`) VALUES
 --
 
 CREATE TABLE `flow` (
-  `flowId` int NOT NULL,
-  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `background` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+  `flowId` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `background` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -164,8 +164,8 @@ INSERT INTO `flow` (`flowId`, `name`, `image`, `background`) VALUES
 --
 
 CREATE TABLE `listmusic` (
-  `playId` int NOT NULL,
-  `idMusic` int NOT NULL
+  `playId` int(11) NOT NULL,
+  `idMusic` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -175,15 +175,15 @@ CREATE TABLE `listmusic` (
 --
 
 CREATE TABLE `music` (
-  `idMusic` int NOT NULL,
-  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `idMusic` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `photo` varchar(250) NOT NULL,
   `date` date NOT NULL,
-  `audio` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `views` bigint NOT NULL,
-  `gender` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `nationality` varchar(180) COLLATE utf8mb4_general_ci NOT NULL,
-  `userId` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+  `audio` varchar(255) NOT NULL,
+  `views` bigint(20) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `nationality` varchar(180) NOT NULL,
+  `userId` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -225,7 +225,30 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (34, 'Someone Like You', 'https://i1.sndcdn.com/artworks-000074073161-kmgoqv-t500x500.jpg', '2011-09-29', 'C:\\fakepath\\Adele - Someone Like You.mp3', 2040736312, 'Pop', 'Estados Unidos', '58'),
 (35, 'Skyfall ', 'https://upload.wikimedia.org/wikipedia/pt/0/09/Capa_de_Skyfall.jpg', '2012-10-18', 'C:\\fakepath\\Adele - Skyfall.mp3', 543202259, 'Pop', 'Estados Unidos', '58'),
 (36, 'Send My Love', 'https://musicapave.com/wp-content/uploads/adele-send-my-love-to-your-new-lover.jpg', '2016-05-22', 'C:\\fakepath\\Adele - Send My Love.mp3', 878636126, 'Pop', 'Estados Unidos', '58'),
-(37, 'Hello ', 'https://m.media-amazon.com/images/M/MV5BMTM2NzE1YTEtNTNjZC00MTg5LTkwOTEtNDEwMDI1ODA1YjhkXkEyXkFqcGdeQXVyNjU0ODAyOTY@._V1_.jpg', '2015-10-22', 'C:\\fakepath\\Adele - Hello.mp3', 3082045753, 'Pop', 'Estados Unidos', '58');
+(37, 'Hello ', 'https://m.media-amazon.com/images/M/MV5BMTM2NzE1YTEtNTNjZC00MTg5LTkwOTEtNDEwMDI1ODA1YjhkXkEyXkFqcGdeQXVyNjU0ODAyOTY@._V1_.jpg', '2015-10-22', 'C:\\fakepath\\Adele - Hello.mp3', 3082045753, 'Pop', 'Estados Unidos', '58'),
+(38, 'Lado Emocional ', 'https://i.ytimg.com/vi/iteQXb0oHsI/maxresdefault.jpg', '2023-07-07', 'C:\\fakepath\\Gusttavo Lima -  Lado Emocional.mp3', 1137747, 'Sertanejo', 'Brasil', '62'),
+(39, 'DESEJO IMORTAL', 'https://i.ytimg.com/vi/BmtdAHmWA1g/maxresdefault.jpg', '2023-04-14', 'C:\\fakepath\\Gusttavo Lima - DESEJO IMORTAL.mp3', 92641379, 'Sertanejo', 'Brasil', '62'),
+(40, 'Bloqueado ', 'https://i1.sndcdn.com/artworks-VWmycCPfFoAbyvRa-BXlaNA-t500x500.jpg', '2021-11-26', 'C:\\fakepath\\Gusttavo Lima - Bloqueado.mp3', 293542083, 'Sertanejo', 'Brasil', '62'),
+(41, 'Eu Não Iria', 'https://i1.sndcdn.com/artworks-Pryq0m5kztaCmbVL-cKZTQw-t500x500.jpg', '2018-11-22', 'C:\\fakepath\\Gusttavo Lima - Eu Não Iria.mp3', 381361549, 'Sertanejo', 'Brasil', '62'),
+(42, 'Na Hora de Amar', 'https://i.ytimg.com/vi/uVMD3Rd9WMk/maxresdefault.jpg', '2018-12-24', 'C:\\fakepath\\Gusttavo Lima - Na Hora de Amar.mp3', 404886621, 'Sertanejo', 'Brasil', '62'),
+(43, 'Termina Comigo Antes', 'https://9382cdebf7.clvaw-cdnwnd.com/9b71833bc45df38b547939216d0d77fa/200004433-bfd86bfd88/c8144636-f632-48da-86d7-ba5c6e614e2e.png?ph=9382cdebf7', '2022-04-01', 'C:\\fakepath\\Gusttavo Lima - Termina Comigo Antes.mp3', 312653140, 'Sertanejo', 'Brasil', '62'),
+(44, 'Balada (Tchê Tchê Rere)', 'https://i.scdn.co/image/ab67616d0000b27310bff5a0e1e7b7a0343fc94b', '2011-10-25', 'C:\\fakepath\\Gusttavo Lima - Balada.mp3', 154317606, 'Sertanejo', 'Brasil', '62'),
+(45, 'Saudade da Minha Vida', 'https://i.ytimg.com/vi/DUJUxYY5OP8/maxresdefault.jpg', '2023-01-27', 'C:\\fakepath\\Gusttavo Lima - Saudade da Minha Vida.mp3', 87676659, 'Sertanejo', 'Brasil', '62'),
+(46, 'Cem Mil', 'https://i1.sndcdn.com/artworks-CXF6zbnDd6SbaJyf-1OcHQg-t500x500.jpg', '2018-10-26', 'C:\\fakepath\\Gusttavo Lima - Cem Mil.mp3', 414845582, 'Sertanejo', 'Brasil', '62'),
+(47, 'Ficha Limpa', 'https://portalpopline.com.br/wp-content/uploads/2021/06/gusttavo-lima-radios-640x800.jpg', '2023-06-08', 'C:\\fakepath\\Gusttavo Lima - Ficha Limpa.mp3', 3840415, 'Sertanejo', 'Brasil', '62'),
+(48, 'Por Covardia Minha', 'https://i.ytimg.com/vi/7Y8K3F1QKlA/maxresdefault.jpg', '2018-12-15', 'C:\\fakepath\\Gusttavo Lima - Por Covardia Minha.mp3', 78360753, 'Sertanejo', 'Brasil', '62'),
+(49, ' AMERICA HAS A PROBLEM ', 'https://f4.bcbits.com/img/a3598485401_10.jpg', '2023-05-23', 'C:\\fakepath\\Beyoncé - AMERICA HAS A PROBLEM.mp3', 3471928, 'Hip Hop', 'Estados Unidos', '51'),
+(50, 'Love On Top', 'https://upload.wikimedia.org/wikipedia/pt/0/07/Beyonc%C3%A9_-_Love_on_Top.jpg', '2011-10-16', 'C:\\fakepath\\Beyoncé - Love On Top.mp3', 528123886, 'Pop', 'Estados Unidos', '51'),
+(51, 'Halo', 'https://i1.sndcdn.com/artworks-000100738651-hgoujv-t500x500.jpg', '2009-10-03', 'C:\\fakepath\\Beyoncé - Halo.mp3', 1421832865, 'Pop', 'Estados Unidos', '51'),
+(52, 'Run the World', 'https://upload.wikimedia.org/wikipedia/pt/thumb/f/f8/Run_the_World_%28Girls%29.jpg/220px-Run_the_World_%28Girls%29.jpg', '2011-05-18', 'C:\\fakepath\\Beyoncé - Run the World.mp3', 565862651, 'Eletronica', 'Estados Unidos', '51'),
+(53, 'Single Ladies', 'https://upload.wikimedia.org/wikipedia/pt/2/2c/Beyonc%C3%A9_-_Single_Ladies.jpg', '2009-10-03', 'C:\\fakepath\\Beyoncé - Single Ladies.mp3', 920815669, 'Pop', 'Estados Unidos', '51'),
+(54, 'CUFF IT', 'https://i1.sndcdn.com/artworks-QAAFhWBJnoOtgvhV-w9BIYg-t500x500.jpg', '2022-07-29', 'C:\\fakepath\\Beyoncé - CUFF IT.mp3', 47967059, 'Pop', 'Estados Unidos', '51'),
+(55, 'BREAK MY SOUL', 'https://cdn.images.express.co.uk/img/dynamic/79/590x/secondary/Madonna-Beyonce-renaissance-break-my-soul-tour-diet-costume-latest-news-update-4217076.jpg?r=1659959107340', '2022-08-08', 'C:\\fakepath\\Beyoncé, Madonna - BREAK MY SOUL.mp3', 4823164, 'Eletronica', 'Estados Unidos', '51, ?'),
+(56, 'Imagine', 'https://upload.wikimedia.org/wikipedia/pt/9/9c/John_Lennon_-_Imagine.jpg', '2016-12-18', 'C:\\fakepath\\IMAGINE - John Lennon.mp3', 287216599, 'Pop', 'Estados Unidos', '55'),
+(57, 'CANETARIA  ', 'https://i0.wp.com/www.zonasuburbana.com.br/wp-content/uploads/2023/06/MC-Mirella-CANETARIA-Numero-1-Clipe-Oficial.webp?fit=1200%2C1206&ssl=1', '2023-06-28', 'C:\\fakepath\\MC Mirella, CANETARIA.mp3', 1141466, 'Funk', 'Brasil', '84'),
+(58, 'Ai Eu Tô Dodói', 'https://m.media-amazon.com/images/I/51+lCDNKP9L._UXNaN_FMjpg_QL85_.jpg', '2022-12-27', 'C:\\fakepath\\MC Mirella - Ai Eu Tô Dodói.mp3', 1703517, 'Funk', 'Brasil', '84'),
+(59, 'QUER MAIS?', 'https://akamai.sscdn.co/uploadfile/letras/albuns/a/c/2/0/881411586980852.jpg', '2018-11-02', 'C:\\fakepath\\POCAH E MC MIRELLA - QUER MAIS.mp3', 181874339, 'Funk', 'Brasil', '83,84'),
+(60, 'Cansei Vacilão', 'https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/73/96/4e/73964ea1-218b-ba6c-af99-8c7d46a47e2f/190296922282.jpg/600x600bf-60.jpg', '2017-11-06', 'C:\\fakepath\\MC Mirella - Cansei Vacilão.mp3', 32394732, 'Funk', 'Brasil', '84');
 
 -- --------------------------------------------------------
 
@@ -234,10 +257,10 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 --
 
 CREATE TABLE `playlist` (
-  `playId` int NOT NULL,
-  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `userId` int NOT NULL
+  `playId` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `photo` varchar(250) NOT NULL,
+  `userId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -247,15 +270,15 @@ CREATE TABLE `playlist` (
 --
 
 CREATE TABLE `users` (
-  `userId` int NOT NULL,
-  `email` varchar(180) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(256) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `userName` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
-  `age` int NOT NULL,
-  `sex` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `userId` int(11) NOT NULL,
+  `email` varchar(180) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `userName` varchar(250) NOT NULL,
+  `age` int(11) NOT NULL,
+  `sex` varchar(100) NOT NULL,
   `artist` tinyint(1) NOT NULL,
-  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL
+  `photo` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -348,31 +371,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `channels`
 --
 ALTER TABLE `channels`
-  MODIFY `idChannel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idChannel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `flow`
 --
 ALTER TABLE `flow`
-  MODIFY `flowId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `flowId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `idMusic` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `idMusic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de tabela `playlist`
 --
 ALTER TABLE `playlist`
-  MODIFY `playId` int NOT NULL AUTO_INCREMENT;
+  MODIFY `playId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
