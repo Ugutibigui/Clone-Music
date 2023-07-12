@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/07/2023 às 21:46
--- Versão do servidor: 10.4.28-MariaDB
+-- Tempo de geração: 12/07/2023 às 04:13
+-- Versão do servidor: 8.0.30
 -- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `channels` (
-  `idChannel` int(255) NOT NULL,
-  `title` varchar(150) NOT NULL,
-  `subtitle` varchar(150) NOT NULL,
-  `card` varchar(150) NOT NULL,
-  `requestApi` varchar(255) NOT NULL,
-  `local` varchar(255) NOT NULL
+  `idChannel` int NOT NULL,
+  `title` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `subtitle` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `card` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `requestApi` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `local` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -47,7 +47,7 @@ INSERT INTO `channels` (`idChannel`, `title`, `subtitle`, `card`, `requestApi`, 
 (4, 'The Grammy Awards 2023', 'E os vencedores são...', 'MusicCard', '', 'Music'),
 (5, 'Mais ouvidas do momento', '', 'MusicCard', 'musics?date=2023&views=500000', 'Music'),
 (6, 'Categorias', '', 'CategorieCard', '', 'Music'),
-(7, 'Lançamentos para você', '', 'MusicCard', '', 'Music'),
+(7, 'Lançamentos para você', '', 'MusicCard', 'musics?', 'Music'),
 (8, '100% para você', '', 'MusicCard', '', 'Music'),
 (9, 'Gêneros:', '', 'CategorieCard', '', 'Music'),
 (10, 'Playlists populares', '', 'MusicCard', '', 'Music'),
@@ -75,8 +75,8 @@ INSERT INTO `channels` (`idChannel`, `title`, `subtitle`, `card`, `requestApi`, 
 --
 
 CREATE TABLE `fans` (
-  `userId` int(255) NOT NULL,
-  `fansCount` int(255) NOT NULL
+  `userId` int NOT NULL,
+  `fansCount` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -133,10 +133,10 @@ INSERT INTO `fans` (`userId`, `fansCount`) VALUES
 --
 
 CREATE TABLE `flow` (
-  `flowId` int(255) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `background` varchar(255) NOT NULL
+  `flowId` int NOT NULL,
+  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `background` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -164,8 +164,8 @@ INSERT INTO `flow` (`flowId`, `name`, `image`, `background`) VALUES
 --
 
 CREATE TABLE `listmusic` (
-  `playId` int(255) NOT NULL,
-  `idMusic` int(255) NOT NULL
+  `playId` int NOT NULL,
+  `idMusic` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -175,15 +175,15 @@ CREATE TABLE `listmusic` (
 --
 
 CREATE TABLE `music` (
-  `idMusic` int(255) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `photo` varchar(250) NOT NULL,
+  `idMusic` int NOT NULL,
+  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
-  `audio` varchar(255) NOT NULL,
-  `views` int(255) NOT NULL,
-  `gender` varchar(100) NOT NULL,
-  `nationality` varchar(180) NOT NULL,
-  `userId` varchar(255) NOT NULL
+  `audio` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `views` bigint NOT NULL,
+  `gender` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `nationality` varchar(180) COLLATE utf8mb4_general_ci NOT NULL,
+  `userId` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -214,7 +214,18 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (23, 'The Real Slim Shady', 'https://upload.wikimedia.org/wikipedia/en/6/69/Eminem_-_The_Real_Slim_Shady_CD_cover.jpg', '2010-09-15', 'C:\\fakepath\\Eminem - The Real Slim Shady.mp3', 841662868, 'Hip Hop', 'Estados Unidos', '54'),
 (24, 'Venom', 'https://pbs.twimg.com/media/EYG-tYiWAAE17Ml.jpg', '2018-10-05', 'C:\\fakepath\\Eminem - Venom.mp3', 783462599, 'Rap', 'Rap', '54'),
 (25, 'Not Afraid', 'https://m.media-amazon.com/images/M/MV5BMDg1NTY0MjItZDk3NS00M2JiLWJmZjgtMTE3Mjg4MTdmOGE5XkEyXkFqcGdeQXVyNzU3Nzk4MDQ@._V1_.jpg', '2010-06-05', 'C:\\fakepath\\Eminem - Not Afraid.mp3', 1777691957, 'Rap', 'Estados Unidos', '54'),
-(26, 'Rap God ', 'https://musicapave.com/wp-content/uploads/eminem-rap-god.jpg', '2013-11-27', 'C:\\fakepath\\Eminem - Rap God.mp3', 1351334350, 'Rap', 'Estados Unidos', '54');
+(26, 'Rap God ', 'https://musicapave.com/wp-content/uploads/eminem-rap-god.jpg', '2013-11-27', 'C:\\fakepath\\Eminem - Rap God.mp3', 1351334350, 'Rap', 'Estados Unidos', '54'),
+(27, 'Hotline Bling', 'https://3.bp.blogspot.com/-0LUVFZLH5u0/V_qoSJYFrXI/AAAAAAAAEH4/6yUb1MURRCEKmCqDNyT3A9ab-Ic3a2iVwCLcB/s1600/drakes-hotline-bling.jpg', '2015-10-26', 'C:\\fakepath\\Drake - Hotline Bling.mp3', 1942087783, 'Pop', 'Estados Unidos', '53'),
+(28, 'God\'s Plan', 'https://akamai.sscdn.co/uploadfile/letras/albuns/c/e/3/8/646121632257722.jpg', '2018-02-16', 'C:\\fakepath\\Drake - God\'s Plan.mp3', 1503449571, 'Trap', 'Estados Unidos', '53'),
+(29, 'Laugh Now Cry Later', 'https://i.redd.it/mv0fdwm5b0h51.jpg', '2010-08-13', 'C:\\fakepath\\Drake - Laugh Now Cry Later.mp3', 449497033, 'Rap', 'Estados Unidos', '53'),
+(30, 'Forever ', 'https://i1.sndcdn.com/artworks-000076983673-unt8l3-t500x500.jpg', '2009-11-25', 'C:\\fakepath\\Drake, Kanye West, Lil Wayne, Eminem - Forever.mp3', 362847074, 'Hip Hop', 'Estados Unidos', '53, 54'),
+(31, 'Started From The Bottom', 'https://i1.sndcdn.com/artworks-000039954317-t4ovg0-t500x500.jpg', '2013-02-13', 'C:\\fakepath\\Drake - Started From The Bottom.mp3', 509335961, 'Rap', 'Estados Unidos', '53'),
+(32, 'Easy On Me', 'https://i1.sndcdn.com/artworks-GSvPigmkmpKHRi8C-Sv4aJw-t500x500.jpg', '2021-10-14', 'C:\\fakepath\\Adele - Easy On Me.mp3', 346942770, 'Pop', 'Estados Unidos', '58'),
+(33, 'Rolling in the Deep', 'https://i1.sndcdn.com/artworks-000109026918-2n3ayn-t500x500.jpg', '2010-11-30', 'C:\\fakepath\\Adele - Rolling in the Deep.mp3', 2276131127, 'Pop', 'Estados Unidos', '58'),
+(34, 'Someone Like You', 'https://i1.sndcdn.com/artworks-000074073161-kmgoqv-t500x500.jpg', '2011-09-29', 'C:\\fakepath\\Adele - Someone Like You.mp3', 2040736312, 'Pop', 'Estados Unidos', '58'),
+(35, 'Skyfall ', 'https://upload.wikimedia.org/wikipedia/pt/0/09/Capa_de_Skyfall.jpg', '2012-10-18', 'C:\\fakepath\\Adele - Skyfall.mp3', 543202259, 'Pop', 'Estados Unidos', '58'),
+(36, 'Send My Love', 'https://musicapave.com/wp-content/uploads/adele-send-my-love-to-your-new-lover.jpg', '2016-05-22', 'C:\\fakepath\\Adele - Send My Love.mp3', 878636126, 'Pop', 'Estados Unidos', '58'),
+(37, 'Hello ', 'https://m.media-amazon.com/images/M/MV5BMTM2NzE1YTEtNTNjZC00MTg5LTkwOTEtNDEwMDI1ODA1YjhkXkEyXkFqcGdeQXVyNjU0ODAyOTY@._V1_.jpg', '2015-10-22', 'C:\\fakepath\\Adele - Hello.mp3', 3082045753, 'Pop', 'Estados Unidos', '58');
 
 -- --------------------------------------------------------
 
@@ -223,10 +234,10 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 --
 
 CREATE TABLE `playlist` (
-  `playId` int(255) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `photo` varchar(250) NOT NULL,
-  `userId` int(255) NOT NULL
+  `playId` int NOT NULL,
+  `name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `userId` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -236,15 +247,15 @@ CREATE TABLE `playlist` (
 --
 
 CREATE TABLE `users` (
-  `userId` int(255) NOT NULL,
-  `email` varchar(180) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `userName` varchar(250) NOT NULL,
-  `age` int(3) NOT NULL,
-  `sex` varchar(100) NOT NULL,
+  `userId` int NOT NULL,
+  `email` varchar(180) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(256) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `userName` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `age` int NOT NULL,
+  `sex` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `artist` tinyint(1) NOT NULL,
-  `photo` varchar(250) NOT NULL
+  `photo` varchar(250) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -337,31 +348,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `channels`
 --
 ALTER TABLE `channels`
-  MODIFY `idChannel` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idChannel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `flow`
 --
 ALTER TABLE `flow`
-  MODIFY `flowId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `flowId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `idMusic` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idMusic` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de tabela `playlist`
 --
 ALTER TABLE `playlist`
-  MODIFY `playId` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `playId` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `userId` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
