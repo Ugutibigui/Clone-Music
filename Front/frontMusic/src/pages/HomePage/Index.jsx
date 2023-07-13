@@ -5,7 +5,7 @@ import { GiAbstract050 } from 'react-icons/gi'
 import { FiSearch } from 'react-icons/fi'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 
 import Button from '../../components/Button/Button'
 import Menu from '../../components/Modals/Menu/Menu'
@@ -77,11 +77,12 @@ function Index({ content }) {
 					<header>
 						<div className={styles.textBox}>
 							<div className={styles.search}>
-								<Link to='/search'>
-									<button> <FiSearch size={20} /> </button>
+								<Link to={`/search?text=${encodeURIComponent(search)}`}>
+									<button id='button-search'> <FiSearch size={20} /> </button>
 								</Link>
 								<input type="text" placeholder='Buscar' onChange={event => setSearch(event.target.value)}
-									onKeyDown={event => event.key === 'Enter' ? Search() : null} value={search} />
+									onKeyDown={event => event.key === 'Enter' ? Search() : null} value={search}
+									/>
 							</div>
 							<button id={styles.closeBtn} className={search ? `${styles.active}` : `${styles.remove}`} onClick={() => setSearch('')}> <AiFillCloseCircle size={35} /> </button>
 						</div>

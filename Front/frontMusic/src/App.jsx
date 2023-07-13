@@ -15,6 +15,11 @@ import Explore from "./pages/Content/Explorar/Explore"
 import Recommendation from './pages/Content/Recommendation/Recommendation'
 
 import SearchPage from "./pages/Content/Search/Search"
+import All from './pages/Content/Search/navBar/All/All'
+import AlbumSearch from './pages/Content/Search/navBar/AlbumSearch/AlbumSearch'
+import ArtistSearch from './pages/Content/Search/navBar/ArtistSearch/ArtistSearch'
+import MusicSearch from './pages/Content/Search/navBar/MusicSearch/MusicSearch'
+
 import CreateMusic from "./pages/Content/CreateMusic/CreateMusic"
 
 import Account from './pages/Content/SetUpAccount/SetUpAccount'
@@ -51,12 +56,16 @@ function App() {
 				<Route path="/podcast" element={<Index content={<Podcasts/>} />} />
 				<Route path="/radio" element={<Index content={<Radio/>}/>}/>
 				<Route path="/explore" element={<Index content={<Explore/>} />} />
-				<Route path="/search" element={<Index content={<SearchPage/>}/>}/>
 				<Route path="/createmusic" element={<Index content={<CreateMusic/>}/>}/>
 
 				<Route exact path="/account" element={<Index content={<Account content={<Settings/>}/>} />} />
 				<Route exact path="/account/device" element={<Index content={<Account content={<Device/>}/>} />} />
 				<Route exact path="/account/apps" element={<Index content={<Account content={<Apps/>}/>} />} />
+
+				<Route exact path="/search" element={<Index content={<SearchPage content={<All/>}/>}/>}/>
+				<Route exact path="/search/music" element={<Index content={<SearchPage content={<MusicSearch/>}/>}/>}/>
+				<Route exact path="/search/album" element={<Index content={<SearchPage content={<AlbumSearch/>}/>}/>}/>
+				<Route exact path="/search/artist" element={<Index content={<SearchPage content={<ArtistSearch/>}/>}/>}/>
 
 				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>

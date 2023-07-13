@@ -2,7 +2,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 import { useState } from 'react'
 
 import Button from '../../../../../components/Button/Button'
-import MusicRankItem from '../../../../../components/Layout/MusicRankItem/MusicRankItem'
+import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
 import SingerDetails from '../../../../../components/Layout/SingerDetails/SingerDetails'
 import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicFormat'
 
@@ -22,10 +22,10 @@ function Discography() {
                     </h1>
 
                     <ul>
-                        <MusicRankItem />
-                        <MusicRankItem />
-                        <MusicRankItem />
-                        <MusicRankItem />
+                        <MusicInfos />
+                        <MusicInfos />
+                        <MusicInfos />
+                        <MusicInfos />
                     </ul>
                 </div>
 
@@ -64,7 +64,7 @@ function Discography() {
                             <h1>Flores de Plástico</h1>
                             <p id={styles.data}>31/03/2024</p>
 
-                            <MusicRankItem />
+                            <MusicInfos />
                         </div>
                     </div>
                 </div>

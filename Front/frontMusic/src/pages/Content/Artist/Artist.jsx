@@ -46,7 +46,7 @@ function Artist({content}) {
 
             <CustomNav navigations={playlists} padding='0 6rem' />
 
-            {content}
+            {}
         </Container>
     )
 }

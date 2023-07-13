@@ -3,9 +3,9 @@ import { BsFillPlayFill, BsThreeDots, BsFillHeartFill } from 'react-icons/bs'
 import { TbMicrophone2 } from 'react-icons/tb'
 import { RiBarcodeFill } from 'react-icons/ri'
 
-import styles from './MusicRankItem.module.css'
+import styles from './MusicInfos.module.css'
 
-function MusicRankItem({ image, title, moreInfos }) {
+function MusicInfos({ image, title, moreInfos }) {
 
     const [buttonClass, setButtonClass] = useState(`${styles.remove}`)
     const [wrapperClass, setWrapperClass] = useState('')
@@ -51,4 +51,4 @@ function MusicRankItem({ image, title, moreInfos }) {
     )
 }
 
-export default MusicRankItem
+export default MusicInfos

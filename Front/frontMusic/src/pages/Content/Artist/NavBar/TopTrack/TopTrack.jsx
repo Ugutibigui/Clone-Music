@@ -1,7 +1,7 @@
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
 import Search from '../../../../../components/Search/Search'
-import MusicRankItem from '../../../../../components/Layout/MusicRankItem/MusicRankItem'
+import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
 
 import styles from './TopTrack.module.css'
 
@@ -21,13 +21,13 @@ function TopTrack() {
             </div>
 
             <ul>
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
-                <MusicRankItem moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
+                <MusicInfos moreInfos={true} />
             </ul>
         </div>
     )
