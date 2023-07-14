@@ -2,5 +2,19 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid var(--gray-one);
+    padding: 1rem;
+}
+
+.TableMusic span:first-child {
+    width: 55%;
+}
+
+#cubeTable {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--dark-gray-one);
+    border-radius: 5px;
+    cursor: pointer;
 }

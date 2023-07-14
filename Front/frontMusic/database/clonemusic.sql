@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/07/2023 às 21:15
+-- Tempo de geração: 14/07/2023 às 04:51
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -248,7 +248,14 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (57, 'CANETARIA  ', 'https://i0.wp.com/www.zonasuburbana.com.br/wp-content/uploads/2023/06/MC-Mirella-CANETARIA-Numero-1-Clipe-Oficial.webp?fit=1200%2C1206&ssl=1', '2023-06-28', 'C:\\fakepath\\MC Mirella, CANETARIA.mp3', 1141466, 'Funk', 'Brasil', '84'),
 (58, 'Ai Eu Tô Dodói', 'https://m.media-amazon.com/images/I/51+lCDNKP9L._UXNaN_FMjpg_QL85_.jpg', '2022-12-27', 'C:\\fakepath\\MC Mirella - Ai Eu Tô Dodói.mp3', 1703517, 'Funk', 'Brasil', '84'),
 (59, 'QUER MAIS?', 'https://akamai.sscdn.co/uploadfile/letras/albuns/a/c/2/0/881411586980852.jpg', '2018-11-02', 'C:\\fakepath\\POCAH E MC MIRELLA - QUER MAIS.mp3', 181874339, 'Funk', 'Brasil', '83,84'),
-(60, 'Cansei Vacilão', 'https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/73/96/4e/73964ea1-218b-ba6c-af99-8c7d46a47e2f/190296922282.jpg/600x600bf-60.jpg', '2017-11-06', 'C:\\fakepath\\MC Mirella - Cansei Vacilão.mp3', 32394732, 'Funk', 'Brasil', '84');
+(60, 'Cansei Vacilão', 'https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/73/96/4e/73964ea1-218b-ba6c-af99-8c7d46a47e2f/190296922282.jpg/600x600bf-60.jpg', '2017-11-06', 'C:\\fakepath\\MC Mirella - Cansei Vacilão.mp3', 32394732, 'Funk', 'Brasil', '84'),
+(61, 'Brota Bebê - Tô Querendo Fazer', 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/4c/f5/23/4cf523f2-b8bd-ab34-85f0-2a4cae98471e/0.jpg/1200x1200bb.jpg', '2023-04-14', 'C:\\fakepath\\MC Mirella e MC Lucy - Brota Bebê - Tô Querendo Fazer.mp3', 1653647, 'Funk', 'Brasil', '84'),
+(62, 'Provocando ', 'https://m.media-amazon.com/images/I/511Jd3O8BaL._UXNaN_FMjpg_QL85_.jpg', '2022-08-10', 'C:\\fakepath\\Mirella e MC Gabzin - Provocando.mp3', 4588538, 'Funk', 'Brasil', '84'),
+(63, 'Meu Desapego', 'https://i1.sndcdn.com/artworks-D9ajf4G1yKLD-0-t500x500.jpg', '2022-08-24', 'C:\\fakepath\\Ludmilla - Meu Desapego.mp3', 51692302, 'Pagode', 'Brasil', '97'),
+(64, 'Cheguei ', 'https://jpimg.com.br/uploads/2017/11/archives/2017/07/07/457784870-ludmilla-lanca-versao-sem-censura-de-cheguei.jpg', '2017-05-03', 'C:\\fakepath\\LUDMILLA - Cheguei.mp3', 293165596, 'Pop', 'Brasil', '97'),
+(65, 'CAFÉ DA MANHÃ', 'https://tracklist.com.br/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-09-at-12.19.10.jpeg', '2022-02-08', 'C:\\fakepath\\Luísa Sonza, Ludmilla - CAFÉ DA MANHÃ.mp3', 70767314, 'Pop', 'Brasil', '88, 97'),
+(66, 'Brigas Demais', 'https://i.ytimg.com/vi/vVXd92vSaEk/maxresdefault.jpg', '2023-02-24', 'C:\\fakepath\\Ludmilla feat. Delacruz e Gaab - Brigas Demais.mp3', 6036757, 'Trap', 'Brasil', '97'),
+(67, 'Rainha da Favela', 'https://i.scdn.co/image/ab67616d0000b273ba97386384cbf562725bdb2c', '2020-11-12', 'C:\\fakepath\\LUDMILLA - Rainha da Favela.mp3', 84271062, 'Funk', 'Brasil', '0');
 
 -- --------------------------------------------------------
 
@@ -383,7 +390,7 @@ ALTER TABLE `flow`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `idMusic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `idMusic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT de tabela `playlist`

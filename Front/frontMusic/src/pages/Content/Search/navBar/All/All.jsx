@@ -33,16 +33,31 @@ const All = () => {
                 <div>
                     <TableMusic>
                         <span>MÚSICA</span>
+                        <span>ARTISTA</span>
                         <span>ÁLBUM</span>
                         <span> <AiOutlineClockCircle /> </span>
                         <span>POP.</span>
-                        <div id={styles.cube}></div>
+                        <div id='cubeTable'></div>
                     </TableMusic>
 
-                    {Array.from({ length: 8 }).map((_, index) => (
-                        <MusicInfos key={index} />
-                    ))}
+                    <div className={styles.musicInfos}>
+                        {Array.from({ length: 8 }).map((_, index) => (
+                            <MusicInfos key={index} moreInfos={true} />
+                        ))}
+                    </div>
                 </div>
+            </section>
+
+            <section className={styles.albuns}>
+
+            </section>
+
+            <section className={styles.artists}>
+
+            </section>
+
+            <section className={styles.profiles}>
+
             </section>
         </>
     )

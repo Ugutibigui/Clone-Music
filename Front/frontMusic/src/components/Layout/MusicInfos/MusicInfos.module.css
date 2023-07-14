@@ -1,26 +1,24 @@
-#wrapper {
+.wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 0 5px;
+    padding: 8px 1rem;
     cursor: pointer;
 }
 
-.background {
+#background {
     background-color: #191922;
 }
 
 .left {
+    width: 50%;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .left p {
     color: #fff;
     font-size: 16px;
-    font-weight: 400;
 }
 
 .image {
@@ -30,11 +28,7 @@
 }
 
 .image button {
-    justify-content: center;
-    align-items: center;
-    border: none;
     background-color: #fff;
-    border-radius: 100px;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -44,7 +38,7 @@
 .image img {
     height: 40px;
     width: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .add {
@@ -56,24 +50,50 @@
 }
 
 .right {
+    width: 50%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 5px;
+}
+
+.infos {
+    display: flex;
+    gap: 6px;
 }
 
 .right button {
-    border-radius: 100px;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 30px;
     height: 30px;
-    transition: 400ms;
-    cursor: pointer;
 }
 
 .right button:hover {
-    background-color: #ffffff6c;
+    background-color: var(--transparent-white);
+}
+
+.right h3 {
+    color: var(--white-one);
+    font-size: 15px;
+}
+
+.right span {
+    font-size: 15px;
+    color: var(--gray-two);
+}
+
+
+
+.right input[type='checkbox'] {
+    display: none;
+}
+
+.right label {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--dark-gray-one);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right input[type='checkbox']:checked ~ label {
+    background-color: var(--pink-red-one);
 }
