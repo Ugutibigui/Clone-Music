@@ -18,7 +18,7 @@ function Channel({ addText, addLink, h2, h3, Card, request }) {
             }
         })
             .then(response => response.json()) 
-            .then(data => setContentCard(data))
+            .then(data => setContentCard(data.sort(() => Math.random() - 0.5)))
     }, [])
 
     return (
@@ -36,8 +36,8 @@ function Channel({ addText, addLink, h2, h3, Card, request }) {
             </div>
 
             <div className={styles.carousel}>
-                {contentCard.map(item => (
-                    <Card object={item} key={item.idMusic}/>
+                {contentCard.map((item, index) => (
+                    <Card object={item} key={index}/>
                 ))}
             </div>
         </section>

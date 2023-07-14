@@ -255,7 +255,21 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (64, 'Cheguei ', 'https://jpimg.com.br/uploads/2017/11/archives/2017/07/07/457784870-ludmilla-lanca-versao-sem-censura-de-cheguei.jpg', '2017-05-03', 'C:\\fakepath\\LUDMILLA - Cheguei.mp3', 293165596, 'Pop', 'Brasil', '97'),
 (65, 'CAFÉ DA MANHÃ', 'https://tracklist.com.br/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-09-at-12.19.10.jpeg', '2022-02-08', 'C:\\fakepath\\Luísa Sonza, Ludmilla - CAFÉ DA MANHÃ.mp3', 70767314, 'Pop', 'Brasil', '88, 97'),
 (66, 'Brigas Demais', 'https://i.ytimg.com/vi/vVXd92vSaEk/maxresdefault.jpg', '2023-02-24', 'C:\\fakepath\\Ludmilla feat. Delacruz e Gaab - Brigas Demais.mp3', 6036757, 'Trap', 'Brasil', '97'),
-(67, 'Rainha da Favela', 'https://i.scdn.co/image/ab67616d0000b273ba97386384cbf562725bdb2c', '2020-11-12', 'C:\\fakepath\\LUDMILLA - Rainha da Favela.mp3', 84271062, 'Funk', 'Brasil', '0');
+(67, 'Rainha da Favela', 'https://i.scdn.co/image/ab67616d0000b273ba97386384cbf562725bdb2c', '2020-11-12', 'C:\\fakepath\\LUDMILLA - Rainha da Favela.mp3', 84271062, 'Funk', 'Brasil', '97'),
+(68, 'Chapadinha na Gaveta', 'https://i.scdn.co/image/ab67616d0000b273baed85ef0fe7c6f064d0b864', '2022-11-4', 'C:\\fakepath\\Gabily, Vanessa Lopes - Chapadinha na Gaveta.mp3', 3584272 , 'Funk', 'Brasil', '85'),
+(69, 'Beautiful Love', 'https://pmstudio.com/pmstudio/images/Justin-Bieber60.jpg', '2022-09-18', 'C:\\fakepath\\Justin Bieber X Free Fire - Beautiful Love.mp3', 5622025, 'Pop', 'Estados Unidos', '60'),
+(70, 'Baby', 'https://upload.wikimedia.org/wikipedia/pt/a/ad/Baby_Single.jpg', '2010-02-19', 'C:\\fakepath\\Justin Bieber - Baby.mp3', 2987400704, 'Pop', 'Estados Unidos', '60'),
+(71, 'Sorry', 'https://s2-glamour.glbimg.com/qEqg5uaCVQwAaDQ12WNwOA40vTM=/0x0:607x607/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_ba3db981e6d14e54bb84be31c923b00c/internal_photos/bs/2021/w/X/uavWAESTCwZkluVrcKWw/2016-04-12-justin-bieber-sorry-portada.jpg', '2015-10-22', 'C:\\fakepath\\Justin Bieber - Sorry.mp3', 3682014487, 'Pop', 'Estados Unidos', '60'),
+(72, "I'm The One", 'https://i.ytimg.com/vi/weeI1G46q0o/maxresdefault.jpg', '2017-04-14', "C:\\fakepath\\DJ Khaled - I'm The One ft. Justin Bieber.mp3", 1733649079, 'Pop', 'Estados Unidos', '60'),
+(73, 'Love Yourself', 'https://i.scdn.co/image/ab67616d0000b273e13ab134bdec59e2d0e82290', '2015-11-14', 'C:\\fakepath\\Justin Bieber - Love Yourself.mp3', 1706430631, 'Pop', 'Estados Unidos', '60'),
+(74, 'Yummy', 'https://i.pinimg.com/originals/73/c6/72/73c672457b6cccbd6d36540518bdd75f.jpg', '2020-01-04', 'C:\\fakepath\\Justin Bieber - Yummy.mp3', 761771366, 'Pop', 'Estados Unidos', '60'),
+(75, 'Beauty And A Beat', 'https://i1.sndcdn.com/artworks-000067280321-bsiag8-t500x500.jpg', '2012-10-12', 'C:\\fakepath\\Justin Bieber - Beauty And A Beat ft. Nicki Minaj.mp3', 1046924772, 'Pop', 'Estados Unidos', '60'),
+(76, 'Somebody To Love', 'https://i.scdn.co/image/ab67616d0000b273629dc9e2e3bc20bbd7d92e4a', '2010-06-16', 'C:\\fakepath\\Justin Bieber - Somebody To Love Remix ft. Usher.mp3', 502742374, 'Pop', 'Estados Unidos', '60'),
+(77, 'Boyfriend', 'https://upload.wikimedia.org/wikipedia/pt/e/e6/Boyfriend_-_Justin_Bieber.jpg', '2012-05-03', 'C:\\fakepath\\Justin Bieber - Boyfriend.mp3', 873186178, 'Pop', 'Estados Unidos', '60'),
+(78, 'Monster', 'https://i.discogs.com/r6_EUb040F63nQKx-D6yD-gZQhr9H6-HCfb267GTYzk/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2Mjg2/MDAxLTE2MDY1ODYw/MzItMTEzNS5qcGVn.jpeg', '2020-11-20', 'C:\\fakepath\\Shawn Mendes, Justin Bieber - Monster.mp3', 201795041, 'Pop', 'Estados Unidos', '60'),
+(79, 'Never Say Never', 'https://upload.wikimedia.org/wikipedia/pt/8/86/Justin_Bieber_-_Never_Say_Never.png', '2010-05-23', 'C:\\fakepath\\Justin Bieber - Never Say Never ft. Jaden.mp3', 1134991373, 'Hip Hop', 'Estados Unidos', '60');
+
+
 
 -- --------------------------------------------------------
 

@@ -4,6 +4,12 @@ const getMusics = async (req, res) => {
     const dateNumber = req.query.date || ''
     const date = parseInt(dateNumber)
 
+    const smallerDateNumber = req.query.smaller
+    const smallerDate = parseInt(smallerDateNumber)
+
+    const BiggerDateNumber = req.query.bigger
+    const BiggerDate = parseInt(BiggerDateNumber)
+
     const viewsNumber = req.query.views || ''
     const views = parseInt(viewsNumber)
 
@@ -14,7 +20,7 @@ const getMusics = async (req, res) => {
     const userId = req.query.user || ''
     const user = parseInt(userId)
 
-    const musics = await musicDatabase.getMusics(date, views, name, gender, user)
+    const musics = await musicDatabase.getMusics(date, views, name, gender, user, smallerDate, BiggerDate)
     return res.status(200).json(musics)
 }
 

@@ -1,14 +1,24 @@
 const connect = require("../database/connection")
 
-async function getMusics(date, views, name, gender, user) {
+async function getMusics(date, views, name, gender, user, smaller, bigger) {
     const conn = await connect()
 
     let sql = 'SELECT * FROM music WHERE 1=1'
 
     const values = []
     if (date) {
-        sql += ' AND date LIKE ?'
+        sql += ' AND YEAR(date) LIKE ?'
         values.push(`%${date}%`)
+    }
+
+    if (smaller) {
+        sql += ' AND YEAR(date) <= ?'
+        values.push(smaller)
+    }
+
+    if (bigger) {
+        sql += ' AND YEAR(date) >= ?'
+        values.push(bigger)
     }
 
     if (views) {

@@ -7,7 +7,9 @@ const getArtists = async (req, res) => {
     const userId = req.query.user || ''
     const user = parseInt(userId)
 
-    const artists = await artistDatabase.getArtists(limit, user)
+    const name = req.query.name || ''
+
+    const artists = await artistDatabase.getArtists(limit, user, name)
     return res.status(200).json(artists)
 }
 
