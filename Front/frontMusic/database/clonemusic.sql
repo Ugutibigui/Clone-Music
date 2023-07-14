@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/07/2023 às 04:51
+-- Tempo de geração: 14/07/2023 às 21:14
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -41,24 +41,24 @@ CREATE TABLE `channels` (
 --
 
 INSERT INTO `channels` (`idChannel`, `title`, `subtitle`, `card`, `requestApi`, `local`) VALUES
-(1, 'Flow: toque o que você sente', 'Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.', 'FlowCard', '', 'Music'),
+(1, 'Flow: toque o que você sente', 'Um mix infinito e personalizado das músicas que você ama e também de novas descobertas.', 'FlowCard', 'flows', 'Music'),
 (2, 'Seus artistas favoritos', '', 'ArtistCard', '', 'Music'),
 (3, 'Playlist que você vai amar', '', 'MusicCard', '', 'Music'),
 (4, 'The Grammy Awards 2023', 'E os vencedores são...', 'MusicCard', '', 'Music'),
-(5, 'Mais ouvidas do momento', '', 'MusicCard', 'musics?date=2023&views=500000', 'Music'),
+(5, 'Mais ouvidas do momento', '', 'MusicCard', 'musics?date=2023&views=1000000', 'Music'),
 (6, 'Categorias', '', 'CategorieCard', '', 'Music'),
 (7, 'Lançamentos para você', '', 'MusicCard', 'musics?', 'Music'),
 (8, '100% para você', '', 'MusicCard', '', 'Music'),
 (9, 'Gêneros:', '', 'CategorieCard', '', 'Music'),
-(10, 'Playlists populares', '', 'MusicCard', '', 'Music'),
+(10, 'Músicas Nostálgicas', '', 'MusicCard', 'musics?smaller=2016&views=5000000', 'Music'),
 (11, 'Destaques', '', 'HighlightCard', '', 'Music'),
-(12, 'Sextou', '', 'MusicCard', '', 'Music'),
+(12, 'Sertanejo 🤠', '', 'MusicCard', 'musics?views=2000000&gender=Sertanejo&bigger=2018', 'Music'),
 (13, 'Charts', '', 'MusicCard', '', 'Music'),
 (14, 'Álbuns mais ouvidos', '', 'MusicCard', '', 'Music'),
-(15, 'Só na Deezer', '', 'MusicCard', '', 'Music'),
+(15, 'Melhores do Funk BR', '', 'MusicCard', 'musics?bigger=2018&views=2000000&gender=Funk', 'Music'),
 (16, 'No ritmo dos anos 2000', '', 'MusicCard', '', 'Music'),
 (17, 'Rádios para você', '', 'radioCard', '', 'Music'),
-(18, 'Podcasts populares', '', 'MusicCard', '', 'Podcast'),
+(18, 'Melhores do Funk BR', '', 'MusicCard', '', 'Podcast'),
 (19, 'Todas as categorias', '', 'CategorieCard', '', 'Podcast'),
 (20, '', '', 'HighlightCard', '', 'Podcast'),
 (21, 'Nossos editores estão amando', '', 'MusicCard', '', 'Podcast'),
@@ -243,7 +243,7 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (52, 'Run the World', 'https://upload.wikimedia.org/wikipedia/pt/thumb/f/f8/Run_the_World_%28Girls%29.jpg/220px-Run_the_World_%28Girls%29.jpg', '2011-05-18', 'C:\\fakepath\\Beyoncé - Run the World.mp3', 565862651, 'Eletronica', 'Estados Unidos', '51'),
 (53, 'Single Ladies', 'https://upload.wikimedia.org/wikipedia/pt/2/2c/Beyonc%C3%A9_-_Single_Ladies.jpg', '2009-10-03', 'C:\\fakepath\\Beyoncé - Single Ladies.mp3', 920815669, 'Pop', 'Estados Unidos', '51'),
 (54, 'CUFF IT', 'https://i1.sndcdn.com/artworks-QAAFhWBJnoOtgvhV-w9BIYg-t500x500.jpg', '2022-07-29', 'C:\\fakepath\\Beyoncé - CUFF IT.mp3', 47967059, 'Pop', 'Estados Unidos', '51'),
-(55, 'BREAK MY SOUL', 'https://cdn.images.express.co.uk/img/dynamic/79/590x/secondary/Madonna-Beyonce-renaissance-break-my-soul-tour-diet-costume-latest-news-update-4217076.jpg?r=1659959107340', '2022-08-08', 'C:\\fakepath\\Beyoncé, Madonna - BREAK MY SOUL.mp3', 4823164, 'Eletronica', 'Estados Unidos', '51, ?'),
+(55, 'BREAK MY SOUL', 'https://cdn.images.express.co.uk/img/dynamic/79/590x/secondary/Madonna-Beyonce-renaissance-break-my-soul-tour-diet-costume-latest-news-update-4217076.jpg?r=1659959107340', '2022-08-08', 'C:\\fakepath\\Beyoncé, Madonna - BREAK MY SOUL.mp3', 4823164, 'Eletronica', 'Estados Unidos', '51'),
 (56, 'Imagine', 'https://upload.wikimedia.org/wikipedia/pt/9/9c/John_Lennon_-_Imagine.jpg', '2016-12-18', 'C:\\fakepath\\IMAGINE - John Lennon.mp3', 287216599, 'Pop', 'Estados Unidos', '55'),
 (57, 'CANETARIA  ', 'https://i0.wp.com/www.zonasuburbana.com.br/wp-content/uploads/2023/06/MC-Mirella-CANETARIA-Numero-1-Clipe-Oficial.webp?fit=1200%2C1206&ssl=1', '2023-06-28', 'C:\\fakepath\\MC Mirella, CANETARIA.mp3', 1141466, 'Funk', 'Brasil', '84'),
 (58, 'Ai Eu Tô Dodói', 'https://m.media-amazon.com/images/I/51+lCDNKP9L._UXNaN_FMjpg_QL85_.jpg', '2022-12-27', 'C:\\fakepath\\MC Mirella - Ai Eu Tô Dodói.mp3', 1703517, 'Funk', 'Brasil', '84'),
@@ -256,11 +256,11 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (65, 'CAFÉ DA MANHÃ', 'https://tracklist.com.br/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-09-at-12.19.10.jpeg', '2022-02-08', 'C:\\fakepath\\Luísa Sonza, Ludmilla - CAFÉ DA MANHÃ.mp3', 70767314, 'Pop', 'Brasil', '88, 97'),
 (66, 'Brigas Demais', 'https://i.ytimg.com/vi/vVXd92vSaEk/maxresdefault.jpg', '2023-02-24', 'C:\\fakepath\\Ludmilla feat. Delacruz e Gaab - Brigas Demais.mp3', 6036757, 'Trap', 'Brasil', '97'),
 (67, 'Rainha da Favela', 'https://i.scdn.co/image/ab67616d0000b273ba97386384cbf562725bdb2c', '2020-11-12', 'C:\\fakepath\\LUDMILLA - Rainha da Favela.mp3', 84271062, 'Funk', 'Brasil', '97'),
-(68, 'Chapadinha na Gaveta', 'https://i.scdn.co/image/ab67616d0000b273baed85ef0fe7c6f064d0b864', '2022-11-4', 'C:\\fakepath\\Gabily, Vanessa Lopes - Chapadinha na Gaveta.mp3', 3584272 , 'Funk', 'Brasil', '85'),
+(68, 'Chapadinha na Gaveta', 'https://i.scdn.co/image/ab67616d0000b273baed85ef0fe7c6f064d0b864', '2022-11-04', 'C:\\fakepath\\Gabily, Vanessa Lopes - Chapadinha na Gaveta.mp3', 3584272, 'Funk', 'Brasil', '85'),
 (69, 'Beautiful Love', 'https://pmstudio.com/pmstudio/images/Justin-Bieber60.jpg', '2022-09-18', 'C:\\fakepath\\Justin Bieber X Free Fire - Beautiful Love.mp3', 5622025, 'Pop', 'Estados Unidos', '60'),
 (70, 'Baby', 'https://upload.wikimedia.org/wikipedia/pt/a/ad/Baby_Single.jpg', '2010-02-19', 'C:\\fakepath\\Justin Bieber - Baby.mp3', 2987400704, 'Pop', 'Estados Unidos', '60'),
-(71, 'Sorry', 'https://s2-glamour.glbimg.com/qEqg5uaCVQwAaDQ12WNwOA40vTM=/0x0:607x607/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_ba3db981e6d14e54bb84be31c923b00c/internal_photos/bs/2021/w/X/uavWAESTCwZkluVrcKWw/2016-04-12-justin-bieber-sorry-portada.jpg', '2015-10-22', 'C:\\fakepath\\Justin Bieber - Sorry.mp3', 3682014487, 'Pop', 'Estados Unidos', '60'),
-(72, "I'm The One", 'https://i.ytimg.com/vi/weeI1G46q0o/maxresdefault.jpg', '2017-04-14', "C:\\fakepath\\DJ Khaled - I'm The One ft. Justin Bieber.mp3", 1733649079, 'Pop', 'Estados Unidos', '60'),
+(71, 'Sorry', 'https://upload.wikimedia.org/wikipedia/pt/8/8e/Sorry_Justin_Bieber_Capa.png', '2015-10-22', 'C:\\fakepath\\Justin Bieber - Sorry.mp3', 3682014487, 'Pop', 'Estados Unidos', '60'),
+(72, 'I\'m The One', 'https://i.ytimg.com/vi/weeI1G46q0o/maxresdefault.jpg', '2017-04-14', 'C:\\fakepath\\DJ Khaled - I\'m The One ft. Justin Bieber.mp3', 1733649079, 'Pop', 'Estados Unidos', '60'),
 (73, 'Love Yourself', 'https://i.scdn.co/image/ab67616d0000b273e13ab134bdec59e2d0e82290', '2015-11-14', 'C:\\fakepath\\Justin Bieber - Love Yourself.mp3', 1706430631, 'Pop', 'Estados Unidos', '60'),
 (74, 'Yummy', 'https://i.pinimg.com/originals/73/c6/72/73c672457b6cccbd6d36540518bdd75f.jpg', '2020-01-04', 'C:\\fakepath\\Justin Bieber - Yummy.mp3', 761771366, 'Pop', 'Estados Unidos', '60'),
 (75, 'Beauty And A Beat', 'https://i1.sndcdn.com/artworks-000067280321-bsiag8-t500x500.jpg', '2012-10-12', 'C:\\fakepath\\Justin Bieber - Beauty And A Beat ft. Nicki Minaj.mp3', 1046924772, 'Pop', 'Estados Unidos', '60'),
@@ -268,8 +268,6 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (77, 'Boyfriend', 'https://upload.wikimedia.org/wikipedia/pt/e/e6/Boyfriend_-_Justin_Bieber.jpg', '2012-05-03', 'C:\\fakepath\\Justin Bieber - Boyfriend.mp3', 873186178, 'Pop', 'Estados Unidos', '60'),
 (78, 'Monster', 'https://i.discogs.com/r6_EUb040F63nQKx-D6yD-gZQhr9H6-HCfb267GTYzk/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2Mjg2/MDAxLTE2MDY1ODYw/MzItMTEzNS5qcGVn.jpeg', '2020-11-20', 'C:\\fakepath\\Shawn Mendes, Justin Bieber - Monster.mp3', 201795041, 'Pop', 'Estados Unidos', '60'),
 (79, 'Never Say Never', 'https://upload.wikimedia.org/wikipedia/pt/8/86/Justin_Bieber_-_Never_Say_Never.png', '2010-05-23', 'C:\\fakepath\\Justin Bieber - Never Say Never ft. Jaden.mp3', 1134991373, 'Hip Hop', 'Estados Unidos', '60');
-
-
 
 -- --------------------------------------------------------
 
@@ -404,7 +402,7 @@ ALTER TABLE `flow`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `idMusic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `idMusic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT de tabela `playlist`

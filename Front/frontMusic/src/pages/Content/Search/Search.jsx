@@ -5,7 +5,7 @@ import CustomNav from '../../../components/Nav/CustomNav/CustomNav';
 
 import styles from './Search.module.css'
 
-const Search = ({ content: Content }) => {
+const Search = ({content}) => {
     const navBar = [
         { name: 'Todos', to: '/search' },
         { name: 'Músicas', to: '/search/music' },
@@ -34,7 +34,7 @@ const Search = ({ content: Content }) => {
             <CustomNav navigations={navBar} padding={20} />
 
             <div className={styles.searchContainer}>
-                <Content object={artistText} />
+                <content object={artistText} />
             </div>
         </Container>
     )
