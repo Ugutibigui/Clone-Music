@@ -6,32 +6,22 @@ import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
 
 import styles from './MusicSearch.module.css'
 
-const MusicSearch = ({ name }) => {
+const MusicSearch = ({ artistData }) => {
 
     const [musics, setMusics] = useState([])
-    const [artist, seArtist] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:8000/artists?name=${name}`, {
-            'method': 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => seArtist(data[0]))
-    }, [name])
-
-    useEffect(() => {
-        fetch(`http://localhost:8000/musics?user=${artist.userId}`, {
-            'method': 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => setMusics(data))
-    }, [artist])
+        if (artistData && artistData.userId) {
+            fetch(`http://localhost:8000/musics?user=${artistData.userId}`, {
+                'method': 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => setMusics(data))
+        }
+    }, [artistData])
 
     return (
         <section className={styles.allMusics}>

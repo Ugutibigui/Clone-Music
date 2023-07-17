@@ -37,8 +37,8 @@ async function getMusics(date, views, name, gender, user, smaller, bigger) {
     }
 
     if (user) {
-        sql += ' AND userId = ?'
-        values.push(user)
+        sql += ' AND userId LIKE ?'
+        values.push(`%${user}%`)
     }
 
     const [result] = await conn.query(sql, values)

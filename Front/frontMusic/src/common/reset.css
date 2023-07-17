@@ -41,6 +41,7 @@ h1 {
 }
 
 h2 {
+    color: var(--white-one);
     font-size: 20px;
     font-weight: 600;
     margin-block-start: 0;

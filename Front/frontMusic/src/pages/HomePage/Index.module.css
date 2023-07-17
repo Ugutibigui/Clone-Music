@@ -124,6 +124,7 @@
 
 .contentRight {
 	margin-left: 220px;
+	min-height: calc(100vh - 56px - 80px);
 	width: calc(100% - 220px);
 	background-color: var(--black-one);
 }
@@ -226,6 +227,7 @@ header .profile .iconsProfile {
 	.contentRight {
 		margin-left: 180px;
 		width: calc(100% - 180px);
+		min-height: calc(100vh - 45px - 80px);
 	}
 
 	.leftMenu img {

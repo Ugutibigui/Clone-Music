@@ -16,8 +16,6 @@ import Recommendation from './pages/Content/Recommendation/Recommendation'
 
 import SearchPage from "./pages/Content/Search/Search"
 import All from './pages/Content/Search/navBar/All/All'
-import AlbumSearch from './pages/Content/Search/navBar/AlbumSearch/AlbumSearch'
-import ArtistSearch from './pages/Content/Search/navBar/ArtistSearch/ArtistSearch'
 import MusicSearch from './pages/Content/Search/navBar/MusicSearch/MusicSearch'
 
 import CreateMusic from "./pages/Content/CreateMusic/CreateMusic"
@@ -64,8 +62,6 @@ function App() {
 
 				<Route exact path="/search" element={<Index content={<SearchPage content={<All/>}/>}/>}/>
 				<Route exact path="/search/music" element={<Index content={<SearchPage content={<MusicSearch/>}/>}/>}/>
-				<Route exact path="/search/album" element={<Index content={<SearchPage content={<AlbumSearch/>}/>}/>}/>
-				<Route exact path="/search/artist" element={<Index content={<SearchPage content={<ArtistSearch/>}/>}/>}/>
 
 				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>

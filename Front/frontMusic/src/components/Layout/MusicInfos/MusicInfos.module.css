@@ -54,6 +54,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
 }
 
 .infos {
@@ -72,15 +73,27 @@
 
 .right h3 {
     color: var(--white-one);
-    font-size: 15px;
+    font-size: 14px;
+    width: 100px;
 }
 
-.right span {
-    font-size: 15px;
-    color: var(--gray-two);
+.artists {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    gap: 5px;
 }
 
+.right .artists a{
+    color: var(--white-one);
+    font-size: 12px;
+}
 
+.right .artists a:hover {
+    text-decoration: underline;
+}
 
 .right input[type='checkbox'] {
     display: none;
@@ -96,4 +109,47 @@
 
 .right input[type='checkbox']:checked ~ label {
     background-color: var(--pink-red-one);
+}
+
+@media screen and (max-width: 1350px) {
+    #pop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .right h3,
+    #date {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #views {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #cubeMusic,
+    #labelMusic,
+    .artists,
+    #date {
+        display: none;
+    }
+
+    .right {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .infos button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .left p {
+        font-size: 13px;
+    }
 }

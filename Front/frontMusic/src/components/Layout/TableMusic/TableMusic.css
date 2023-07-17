@@ -11,10 +11,42 @@
     width: 55%;
 }
 
+.TableMusic span:not(:first-child) {
+    margin-left: 40px;
+  }
+  
+
 #cubeTable {
     width: 20px;
     height: 20px;
     border: 1px solid var(--dark-gray-one);
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1350px) {
+    #pop {
+        display: none;
+    }
+
+    .TableMusic span:not(:first-child) {
+        margin-left: 0px
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #views {
+        display: none;
+    }
+
+    .TableMusic span:not(:first-child) {
+        margin-left: 40px
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .TableMusic span:not(:first-child),
+    #cubeTable {
+        display: none;
+    }
 }
