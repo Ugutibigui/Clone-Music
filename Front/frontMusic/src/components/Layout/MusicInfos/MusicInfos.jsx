@@ -5,7 +5,7 @@ import { RiBarcodeFill } from 'react-icons/ri'
 
 import styles from './MusicInfos.module.css'
 
-function MusicInfos({ music, moreInfos }) {
+function MusicInfos({ infos, moreInfos }) {
 
     const [buttonClass, setButtonClass] = useState(`${styles.remove}`)
     const [wrapperClass, setWrapperClass] = useState('')
@@ -22,11 +22,11 @@ function MusicInfos({ music, moreInfos }) {
             }}>
             <div className={styles.left}>
                 <div className={styles.image}>
-                    <img src="https://e-cdns-images.dzcdn.net/images/cover/22a7697cba2e247087ad0e0bb42ad8b6/40x40-000000-80-0-0.jpg" alt="Music" />
+                    <img src={infos.photo} alt={infos.name} />
                     <button className={buttonClass}> <BsFillPlayFill size={20} color='#000' /> </button>
                 </div>
 
-                <p>1. Set dos Casados</p>
+                <p> {infos.name} </p>
             </div>
 
             <div className={styles.right}>
@@ -39,8 +39,8 @@ function MusicInfos({ music, moreInfos }) {
                 {moreInfos && (
                     <>
                         <h3> Mc hariel </h3>
-                        <h3> Set dos Casados </h3>
-                        <span> 10:43 </span>
+                        <h3> {infos.name} </h3>
+                        <span> {infos.date} </span>
                         <span> <RiBarcodeFill /> </span>
                         <input type="checkbox" name="boxMusics" id='cubeMusic' />
                         <label htmlFor="cubeMusic"></label>

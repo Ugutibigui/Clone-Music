@@ -13,7 +13,7 @@ async function getArtists(limit, user, name) {
     
     if (name) {
         sql += ' AND name LIKE ?'
-        values.push(name)
+        values.push(`%${name}%`)
     }
 
     if (limit) {
