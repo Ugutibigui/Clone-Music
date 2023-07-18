@@ -23,16 +23,7 @@ const MusicFormat = ({ listMusic, text, selectOne, selectTwo }) => {
             </div>
 
             <section>
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
-                <MusicCard />
+                
             </section>
         </div>
     )

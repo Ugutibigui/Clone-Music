@@ -1,27 +1,8 @@
-.container {
-    height: calc(100vh - 56px - 80px);
-    overflow-x: auto;
-}
-
-.container::-webkit-scrollbar-track {
-	background-color: #191922;
-	border-left: 1px solid #45454e;
-}
-
-.container::-webkit-scrollbar {
-	width: 8px;
-}
-
-.container::-webkit-scrollbar-thumb {
-	background: #686666;
-	border-radius: 20px;
-}
-
 .topContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 6rem;
+    padding-top: 2rem;
 }
 
 .profile {
@@ -31,71 +12,56 @@
 
 .profile img {
     border-radius: 200px;
-    width: 234px;
-    height: 234px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .infoArtist {
-    width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
+    gap: 5px;
 }
 
 .infoArtist h1 {
     font-size: 32px;
-    font-weight: 700;
-    margin: 0;
 }
 
-.infoArtist h2 {
-    font-size: 14px;
-    font-weight: 500;
-
-}
 .infoArtist p {
-    color: #A2A2AD;
-    font-size: 12px;
-    margin: 0;
+    font-size: 16px;
 }
 
 .infoArtist .buttons {
     margin-top: 1rem;
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 1rem;
 }
 
-.infoArtist .buttons .button {
-    margin-top: .25rem;
+.infoArtist .buttons button:not(:first-child) {
     height: 40px;
     width: 40px;
-    background: none;
-    border-radius: 100px;
-    border: 1px solid #52525D;
-    color: #fff;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: 400ms;
+    border: 1px solid var(--dark-gray-two);
+    color: var(--white-one);
 }
 
-.infoArtist .buttons .button:hover {
-    border-color: #EF5466;
-    color: #EF5466;
+.infoArtist .buttons button:not(:first-child):hover {
+    border-color: var(--pink-red-one);
+    color: var(--pink-red-one);
+}
+
+.medias {
+    display: flex;
+    gap: 10px;
 }
 
 .medias svg {
-    padding: 0 1rem;
     cursor: pointer;
     transition: 400ms;
 }
 
 .medias svg:hover {
     fill: #FFF;
-}
-
-.medias svg:nth-of-type(2) {
-    border-left: 1px solid rgba(194,194,202,.6);;
 }

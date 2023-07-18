@@ -1,5 +1,8 @@
 import { BsTwitter, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
 import { AiFillHeart, AiFillInstagram } from 'react-icons/ai'
+import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { parse, v4 as uuidv4 } from 'uuid'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Container from '../../../components/Layout/Container/Container'
@@ -7,46 +10,108 @@ import Button from '../../../components/Button/Button'
 
 import styles from './Artist.module.css'
 
-function Artist({content}) {
+function Artist({ content }) {
+
+    const { id } = useParams()
 
     const playlists = [
-        { name: 'Discografia', to: '/artist/:id' },
-        { name: 'Top músicas', to: '/artist/:id/top_track' },
-        { name: 'Artistas semelhantes', to: '/artist/:id/related_artist' },
-        { name: 'Playlists', to: '/artist/:id/playlists' },
-        { name: 'Shows', to: '/artist/:id/concerts' },
-        { name: 'Biografia', to: '/artist/:id/biography' }
+        { name: 'Discografia', to: `/artist/${id}` },
+        { name: 'Top músicas', to: `/artist/${id}/top_track` },
+        { name: 'Artistas semelhantes', to: `/artist/${id}/related_artist` },
+        { name: 'Playlists', to: `/artist/${id}/playlists` },
+        { name: 'Shows', to: `/artist/${id}/concerts` },
+        { name: 'Biografia', to: `/artist/${id}/biography` }
     ]
+
+    const [artist, setArtist] = useState([])
+    const [music, setMusics] = useState([])
+    const [fans, setFans] = useState([])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/artists?user=${id}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setArtist(data[0]))
+            .catch(error => console.log(`Erro na procura de artista pelo ID: ${error}`))
+    }, [id])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/musics?user=${id}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setMusics(data))
+            .catch(error => console.log(`Erro na procura de musica do artista pelo ID: ${error}`))
+    }, [id])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/musics?user=${id}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setMusics(data))
+            .catch(error => console.log(`Erro na procura de musica do artista pelo ID: ${error}`))
+    }, [id])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/fans?user=${id}`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setFans(data))
+            .catch(error => console.log(`Erro na procura de fans do artista pelo ID: ${error}`))
+    }, [id])
+
+    if (music.length === 0 || fans.length === 0 || artist.length === 0) {
+        return (
+            <Container>
+                <h1>Artista não encontrado!</h1>
+            </Container>
+        )
+    }
 
     return (
         <Container>
             <div className={styles.topContent}>
                 <div className={styles.profile}>
-                    <img src="https://e-cdn-images.dzcdn.net/images/artist/3a6e09e739db1615be58b155a7331068/264x264-000000-80-0-0.jpg" alt="Mc Hariel" />
+                    <img src={artist.photo} alt={artist.name} />
 
                     <div className={styles.infoArtist}>
-                        <h1>Mc Hariel</h1>
-                        <h2>Ouça Mundão Girou Deluxe aqui na Deezer!</h2>
-                        <p>1.046.862 fãs</p>
+                        <h1> {artist.name} </h1>
+                        <p>Ouça {music[0].name} aqui na Deezer!</p>
+                        <span>{fans[0].fansCount} fãs</span>
 
                         <div className={styles.buttons}>
-                            <Button width='130px' icon={<BsFillPlayFill size={20} />} text='MIX' type='pink' />
+                            <Button icon={<BsFillPlayFill size={20} />} text='MIX' type='pink' />
 
-                            <button className={styles.button}> <AiFillHeart size={18} /> </button>
-                            <button className={styles.button}> <BsThreeDots size={18} /> </button>
+                            <button> <AiFillHeart size={18} /> </button>
+                            <button> <BsThreeDots size={18} /> </button>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.medias}>
-                    <BsTwitter color='#fff8' size={20}/>
-                    <AiFillInstagram color='#fff8' size={20}/>
+                    <BsTwitter color='#fff8' size={20} />
+                    <AiFillInstagram color='#fff8' size={20} />
                 </div>
             </div>
 
-            <CustomNav navigations={playlists} padding='0 6rem' />
+            <CustomNav navigations={playlists} />
 
-            {}
+            {React.cloneElement(content, { musicData: music })}
         </Container>
     )
 }

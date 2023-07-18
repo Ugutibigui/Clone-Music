@@ -66,7 +66,7 @@ function MusicCard({ object }) {
             <span>
                 Por
                 {artistNames.map((name, index) => (
-                    <a key={index} href=""> {name},  </a>
+                    <a key={index} href={`/artist/${userIdArray[index]}`}> {name},  </a>
                 ))}
             </span>
             <p> Lançado em {formatDate(object.date)}</p>

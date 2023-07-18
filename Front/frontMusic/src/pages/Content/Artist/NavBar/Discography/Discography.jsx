@@ -1,5 +1,6 @@
 import { IoIosArrowForward } from 'react-icons/io'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 import Button from '../../../../../components/Button/Button'
 import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
@@ -8,24 +9,38 @@ import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicForma
 
 import styles from './Discography.module.css'
 
-function Discography() {
+function Discography({ musicData }) {
 
     const [arrayMusic, setArrayMusics] = useState({})
+    const [topMusics, setTopMusics] = useState([])
+
+    const { id } = useParams()
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/musics?user=${id}&desc=true&limit=4`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setTopMusics(data))
+            .catch(error => console.log(`Erro na procura de top 4 musicas do artista pelo ID: ${error}`))
+    }, [id])
 
     return (
         <>
             <div className={styles.topContent}>
                 <div className={styles.content}>
-                    <h1>
+                    <Link to={`/artist/${id}/top_track`}>
                         <span>Top músicas  </span>
                         <IoIosArrowForward />
-                    </h1>
+                    </Link>
 
                     <ul>
-                        <MusicInfos />
-                        <MusicInfos />
-                        <MusicInfos />
-                        <MusicInfos />
+                        {topMusics.map((music, index) => (
+                            <MusicInfos key={index} infos={music} moreInfos={false} />
+                        ))}
                     </ul>
                 </div>
 
@@ -64,7 +79,7 @@ function Discography() {
                             <h1>Flores de Plástico</h1>
                             <p id={styles.data}>31/03/2024</p>
 
-                            <MusicInfos />
+
                         </div>
                     </div>
                 </div>
@@ -85,10 +100,10 @@ function Discography() {
                 </aside>
             </div>
 
-            <MusicFormat listMusic={arrayMusic[0]} text='Álbuns' selectOne={['Tipo', 'A-Z', 'Data de Lançamento', 'Mais ouvidos']} selectTwo={['Grade', 'Lista']}/>
-            <MusicFormat listMusic={arrayMusic[1]} text='EPs'/>
-            <MusicFormat listMusic={arrayMusic[2]} text='Singles'/>
-            <MusicFormat listMusic={arrayMusic[3]} text='Destaque em'/>
+            <MusicFormat listMusic={arrayMusic[0]} text='Álbuns' selectOne={['Tipo', 'A-Z', 'Data de Lançamento', 'Mais ouvidos']} selectTwo={['Grade', 'Lista']} />
+            <MusicFormat listMusic={arrayMusic[1]} text='EPs' />
+            <MusicFormat listMusic={arrayMusic[2]} text='Singles' />
+            <MusicFormat listMusic={arrayMusic[3]} text='Destaque em' />
         </>
     )
 }
