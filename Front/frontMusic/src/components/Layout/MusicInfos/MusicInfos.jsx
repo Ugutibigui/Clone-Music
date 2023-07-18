@@ -61,7 +61,7 @@ function MusicInfos({ infos, moreInfos }) {
                 <p> {infos.name} </p>
             </div>
 
-            <div className={styles.right}>
+            <div className={styles.right} style={moreInfos ? {width: '50%'} : {width: 'unset'}}>
                 <div className={styles.infos}>
                     <button> <TbMicrophone2 color='#fff' size={20} /> </button>
                     <button> <BsFillHeartFill color='#fff' size={20} /> </button>

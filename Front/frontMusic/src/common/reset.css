@@ -91,3 +91,8 @@ button {
 	color: #fff;
     transition: 500ms;
 }
+
+img {
+    object-fit: cover;
+    object-position: center;
+}

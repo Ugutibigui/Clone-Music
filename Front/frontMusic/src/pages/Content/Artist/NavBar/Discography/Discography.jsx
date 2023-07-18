@@ -4,20 +4,23 @@ import { Link, useParams } from 'react-router-dom'
 
 import Button from '../../../../../components/Button/Button'
 import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
-import SingerDetails from '../../../../../components/Layout/SingerDetails/SingerDetails'
+import AlbumInfos from '../../../../../components/Layout/AlbumInfos/AlbumInfos'
 import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicFormat'
+import MusicCard from '../../../../../components/Cards/Music Card/MusicCard'
 
 import styles from './Discography.module.css'
 
 function Discography({ musicData }) {
 
     const [arrayMusic, setArrayMusics] = useState({})
+
     const [topMusics, setTopMusics] = useState([])
+    const [latestMusic, setLatestMusic] = useState([])
 
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:8000/musics?user=${id}&desc=true&limit=4`, {
+        fetch(`http://localhost:8000/musics?user=${id}&descviews=true&limit=4`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -28,16 +31,28 @@ function Discography({ musicData }) {
             .catch(error => console.log(`Erro na procura de top 4 musicas do artista pelo ID: ${error}`))
     }, [id])
 
+    useEffect(() => {
+        fetch(`http://localhost:8000/musics?user=${id}&descdate=true&limit=1`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setLatestMusic(data))
+            .catch(error => console.log(`Erro na procura de música mais recente do artista pelo ID: ${error}`))
+    }, [id])
+
     return (
         <>
-            <div className={styles.topContent}>
+            <section className={styles.artistContent}>
                 <div className={styles.content}>
                     <Link to={`/artist/${id}/top_track`}>
-                        <span>Top músicas  </span>
-                        <IoIosArrowForward />
+                        <h1>Top músicas  </h1>
+                        <IoIosArrowForward size={25} />
                     </Link>
 
-                    <ul>
+                    <ul className={styles.trackContent}>
                         {topMusics.map((music, index) => (
                             <MusicInfos key={index} infos={music} moreInfos={false} />
                         ))}
@@ -45,60 +60,64 @@ function Discography({ musicData }) {
                 </div>
 
                 <aside>
-                    <ul>
-                        <h1>
-                            <span>Playlists  </span>
-                            <IoIosArrowForward />
-                        </h1>
+                    <Link to={``}>
+                        <h1> Playlists </h1>
+                        <IoIosArrowForward size={25} />
+                    </Link>
 
-                        <SingerDetails />
-                        <SingerDetails />
-                        <SingerDetails />
-
-                        <Button text='VER MAIS PLAYLIST' type='black' />
+                    <ul className={styles.albumContent}>
+                        <AlbumInfos />
+                        <AlbumInfos />
+                        <AlbumInfos />
                     </ul>
 
+                    <Button text='VER MAIS PLAYLISTS' type='black' />
                 </aside>
-            </div>
+            </section>
 
-            <div className={styles.topContent}>
+            <section className={styles.artistContent}>
                 <div className={styles.content}>
-                    <h1>
-                        <span>Último lançamento </span>
-                        <IoIosArrowForward />
-                    </h1>
+                    <Link to={``}>
+                        <h1> Último lançamento </h1>
+                        <IoIosArrowForward size={25} />
+                    </Link>
 
-                    <div className={styles.latestTrack}>
-                        <div className={styles.cardMusic}>
-                            <img src="https://e-cdns-images.dzcdn.net/images/cover/c8252a730831e5931532ec798529591d/200x200-000000-80-0-0.jpg" alt="Music" />
-
-                            <p> ℗ 2023 Warner Music Brasil Ltda. </p>
-                        </div>
+                    <div className={`${styles.trackContent} ${styles.row}`}>
+                        {latestMusic.map((music, index) => (
+                            <MusicCard object={music} key={index} />
+                        ))}
 
                         <div className={styles.infoMusic}>
-                            <h1>Flores de Plástico</h1>
-                            <p id={styles.data}>31/03/2024</p>
-
-
+                            {latestMusic.length > 0 ? (
+                                <>
+                                    <h1>{latestMusic[0].name}</h1>
+                                    <span>{latestMusic[0].views} visualizações</span>
+                                    {latestMusic.map((music, index) => (
+                                        <MusicInfos infos={music} key={index} moreInfos={false} />
+                                    ))}
+                                </>
+                            ) : (
+                                <h1>Nenhum lançamento encontrado</h1>
+                            )}
                         </div>
                     </div>
                 </div>
 
                 <aside>
-                    <h1>
-                        <span>Artistas semelhantes </span>
-                        <IoIosArrowForward />
-                    </h1>
+                    <Link to={``}>
+                        <h1> Artistas semelhantes </h1>
+                        <IoIosArrowForward size={25} />
+                    </Link>
 
-                    <ul>
-                        <SingerDetails />
-                        <SingerDetails />
-                        <SingerDetails />
-
-                        <Button text='VER MAIS PLAYLIST' type='black' />
+                    <ul className={styles.albumContent}>
+                        <AlbumInfos />
+                        <AlbumInfos />
+                        <AlbumInfos />
                     </ul>
+
+                    <Button text='VER MAIS PLAYLIST' type='black' />
                 </aside>
-            </div>
+            </section>
 
             <MusicFormat listMusic={arrayMusic[0]} text='Álbuns' selectOne={['Tipo', 'A-Z', 'Data de Lançamento', 'Mais ouvidos']} selectTwo={['Grade', 'Lista']} />
             <MusicFormat listMusic={arrayMusic[1]} text='EPs' />

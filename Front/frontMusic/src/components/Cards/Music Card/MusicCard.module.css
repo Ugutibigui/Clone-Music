@@ -72,6 +72,11 @@
     font-weight: 400;
 }
 
+.MusicContainer span {
+    display: flex;
+    gap: 3px;
+}
+
 .MusicContainer span,
 .MusicContainer span a {
     color: var(--gray-one);

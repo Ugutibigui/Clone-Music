@@ -1,0 +1,72 @@
+.wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapperImage {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.wrapperImage img {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+}
+
+.wrapperImage button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: var(--white-one);
+}
+
+.remove {
+    display: none;
+}
+
+.add {
+    display: flex;
+    animation: opacity 500ms ease;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.texts h3 {
+    color: #fff;
+    font-size: 15px;
+}
+
+.texts p {
+    font-size: 13px;
+}
+
+#heartButton {
+    width: 30px;
+    height: 30px;
+}
+
+#heartButton:hover {
+    background-color: var(--transparent-white);
+}

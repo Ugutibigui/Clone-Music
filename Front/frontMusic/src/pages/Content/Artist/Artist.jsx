@@ -47,19 +47,7 @@ function Artist({ content }) {
             }
         })
             .then(response => response.json())
-            .then(data => setMusics(data))
-            .catch(error => console.log(`Erro na procura de musica do artista pelo ID: ${error}`))
-    }, [id])
-
-    useEffect(() => {
-        fetch(`http://localhost:8000/musics?user=${id}`, {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => setMusics(data))
+            .then(data => setMusics(data.sort(() => Math.random() - 0.5)))
             .catch(error => console.log(`Erro na procura de musica do artista pelo ID: ${error}`))
     }, [id])
 
