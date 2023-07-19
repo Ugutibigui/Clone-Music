@@ -268,6 +268,18 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (77, 'Boyfriend', 'https://upload.wikimedia.org/wikipedia/pt/e/e6/Boyfriend_-_Justin_Bieber.jpg', '2012-05-03', 'C:\\fakepath\\Justin Bieber - Boyfriend.mp3', 873186178, 'Pop', 'Estados Unidos', '60'),
 (78, 'Monster', 'https://i.discogs.com/r6_EUb040F63nQKx-D6yD-gZQhr9H6-HCfb267GTYzk/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2Mjg2/MDAxLTE2MDY1ODYw/MzItMTEzNS5qcGVn.jpeg', '2020-11-20', 'C:\\fakepath\\Shawn Mendes, Justin Bieber - Monster.mp3', 201795041, 'Pop', 'Estados Unidos', '60'),
 (79, 'Never Say Never', 'https://upload.wikimedia.org/wikipedia/pt/8/86/Justin_Bieber_-_Never_Say_Never.png', '2010-05-23', 'C:\\fakepath\\Justin Bieber - Never Say Never ft. Jaden.mp3', 1134991373, 'Hip Hop', 'Estados Unidos', '60');
+(80, 'É PA PA PA TERRORISTA', 'https://i.ytimg.com/vi/uLWPJCBwcaw/maxresdefault.jpg', '2023-05-15', 'C:\\fakepath\\DJ Arana - É PA PA PA TERRORISTA.mp3', 6944063, 'Funk', 'Brasil', '95');
+(81, 'MACHUCA XT', 'https://i.ytimg.com/vi/IwDrW0YTYWI/maxresdefault.jpg', '2023-02-27', 'C:\\fakepath\\DJ Arana - MACHUCA XT.mp3', 17379397, 'Funk', 'Brasil', '95');
+(82, 'AQUELA MINA DE VERMELHO', 'https://i.scdn.co/image/ab67616d0000b2733d6de54c1c0a5cfcb9c3637b', '2021-11-08', 'C:\\fakepath\\4_AQUELA MINA DE VERMELHO.mp3', 28410601, 'Funk', 'Brasil', '95');
+(83, 'BERIMBAU ITALIANO', 'https://i.ytimg.com/vi/N0Y9Qq0geHg/maxresdefault.jpg', '2022-06-01', 'C:\\fakepath\\DJ ARANA - BERIMBAU ITALIANO.mp3', 9836518, 'Funk', 'Brasil', '95');
+(84, 'É PA PA PA TERRORISTA', 'https://m.media-amazon.com/images/I/41Q58BOaTrL._UXNaN_FMjpg_QL85_.jpg', '2023-07-01', 'C:\\fakepath\\É PA PA PA TERRORISTA.mp3', 652148, 'Funk', 'Brasil', '95');
+(85, 'ABCDÁRIO DA GUERRA', 'https://images.genius.com/424113c5285d735947eb73121190f121.1000x1000x1.png', '2023-03-21', 'C:\\fakepath\\MC LAN E DJ ARANA - ABCDÁRIO DA GUERRA.mp3', 4393566, 'Funk', 'Brasil', '95');
+(86, 'Funk Rave', 'https://upload.wikimedia.org/wikipedia/pt/0/03/Anitta_-_Funk_Rave.png', '2023-06-23', 'C:\\fakepath\\Anitta - Funk Rave.mp3', 11195119, 'Funk', 'Espanhol' , '61');
+(87, 'Meiga e Abusada', 'https://upload.wikimedia.org/wikipedia/pt/2/2d/Meiga_e_Abusada.png', '2012-12-18', 'C:\\fakepath\\Anitta - Meiga e Abusada.mp3', 122050949, 'Pop', 'Brasil', '61');
+(88, 'Pilantra', 'https://portalpopline.com.br/wp-content/uploads/2023/03/Jao-Anitta-Pilantra-3.png', '2023-03-12', 'C:\\fakepath\\Jão, Anitta - Pilantra.mp3', 21540629, 'Pop', 'Brasil', '61');
+(89, 'Sua Cara', 'https://i1.sndcdn.com/artworks-000238467635-oojgl2-t500x500.jpg', '2017-07-11', 'C:\\fakepath\\Major Lazer - Sua Cara (Feat. Anitta & Pabllo Vittar).mp3', 567244996, 'Pop', 'Brasil', '61');
+(90, 'NU', 'https://lastfm.freetls.fastly.net/i/u/500x500/6b25414c7779d2a4bacda0202ccb3b49.jpg', '2023-05-18', 'C:\\fakepath\\Anitta - NU.mp3', 11273875, 'Pop', 'Brasil', '61');
+(91, 'Contatinho', 'https://portalpopline.com.br/wp-content/uploads/2019/09/contatinho.jpg', '2019-09-06', 'C:\\fakepath\\Léo Santana, Anitta - Contatinho.mp3', 289576724, 'Axé', 'Brasil', '61');
 
 -- --------------------------------------------------------
 
