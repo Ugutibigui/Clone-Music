@@ -1,32 +1,26 @@
 .search {
     width: 600px;
     height: 40px;
-    background-color: #23232D;
-    color: #D1D1D6;
-    border: 1px solid #52525D;
+    background-color: var(--black-three);
+    color: var(--gray-one);
+    border: 1px solid var(--dark-gray-two);
     border-radius: 5px;
     display: flex;
 }
 
 .search button {
-    background: none;
-    border: none;
-    display: grid;
-    place-items: center;
-    color: #52525D;
+    color: var(--dark-gray-two);
 }
 
 .search button svg  {
+    margin: 5px;
     width: 16px;
     height: 16px;
 }
 
 .search input {
-    width: 100%;
     padding: 5px;
     background: none;
     border: none;
-    outline: none;
-    color: #fff;
     font-size: 16px;
 }

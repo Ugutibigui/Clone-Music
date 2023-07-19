@@ -1,0 +1,11 @@
+.allArtists {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.artistList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}

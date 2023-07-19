@@ -17,6 +17,7 @@ import Recommendation from './pages/Content/Recommendation/Recommendation'
 import SearchPage from "./pages/Content/Search/Search"
 import All from './pages/Content/Search/navBar/All/All'
 import MusicSearch from './pages/Content/Search/navBar/MusicSearch/MusicSearch'
+import ArtistRelated from "./pages/Content/Search/navBar/ArtistRelated/ArtistRelated"
 
 import CreateMusic from "./pages/Content/CreateMusic/CreateMusic"
 
@@ -40,10 +41,6 @@ import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
 import Artist from './pages/Content/Artist/Artist'
 import Discography from "./pages/Content/Artist/NavBar/Discography/Discography"
 import TopTrack from "./pages/Content/Artist/NavBar/TopTrack/TopTrack"
-import Related from "./pages/Content/Artist/NavBar/Related/Related"
-import PlaylistArt from './pages/Content/Artist/NavBar/PlaylistArt/PlaylistArt'
-import Concert from './pages/Content/Artist/NavBar/Concert/Concert'
-import Biography from './pages/Content/Artist/NavBar/Biography/Biography'
 
 function App() {
 	return (
@@ -62,6 +59,7 @@ function App() {
 
 				<Route exact path="/search" element={<Index content={<SearchPage content={<All/>}/>}/>}/>
 				<Route exact path="/search/music" element={<Index content={<SearchPage content={<MusicSearch/>}/>}/>}/>
+				<Route exact path="/search/artist" element={<Index content={<SearchPage content={<ArtistRelated/>}/>}/>}/>
 
 				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>
@@ -76,10 +74,6 @@ function App() {
 
 				<Route exact path="/artist/:id" element={<Index content={<Artist content={<Discography/>}/>} />}/>
 				<Route path="/artist/:id/top_track" element={<Index content={<Artist content={<TopTrack/>}/>} />}/>
-				<Route path="/artist/:id/related_artist" element={<Index content={<Artist content={<Related/>}/>} />}/>
-				<Route path="/artist/:id/playlists" element={<Index content={<Artist content={<PlaylistArt/>}/>} />}/>
-				<Route path="/artist/:id/concerts" element={<Index content={<Artist content={<Concert/>}/>} />}/>
-				<Route path="/artist/:id/biography" element={<Index content={<Artist content={<Biography/>}/>} />}/>
 
 				<Route path="/recommendation" element={<Recommendation />} />
 				<Route path="/login" element={<ScreenLogin />} />

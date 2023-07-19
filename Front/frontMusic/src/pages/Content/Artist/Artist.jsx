@@ -16,11 +16,7 @@ function Artist({ content }) {
 
     const playlists = [
         { name: 'Discografia', to: `/artist/${id}` },
-        { name: 'Top músicas', to: `/artist/${id}/top_track` },
-        { name: 'Artistas semelhantes', to: `/artist/${id}/related_artist` },
-        { name: 'Playlists', to: `/artist/${id}/playlists` },
-        { name: 'Shows', to: `/artist/${id}/concerts` },
-        { name: 'Biografia', to: `/artist/${id}/biography` }
+        { name: 'Top músicas', to: `/artist/${id}/top_track` }
     ]
 
     const [artist, setArtist] = useState([])

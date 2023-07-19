@@ -16,6 +16,7 @@ const Search = ({ content }) => {
     const navBar = [
         { name: 'Todos', to: `/search?text=${artistText}` },
         { name: 'Músicas', to: `/search/music?text=${artistText}` },
+        { name: 'Artistas', to: `/search/artist?text=${artistText}` }
     ]
 
     useEffect(() => {
@@ -26,7 +27,7 @@ const Search = ({ content }) => {
 			}
 		})
 			.then(response => response.json())
-			.then(data => setArtist(data[0]))
+			.then(data => setArtist(data))
 	}, [artistText])
 
     if (!artist) {

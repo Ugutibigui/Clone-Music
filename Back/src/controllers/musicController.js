@@ -13,7 +13,7 @@ const getMusics = async (req, res) => {
     const viewsNumber = req.query.views || ''
     const views = parseInt(viewsNumber)
 
-    const name = req.query.nome || ''
+    const name = req.query.name || ''
 
     const gender = req.query.gender || ''
 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ImPlay3 } from 'react-icons/im'
 import { FaHeart } from 'react-icons/fa'
 
-function ArtistCard() {
+function ArtistCard({ object }) {
 
     const [className, setClassName] = useState(`${styles.btn}`);
 
@@ -13,7 +13,7 @@ function ArtistCard() {
             <div className={styles.imageCenter}
             onMouseEnter={() => setClassName(`${styles.addButton}`)}
             onMouseLeave={() => setClassName(`${styles.btn}`)} >
-                <img src='https://e-cdns-images.dzcdn.net/images/artist/a9cb605a0b64f652ec004187aba94ad8/264x264-000000-80-0-0.jpg' alt="Artista" />
+                <img src={object.photo} alt={object.name} />
 
                 <div className={styles.buttonsRound}>
                     <button className={className}>
@@ -26,7 +26,7 @@ function ArtistCard() {
                 </div>
             </div>
 
-            <span>Gusttavo Lima</span>
+            <span> {object.name} </span>
 
             <p>7.137.751 fãs</p>
         </div>

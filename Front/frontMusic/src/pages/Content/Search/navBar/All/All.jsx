@@ -5,16 +5,22 @@ import { useEffect, useState } from 'react'
 
 import TableMusic from '../../../../../components/Layout/TableMusic/TableMusic'
 import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
+import ArtistCard from '../../../../../components/Cards/Artist Card/ArtistCard'
 
 import styles from './All.module.css'
 
 const All = ({ artistData }) => {
+	const [artist, setArtist] = useState([])
 	const [fans, setFans] = useState([])
 	const [musics, setMusics] = useState([])
 
 	useEffect(() => {
-		if (artistData && artistData.userId) {
-			fetch(`http://localhost:8000/fans?user=${artistData.userId}`, {
+		setArtist(artistData[0])
+	}, [artistData])
+
+	useEffect(() => {
+		if (artist && artist.userId) {
+			fetch(`http://localhost:8000/fans?user=${artist.userId}`, {
 				'method': 'GET',
 				headers: {
 					'Content-Type': 'application/json'
@@ -23,11 +29,11 @@ const All = ({ artistData }) => {
 				.then(response => response.json())
 				.then(data => setFans(data[0]))
 		}
-	}, [artistData])
+	}, [artist])
 
 	useEffect(() => {
-		if (artistData && artistData.userId) {
-			fetch(`http://localhost:8000/musics?user=${artistData.userId}`, {
+		if (artist && artist.userId) {
+			fetch(`http://localhost:8000/musics?user=${artist.userId}`, {
 				'method': 'GET',
 				headers: {
 					'Content-Type': 'application/json'
@@ -36,7 +42,7 @@ const All = ({ artistData }) => {
 				.then(response => response.json())
 				.then(data => setMusics(data))
 		}
-	}, [artistData])
+	}, [artist])
 
 	return (
 		<>
@@ -44,10 +50,10 @@ const All = ({ artistData }) => {
 				<h1> Principal Resultado </h1>
 
 				<div className={styles.profile}>
-					<img src={artistData.photo} alt={artistData.name} />
+					<img src={artist.photo} alt={artist.name} />
 
 					<div className={styles.infos}>
-						<h2> {artistData.name} </h2>
+						<h2> {artist.name} </h2>
 						<span> {fans.fansCount} fãs</span>
 						<div> Artista </div>
 					</div>
@@ -55,7 +61,7 @@ const All = ({ artistData }) => {
 			</section>
 
 			<section className={styles.musics}>
-				<Link to={`/search/music?text=${artistData.name}`}>
+				<Link to={`/search/music?text=${artist.name}`}>
 					<h1> Músicas </h1>
 					<SlArrowRight size={20} />
 				</Link>
@@ -79,6 +85,28 @@ const All = ({ artistData }) => {
 							)}
 					</div>
 				</div>
+			</section>
+
+			<section className={styles.artists}>
+				<Link to={`/search/artist?text=${artist.name}`}>
+					<h1> Artistas </h1>
+					<SlArrowRight size={20} />
+				</Link>
+
+				<ul className={styles.artistList}>
+					{artistData.length > 0 ? (
+						<>
+							{artistData.slice(0, 4).map((artist, index) => (
+								<li key={index}>
+									<ArtistCard object={artist} />
+								</li>
+							))}
+
+						</>
+					) : (
+						<h1> Aritsta não encontrado! </h1>
+					)}
+				</ul>
 			</section>
 		</>
 	)

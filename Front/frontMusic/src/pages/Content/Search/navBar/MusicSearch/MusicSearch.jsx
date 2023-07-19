@@ -9,10 +9,15 @@ import styles from './MusicSearch.module.css'
 const MusicSearch = ({ artistData }) => {
 
     const [musics, setMusics] = useState([])
+    const [artist, setArtist] = useState([])
 
     useEffect(() => {
-        if (artistData && artistData.userId) {
-            fetch(`http://localhost:8000/musics?user=${artistData.userId}`, {
+        setArtist(artistData[0])
+    }, [artistData])
+
+    useEffect(() => {
+        if (artist && artist.userId) {
+            fetch(`http://localhost:8000/musics?user=${artist.userId}`, {
                 'method': 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -21,7 +26,7 @@ const MusicSearch = ({ artistData }) => {
                 .then(response => response.json())
                 .then(data => setMusics(data))
         }
-    }, [artistData])
+    }, [artist])
 
     return (
         <section className={styles.allMusics}>

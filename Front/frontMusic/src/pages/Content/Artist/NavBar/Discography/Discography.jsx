@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom'
 import Button from '../../../../../components/Button/Button'
 import MusicInfos from '../../../../../components/Layout/MusicInfos/MusicInfos'
 import AlbumInfos from '../../../../../components/Layout/AlbumInfos/AlbumInfos'
-import MusicFormat from '../../../../../components/Layout/MusicFormat/MusicFormat'
 import MusicCard from '../../../../../components/Cards/Music Card/MusicCard'
 
 import styles from './Discography.module.css'
@@ -119,10 +118,20 @@ function Discography({ musicData }) {
                 </aside>
             </section>
 
-            <MusicFormat listMusic={arrayMusic[0]} text='Álbuns' selectOne={['Tipo', 'A-Z', 'Data de Lançamento', 'Mais ouvidos']} selectTwo={['Grade', 'Lista']} />
-            <MusicFormat listMusic={arrayMusic[1]} text='EPs' />
-            <MusicFormat listMusic={arrayMusic[2]} text='Singles' />
-            <MusicFormat listMusic={arrayMusic[3]} text='Destaque em' />
+            <section className={`${styles.artistContent} ${styles.column}`}>
+                <div className={styles.subtitle}>
+                    <h1> Músicas </h1>
+                    <div id={styles.line}></div>
+                </div>
+
+                <ul className={styles.musicList}>
+                    {musicData.map((music, index) => (
+                        <li key={index}>
+                            <MusicCard object={music} />
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </>
     )
 }

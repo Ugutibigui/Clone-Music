@@ -50,20 +50,24 @@
     font-size: 12px;
 }
 
-.musics {
+.musics,
+.artists {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.musics a {
+.musics a,
+.artists a {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .musics a h1, 
-.musics a svg {
+.musics a svg,
+.artists a h1,
+.artists a svg {
     transition: 300ms;
 }
 
@@ -77,15 +81,27 @@
     }
 }
 
-.musics a:hover > h1{
+.musics a:hover > h1,
+.artists a:hover > h1{
     color: var(--pink-red-one);
 }
 
-.musics a:hover  svg {
+.musics a:hover > svg,
+.artists a:hover > svg {
     animation: arrow-left 500ms ease;
     fill: var(--pink-red-one);
 }
 
 .musicInfos {
     padding: 1rem 0;
+}
+
+.artists {
+    padding-bottom: 3rem;
+}
+
+.artistList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }

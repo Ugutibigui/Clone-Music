@@ -88,11 +88,17 @@ button {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-	color: #fff;
+	color: var(--white-one);
     transition: 500ms;
 }
 
 img {
     object-fit: cover;
     object-position: center;
+}
+
+input {
+    outline: none;
+    color: var(--white-one);
+    width: 100%;
 }
