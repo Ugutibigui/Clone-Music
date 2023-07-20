@@ -1,38 +1,29 @@
 .artistContainer {
     height: 100vh;
-    background-color: #121216;
+    background-color: var(--black-one);
     padding: 0rem 8rem;
     overflow: hidden;
 }
 
 .topContent {
-    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .topContent img {
-    margin-top: 2rem;
-    height: 24px;
+    width: 130px;
 }
 
 .topContent button {
-    position: absolute;
-    right: 0;
-    top: 0;
     width: 40px;
     height: 40px;
     margin: 20px;
-    border: none;
-    border-radius: 100px;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 400ms;
 }
 
 .topContent button:hover {
-    background-color: #53515198;
+    background-color: var(--dark-gray-two);
 }
 
 .navContainer {
@@ -42,73 +33,42 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    color: #fff;
+    color: var(--white-one);
     margin: 0 auto;
 }
 
 .navContainer h1,
 .navContainer p {
-    margin-block-start: 0;
-    margin-block-end: 0;
     text-align: center;
-}
+} 
 
-.search {
-    height: 48px;
-    width: 100%;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    background-color: #23232D;
-    border: 1px solid #52525D;
-    border-radius: 30px;
-}
-
-.search input {
-    outline: none;
-    width: 95%;
-    height: 100%;
-    background: none;
-    border: none;
-    font-size: 16px;
-    margin-left: 10px;
-    color: #fff;
-}
-
-.search svg {
-    margin-left: 10px;
+.navContainer div {
+    border-radius: 100px;
+    margin-bottom: 2rem;
 }
 
 .gridScreen {
     width: 100%;
     height: 57vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gridScreen section {
-    width: 100vw;
-    height: 100%;
-    display: grid; 
-    grid-template-columns: repeat(6,16.6%);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
     overflow-y: scroll;
     overflow-x: hidden;
     margin-bottom: 2rem;
 }
 
-.gridScreen section::-webkit-scrollbar-track {
-	background-color: transparent;
+.gridScreen::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
-.gridScreen section::-webkit-scrollbar {
-	width: 8px;
+.gridScreen::-webkit-scrollbar {
+    width: 8px;
 }
 
-.gridScreen section::-webkit-scrollbar-thumb {
-	background: #dbdbdb;
-	border-radius: 20px;
+.gridScreen::-webkit-scrollbar-thumb {
+    background: #dbdbdb;
+    border-radius: 20px;
 }
 
 .finish {
@@ -117,4 +77,68 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1550px) {
+    .gridScreen {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .artistContainer {
+        padding: 0rem 4em;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .gridScreen {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .gridScreen {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .gridScreen {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .artistContainer {
+        padding: 0rem 2rem;
+    }
+
+    .topContent img {
+        width: 80px;
+    }
+
+    .topContent button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .topContent button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .navContainer h1 {
+        font-size: 18px;
+    }
+
+    .navContainer p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .gridScreen {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
-import { FiSearch } from 'react-icons/fi'
 
 import Button from '../../../components/Button/Button'
 import AddArtist from '../../../components/Cards/AddArtist Card/AddArtist'
+import Search from '../../../components/Search/Search'
 
 import deezer from '../../../assets/deezerWhite.png'
 import styles from './Recommendation.module.css'
@@ -22,6 +22,7 @@ function Artists() {
         })
             .then(response => response.json()) // randomizando os artistas
             .then(data => setArtist(data.sort(() => Math.random() - 0.5)))
+            .catch(error => console.log(`Erro na procurade diversos artistas: ${error}`))
     }, [])
 
     return (
@@ -30,7 +31,7 @@ function Artists() {
                 <img src={deezer} alt="Deezer" />
 
                 <Link to='/'>
-                    <button> <AiOutlineClose size={40} color='white' /> </button>
+                    <button> <AiOutlineClose size={30} color='white' /> </button>
                 </Link>
             </div>
 
@@ -39,19 +40,14 @@ function Artists() {
 
                 <p>Escolha seus artistas para recomendações mais personalizadas!</p>
 
-                <div className={styles.search}>
-                    <FiSearch size={20} />
-                    <input type="text" placeholder='Buscar' />
-                </div>
+                <Search placeholder='Buscar' size='100%'/>
             </div>
 
-            <div className={styles.gridScreen}>
-                <section>
-                    {artist.map((item, index) => (
-                        <AddArtist key={index} image={item.photo} name={item.name} />
-                    ))}
-                </section>
-            </div>
+            <section className={styles.gridScreen}>
+                {artist.map((item, index) => (
+                    <AddArtist key={index} image={item.photo} name={item.name} />
+                ))}
+            </section>
 
             <div className={styles.finish}>
                 <Link to='/'>

@@ -76,7 +76,7 @@ function Artist({ content }) {
                     <div className={styles.infoArtist}>
                         <h1> {artist.name} </h1>
                         <p>Ouça {music[0].name} aqui na Deezer!</p>
-                        <span>{fans[0].fansCount} fãs</span>
+                        <span>{fans[0].fansCount.toLocaleString()} fãs</span>
 
                         <div className={styles.buttons}>
                             <Button icon={<BsFillPlayFill size={20} />} text='MIX' type='pink' />

@@ -11,7 +11,7 @@ const Search = ({ content }) => {
     const searchParams = new URLSearchParams(location.search)
     const artistText = searchParams.get('text')
 
-    const [artist, setArtist] = useState(null)
+    const [artist, setArtist] = useState([])
 
     const navBar = [
         { name: 'Todos', to: `/search?text=${artistText}` },
@@ -30,7 +30,7 @@ const Search = ({ content }) => {
 			.then(data => setArtist(data))
 	}, [artistText])
 
-    if (!artist) {
+    if (artist.length === 0) {
 		return <Container>
 			<h1> Nenhum resultado para "{artistText}" </h1>
 			<h2> Por que não explorar outras opções? </h2>
@@ -39,7 +39,7 @@ const Search = ({ content }) => {
 
     return (
         <Container>
-            <CustomNav navigations={navBar} padding={20} />
+            <CustomNav navigations={navBar} />
 
             <div className={styles.searchContainer}>
                 {React.cloneElement(content, { artistData: artist })}

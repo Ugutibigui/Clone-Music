@@ -1,6 +1,6 @@
 const connect = require("../database/connection")
 
-async function getMusics(date, views, name, gender, user, smaller, bigger, descViews, descDate, limit) {
+async function getMusics(date, views, name, gender, user, smaller, bigger, descViews, descDate, limit, nationality) {
     const conn = await connect()
 
     let sql = 'SELECT * FROM music WHERE 1=1'
@@ -39,6 +39,11 @@ async function getMusics(date, views, name, gender, user, smaller, bigger, descV
     if (user) {
         sql += ' AND userId LIKE ?'
         values.push(`%${user}%`)
+    }
+
+    if (nationality) {
+        sql += ' AND nationality = ?'
+        values.push(nationality)
     }
 
     if (descViews) {

@@ -35,7 +35,7 @@ function TopTrack({ musicData }) {
 
     if (musics.length === 0) {
         return (
-            <h1> Música não encontrada! </h1>
+            <h1> Músicas não encontradas! </h1>
         )
     }
 

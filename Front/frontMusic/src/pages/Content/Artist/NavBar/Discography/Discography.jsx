@@ -10,9 +10,6 @@ import MusicCard from '../../../../../components/Cards/Music Card/MusicCard'
 import styles from './Discography.module.css'
 
 function Discography({ musicData }) {
-
-    const [arrayMusic, setArrayMusics] = useState({})
-
     const [topMusics, setTopMusics] = useState([])
     const [latestMusic, setLatestMusic] = useState([])
 
@@ -41,6 +38,12 @@ function Discography({ musicData }) {
             .then(data => setLatestMusic(data))
             .catch(error => console.log(`Erro na procura de música mais recente do artista pelo ID: ${error}`))
     }, [id])
+
+    if (musicData.length === 0) {
+        return (
+            <h1> Músicas não encontradas! </h1>
+        )
+    }
 
     return (
         <>
@@ -90,7 +93,7 @@ function Discography({ musicData }) {
                             {latestMusic.length > 0 ? (
                                 <>
                                     <h1>{latestMusic[0].name}</h1>
-                                    <span>{latestMusic[0].views} visualizações</span>
+                                    <span>{latestMusic[0].views.toLocaleString()} Visualizações</span>
                                     {latestMusic.map((music, index) => (
                                         <MusicInfos infos={music} key={index} moreInfos={false} />
                                     ))}

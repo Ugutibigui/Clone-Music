@@ -27,7 +27,9 @@ const getMusics = async (req, res) => {
     const limitNumber = req.query.limit || ''
     const limit = parseInt(limitNumber)
 
-    const musics = await musicDatabase.getMusics(date, views, name, gender, user, smallerDate, BiggerDate, descViews, descDate, limit)
+    const nationality = req.query.nationality || ''
+
+    const musics = await musicDatabase.getMusics(date, views, name, gender, user, smallerDate, BiggerDate, descViews, descDate, limit, nationality)
     return res.status(200).json(musics)
 }
 

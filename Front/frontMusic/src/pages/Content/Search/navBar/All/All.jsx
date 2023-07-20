@@ -27,7 +27,7 @@ const All = ({ artistData }) => {
 				}
 			})
 				.then(response => response.json())
-				.then(data => setFans(data[0]))
+				.then(data => setFans(data))
 		}
 	}, [artist])
 
@@ -50,11 +50,13 @@ const All = ({ artistData }) => {
 				<h1> Principal Resultado </h1>
 
 				<div className={styles.profile}>
-					<img src={artist.photo} alt={artist.name} />
+					<Link to={`/artist/${artist.userId}`}>
+						<img src={artist.photo} alt={artist.name} />
+					</Link>
 
 					<div className={styles.infos}>
 						<h2> {artist.name} </h2>
-						<span> {fans.fansCount} fãs</span>
+						<span> {fans[0]?.fansCount.toLocaleString()} fãs</span>
 						<div> Artista </div>
 					</div>
 				</div>
@@ -93,20 +95,13 @@ const All = ({ artistData }) => {
 					<SlArrowRight size={20} />
 				</Link>
 
-				<ul className={styles.artistList}>
-					{artistData.length > 0 ? (
-						<>
-							{artistData.slice(0, 4).map((artist, index) => (
-								<li key={index}>
-									<ArtistCard object={artist} />
-								</li>
-							))}
-
-						</>
-					) : (
-						<h1> Aritsta não encontrado! </h1>
-					)}
-				</ul>
+				<div className={styles.artistList}>
+					{artistData.slice(0, 4).map((artist, index) => (
+						<Link to={`/artist/${artist.userId}`} key={index}>
+							<ArtistCard object={artist} />
+						</Link>
+					))}
+				</div>
 			</section>
 		</>
 	)
