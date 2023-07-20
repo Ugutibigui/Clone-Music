@@ -12,6 +12,7 @@ import styles from './Recommendation.module.css'
 function Artists() {
 
     const [artist, setArtist] = useState([])
+    const [text, setText] = useState('')
 
     useEffect(() => {
         fetch('http://localhost:8000/artists?limit=200', {
@@ -24,6 +25,18 @@ function Artists() {
             .then(data => setArtist(data.sort(() => Math.random() - 0.5)))
             .catch(error => console.log(`Erro na procurade diversos artistas: ${error}`))
     }, [])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/artists?name=${text}`, {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setArtist(data))
+            .catch(error => console.log(`Erro na procurade de artista pelo nome: ${error}`))
+    }, [text])
 
     return (
         <section className={styles.artistContainer}>
@@ -40,7 +53,7 @@ function Artists() {
 
                 <p>Escolha seus artistas para recomendações mais personalizadas!</p>
 
-                <Search placeholder='Buscar' size='100%'/>
+                <Search placeholder='Buscar' size='100%' onChange={event => setText(event.target.value)} />
             </div>
 
             <section className={styles.gridScreen}>
