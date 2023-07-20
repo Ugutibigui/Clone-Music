@@ -267,19 +267,34 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (76, 'Somebody To Love', 'https://i.scdn.co/image/ab67616d0000b273629dc9e2e3bc20bbd7d92e4a', '2010-06-16', 'C:\\fakepath\\Justin Bieber - Somebody To Love Remix ft. Usher.mp3', 502742374, 'Pop', 'Estados Unidos', '60'),
 (77, 'Boyfriend', 'https://upload.wikimedia.org/wikipedia/pt/e/e6/Boyfriend_-_Justin_Bieber.jpg', '2012-05-03', 'C:\\fakepath\\Justin Bieber - Boyfriend.mp3', 873186178, 'Pop', 'Estados Unidos', '60'),
 (78, 'Monster', 'https://i.discogs.com/r6_EUb040F63nQKx-D6yD-gZQhr9H6-HCfb267GTYzk/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2Mjg2/MDAxLTE2MDY1ODYw/MzItMTEzNS5qcGVn.jpeg', '2020-11-20', 'C:\\fakepath\\Shawn Mendes, Justin Bieber - Monster.mp3', 201795041, 'Pop', 'Estados Unidos', '60'),
-(79, 'Never Say Never', 'https://upload.wikimedia.org/wikipedia/pt/8/86/Justin_Bieber_-_Never_Say_Never.png', '2010-05-23', 'C:\\fakepath\\Justin Bieber - Never Say Never ft. Jaden.mp3', 1134991373, 'Hip Hop', 'Estados Unidos', '60');
-(80, 'É PA PA PA TERRORISTA', 'https://i.ytimg.com/vi/uLWPJCBwcaw/maxresdefault.jpg', '2023-05-15', 'C:\\fakepath\\DJ Arana - É PA PA PA TERRORISTA.mp3', 6944063, 'Funk', 'Brasil', '95');
-(81, 'MACHUCA XT', 'https://i.ytimg.com/vi/IwDrW0YTYWI/maxresdefault.jpg', '2023-02-27', 'C:\\fakepath\\DJ Arana - MACHUCA XT.mp3', 17379397, 'Funk', 'Brasil', '95');
-(82, 'AQUELA MINA DE VERMELHO', 'https://i.scdn.co/image/ab67616d0000b2733d6de54c1c0a5cfcb9c3637b', '2021-11-08', 'C:\\fakepath\\4_AQUELA MINA DE VERMELHO.mp3', 28410601, 'Funk', 'Brasil', '95');
-(83, 'BERIMBAU ITALIANO', 'https://i.ytimg.com/vi/N0Y9Qq0geHg/maxresdefault.jpg', '2022-06-01', 'C:\\fakepath\\DJ ARANA - BERIMBAU ITALIANO.mp3', 9836518, 'Funk', 'Brasil', '95');
-(84, 'É PA PA PA TERRORISTA', 'https://m.media-amazon.com/images/I/41Q58BOaTrL._UXNaN_FMjpg_QL85_.jpg', '2023-07-01', 'C:\\fakepath\\É PA PA PA TERRORISTA.mp3', 652148, 'Funk', 'Brasil', '95');
-(85, 'ABCDÁRIO DA GUERRA', 'https://images.genius.com/424113c5285d735947eb73121190f121.1000x1000x1.png', '2023-03-21', 'C:\\fakepath\\MC LAN E DJ ARANA - ABCDÁRIO DA GUERRA.mp3', 4393566, 'Funk', 'Brasil', '95');
-(86, 'Funk Rave', 'https://upload.wikimedia.org/wikipedia/pt/0/03/Anitta_-_Funk_Rave.png', '2023-06-23', 'C:\\fakepath\\Anitta - Funk Rave.mp3', 11195119, 'Funk', 'Espanhol' , '61');
-(87, 'Meiga e Abusada', 'https://upload.wikimedia.org/wikipedia/pt/2/2d/Meiga_e_Abusada.png', '2012-12-18', 'C:\\fakepath\\Anitta - Meiga e Abusada.mp3', 122050949, 'Pop', 'Brasil', '61');
-(88, 'Pilantra', 'https://portalpopline.com.br/wp-content/uploads/2023/03/Jao-Anitta-Pilantra-3.png', '2023-03-12', 'C:\\fakepath\\Jão, Anitta - Pilantra.mp3', 21540629, 'Pop', 'Brasil', '61');
-(89, 'Sua Cara', 'https://i1.sndcdn.com/artworks-000238467635-oojgl2-t500x500.jpg', '2017-07-11', 'C:\\fakepath\\Major Lazer - Sua Cara (Feat. Anitta & Pabllo Vittar).mp3', 567244996, 'Pop', 'Brasil', '61');
-(90, 'NU', 'https://lastfm.freetls.fastly.net/i/u/500x500/6b25414c7779d2a4bacda0202ccb3b49.jpg', '2023-05-18', 'C:\\fakepath\\Anitta - NU.mp3', 11273875, 'Pop', 'Brasil', '61');
-(91, 'Contatinho', 'https://portalpopline.com.br/wp-content/uploads/2019/09/contatinho.jpg', '2019-09-06', 'C:\\fakepath\\Léo Santana, Anitta - Contatinho.mp3', 289576724, 'Axé', 'Brasil', '61');
+(79, 'Never Say Never', 'https://upload.wikimedia.org/wikipedia/pt/8/86/Justin_Bieber_-_Never_Say_Never.png', '2010-05-23', 'C:\\fakepath\\Justin Bieber - Never Say Never ft. Jaden.mp3', 1134991373, 'Hip Hop', 'Estados Unidos', '60'),
+(80, 'É pa pa pa terrorista', 'https://i.ytimg.com/vi/uLWPJCBwcaw/maxresdefault.jpg', '2023-05-15', 'C:\\fakepath\\DJ Arana - É PA PA PA TERRORISTA.mp3', 6944063, 'Funk', 'Brasil', '95'),
+(81, 'Machuca XT', 'https://i.ytimg.com/vi/IwDrW0YTYWI/maxresdefault.jpg', '2023-02-27', 'C:\\fakepath\\DJ Arana - MACHUCA XT.mp3', 17379397, 'Funk', 'Brasil', '95'),
+(82, 'Aquela mina de vermelho', 'https://i.scdn.co/image/ab67616d0000b2733d6de54c1c0a5cfcb9c3637b', '2021-11-08', 'C:\\fakepath\\4_AQUELA MINA DE VERMELHO.mp3', 28410601, 'Funk', 'Brasil', '95'),
+(83, 'Berimbau Italiano', 'https://i.ytimg.com/vi/N0Y9Qq0geHg/maxresdefault.jpg', '2022-06-01', 'C:\\fakepath\\DJ ARANA - BERIMBAU ITALIANO.mp3', 9836518, 'Funk', 'Brasil', '95'),
+(84, 'Abcdário da guerra', 'https://images.genius.com/424113c5285d735947eb73121190f121.1000x1000x1.png', '2023-03-21', 'C:\\fakepath\\MC LAN E DJ ARANA - ABCDÁRIO DA GUERRA.mp3', 4393566, 'Funk', 'Brasil', '95'),
+(85, 'Funk Rave', 'https://upload.wikimedia.org/wikipedia/pt/0/03/Anitta_-_Funk_Rave.png', '2023-06-23', 'C:\\fakepath\\Anitta - Funk Rave.mp3', 11195119, 'Funk', 'Espanhol', '61'),
+(86, 'Meiga e Abusada', 'https://upload.wikimedia.org/wikipedia/pt/2/2d/Meiga_e_Abusada.png', '2012-12-18', 'C:\\fakepath\\Anitta - Meiga e Abusada.mp3', 122050949, 'Pop', 'Brasil', '61'),
+(87, 'Pilantra', 'https://portalpopline.com.br/wp-content/uploads/2023/03/Jao-Anitta-Pilantra-3.png', '2023-03-12', 'C:\\fakepath\\Jão, Anitta - Pilantra.mp3', 21540629, 'Pop', 'Brasil', '61'),
+(88, 'Sua Cara', 'https://i1.sndcdn.com/artworks-000238467635-oojgl2-t500x500.jpg', '2017-07-11', 'C:\\fakepath\\Major Lazer - Sua Cara (Feat. Anitta & Pabllo Vittar).mp3', 567244996, 'Pop', 'Brasil', '61'),
+(89, 'Nu', 'https://lastfm.freetls.fastly.net/i/u/500x500/6b25414c7779d2a4bacda0202ccb3b49.jpg', '2023-05-18', 'C:\\fakepath\\Anitta - NU.mp3', 11273875, 'Pop', 'Brasil', '61'),
+(90, 'Contatinho', 'https://portalpopline.com.br/wp-content/uploads/2019/09/contatinho.jpg', '2019-09-06', 'C:\\fakepath\\Léo Santana, Anitta - Contatinho.mp3', 289576724, 'Axé', 'Brasil', '61'),
+(91, 'Downtown', 'https://upload.wikimedia.org/wikipedia/pt/1/19/Anitta_ft._J_Balvin_-_Downtown.jpeg', '2017-11-20', 'C:\\fakepath\\Anitta & J Balvin - Downtown.mp3', 690705170, 'Pop', 'Espanhol', '61'),
+(92, 'Envolver', 'https://upload.wikimedia.org/wikipedia/pt/c/c7/Envolver_-_Anitta.png', '2021-11-11', 'C:\\fakepath\\Anitta - Envolver.mp3', 558752449, 'Pop', 'Espanhol', '61'),
+(93, 'Vai vendo', 'https://www.djsound.com.br/wp-content/uploads/2023/04/46a315b9-2807-5ea4-c1cd-c25ca3063cd2-scaled.jpg', '2023-05-10', 'C:\\fakepath\\Anitta - VAI VENDO [feat. Mc Ryan SP].mp3', 8103015, 'Funk', 'Brasil', '61, 79'),
+(94, 'Essa Mina É Louca', 'https://i.ytimg.com/vi/ghQOd88PM80/maxresdefault.jpg', '2016-01-14', 'C:\\fakepath\\Anitta part. Jhama - Essa Mina É Louca.mp3', 269025270, 'Pop', 'Brasil', '61'),
+(95, 'Favela Chegou', 'https://upload.wikimedia.org/wikipedia/pt/2/20/Ludmilla_-_Favela_Chegou.jpg', '2019-02-27', 'C:\\fakepath\\LUDMILLA e Anitta - Favela Chegou.mp3', 122238329, 'Funk', 'Brasil', '97, 61'),
+(96, 'Smooth Criminal', 'https://i1.sndcdn.com/artworks-1OHOA4uZkbc36Prf-ht3dkw-t500x500.jpg', '2010-11-19', 'C:\\fakepath\\Michael Jackson - Smooth Criminal.mp3', 862295205, 'Pop', 'Estados Unidos', '48'),
+(97, 'Billie Jean', 'https://photos.enjoei.com.br/michael-jackson-billie-jean-lp-vinil-single-disco/1200xN/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy81MDg4NjI2LzY2ODM1ZjBkNDdjMjVkMjZkOWFjNGU4ZjM1MzYzNmVkLmpwZw', '1982-01-01', 'C:\\fakepath\\Michael Jackson - Billie Jean.mp3', 1408185127, 'Pop', 'Estados Unidos', '48'),
+(98, 'Earth Song', 'https://i1.sndcdn.com/artworks-000072148167-8phbnb-t500x500.jpg', '1995-01-01', 'C:\\fakepath\\Michael Jackson - Earth Song.mp3', 395509855, 'Pop', 'Estados Unidos', '48'),
+(99, 'They Don’t Care About Us', 'https://upload.wikimedia.org/wikipedia/pt/3/3f/They_Don%27t_Care_About_Us.jpg', '1995-07-02', 'C:\\fakepath\\Michael Jackson - They Don’t Care About Us.mp3', 1023815369, 'Pop', 'Estados Unidos', '48'),
+(100, 'Beat It,', 'https://i.discogs.com/WdqvBwDWkDhRkF5w_yUfuytdHRNLk6FpBbh1LBWlXhE/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0Nzc2/NzEtMTYwOTI3Mjcx/MS03MDgzLmpwZWc.jpeg', '1982-04-11', 'C:\\fakepath\\Michael Jackson - Beat It.mp3', 960772446, 'Pop', 'Estados Unidos', '48'),
+(101, 'Thriller', 'https://media.fstatic.com/Ss6TSANCqRS21j3MeaGwJo8m-wA=/322x478/smart/filters:format(webp)/media/movies/covers/2017/10/1-SYabAhDdeFzttJ7k_yaWeQ.png', '1982-10-03', 'C:\\fakepath\\Michael Jackson - Thriller.mp3', 919542476, 'Pop', 'Estados Unidos', '48'),
+(102, 'Remember The Time', 'https://pics.filmaffinity.com/michael_jackson_remember_the_time-558935270-large.jpg', '1991-10-03', 'C:\\fakepath\\Michael Jackson - Remember The Time.mp3', 524519598, 'Pop', 'Estados Unidos', '48'),
+(103, 'ELA PIROU NA DODGE RAM', 'https://9382cdebf7.clvaw-cdnwnd.com/9b71833bc45df38b547939216d0d77fa/200010604-9335093353/IMG-1650.jpg?ph=9382cdebf7', '2023-03-17', 'C:\\fakepath\\LUAN PEREIRA, @MCRyanSP - ELA PIROU NA DODGE RAM.mp3', 74611837, 'Funk', 'Brasil', '79')
+(104, 'Bebezinhas da Facul', 'https://p16.resso.me/img/tos-alisg-v-2102/078769f353584aeab795265054d26a0d~c5_500x500.jpg', '2023-06-09', 'C:\\fakepath\\MC Paiva, MC Ryan SP e MC Kadu - Bebezinhas da Facul.mp3', 2809659, 'Funk', 'Brasil', '79'),
+(105, 'Casei Com a Putaria', 'https://akamai.sscdn.co/uploadfile/letras/albuns/1/1/b/7/01661523338.jpg', '2022-06-01', 'C:\\fakepath\\MC Paiva e MC Ryan SP - Casei Com a Putaria.mp3', 177313273, 'Funk', 'Brasil', '79')
+
 
 -- --------------------------------------------------------
 
