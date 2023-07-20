@@ -34,7 +34,7 @@ function Artists() {
             }
         })
             .then(response => response.json())
-            .then(data => setArtist(data))
+            .then(data => setArtist(data.sort(() => Math.random() - 0.5)))
             .catch(error => console.log(`Erro na procurade de artista pelo nome: ${error}`))
     }, [text])
 
