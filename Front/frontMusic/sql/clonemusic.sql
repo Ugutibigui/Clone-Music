@@ -318,6 +318,11 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (127, 'Provocar', 'https://upload.wikimedia.org/wikipedia/pt/d/df/Provocar.jpg', '2018-11-22', 'C:\\fakepath\\Lexa feat. Gloria Groove - Provocar.mp3', 114987867, 'Funk', 'Brasil', '92'),
 (128, 'Quebrar Seu Coração', 'https://s2.glbimg.com/GMegVT7sn02crKWcS83z6AH4U1o=/e.glbimg.com/og/ed/f/original/2020/10/23/lexa.jpg', '2020-10-23', 'C:\\fakepath\\Lexa e Luísa Sonza - Quebrar Seu Coração.mp3', 40795706, 'Funk', 'Brasil', '92, 88'),
 (129, 'Bate Palma', 'https://akamai.sscdn.co/uploadfile/letras/albuns/b/d/b/f/961941600091851.jpg', '2020-01-10', 'C:\\fakepath\\Jottapê e Lexa - Bate Palma.mp3', 151091026, 'Funk', 'Brasil', '92'),
+(130, 'Smells Like Teen Spirit', 'https://upload.wikimedia.org/wikipedia/pt/3/3c/Smells_Like_Teen_Spirit.jpg', '2009-07-16', 'C:\\fakepath\\Nirvana - Smells Like Teen Spirit.mp3', 1705167314, 'Rock', 'Estados Unidos', '98'),
+(131, 'Something In The Way', 'https://i.scdn.co/image/ab67616d0000b273e175a19e530c898d167d39bf', '2021-11-12', 'C:\\fakepath\\Nirvana - Something In The Way.mp3', 50540121, 'Rock', 'Estados Unidos', '98'),
+(132, 'Come As You Are', 'https://i1.sndcdn.com/artworks-ZPfv0NQRRf6PCLuX-U27s2g-t500x500.jpg', '2009-06-14', 'C:\\fakepath\\Nirvana - Come As You Are.mp3', 508572142, 'Rock', 'Estados Unidos', '98'),
+(133, 'Psychosocial ', 'https://akamai.sscdn.co/uploadfile/letras/albuns/1/3/9/4/27079.jpg', '2009-10-29', 'C:\\fakepath\\Slipknot - Psychosocial.mp3', 493755547, 'Rock', 'Estados Unidos', '99')
+
 -- --------------------------------------------------------
 
 --
