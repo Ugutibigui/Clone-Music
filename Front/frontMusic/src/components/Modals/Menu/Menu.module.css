@@ -1,12 +1,11 @@
 .modalContainer {
     display: flex;
     justify-content: end;
-    align-items: start;
     margin-top: 56px;
 }
 
 .boxContainer {
-    padding-right: 10px;
+    margin-right: 10px;
     z-index: 8;
 }
 
@@ -21,8 +20,8 @@
 }
 
 .boxContainer section {
-    background-color: #23232d;
-    max-height: calc(100vh - 56px - 80px - 40px);
+    background-color: var(--black-three);
+    height: calc(100vh - 56px - 80px - 40px);
     width: 360px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -31,7 +30,7 @@
 }
 
 .boxContainer section::-webkit-scrollbar-track {
-	background-color: #191922;
+	background-color: var(--black-two);
 }
 
 .boxContainer section::-webkit-scrollbar {
@@ -39,7 +38,7 @@
 }
 
 .boxContainer section::-webkit-scrollbar-thumb {
-	background: #686666;
+	background: var(--dark-gray-two);
 	border-radius: 20px;
 }
 
@@ -79,11 +78,28 @@
 }
 
 .button:hover {
-    background-color: #505052;
+    background-color: var(--dark-gray-two);
+}
+
+#checkMode {
+    display: none;
+}
+
+#checkMode:checked ~ .button label {
+    background-color: var(--pink-red-one);
+}
+
+.button label {
+    height: 20px;
+    z-index: 10;
+    width: 20px;
+    border: 1px solid var(--dark-gray-one);
+    border-radius: 5px;
+    margin: 12px;
 }
 
 .button span {
-    color: #fff;
+    color: var(--white-one);
     font-size: 14px;
     padding: 12px;
 }
@@ -112,5 +128,23 @@
 
 .getDeezer span {
     font-size: 13px;
-    color: #686666;
+    color: var(--dark-gray-one);
+}
+
+@media screen and (max-width: 920px) {
+    .modalContainer {
+        margin-top: 45px;
+    }
+
+    .boxContainer section {
+        height: calc(100vh - 45px - 80px - 40px);
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .boxContainer section {
+        height: 60vh;
+        width: 250px;
+    }
 }

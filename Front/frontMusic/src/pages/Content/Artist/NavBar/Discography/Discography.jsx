@@ -60,21 +60,6 @@ function Discography({ musicData }) {
                         ))}
                     </ul>
                 </div>
-
-                <aside>
-                    <Link to={``}>
-                        <h1> Playlists </h1>
-                        <IoIosArrowForward size={25} />
-                    </Link>
-
-                    <ul className={styles.albumContent}>
-                        <AlbumInfos />
-                        <AlbumInfos />
-                        <AlbumInfos />
-                    </ul>
-
-                    <Button text='VER MAIS PLAYLISTS' type='black' />
-                </aside>
             </section>
 
             <section className={styles.artistContent}>
@@ -104,21 +89,6 @@ function Discography({ musicData }) {
                         </div>
                     </div>
                 </div>
-
-                <aside>
-                    <Link to={``}>
-                        <h1> Artistas semelhantes </h1>
-                        <IoIosArrowForward size={25} />
-                    </Link>
-
-                    <ul className={styles.albumContent}>
-                        <AlbumInfos />
-                        <AlbumInfos />
-                        <AlbumInfos />
-                    </ul>
-
-                    <Button text='VER MAIS PLAYLIST' type='black' />
-                </aside>
             </section>
 
             <section className={`${styles.artistContent} ${styles.column}`}>

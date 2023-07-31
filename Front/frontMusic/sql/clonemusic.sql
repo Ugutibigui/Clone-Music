@@ -317,8 +317,7 @@ INSERT INTO `music` (`idMusic`, `name`, `photo`, `date`, `audio`, `views`, `gend
 (126, 'Desce com Pressão', 'https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/35/e4/95/35e49508-3d47-589a-4c7e-5cd1731d9b29/190296794612.jpg/1200x1200bf-60.jpg', '2020-11-13', 'C:\\fakepath\\Kevinho, Tainá Costa e Mad Dogz - Desce com Pressão.mp3', 18998282, 'Eletronica', 'Brasil', '93, 81'),
 (127, 'Provocar', 'https://upload.wikimedia.org/wikipedia/pt/d/df/Provocar.jpg', '2018-11-22', 'C:\\fakepath\\Lexa feat. Gloria Groove - Provocar.mp3', 114987867, 'Funk', 'Brasil', '92'),
 (128, 'Quebrar Seu Coração', 'https://s2.glbimg.com/GMegVT7sn02crKWcS83z6AH4U1o=/e.glbimg.com/og/ed/f/original/2020/10/23/lexa.jpg', '2020-10-23', 'C:\\fakepath\\Lexa e Luísa Sonza - Quebrar Seu Coração.mp3', 40795706, 'Funk', 'Brasil', '92, 88'),
-(129, 'Bate Palma', 'https://akamai.sscdn.co/uploadfile/letras/albuns/b/d/b/f/961941600091851.jpg', '2020-01-10', 'C:\\fakepath\\Jottapê e Lexa - Bate Palma.mp3', 151091026, 'Funk', 'Brasil', '92')
-
+(129, 'Bate Palma', 'https://akamai.sscdn.co/uploadfile/letras/albuns/b/d/b/f/961941600091851.jpg', '2020-01-10', 'C:\\fakepath\\Jottapê e Lexa - Bate Palma.mp3', 151091026, 'Funk', 'Brasil', '92'),
 -- --------------------------------------------------------
 
 --

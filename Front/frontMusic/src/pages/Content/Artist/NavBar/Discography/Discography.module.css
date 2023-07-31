@@ -46,21 +46,8 @@
     width: 65%;
 }
 
-.artistContent aside {
-    width: 35%;
-}
-
-.content,
-.artistContent aside {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.artistContent aside button:not(.albumContent button) {
-    width: 180px;
-    height: 30px !important;
-    font-size: 10px !important;    
+.content a {
+    margin-bottom: 2rem;
 }
 
 .trackContent{

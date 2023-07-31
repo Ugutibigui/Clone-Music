@@ -23,9 +23,7 @@ function Notification({ open, setOpen }) {
             closeAfterTransition>
             <Box className={stylesModal.boxContainer} style={style}>
                 <section className={styles.section}>
-                    <div className={styles.notification}>
-                        <p>Notificações</p>
-                    </div>
+                    <p id={styles.notification}>Notificações</p>
 
                     <div className={styles.addArtist}>
                         <img src="https://e-cdn-files.dzcdn.net/cache/slash/images/common/placeholders/friends.2cbd42c94c8b0a4b6d443e792c70a3ba.png" alt="Artists" />

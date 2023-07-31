@@ -175,7 +175,12 @@ function Menu({ open, setOpen }) {
                                         <>
                                             <span style={{ color: item.color }}> {item.text} </span>
 
-                                            {item.checkbox ? <input type="checkbox" /> : <span className={styles[classNames[index]]}> <IoIosArrowForward /> </span>}
+                                            {item.checkbox ? (
+                                                <>
+                                                    <input type="checkbox" id={styles.checkMode} />
+                                                    <label htmlFor={styles.checkMode}></label>
+                                                </>
+                                            ) : <span className={styles[classNames[index]]}> <IoIosArrowForward /> </span>}
                                         </>
                                     )}
                                 </div>
