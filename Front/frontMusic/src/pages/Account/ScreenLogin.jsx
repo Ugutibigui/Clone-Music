@@ -46,17 +46,17 @@ function ScreenLogin() {
 					</Link>
 					<div className={styles.textClick}>
 						<h1>Fazer login</h1>
-						<span>
-							Ainda não possui uma conta Deezer?{' '}
+						<h2>
+							Ainda não possui uma conta Deezer?
 							<Link to="/register">
 								<strong>CADASTRE-SE</strong>
 							</Link>
-						</span>
+						</h2>
 					</div>
-					<div className={`${styles.socialMediaAccount} ${styles.threeLogos}`}>
-						<Button icon={<BsFacebook size={20} color="royalblue" />} text="FACEBOOK" type="white" />
-						<Button icon={<FcGoogle size={20} />} text="GOOGLE" type="white" />
-						<Button icon={<BsApple size={20} />} text="APPLE" type="white" />
+					<div className={styles.socialMediaAccount}>
+						<button><BsFacebook size={35} color="royalblue" /></button>
+						<button><FcGoogle size={35} /></button>
+						<button><BsApple size={35} color='black'/></button>
 					</div>
 					<Formik initialValues={{}} validationSchema={validationLogin} onSubmit={Login} >
 						{({ errors, touched }) => (

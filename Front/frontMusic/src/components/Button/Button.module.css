@@ -40,6 +40,16 @@
     background-color: var(--transparent-white);
 }
 
+.solid_white {
+    background-color: var(--white-one);
+    border: none;
+    color: var(--black);
+}
+
+.solid_white:hover {
+    background-color: var(--transparent-white);
+}
+
 /* Não vi uso ainda 
 
 .blue {

@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
 }
 
 .topAccount section img {
@@ -36,14 +35,23 @@
     margin-bottom: 70px;
 }
 
-.topAccount section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
+.textClick {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.offer {
+.textClick h1 {
+    font-size: 2.5rem;
+}
+
+.textClick h2 {
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+}
+
+.offer { /**/
     border: 2px solid #a2a2ad91;
     border-radius: 15px;
     display: flex;
@@ -55,20 +63,20 @@
     padding: 20px 40px;
 }
 
-.offer span {
+.offer span { /**/
     font-size: 14px;
     color: #fff;
     letter-spacing: .5px;
     margin-bottom: 10px;
 }
 
-.offer .partnerships {
+.offer .partnerships { /**/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.offer .partnerships img {
+.offer .partnerships img { /**/
     height: 30px;
     width: 60px;
     margin-bottom: 10px;
@@ -76,33 +84,31 @@
     mix-blend-mode: color-burn;
 }
 
-.topAccount section h2 {
-    margin-bottom: 35px;
-    font-size: 15px;
-    font-weight: 100;
-    overflow-wrap: break-word;
-    color: #fff;
-    text-align: center;
-}
-
-.topAccount section h2 strong {
-    color: #ef5466;
+.textClick h2 strong {
+    color: var(--pink-red-one);
     cursor: pointer;
     transition: 400ms;
 }
 
-.topAccount section h2 strong:hover {
-    color: #9b2e3b;
+.textClick h2 strong:hover {
+    color: var(--dark-pink-one);
 }
 
 .socialMediaAccount {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
-.threeLogos button {
-    width: 120px;
+.socialMediaAccount button {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-one);
+}
+
+.socialMediaAccount button:hover {
+    transform: scale(1.1);
 }
 
 .form {
@@ -111,26 +117,23 @@
     justify-content: center;
     width: 100%;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .form span {
     font-size: 1.1rem;
-    font-weight: 500;
-    color: #a2a2ad;
 }
 
-#forget {
+#forget { 
     letter-spacing: 1px;
     font-size: 14px;
-    font-weight: bolder;
     transition: 400ms;
     cursor: pointer;
-    color: #fff;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
-#forget:hover {
-    color: #ef5466;
+#forget:hover { 
+    color: var(--pink-red-one);
 }
 
 /* Estilização do form ScreenLogin.css */
