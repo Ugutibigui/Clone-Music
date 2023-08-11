@@ -80,7 +80,7 @@ function ScreenRegister() {
     return (
         <div className={styles.bodyAccount}>
             <div className={styles.topAccount}>
-                <img id={styles.backgroundAccount} src={backgroundLogin} alt="" />
+                <img id={styles.backgroundAccount} src={backgroundLogin} alt="Logo image" />
 
                 <section>
                     <Link to='/'>
@@ -101,11 +101,11 @@ function ScreenRegister() {
                         </div>
                     </div>
 
-                    <h2>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h2>
+                    <h3 id={styles.subtitle}>Você já está cadastrado na Deezer? <Link to='/login'> <strong>LOGIN</strong> </Link> </h3>
 
                     <div className={styles.socialMediaAccount}>
-                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='white' width='180px'/>
-                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='white' width='180px'/>
+                        <Button icon={<BsFacebook size={25} color='royalblue' />} text='FACEBOOK' type='solid_white' width='180px'/>
+                        <Button icon={<FcGoogle size={25} />} text='GOOGLE' type='solid_white' width='180px'/>
                     </div>
 
                     <Formik initialValues={{}} validationSchema={validationRegister} onSubmit={Register}>
@@ -150,7 +150,7 @@ function ScreenRegister() {
 
                                 <Input type='checkbox' text='Artista?' name='artistCheck' handleOnChange={(bool) => setCheckBox(bool.target.checked ? 1 : 0)} />
 
-                                <h2>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
+                                <h2 id={styles.terms}>Ao clicar em "Cadastrar-se", você aceita os <strong> TERMOS E CONDIÇÕES DE USO </strong> e a <strong> POLÍTICA DE PRIVACIDADE </strong></h2>
 
                                 <Button text='CADASTRAR-SE' type='pink' typeButton='submit' />
 

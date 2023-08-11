@@ -399,7 +399,7 @@ INSERT INTO `users` (`userId`, `email`, `password`, `name`, `userName`, `age`, `
 (94, 'thallitatreyce@gmail.com', 'cfffb1f29b49305bb2ff5375b420006bbf34f080203f8d133f9215cdf2d15e68', 'Treyce', 'thallitatreyce', 16, 'Feminino', 1, 'https://p16.resso.me/img/tos-alisg-i-0000/2d03cf2b193d4234b9e00292992d57e7~c5_750x750.jpg'),
 (95, 'djaranana@gmail.com', '790ea9223bdcda183bf3ade068a9c23defcb34758e24639909ad608980b3dd4d', 'DJ Arana', 'guiArana', 17, 'Masculino', 1, 'https://portalpopclub.com.br/wp-content/uploads/2023/02/image-57.png'),
 (96, 'mcbianca@gmail.com', '8bdc360d8f925fdabc243ef14825ed65f13e01b769d8eb9458271caf21b38c43', 'Bianca', 'mcbianca', 22, 'Feminino', 1, 'https://s2.glbimg.com/ONMvfpuiAoohgd9yIpoZjBgK2IU=/top/e.glbimg.com/og/ed/f/original/2021/06/25/bianca4.jpg'),
-(97, 'ludmilaoliveira@gmail.com', 'ba89e97373fc6c04879e654c161bc2824ff60c25e35bd2413ea953e3069183d0', 'Ludmila', 'ludmilaoliveira', 28, 'Feminino', 1, 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/24/1018510146-2iy7htvcvzdupdiblbge2zuvsu.png');
+(97, 'ludmilaoliveira@gmail.com', 'ba89e97373fc6c04879e654c161bc2824ff60c25e35bd2413ea953e3069183d0', 'Ludmila', 'ludmilaoliveira', 28, 'Feminino', 1, 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/24/1018510146-2iy7htvcvzdupdiblbge2zuvsu.png')
 
 --
 -- Índices para tabelas despejadas

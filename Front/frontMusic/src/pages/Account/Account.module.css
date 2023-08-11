@@ -51,23 +51,36 @@
     gap: 5px;
 }
 
-.offer { /**/
-    border: 2px solid #a2a2ad91;
+.offer {
+    border: 2px solid var(--dark-gray-two);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     cursor: pointer;
+    margin-top: 10px;
     margin-bottom: 35px;
     padding: 20px 40px;
 }
 
-.offer span { /**/
+.offer span { 
     font-size: 14px;
     color: #fff;
     letter-spacing: .5px;
     margin-bottom: 10px;
+}
+
+#subtitle {
+    color: var(--white-one);
+    margin-bottom: 10px;
+}
+
+#subtitle strong {
+    transition: 500ms;
+    color: var(--pink-red-one);
+}
+
+#subtitle strong:hover {
+    color: var(dark-pink-one);
 }
 
 .offer .partnerships { /**/
@@ -99,6 +112,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 15px;
 }
 
 .socialMediaAccount button {
@@ -138,24 +152,28 @@
 
 /* Estilização do form ScreenLogin.css */
 
-#identity-register { /* Estilizar depois */
-    width: 100%;
-    height: 54px;
-}
-
 #reCAPTCHA {
     text-align: center;
     font-size: 14px;
-    color: #fff;
+    color: var(--white-one);
+}
+
+#terms {
+    font-size: 14px;
+    text-align: center;
+}
+
+#terms strong {
+    color: var(--pink-red-one);
 }
 
 .topAccount section span strong {
-    color: #ef5466;
+    color: var(--pink-red-one);
     transition: 400ms;
 }
 
 .topAccount section span strong:hover {
-    color: #9b2e3b;
+    color: var(--dark-pink-one);
 }
 
 .textClick {
@@ -169,13 +187,13 @@
 }
 
 .textClick h1 {
-    color: #fff;
+    color: var(--white-one);
     font-size: 30px;
     font-weight: 700;
 }
 
 .textClick span {
-    color: #ffffff;
+    color: var(--white-one);
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
@@ -183,12 +201,12 @@
 }
 
 .textClick strong {
-    color: #ef5466;
+    color: var(--pink-red-one);
     cursor: pointer;
     transition: 400ms;
     font-size: 14px;
 }
 
 .textClick strong:hover {
-    color: #9b2e3b;
+    color: var(--dark-pink-one);
 }
