@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .apps {
@@ -20,19 +21,16 @@
     padding: 20px;
 }
 
-#google-play {
-    width: 160px;
-}
-
 .listasInfos {
+    padding: 0 60px;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
 }
 
 .bottomInfos {
-    height: 20vh;
-    width: 95%;
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,20 +44,46 @@
     width: 150px;
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: var(--white-one);
 }
 
 .languageAge {
-    width: 220px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .languageAge p {
-    color: #818181;
+    color: var(--dark-gray-two);
 }
 
 .languageAge span {
-    color: #fff;
+    color: var(--white-one);
+}
+
+@media screen and (max-width: 700px) {
+    .listasInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .bottomInfos img {
+        width: 100px;
+    }
+
+    .languageAge p {
+        font-size: 14px;
+    }
+    
+    .languageAge span {
+        font-size: 14px;
+    }
+
+    .icons svg{
+        width: 20px;
+        height: 20px;
+    }
 }

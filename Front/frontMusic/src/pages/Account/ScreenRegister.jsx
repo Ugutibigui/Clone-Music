@@ -55,7 +55,8 @@ function ScreenRegister() {
                     }
                 })
 
-            await api.post('user/createUser', body)
+            if (accountExists === true) {
+                await api.post('user/createUser', body)
                 .then(response => {
                     if (response.data.ok) {
                         alert('Conta Criada com sucesso')
@@ -64,6 +65,10 @@ function ScreenRegister() {
                         alert('Erro na Criação de Conta')
                     }
                 })
+            } else {
+                alert("Está conta já existe")
+                window.location.reload()
+            }
         } catch (error) {
             console.log('Erro na API de Cadastro')
         }

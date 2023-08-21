@@ -1,27 +1,35 @@
 .infosList span {
-    color: #fff;
+    color: var(--white-one);
     font-size: 16px;
-    font-weight: 700;
-    margin-left: 38px;
 }
 
 .infosList ul {
-    width: 200px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    gap: 10px;
+    padding: 10px;
 }
 
 .infosList ul li{
-    margin-bottom: 30px;
-    display: list-item;
-    list-style-type: none;
-    color: #bebec7;
+    color: var(--gray-one);
     font-size: 14px;
     cursor: pointer;
     transition: 400ms;
+    margin-top: 10px;
 }
 
 .infosList ul li:hover {
-    color: #fff;
+    color: var(--white-one);
+}
+
+@media screen and (max-width: 700px) {
+    .infosList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infosList ul {
+        align-items: center;
+    }
 }

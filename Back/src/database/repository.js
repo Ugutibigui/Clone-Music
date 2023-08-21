@@ -9,7 +9,7 @@ const searchInfosLogin = async (param) => {
 
 const checkUser = async (param) => {
     const conn = await connect()
-    const sql = 'SELECT * FROM users WHERE email = ?'
+    const sql = 'SELECT * FROM users WHERE email = ?;'
     const values = [param.email]
     return await conn.query(sql, values)
 }
