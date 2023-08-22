@@ -27,12 +27,14 @@ router.post('/', async (req, res) => {
 
             const [login] = await db.searchInfosLogin(param);
 
+            const secret = process.env.SECRET
+
             if (login.length > 0) { 
-                   let Token = await jwt.sign({
+                  const Token = jwt.sign({
                         id: login.id,
                         name: login.name,
                         email: login.email
-                  }, 'passwordForToken');
+                  }, secret);
 
                   //salva o token nos cookies
 

@@ -34,6 +34,9 @@ app.use("/user/logoff", logoff)
 const checkUser = require("./Router/user/checkExistingUser")
 app.use("/user/checkExistingUser", checkUser)
 
+const privateRoute = require("./Router/user/privateRoute")
+app.use("/user/:id", privateRoute)
+
 const createMusic = require("./Router/music/createMusic")
 app.use("/music/createMusic", createMusic)
 
