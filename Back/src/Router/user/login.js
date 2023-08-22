@@ -15,9 +15,10 @@ router.post('/', async (req, res) => {
             password: password
       }
 
-      var response = {
+      let response = {
             ok: false,
-            message: ""
+            message: '',
+            userInfo: ''
       }
 
       try {
@@ -25,21 +26,26 @@ router.post('/', async (req, res) => {
                   return { erro: 'Dados insuficientes.' }
             }
 
-            const [login] = await db.searchInfosLogin(param);
+            const [login] = await db.searchInfosLogin(param)
 
             const secret = process.env.SECRET
 
-            if (login.length > 0) { 
-                  const Token = jwt.sign({
-                        id: login.id,
-                        name: login.name,
-                        email: login.email
-                  }, secret);
+            if (login.length > 0) {
+                  const Token = jwt.sign({ // Obtendo Token
+                        id: login[0].userId,
+                        name: login[0].name,
+                        email: login[0].email,
+                        photo: login[0].photo,
+                        artist: login[0].artist === 0 ? false : true
+                  }, secret, { expiresIn: '1h' })
 
-                  //salva o token nos cookies
+                  const payload = Token.split('.')[1] // Decodificando Token
+                  const decodedPayload = JSON.parse(atob(payload))
+                  const userInformation = decodedPayload
 
                   response.ok = true
                   response.message = 'logged'
+                  response.userInfo = userInformation
                   res.cookie('Token', Token);
                   res.status(200).send(response)
             } else {
@@ -51,7 +57,7 @@ router.post('/', async (req, res) => {
             console.log(err)
             res.send("Ocorreu um erro interno")
       }
-      
+
 })
 
 module.exports = router;

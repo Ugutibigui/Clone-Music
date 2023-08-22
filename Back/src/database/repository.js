@@ -14,13 +14,6 @@ const checkUser = async (param) => {
     return await conn.query(sql, values)
 }
 
-const checkById = async (id) => {
-    const conn = await connect()
-    const sql = 'SELECT * FROM users WHERE userId = ?;'
-    const values = [id]
-    return await conn.query(sql, values)
-}
-
 
 const createUser = async (param) => {
     const conn = await connect()
@@ -43,16 +36,9 @@ const createMusic = async (param) => {
     await conn.query(sql, values)
 }
 
-const checkToken = (req, res, next) => {
-     const authHeader = req.headers['authorization']
-     const token = authHeader && authHeader.split(' ')[1]
-}
-
 module.exports = {
     searchInfosLogin,
     checkUser,
     createUser,
-    createMusic,
-    checkToken,
-    checkById
+    createMusic
 }

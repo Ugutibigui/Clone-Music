@@ -2,6 +2,8 @@ import { FcGoogle } from 'react-icons/fc'
 import { BsFacebook, BsApple } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { Formik, Form, ErrorMessage } from 'formik'
+import { useContext, useEffect } from 'react'
+import { Context } from '../../context/context'
 
 import InputField from '../../components/Form/InputField/InputField'
 import Button from '../../components/Button/Button'
@@ -19,6 +21,12 @@ function ScreenLogin() {
 		password: yup.string().min(8, 'Mínimo de 8 caracteres').required('Campo obrigatório')
 	})
 
+	const [userState, dispatch] = useContext(Context)
+
+	useEffect(() => {
+		console.log(userState)
+	})
+
 	const Login = async (values) => {
 		const body = {
 			email: values.email,
@@ -28,7 +36,12 @@ function ScreenLogin() {
 		try {
 			await api.post('user/login', body)
 				.then(response => {
-					response.data.ok === true ? alert('Logado') : alert('Email ou senha incorretos')
+					if (response.data.ok === true) {
+						dispatch({ type: 'LOGIN', payload: response.data.userInfo });
+						window.location.reload()
+					} else {
+						alert('Email ou senha incorretos')
+					}
 				})
 		} catch (error) {
 			console.log('Erro na API do login')

@@ -1,5 +1,7 @@
 import { TbArrowsShuffle } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
+import { Context } from '../../../context/context'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Button from '../../../components/Button/Button'
@@ -8,6 +10,12 @@ import Container from '../../../components/Layout/Container/Container'
 import styles from './Favorite.module.css'
 
 function Favorite({ content }) {
+
+    const [userState, dispatch] = useContext(Context)
+
+    useEffect(() => {
+        console.log(userState)
+    })
 
     const playlists = [
         { name: 'Destaque', to: '/favorite' },
