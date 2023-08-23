@@ -46,16 +46,9 @@ function ScreenRegister() {
 
         try {
             await api.post('user/checkExistingUser', { email: values.email })
-                .then(response => {
-                    if (response.data.exists) {
-                        setAccountExists(true);
-                        return;
-                    } else {
-                        setAccountExists(false)
-                    }
-                })
+                .then(response => setAccountExists(response.data.ok))
 
-            if (accountExists === true) {
+            if (accountExists) {
                 await api.post('user/createUser', body)
                 .then(response => {
                     if (response.data.ok) {
@@ -67,7 +60,7 @@ function ScreenRegister() {
                 })
             } else {
                 alert("Está conta já existe")
-                window.location.reload()
+                //window.location.reload()
             }
         } catch (error) {
             console.log('Erro na API de Cadastro')

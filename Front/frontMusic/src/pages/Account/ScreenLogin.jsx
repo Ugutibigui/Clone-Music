@@ -23,10 +23,6 @@ function ScreenLogin() {
 
 	const [userState, dispatch] = useContext(Context)
 
-	useEffect(() => {
-		console.log(userState)
-	})
-
 	const Login = async (values) => {
 		const body = {
 			email: values.email,
@@ -38,7 +34,7 @@ function ScreenLogin() {
 				.then(response => {
 					if (response.data.ok === true) {
 						dispatch({ type: 'LOGIN', payload: response.data.userInfo });
-						window.location.reload()
+						alert("Logado")
 					} else {
 						alert('Email ou senha incorretos')
 					}

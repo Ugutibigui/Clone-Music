@@ -1,6 +1,7 @@
 import { BsFacebook, BsGoogle } from 'react-icons/bs'
 import { AiFillCamera } from 'react-icons/ai'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { Context } from '../../../../../context/context'
 
 import Button from '../../../../../components/Button/Button'
 import api from '../../../../../services/api'
@@ -9,8 +10,10 @@ import styles from './Settings.module.css'
 
 const Settings = () => {
 
+    const [userState, dispatch] = useContext(Context)
+
     const [camera, setCamera] = useState('off')
-    const [profileImage, setProfileImage] = useState('https://e-cdns-images.dzcdn.net/images/user/d41d8cd98f00b204e9800998ecf8427e/264x264-000000-80-0-0.jpg');
+    const [profileImage, setProfileImage] = useState(userState.photo);
 
     function handleFileChange(event) {
         const file = event.target.files[0]

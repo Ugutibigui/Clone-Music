@@ -3,7 +3,7 @@ import { BsThreeDots } from 'react-icons/bs'
 
 import styles from './PlaylistCard.module.css'
 
-function PlaylistCard() {
+function PlaylistCard({object}) {
 
     const [className, setClassName] = useState(`${styles.remove}`);
 
@@ -12,15 +12,15 @@ function PlaylistCard() {
             <div className={styles.image}
             onMouseEnter={() => setClassName(`${styles.add}`)}
             onMouseLeave={() =>  setClassName(`${styles.remove}`)}>
-                <img src="https://e-cdns-images.dzcdn.net/images/cover/d41d8cd98f00b204e9800998ecf8427e/264x264-000000-80-0-0.jpg" alt="Recently" />
+                <img src={object.photo} alt={object.name} />
                 
                 <button className={className}>
                     <BsThreeDots/>
                 </button>
             </div>
 
-            <div>Rock</div>
-            <span>Pública</span>
+            <div> {object.name} </div>
+            <span> 40 Músicas </span>
         </div>
     )
 }

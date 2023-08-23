@@ -1,14 +1,11 @@
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
 import Search from '../../../../../components/Search/Search'
-import ArtisrCard from '../../../../../components/Cards/Artist Card/ArtistCard'
+import ArtistCard from '../../../../../components/Cards/Artist Card/ArtistCard'
 import AddContent from '../../../../../components/Layout/AddContent/AddContent'
 
 import styles from './NavArtists.module.css'
 
 function NavArtists() {
-    const artistList = Array.from({ length: 12 }, (_, i) => <li key={i}><ArtisrCard /></li>); 
-    // Temporario até uso da API
-
     return (
         <>
             <div className={styles.topContent}>

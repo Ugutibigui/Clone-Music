@@ -12,8 +12,30 @@ const LazyCategorieCard = React.lazy(() => import('../../../components/Cards/Cat
 const LazyHighlightCard = React.lazy(() => import('../../../components/Cards/Highlight Card/HighlightCard'))
 const LazyRadioCard = React.lazy(() => import('../../../components/Cards/Radio Card/RadioCard'))
 const LazyFlowCard = React.lazy(() => import('../../../components/Cards/Flow Card/FlowCard'))
+const LazyPlaylistCard = React.lazy(() => import('../../../components/Cards/Playlist Card/PlaylistCard'))
 
 import styles from './Music.module.css'
+
+export function getComponentByName (componentName) {
+    switch (componentName) {
+        case 'CategorieCard':
+            return LazyCategorieCard
+        case 'MusicCard':
+            return LazyMusicCard
+        case 'ArtistCard':
+            return LazyArtistCard
+        case 'HighlightCard':
+            return LazyHighlightCard
+        case 'RadioCard':
+            return LazyRadioCard
+        case 'FlowCard':
+            return LazyFlowCard
+        case 'PlaylistCard':
+            return LazyPlaylistCard
+        default:
+            return null
+    }
+}
 
 function Music() {
 
@@ -40,25 +62,6 @@ function Music() {
         }).then(response => response.json())
             .then(data => setChannels(data))
     }, [])
-
-    const getComponentByName = (componentName) => {
-        switch (componentName) {
-            case 'CategorieCard':
-                return LazyCategorieCard
-            case 'MusicCard':
-                return LazyMusicCard
-            case 'ArtistCard':
-                return LazyArtistCard
-            case 'HighlightCard':
-                return LazyHighlightCard
-            case 'RadioCard':
-                return LazyRadioCard
-            case 'FlowCard':
-                return LazyFlowCard
-            default:
-                return null
-        }
-    };
 
     return (
         <Container>

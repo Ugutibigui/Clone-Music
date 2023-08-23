@@ -11,6 +11,8 @@ function Channel({ addText, addLink, h2, h3, Card, request }) {
     const [contentCard, setContentCard] = useState([])
 
     useEffect(() => {
+        console.log(`http://localhost:8000/${request}`)
+
         fetch(`http://localhost:8000/${request}`, {
             'method': 'GET',
             headers: {

@@ -6,11 +6,13 @@ const flowController = require("./controllers/flowController")
 const channelController = require("./controllers/channelController")
 const musicController = require("./controllers/musicController")
 const fansController = require("./controllers/fansController")
+const playlistController = require("./controllers/playlistController")
 
 router.get('/artists', artistController.getArtists)
 router.get('/flows', flowController.getFlows)
 router.get('/channels', channelController.getChannels)
 router.get('/musics', musicController.getMusics)
 router.get('/fans', fansController.getFans)
+router.get('/playlist', playlistController.getPlaylist)
 
 module.exports = router
