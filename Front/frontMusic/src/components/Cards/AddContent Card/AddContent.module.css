@@ -1,0 +1,24 @@
+.figure {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plus {
+    height: 264px;
+    width: 264px;
+    display: grid;
+    place-items: center;
+    background-color: var(--dark-gray-two);
+    cursor: pointer;
+}
+
+.figure span {
+    font-size: 16px;
+    color: var(--white-one);
+    cursor: pointer;
+}
+
+.figure span:hover {
+    text-decoration: underline;
+}

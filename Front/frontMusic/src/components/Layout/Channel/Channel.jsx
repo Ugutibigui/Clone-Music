@@ -1,18 +1,14 @@
-import { AiOutlineLeft } from 'react-icons/ai'
-import { AiOutlineRight } from 'react-icons/ai'
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { useState, useEffect } from 'react'
-
-import AddContent from '../AddContent/AddContent'
 
 import styles from './Channel.module.css'
 
-function Channel({ addText, addLink, h2, h3, Card, request }) {
+function Channel({ addContent, addLink, h2, h3, Card, request }) {
 
     const [contentCard, setContentCard] = useState([])
+    const [createPlaylistModal, setCreatePlaylistModal] = useState(false)
 
     useEffect(() => {
-        console.log(`http://localhost:8000/${request}`)
-
         fetch(`http://localhost:8000/${request}`, {
             'method': 'GET',
             headers: {
@@ -38,6 +34,10 @@ function Channel({ addText, addLink, h2, h3, Card, request }) {
             </div>
 
             <div className={styles.carousel}>
+                {addContent && (
+                    addContent
+                )}
+
                 {contentCard.map((item, index) => (
                     <Card object={item} key={index}/>
                 ))}

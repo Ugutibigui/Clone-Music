@@ -15,11 +15,11 @@ function PlaylistCard({object}) {
                 <img src={object.photo} alt={object.name} />
                 
                 <button className={className}>
-                    <BsThreeDots/>
+                    <BsThreeDots color='#000' size={20}/>
                 </button>
             </div>
 
-            <div> {object.name} </div>
+            <h2> {object.name} </h2>
             <span> 40 Músicas </span>
         </div>
     )

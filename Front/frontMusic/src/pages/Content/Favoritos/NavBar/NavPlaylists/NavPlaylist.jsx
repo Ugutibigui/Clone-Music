@@ -5,12 +5,14 @@ import { getComponentByName } from '../../../Musica/Music'
 import Search from '../../../../../components/Search/Search'
 import CustomSelect from '../../../../../components/Nav/CustomSelect/CustomSelect'
 import Channel from '../../../../../components/Layout/Channel/Channel'
-import PlaylistCard from '../../../../../components/Cards/Playlist Card/PlaylistCard'
+import AddContent from '../../../../../components/Cards/AddContent Card/AddContent'
+import CreatePlaylist from '../../../../../components/Modals/CreatePlaylist/CreatePlaylist'
 
 import styles from './NavPlaylist.module.css'
 
 function NavPlaylist() {
 
+    const [createPlaylist, setCreatePlaylist] = useState(false)
     const [playlist, setPlaylist] = useState([])
     const [channel, setChannel] = useState([])
     const [userState, dispatch] = useContext(Context)
@@ -39,6 +41,8 @@ function NavPlaylist() {
 
     return (
         <>
+            <CreatePlaylist open={createPlaylist} setOpen={setCreatePlaylist}/>
+
             <div className={styles.topContent}>
                 <h1>{playlist.length} playlist</h1>
 
@@ -55,7 +59,8 @@ function NavPlaylist() {
                 const Component = getComponentByName(channel.card)
 
                 return Component ? (
-                    <Channel key={channel.idChannel} h2={channel.title} h3={channel.subtitle} Card={Component} request={`playlist?user=${userState.id}`}/>
+                    <Channel addContent={<AddContent text='Criar uma Playlist' onclick={() => setCreatePlaylist(true)}/>} 
+                    key={channel.idChannel} h2={channel.title} h3={channel.subtitle} Card={Component} request={`playlist?user=${userState.id}`}/>
                 ) : null
             })}
         </>
