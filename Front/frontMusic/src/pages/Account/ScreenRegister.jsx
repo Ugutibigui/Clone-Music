@@ -60,7 +60,6 @@ function ScreenRegister() {
                 })
             } else {
                 alert("Está conta já existe")
-                //window.location.reload()
             }
         } catch (error) {
             console.log('Erro na API de Cadastro')

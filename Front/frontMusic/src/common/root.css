@@ -5,6 +5,7 @@
     --transparent-white: #ffffff66;
     --gray-one: #c2c2c7;
     --gray-two: #92929d;
+    --gray-three: #a2a2ad;
     --dark-gray-one: #45454e;
     --dark-gray-two: #52525D;
     --black: #000;
@@ -16,5 +17,5 @@
 
     /* Fonts */
 
-    --ubuntu-font: Ubuntu, Arial, sans-serif;
+    --font: Helvetica, Ubuntu, Arial;
 }

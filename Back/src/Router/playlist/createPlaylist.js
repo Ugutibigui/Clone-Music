@@ -1,9 +1,9 @@
 const express = require('express')
 
 const router = express.Router()
-const db = require("../../database/repository")
+const db = require('../../database/repository')
 
-router.post('/', async (req, res, next) => {
+router.post('/', async(req, res, next) => {
     const info = req.body
 
     const response = {
@@ -12,14 +12,14 @@ router.post('/', async (req, res, next) => {
     }
 
     try {
-        await db.createMusic(info)
+        await db.createPlaylist(info)
         response.ok = true
-        response.message = "Música criada"
+        response.message = 'Playlist Criada'
         res.send(response)
     } catch (error) {
-        console.log(error)
+        console.log(`Erro em CreatePlaylist.js\nErro: ${error}`)
         res.send(error)
     }
 })
 
-module.exports = router;
+module.exports = router

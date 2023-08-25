@@ -4,7 +4,7 @@
 }
 
 .createPlaylist {
-    width: 1000px;
+    width: 800px;
     height: 600px;
     background-color: var(--black-three);
     box-shadow: 0 2px 8px 2px rgb(10 10 22/30%);
@@ -32,42 +32,112 @@
 .createPlaylist h1 {
     font-size: 28px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .infos {
     width: 100%;
     display: flex;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
-.infos img {
-    width: 250px;
-    height: 250px;
+.sendImage {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.sendImage img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+    transition: 500ms;
 }
 
-.inputBox {
+.sendImage img:hover {
+    opacity: .7;
+}
+
+.sendImage label {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.25);
+    background-color: var(--white-one);
+    display: grid;
+    place-items: center;
+    border-radius: 100px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.sendImage label:hover {
+    transform: scale(1.2);
+}
+
+#sendImageInput {
+    display: none;
+}
+
+.inputsBox {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 20px;
 }
 
 .createPlaylist label {
     margin-bottom: 2px;
 }
 
-.createPlaylist input[type='text'] {
+.createPlaylist input[type='text'], textarea {
     font-size: 16px;
     padding: 15px;
-    color: var(--dark-gray-two);
+    color: var(--gray-one);
     border: 1px solid var(--dark-gray-two);
     background-color: var(--black-one);
     width: 100%;
 }
 
-.createPlaylist input[type='text']::placeholder {
-    
+.typePlaylist {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.typePlaylist button {
+    width: 40px;
+    height: 40px;
+    background-color: #32323D;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text h2 {
+    color: var(--white-one);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text h3 {
+    color: var(--gray-three);
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.sendBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }

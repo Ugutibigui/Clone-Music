@@ -55,12 +55,12 @@ function ScreenLogin() {
 					</Link>
 					<div className={styles.textClick}>
 						<h1>Fazer login</h1>
-						<h2>
+						<p>
 							Ainda não possui uma conta Deezer?
 							<Link to="/register">
 								<strong>CADASTRE-SE</strong>
 							</Link>
-						</h2>
+						</p>
 					</div>
 					<div className={styles.socialMediaAccount}>
 						<button><BsFacebook size={35} color="royalblue" /></button>

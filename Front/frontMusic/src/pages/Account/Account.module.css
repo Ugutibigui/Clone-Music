@@ -192,6 +192,12 @@
     font-weight: 700;
 }
 
+.textClick p {
+    display: flex;
+    gap: 3px;
+    color: var(--white-one);
+}
+
 .textClick span {
     color: var(--white-one);
     font-size: 14px;

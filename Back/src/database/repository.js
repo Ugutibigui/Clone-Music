@@ -36,9 +36,17 @@ const createMusic = async (param) => {
     await conn.query(sql, values)
 }
 
+const createPlaylist = async (param) => {
+    const conn = await connect()
+    const sql = 'INSERT INTO playlist(name, photo, description, userId) VALUES (?, ?, ?, ?);'
+    const values = [param.name, param.image, param.description, param.userId]
+    await conn.query(sql, values)
+}
+
 module.exports = {
     searchInfosLogin,
     checkUser,
     createUser,
-    createMusic
+    createMusic,
+    createPlaylist
 }

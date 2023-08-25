@@ -29,8 +29,8 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 20px;
 }
 
-h1, h2, h3, p, span, li, a, button {
-    font-family: var(--ubuntu-font);
+h1, h2, h3, p, span, li, a, button, label, textarea {
+    font-family: var(--font);
 }
 
 h1 {
@@ -103,8 +103,11 @@ input {
 }
 
 label {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: var(--gray-two);
+}
+
+textarea {
+    resize: none;
 }

@@ -37,6 +37,9 @@ app.use("/user/checkExistingUser", checkUser)
 const createMusic = require("./Router/music/createMusic")
 app.use("/music/createMusic", createMusic)
 
+const createPlaylist = require("./Router/playlist/createPlaylist")
+app.use("/playlist/createPlaylist", createPlaylist)
+
 app.listen(port, () => {
       console.log("Servidor Online!")
 })
