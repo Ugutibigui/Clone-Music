@@ -2,7 +2,6 @@ import { BsTwitter, BsFillPlayFill, BsThreeDots } from 'react-icons/bs'
 import { AiFillHeart, AiFillInstagram } from 'react-icons/ai'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
-import { parse, v4 as uuidv4 } from 'uuid'
 
 import CustomNav from '../../../components/Nav/CustomNav/CustomNav'
 import Container from '../../../components/Layout/Container/Container'

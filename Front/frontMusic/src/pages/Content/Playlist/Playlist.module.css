@@ -1,0 +1,48 @@
+.playlist {
+    padding: 20px 0;
+    display: flex;
+    gap: 40px;
+}
+
+#imagePlay {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.infoPlay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.profile h3 {
+    color: var(--white-one);
+}
+
+.infoPlay p {
+    width: 50%;
+}
+
+.infoPlay button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--dark-gray-two);
+}
+
+.infoPlay button:hover {
+    background-color: var(--transparent-white);
+    border-color: var(--white-one);
+}

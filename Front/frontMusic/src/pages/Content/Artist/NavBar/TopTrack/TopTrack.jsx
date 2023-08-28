@@ -11,7 +11,7 @@ import styles from './TopTrack.module.css'
 function TopTrack({ musicData }) {
 
     const [musics, setMusics] = useState([])
-    const [searchText, setSearcText] = useState('')
+    const [searchText, setSearchText] = useState('')
 
     const { id } = useParams()
 
@@ -43,7 +43,7 @@ function TopTrack({ musicData }) {
         <>
             <h1> Top Músicas </h1>
 
-            <Search size='40%' placeholder='Buscar nas faixas' onChange={text => setSearcText(text.target.value)} />¨
+            <Search size='40%' placeholder='Buscar nas faixas' onChange={text => setSearchText(text.target.value)} />¨
 
             <TableMusic>
                 <span>MÚSICA</span>

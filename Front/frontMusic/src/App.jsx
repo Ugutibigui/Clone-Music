@@ -30,7 +30,7 @@ import Favorite from "./pages/Content/Favoritos/Favorite"
 import NavHighlight from './pages/Content/Favoritos/NavBar/NavHighlight/NavHighlight'
 import Album from './pages/Content/Favoritos/NavBar/Albums/Album'
 import Dearest from './pages/Content/Favoritos/NavBar/Dearest/Dearest'
-import Playlist from './pages/Content/Favoritos/NavBar/NavPlaylists/NavPlaylist'
+import NavPlaylist from './pages/Content/Favoritos/NavBar/NavPlaylists/NavPlaylist'
 import Artists from './pages/Content/Favoritos/NavBar/NavArtists/NavArtists'
 import History from './pages/Content/Favoritos/NavBar/PlaybackHistory/PlaybackHistory'
 import NavPodcasts from './pages/Content/Favoritos/NavBar/NavPodcasts/NavPodcasts'
@@ -41,6 +41,8 @@ import Followers from './pages/Content/Favoritos/NavBar/Followers/Followers'
 import Artist from './pages/Content/Artist/Artist'
 import Discography from "./pages/Content/Artist/NavBar/Discography/Discography"
 import TopTrack from "./pages/Content/Artist/NavBar/TopTrack/TopTrack"
+
+import Playlist from "./pages/Content/Playlist/Playlist"
 
 function App() {
 	return (
@@ -63,7 +65,7 @@ function App() {
 
 				<Route exact path="/favorite" element={<Index content={<Favorite content={<NavHighlight/>}/>} />} />
 				<Route path="/favorite/dearest" element={<Index content={<Favorite content={<Dearest/>}/>} />}/>
-				<Route path="/favorite/playlist" element={<Index content={<Favorite content={<Playlist/>}/>} />}/>
+				<Route path="/favorite/playlist" element={<Index content={<Favorite content={<NavPlaylist/>}/>} />}/>
 				<Route path="/favorite/album" element={<Index content={<Favorite content={<Album/>}/>} />}/>
 				<Route path="/favorite/artist" element={<Index content={<Favorite content={<Artists/>}/>} />}/>
 				<Route path="/favorite/history" element={<Index content={<Favorite content={<History/>}/>} />}/>
@@ -74,6 +76,8 @@ function App() {
 
 				<Route exact path="/artist/:id" element={<Index content={<Artist content={<Discography/>}/>} />}/>
 				<Route path="/artist/:id/top_track" element={<Index content={<Artist content={<TopTrack/>}/>} />}/>
+
+				<Route exact path="/playlist/:id" element={<Index content={<Playlist/>}/>}/>
 
 				<Route path="/recommendation" element={<Recommendation />} />
 				<Route path="/login" element={<ScreenLogin />} />
