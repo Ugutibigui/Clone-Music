@@ -1,0 +1,58 @@
+.modalContainer {
+    display: grid;
+    place-items: center;
+}
+
+.boxContainer {
+    width: 1200px;
+    background-color: var(--black-three);
+    box-shadow: 0 2px 8px 2px rgb(10 10 22/30%);
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.boxContainer h1 {
+    margin-bottom: 16px;
+}
+
+.closeBtn {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+}
+
+.closeBtn button {
+    padding: 5px;
+}
+
+.closeBtn button:hover {
+    background-color: var(--dark-gray-two);
+}
+
+.choiceImage {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.image {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.selected {
+    opacity: .6;
+    border-color: var(--dark-pink-one);
+}
