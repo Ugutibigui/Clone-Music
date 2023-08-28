@@ -1,6 +1,6 @@
 const connect = require("../database/connection")
 
-async function getPlaylists(userId, limit, search) {
+async function getPlaylists(userId, playId, limit) {
     const conn = await connect()
 
     let sql = 'SELECT * FROM playlist where 1 = 1'
@@ -10,6 +10,11 @@ async function getPlaylists(userId, limit, search) {
     if (userId) {
         sql +=  ' AND userId = ?'
         values.push(userId)
+    }
+
+    if (playId) {
+        sql += ' AND playId = ?'
+        values.push(playId)
     }
 
     if (limit) {
