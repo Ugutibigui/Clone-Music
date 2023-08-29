@@ -1,4 +1,5 @@
 .MusicContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -55,7 +56,7 @@
 
 .addButton {
     display: flex;
-    animation: opacity-animation 600ms normal;
+    animation: opacity-animation 400ms normal;
 }
 
 @keyframes opacity-animation {

@@ -32,10 +32,6 @@
     color: var(--white-one);
 }
 
-.infoPlay p {
-    width: 50%;
-}
-
 .infoPlay button {
     width: 35px;
     height: 35px;

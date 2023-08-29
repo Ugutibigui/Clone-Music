@@ -1,7 +1,7 @@
 import { IoIosArrowForward } from 'react-icons/io'
-import { Modal, Box } from '@mui/material';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Modal, Box } from '@mui/material'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import styles from './Menu.module.css'
 
@@ -130,7 +130,6 @@ function Menu({ open, setOpen }) {
         bgcolor: 'background.paper',
         boxShadow: 24,
     }
-
 
     return (
         <Modal className={styles.modalContainer}

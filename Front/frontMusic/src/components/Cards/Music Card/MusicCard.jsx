@@ -3,11 +3,14 @@ import { ImPlay3 } from 'react-icons/im'
 import { FiHeart } from 'react-icons/fi'
 import { BsThreeDots } from 'react-icons/bs'
 
+import InfoMusic from '../../Modals/InfoMusic/InfoMusic'
+
 import styles from './MusicCard.module.css'
 
 function MusicCard({ object }) {
     const [className, setClassName] = useState(`${styles.btn}`)
     const [artistNames, setArtistNames] = useState([])
+    const [selected, setSelected] = useState(false)
 
     function formatDate(date) {
         const formattedDate = new Date(date)
@@ -41,37 +44,39 @@ function MusicCard({ object }) {
     }, [userIdArray])
 
     return (
-        <div className={styles.MusicContainer}>
-            <div className={styles.image}
-                onMouseEnter={() => setClassName(`${styles.addButton}`)}
-                onMouseLeave={() => setClassName(`${styles.btn}`)} >
-                <img src={object.photo} alt={object.name} />
+            <div className={styles.MusicContainer}>
+                <InfoMusic open={selected} setOpen={setSelected}/>
 
-                <div className={styles.buttons}>
-                    <button>
-                        <ImPlay3 size={20}/>
-                    </button>
+                <div className={styles.image}
+                    onMouseEnter={() => setClassName(`${styles.addButton}`)}
+                    onMouseLeave={() => setClassName(`${styles.btn}`)} >
+                    <img src={object.photo} alt={object.name} />
 
-                    <button className={className}>
-                        <FiHeart size={20}/>
-                    </button>
+                    <div className={styles.buttons}>
+                        <button>
+                            <ImPlay3 size={20} />
+                        </button>
 
-                    <button className={className}>
-                        <BsThreeDots size={20}/>
-                    </button>
+                        <button className={className}>
+                            <FiHeart size={20} />
+                        </button>
+
+                        <button className={className} onClick={() => setSelected(true)}>
+                            <BsThreeDots size={20} />
+                        </button>
+                    </div>
                 </div>
-            </div>
 
-            <h2>{object.name}</h2>
-            <span>
-                Por
-                {artistNames.map((name, index) => (
-                    <a key={index} href={`/artist/${userIdArray[index]}`}> {name},  </a>
-                ))}
-            </span>
-            <p> Lançado em {formatDate(object.date)}</p>
-        </div>
-    );
+                <h2>{object.name}</h2>
+                <span>
+                    Por
+                    {artistNames.map((name, index) => (
+                        <a key={index} href={`/artist/${userIdArray[index]}`}> {name},  </a>
+                    ))}
+                </span>
+                <p> Lançado em {formatDate(object.date)}</p>
+            </div>
+    )
 }
 
 export default MusicCard;
