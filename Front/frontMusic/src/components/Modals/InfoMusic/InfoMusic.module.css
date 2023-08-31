@@ -4,7 +4,8 @@
     z-index: 3;
     background-color: var(--black-three);
     border-radius: 10px;
-    animation: normal animate-modal 500ms;
+    animation: normal animate-modal;
+    width: 260px;
 }
 
 @keyframes animate-modal {
@@ -21,16 +22,18 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 10px 15px;
+    padding: 10px;
     transition: 400ms;
     cursor: pointer;
 }
 
 .option:first-child {
+    padding: 15px 10px;
     border-radius: 10px 10px 0 0;
 }
 
 .option:last-child {
+    padding: 15px 10px;
     border-radius: 0 0 10px 10px;
 }
 

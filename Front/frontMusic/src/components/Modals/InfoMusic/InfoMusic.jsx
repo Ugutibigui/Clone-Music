@@ -1,28 +1,36 @@
 import { RiPlayList2Fill } from 'react-icons/ri'
 import { MdFavoriteBorder } from 'react-icons/md'
 import { TbPlaylist } from 'react-icons/tb'
-import { IoMdShareAlt } from 'react-icons/io'
+import { IoMdShareAlt, IoIosArrowBack } from 'react-icons/io'
 import { BsPeopleFill } from 'react-icons/bs'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
+import { Context } from '../../../context/context'
+
+import Search from '../../Search/Search'
 
 import styles from './InfoMusic.module.css'
 
-const InfoMusic = ({open, setOpen}) => {
+const InfoMusic = ({ open, setOpen }) => {
 
     const options = [
-        { icon: RiPlayList2Fill, text: 'Ouvir em seguida' },
-        { icon: MdFavoriteBorder, text: 'Adicionar aos meus favoritos' },
-        { icon: TbPlaylist, text: 'Adicionar a playlist' },
-        { icon: IoMdShareAlt, text: 'Compartilhar' },
-        { icon: BsPeopleFill, text: 'Perfil do Criador' },
+        { icon: RiPlayList2Fill, text: 'Ouvir em seguida', click: '' },
+        { icon: MdFavoriteBorder, text: 'Adicionar aos meus favoritos', click: 'favorite' },
+        { icon: TbPlaylist, text: 'Adicionar a playlist', click: 'playlist' },
+        { icon: IoMdShareAlt, text: 'Compartilhar', click: 'share' },
+        { icon: BsPeopleFill, text: 'Perfil do Criador', click: 'profile' },
     ]
 
     const ulRef = useRef(null)
+    const [actually, setActually] = useState('')
+    const [playlist, setPlaylist] = useState([])
+
+    const [userState, dispatch] = useContext(Context)
 
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (ulRef.current && !ulRef.current.contains(event.target)) {
                 setOpen(false)
+                setActually(false)
             }
         }
         document.addEventListener('mousedown', handleOutsideClick)
@@ -31,17 +39,51 @@ const InfoMusic = ({open, setOpen}) => {
         }
     }, [ulRef])
 
+    useEffect(() => {
+        if (open) {
+            setActually('config')
+        }
+    }, [open])
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/playlist?user=${userState.id}`, {
+            'method': 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => setPlaylist(data))
+    }, [userState.id])
+
     return (
-        open && (
-            <div className={styles.modalInfos} ref={ulRef}>
-                {options.map((option, index) => (
-                    <div key={index} className={styles.option}>
-                        <option.icon color='#fff' size={20}/>
+        <div className={styles.modalInfos} ref={ulRef}>
+            {actually === 'config' && (
+
+                options.map((option, index) => (
+                    <div key={index} className={styles.option} onClick={() => setActually(option.click)}>
+                        <option.icon color='#fff' size={20} />
                         <h3>{option.text}</h3>
                     </div>
-                ))}
-            </div>
-        )
+                ))
+
+            )}
+
+            {actually === 'playlist' && (
+                <>
+                    <div className={styles.toBack}>
+                        <IoIosArrowBack size={20} color='#a2a2ad' />
+                        <span>Voltar</span>
+                    </div>
+
+                    <div className={styles.search}>
+                        <Search size='100%' placeholder='Buscar' />
+                    </div>
+
+
+                </>
+            )}
+        </div>
     )
 }
 
