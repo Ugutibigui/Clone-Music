@@ -45,7 +45,7 @@ function MusicCard({ object }) {
 
     return (
             <div className={styles.MusicContainer}>
-                <InfoMusic open={selected} setOpen={setSelected}/>
+                <InfoMusic open={selected} setOpen={setSelected} music={object}/>
 
                 <div className={styles.image}
                     onMouseEnter={() => setClassName(`${styles.addButton}`)}

@@ -14,6 +14,7 @@ function NavPlaylist() {
 
     const [createPlaylist, setCreatePlaylist] = useState(false)
     const [playlist, setPlaylist] = useState([])
+    const [listMusic, setListMusic] = useState([])
     const [channel, setChannel] = useState([])
     const [userState, dispatch] = useContext(Context)
 

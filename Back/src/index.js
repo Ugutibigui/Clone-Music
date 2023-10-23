@@ -40,6 +40,9 @@ app.use("/music/createMusic", createMusic)
 const createPlaylist = require("./Router/playlist/createPlaylist")
 app.use("/playlist/createPlaylist", createPlaylist)
 
+const addToPlaylist = require("./Router/playlist/addToPlaylist")
+app.use("/playlist/addToPlaylist", addToPlaylist)
+
 app.listen(port, () => {
       console.log("Servidor Online!")
 })

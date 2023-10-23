@@ -1,24 +1,24 @@
 const express = require('express')
 
 const router = express.Router()
-const db = require('../../database/repository')
+const db = require("../../database/playlist")
 
 router.post('/', async(req, res, next) => {
     const info = req.body
 
     const response = {
-        ok: false,
+        ok: false, 
         message: ""
     }
 
     try {
-        await db.createPlaylist(info)
+        await db.createPlayMusic(info)
         response.ok = true
-        response.message = 'Playlist Criada'
+        response.message = 'Música adicionada à playlist com sucesso'
         res.send(response)
     } catch (error) {
-        console.log(`Erro em CreatePlaylist.js\nErro: ${error}`)
-        response.message(error)
+        console.log(`Erro em AddToPlaylist.js\nErro: ${error}`)
+        response.message = error
         res.send(response)
     }
 })

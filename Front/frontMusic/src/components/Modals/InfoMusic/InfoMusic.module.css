@@ -46,3 +46,48 @@
     color: var(--white-one);
     letter-spacing: 1px;
 }
+
+.addContent {
+    padding: 10px;
+}
+
+.toBack {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.toBack button:hover {
+    background-color: var(--dark-gray-two);
+}
+
+.search {
+    padding: 20px 0;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playlist {
+    background-color: var(--dark-gray-one);
+    transition: 300ms;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.playlist img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.playlist:hover {
+    background-color: var(--dark-gray-two);
+}

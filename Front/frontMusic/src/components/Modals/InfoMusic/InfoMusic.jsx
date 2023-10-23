@@ -7,10 +7,11 @@ import { useState, useEffect, useRef, useContext } from 'react'
 import { Context } from '../../../context/context'
 
 import Search from '../../Search/Search'
+import api from '../../../services/api'
 
 import styles from './InfoMusic.module.css'
 
-const InfoMusic = ({ open, setOpen }) => {
+const InfoMusic = ({ open, setOpen, music }) => {
 
     const options = [
         { icon: RiPlayList2Fill, text: 'Ouvir em seguida', click: '' },
@@ -25,6 +26,26 @@ const InfoMusic = ({ open, setOpen }) => {
     const [playlist, setPlaylist] = useState([])
 
     const [userState, dispatch] = useContext(Context)
+
+    const addToPlaylist = async (playId, musicId) => {
+        const body = {
+            playId : playId,
+            idMusic : musicId
+        }
+
+        try {
+            await api.post('/playlist/addToPlaylist', body)
+            .then(response => {
+                if (response.data.ok === true) {
+                    alert("Música adicionada com sucesso")
+                } else {
+                    alert('Erro ao adicionar música')
+                }
+            })
+        } catch (error) {
+            console.log(`Erro ao adicionar música a playlist: ${error}`)
+        }
+    }
 
     useEffect(() => {
         const handleOutsideClick = (event) => {
@@ -70,9 +91,11 @@ const InfoMusic = ({ open, setOpen }) => {
             )}
 
             {actually === 'playlist' && (
-                <>
+                <div className={styles.addContent}>
                     <div className={styles.toBack}>
-                        <IoIosArrowBack size={20} color='#a2a2ad' />
+                        <button onClick={() => setActually('config')}>
+                            <IoIosArrowBack size={20} color='#a2a2ad' />
+                        </button>
                         <span>Voltar</span>
                     </div>
 
@@ -80,8 +103,16 @@ const InfoMusic = ({ open, setOpen }) => {
                         <Search size='100%' placeholder='Buscar' />
                     </div>
 
+                    <div className={styles.playlists}>
+                        {playlist.map((playlist, index) => (
+                            <div className={styles.playlist} key={index} onClick={() => addToPlaylist(playlist.playId, music.idMusic)}>
+                                <img src={playlist.photo} alt={playlist.name} />
 
-                </>
+                                <h2> {playlist.name} </h2>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             )}
         </div>
     )

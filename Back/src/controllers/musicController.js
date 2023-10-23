@@ -33,6 +33,15 @@ const getMusics = async (req, res) => {
     return res.status(200).json(musics)
 }
 
+const getListMusic = async (req, res) => {
+    const playIdNumber = req.query.playid || ''
+    const playId = parseInt(playIdNumber)
+
+    const musicIds = await musicDatabase.getListMusic(playId)
+    return res.status(200).json(musicIds)
+}
+
 module.exports = {
-    getMusics
+    getMusics,
+    getListMusic
 }

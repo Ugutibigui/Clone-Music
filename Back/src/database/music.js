@@ -63,6 +63,22 @@ async function getMusics(date, views, name, gender, user, smaller, bigger, descV
     return result
 }
 
+async function getListMusic(playId) {
+    const conn = await connect()
+
+    let sql = "SELECT * FROM listmusic WHERE 1=1"
+    const values = []
+
+    if(playId) {
+        sql += ' AND playId = ?;'
+        values.push(playId)
+    }
+
+    const [result] = await conn.query(sql, values)
+    return result
+}
+
 module.exports = {
-    getMusics
+    getMusics,
+    getListMusic
 }

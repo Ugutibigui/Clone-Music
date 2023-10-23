@@ -26,6 +26,15 @@ async function getPlaylists(userId, playId, limit) {
     return result
 }
 
+async function createPlayMusic(param) {
+    const conn = await connect()
+
+    const sql = 'INSERT INTO listmusic(playId, idMusic) VALUES (?, ?)'
+    const values = [param.playId, param.idMusic]
+    await conn.query(sql, values)
+}
+
 module.exports = {
-    getPlaylists
+    getPlaylists,
+    createPlayMusic,
 }
