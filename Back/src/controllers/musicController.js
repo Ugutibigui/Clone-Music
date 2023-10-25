@@ -29,7 +29,10 @@ const getMusics = async (req, res) => {
 
     const nationality = req.query.nationality || ''
 
-    const musics = await musicDatabase.getMusics(date, views, name, gender, user, smallerDate, BiggerDate, descViews, descDate, limit, nationality)
+    const musicIdNumber = req.query.id || ''
+    const musicId = parseInt(musicIdNumber)
+
+    const musics = await musicDatabase.getMusics(date, views, name, gender, user, smallerDate, BiggerDate, descViews, descDate, limit, nationality, musicId)
     return res.status(200).json(musics)
 }
 

@@ -12,7 +12,7 @@ router.post('/', async (req, res, next) => {
             message: ""
       }
 
-      var Auth = rew.cookie.Token || null
+      var Auth = req.cookies.Token || null
 
       if (typeof (Auth) == 'undefined' || Auth == '' || Auth == null) {
             response.message = "Não autorizado"
